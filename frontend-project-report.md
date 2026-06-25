@@ -1,50 +1,50 @@
-# Bao cao tong quan Frontend - EAM Workspace
+# Báo cáo tổng quan Frontend - EAM Workspace
 
-## 1. Muc dich tai lieu
+## 1. Mục đích tài liệu
 
-Tai lieu nay mo ta chi tiet phan Frontend cua du an **EAM Workspace**. Noi dung duoc viet de ho tro:
+Tài liệu này mô tả chi tiết phần Frontend của dự án **EAM Workspace**. Nội dung được viết để hỗ trợ:
 
-- Viet bao cao thuc tap/do an.
-- Lam template thiet ke bao cao cho team.
-- Chuan hoa mau sac, typography, component, spacing va style cua project.
-- Chuyen thong tin thiet ke sang mot template Word/PowerPoint/Canva/Figma khac sao cho hop voi nhan dien cua du an.
+- Viết báo cáo thực tập/đồ án.
+- Làm template thiết kế báo cáo cho team.
+- Chuẩn hóa màu sắc, typography, component, spacing và style của project.
+- Chuyển thông tin thiết kế sang một template Word/PowerPoint/Canva/Figma khác sao cho hợp với nhận diện của dự án.
 
-Phan Frontend duoc mo ta ky hon ve mau sac, logo, bo cuc, dark mode, dashboard style va cac component UI vi day la phan can thiet de dieu chinh template bao cao cho dong bo voi san pham.
+Phần Frontend được mô tả kỹ hơn về màu sắc, logo, bố cục, dark mode, dashboard style và các component UI vì đây là phần cần thiết để điều chỉnh template báo cáo cho đồng bộ với sản phẩm.
 
-## 2. Tong quan Frontend
+## 2. Tổng quan Frontend
 
-Frontend cua **EAM Workspace** la ung dung React danh cho hai nhom nguoi dung chinh:
+Frontend của **EAM Workspace** là ứng dụng React dành cho hai nhóm người dùng chính:
 
-- **Admin Portal**: danh cho nguoi quan tri tai san/nhan su trong doanh nghiep.
-- **Employee Portal**: danh cho nhan vien xem tai san, ho so, lich su, gui yeu cau ho tro va tu phuc vu.
+- **Admin Portal**: dành cho người quản trị tài sản/nhân sự trong doanh nghiệp.
+- **Employee Portal**: dành cho nhân viên xem tài sản, hồ sơ, lịch sử, gửi yêu cầu hỗ trợ và tự phục vụ.
 
-Frontend co vai tro:
+Frontend có vai trò:
 
-- Hien thi dashboard va cac man hinh nghiep vu.
-- Goi REST API tu Backend.
-- Quan ly trang thai dang nhap va token.
-- Dieu huong theo role.
-- Hien thi loading, empty, error va toast notification.
-- Ho tro dark mode/light mode.
-- Ho tro tieng Viet/tieng Anh.
-- Toi uu trai nghiem desktop va mobile.
+- Hiển thị dashboard và các màn hình nghiệp vụ.
+- Gọi REST API từ Backend.
+- Quản lý trạng thái đăng nhập và token.
+- Điều hướng theo role.
+- Hiển thị loading, empty, error và toast notification.
+- Hỗ trợ dark mode/light mode.
+- Hỗ trợ tiếng Việt/tiếng Anh.
+- Tối ưu trải nghiệm desktop và mobile.
 
-## 3. Cong nghe su dung
+## 3. Công nghệ sử dụng
 
-| Thanh phan | Cong nghe | Vai tro |
+| Thành phần | Công nghệ | Vai trò |
 | --- | --- | --- |
-| Framework UI | React | Xay dung giao dien component-based |
-| Build tool | Vite | Dev server va build nhanh |
-| CSS framework | Tailwind CSS | Tao UI nhanh, dong bo design system |
-| Routing | React Router | Quan ly route admin/employee/auth |
-| Icons | lucide-react | Icon hien dai, dong bo |
-| Notification | react-hot-toast | Toast thong bao thanh cong/loi |
-| API client | fetch/custom client | Goi Backend API |
-| State | React hooks/context/local state | Quan ly state phu hop voi quy mo MVP |
-| Testing UI | Playwright | Smoke test luong UI |
+| Framework UI | React | Xây dựng giao diện component-based |
+| Build tool | Vite | Dev server và build nhanh |
+| CSS framework | Tailwind CSS | Tạo UI nhanh, đồng bộ design system |
+| Routing | React Router | Quản lý route admin/employee/auth |
+| Icons | lucide-react | Icon hiện đại, đồng bộ |
+| Notification | react-hot-toast | Toast thông báo thành công/lỗi |
+| API client | fetch/custom client | Gọi Backend API |
+| State | React hooks/context/local state | Quản lý state phù hợp với quy mô MVP |
+| Testing UI | Playwright | Smoke test luồng UI |
 | Deployment | AWS Amplify | Host React static app |
 
-## 4. Kien truc Frontend
+## 4. Kiến trúc Frontend
 
 ```text
 frontend/
@@ -80,18 +80,18 @@ frontend/
       index.css
 ```
 
-Huong to chuc:
+Hướng tổ chức:
 
-- `pages`: moi page lon cua Admin/Employee.
+- `pages`: mỗi page lớn của Admin/Employee.
 - `components/layout`: navbar, sidebar, layout wrapper.
 - `components/ui`: button, card, input, modal, table, badge, toast wrapper.
-- `services`: gom API client va cac service theo module.
-- `contexts`: quan ly auth, theme va ngon ngu.
-- `routes`: phan chia route public/protected/admin/employee.
+- `services`: gồm API client và các service theo module.
+- `contexts`: quản lý auth, theme và ngôn ngữ.
+- `routes`: phần chia route public/protected/admin/employee.
 
-## 5. Dinh huong thiet ke tong the
+## 5. Định hướng thiết kế tổng thể
 
-Phong cach UI cua EAM Workspace nen duoc mo ta la:
+Phòng cách UI của EAM Workspace nên được mô tả là:
 
 ```text
 Modern SaaS Dashboard
@@ -100,79 +100,79 @@ Clean Tech Interface
 Asset Operations Workspace
 ```
 
-Dac diem cam nhan:
+Đặc điểm cảm nhận:
 
-- Chuyen nghiep, gon gang, khong qua mau me.
-- Uu tien kha nang doc du lieu, quan ly bang bieu va thao tac lap lai.
-- Su dung navy/emerald lam nhan dien chinh.
-- Co dark mode cao cap, gan voi cam giac cong nghe va van hanh he thong.
-- Card, table, sidebar va form co border radius vua phai, shadow mem.
-- Khong dung style landing page qua trang tri; day la san pham quan tri, can thuc dung va ro rang.
+- Chuyên nghịệp, gọn gàng, không quá màu mè.
+- Ưu tiên khả năng đọc dữ liệu, quản lý bảng bịểu và thao tắc lặp lại.
+- Sử dùng navy/emerald làm nhân diện chính.
+- Có dark mode cáo cập, gần với cảm giác công nghệ và vận hành hệ thống.
+- Card, table, sidebar và form có border radius vua phải, shadow mềm.
+- Không dùng style landing page quá trang trí; đây là sản phẩm quản trị, cần thực dụng và rõ rang.
 
-## 6. Logo va nhan dien thuong hieu
+## 6. Logo và nhận diện thương hiệu
 
-### 6.1 Ten san pham
+### 6.1 Tên sản phẩm
 
-Ten hien thi:
+Tên hiển thị:
 
 ```text
 EAM Workspace
 ```
 
-Y nghia:
+Ý nghĩa:
 
 - `EAM`: Enterprise Asset Management.
-- `Workspace`: khong gian lam viec chung cho admin va nhan vien.
+- `Workspace`: không gian làm việc chung cho admin và nhân viên.
 
-### 6.2 Mo ta logo
+### 6.2 Mô tả logo
 
-Logo gom:
+Logo gồm:
 
-- Bieu tuong khoi/hop dai dien cho tai san.
-- Khung luc giac/navy tao cam giac ben vung va ky thuat.
-- Dau check mau emerald dai dien cho xac nhan, kiem ke, ban giao thanh cong.
-- Chu `EAM Workspace` mau navy tao cam giac doanh nghiep.
+- Bịểu tượng khởi/hợp đại diện cho tài sản.
+- Khung lục gìác/navy tạo cảm giác bền vững và kỹ thuật.
+- Dấu check màu emerald đại diện cho xác nhận, kiểm kê, bàn giao thành công.
+- Chủ `EAM Workspace` màu navy tạo cảm giác doanh nghiệp.
 
-### 6.3 Cach su dung logo
+### 6.3 Cách sử dụng logo
 
-Trong bao cao/template:
+Trong báo cáo/template:
 
-- Trang bia: dung logo day du co wordmark.
-- Header/footer: dung icon logo nho.
-- Slide mo dau: logo dat goc trai tren hoac can giua.
-- Nen toi: dung logo co chu mau sang hoac chi dung icon.
-- Nen sang: dung logo day du ban goc.
+- Trang bìa: dùng logo đầy đủ có wordmark.
+- Header/footer: dùng icon logo nhỏ.
+- Slide mô đầu: logo dat góc trai trên hoặc cần giua.
+- Nền tối: dùng logo có chủ màu sáng hoặc chỉ dùng icon.
+- Nền sáng: dùng logo đầy đủ bàn góc.
 
-Ty le khuyen nghi:
+Tỷ lệ khuyến nghị:
 
-- Logo day du tren bia: rong 180-260px.
-- Logo trong header: cao 28-36px.
+- Logo đầy đủ trên bìa: rộng 180-260px.
+- Logo trong header: cáo 28-36px.
 - Icon trong sidebar/app: 40-48px.
-- Favicon/app icon: dung icon rieng, khong dung wordmark dai.
+- Favicon/app icon: dùng icon riêng, không dùng wordmark đại.
 
-## 7. He mau chu dao
+## 7. Hệ màu chủ đạo
 
-### 7.1 Bang mau nhan dien
+### 7.1 Bảng màu nhân diện
 
-| Vai tro | Mau | Ma mau goi y | Cach dung |
+| Vai trò | Màu | Mã màu goi y | Cách dùng |
 | --- | --- | --- | --- |
-| Primary Navy | Xanh navy dam | `#062B49`, `#0B2545` | Logo, heading, sidebar, nut chinh dark |
-| Deep Ink | Gan den xanh | `#0F172A`, `#111827` | Nen dark, text dam |
-| Emerald | Xanh thanh cong | `#10B981`, `#059669` | CTA, active state, success, badge |
-| Teal | Xanh cong nghe | `#14B8A6`, `#0D9488` | Hover, accent, chart |
-| Sky/Cyan | Xanh sang | `#38BDF8`, `#0EA5E9` | Focus ring, link, highlight nhe |
-| Slate | Xam xanh | `#64748B`, `#94A3B8` | Text phu, icon, label |
-| Surface Light | Nen sang | `#F8FAFC`, `#F1F5F9` | Background, section |
-| Border Light | Vien sang | `#E2E8F0`, `#CBD5E1` | Border card/input/table |
-| Surface Dark | Nen toi | `#06130F`, `#081C16`, `#0B1220` | Dark mode background |
-| Danger | Do loi | `#EF4444`, `#DC2626` | Error, delete, broken asset |
-| Warning | Vang/cam | `#F59E0B`, `#D97706` | Canh bao, pending |
+| Primary Navy | Xanh navy đậm | `#062B49`, `#0B2545` | Logo, heading, sidebar, nút chính dark |
+| Deep Ink | Gần đen xanh | `#0F172A`, `#111827` | Nên dark, text đảm |
+| Emerald | Xanh thành công | `#10B981`, `#059669` | CTA, active state, success, badge |
+| Teal | Xanh công nghệ | `#14B8A6`, `#0D9488` | Hover, accent, chart |
+| Sky/Cyan | Xanh sáng | `#38BDF8`, `#0EA5E9` | Focus ring, link, highlight nhe |
+| Slate | Xám xanh | `#64748B`, `#94A3B8` | Text phụ, icon, label |
+| Surface Light | Nền sáng | `#F8FAFC`, `#F1F5F9` | Background, section |
+| Border Light | Viền sáng | `#E2E8F0`, `#CBD5E1` | Border card/input/table |
+| Surface Dark | Nền tối | `#06130F`, `#081C16`, `#0B1220` | Dark mode background |
+| Danger | Do lỗi | `#EF4444`, `#DC2626` | Error, delete, broken asset |
+| Warning | Vang/cảm | `#F59E0B`, `#D97706` | Cảnh báo, pending |
 | Info | Xanh info | `#3B82F6`, `#2563EB` | Link, info badge |
-| Purple | Tim phu | `#8B5CF6`, `#7C3AED` | Task, secondary metric |
+| Purple | Tìm phụ | `#8B5CF6`, `#7C3AED` | Task, secondary metric |
 
-### 7.2 Ti le su dung mau
+### 7.2 Tỉ lệ sử dụng màu
 
-Nen ap dung quy tac:
+Nên áp dụng quy tắc:
 
 ```text
 70% neutral/surface
@@ -180,35 +180,35 @@ Nen ap dung quy tac:
 10% semantic/accent
 ```
 
-Y nghia:
+Ý nghĩa:
 
-- UI khong bi roi mat.
-- Dashboard van ro rang khi co nhieu bang, form, card.
-- Emerald chi nen dung de nhan manh hanh dong chinh, active state, success.
-- Navy dung lam nen hoac text quan trong.
+- UI không bị rối mật.
+- Dashboard vận rõ rang khi có nhiều bảng, form, card.
+- Emerald chỉ nên dùng để nhấn mạnh hành động chính, active state, success.
+- Navy dùng làm nên hoặc text quản trong.
 
-### 7.3 Mau cho bao cao/template
+### 7.3 Màu cho báo cáo/template
 
-Neu sua template bao cao, nen doi bang mau theo he sau:
+Nếu sửa template báo cáo, nên đời bảng màu theo hệ sau:
 
-| Thanh phan bao cao | Mau nen | Mau chu | Ghi chu |
+| Thành phần báo cáo | Màu nên | Màu chủ | Ghi chú |
 | --- | --- | --- | --- |
-| Trang bia | Gradient `#062B49 -> #0F172A` | Trang `#FFFFFF` | Logo dat noi bat |
-| Tieu de chuong | `#062B49` | Trang | Co thanh accent emerald |
-| Heading H1 | Khong nen | `#0F172A` hoac `#062B49` | Ban sang |
-| Heading H2 | Khong nen | `#0B2545` | Dong bo voi logo |
-| Heading dark | Khong nen | `#F8FAFC` | Neu nen toi |
-| Bang table header | `#E6F7F2` | `#065F46` | Nhe, sach |
-| Vien bang | `#CBD5E1` | - | Khong dung vien den dam |
-| Callout success | `#ECFDF5` | `#047857` | Ket qua dat |
-| Callout warning | `#FFFBEB` | `#B45309` | Luu y |
-| Callout error | `#FEF2F2` | `#B91C1C` | Loi/rui ro |
+| Trang bìa | Gradient `#062B49 -> #0F172A` | Trang `#FFFFFF` | Logo dat nội bắt |
+| Tiêu đề chuong | `#062B49` | Trang | Có thành accent emerald |
+| Heading H1 | Không nên | `#0F172A` hoặc `#062B49` | Bàn sáng |
+| Heading H2 | Không nên | `#0B2545` | Đồng bộ với logo |
+| Heading dark | Không nên | `#F8FAFC` | Nếu nền tối |
+| Bảng table header | `#E6F7F2` | `#065F46` | Nhẹ, sạch |
+| Viền bảng | `#CBD5E1` | - | Không dùng viền đến đảm |
+| Callout success | `#ECFDF5` | `#047857` | Kết quả đạt |
+| Callout warning | `#FFFBEB` | `#B45309` | Lưu ý |
+| Callout error | `#FEF2F2` | `#B91C1C` | Lỗi/rui rõ |
 | Code block | `#0B1220` | `#E2E8F0` | Giong developer console |
-| Footer | `#0F172A` | `#CBD5E1` | Nho gon |
+| Footer | `#0F172A` | `#CBD5E1` | Nhỏ gọn |
 
-## 8. Design tokens de dua vao template
+## 8. Design tokens để đưa vào template
 
-### 8.1 Mau nen
+### 8.1 Màu nên
 
 ```text
 Light background: #F8FAFC
@@ -219,7 +219,7 @@ Dark surface: #111827 / #16211B
 Dark elevated surface: rgba(15, 23, 42, 0.86)
 ```
 
-### 8.2 Mau text
+### 8.2 Màu text
 
 ```text
 Light heading: #0F172A
@@ -262,155 +262,155 @@ Badge: 999px
 
 ## 9. Typography
 
-Font nen dung:
+Font nên dùng:
 
 ```text
 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
 ```
 
-Neu template Word/PowerPoint khong co Inter, co the dung:
+Nếu template Word/PowerPoint không có Inter, có thể dùng:
 
 ```text
 Aptos / Segoe UI / Calibri
 ```
 
-Cap bac chu:
+Cấp bậc chữ:
 
-| Cap | Size web | Size bao cao goi y | Weight | Cach dung |
+| Cập | Size web | Size báo cáo goi y | Weight | Cách dùng |
 | --- | --- | --- | --- | --- |
-| Display | 36-48px | 28-36pt | 800/900 | Bia, tieu de lon |
-| H1 | 28-36px | 24-28pt | 800 | Ten chuong |
-| H2 | 22-28px | 18-22pt | 700/800 | Muc lon |
-| H3 | 18-20px | 15-17pt | 700 | Muc nho |
-| Body | 14-16px | 10.5-12pt | 400/500 | Noi dung |
+| Display | 36-48px | 28-36pt | 800/900 | Bìa, tiêu đề lớn |
+| H1 | 28-36px | 24-28pt | 800 | Tên chuong |
+| H2 | 22-28px | 18-22pt | 700/800 | Mục lớn |
+| H3 | 18-20px | 15-17pt | 700 | Mục nhỏ |
+| Body | 14-16px | 10.5-12pt | 400/500 | Nội dung |
 | Label | 11-13px | 9-10pt | 700 | Label, table header |
-| Caption | 11-12px | 8.5-9pt | 500 | Ghi chu |
+| Caption | 11-12px | 8.5-9pt | 500 | Ghi chú |
 
-Nguyen tac:
+Nguyên tắc:
 
-- Heading ngan, ro, dam.
-- Body text khong qua xam nhat.
-- Label trong dashboard nen uppercase nhe, tracking vua phai.
-- Khong dung letter spacing am.
-- Khong phong to chu qua muc trong card nho.
+- Heading ngắn, rõ, đảm.
+- Body text không quá xám nhạt.
+- Label trong dashboard nên uppercase nhe, tracking vua phải.
+- Không dùng letter spacing am.
+- Không phòng to chủ qua mục trong card nhỏ.
 
-## 10. Layout tong the
+## 10. Layout tổng thể
 
 ### 10.1 Admin layout
 
-Admin layout gom:
+Admin layout gồm:
 
-- Sidebar trai co nhom menu.
-- Navbar tren cung co search, theme toggle, notification, status.
-- Main content gom page header, metric cards, table/form/workflow.
-- Floating/inline actions nhu them moi, import, export.
+- Sidebar trái có nhóm menu.
+- Navbar trên cùng có search, theme toggle, notification, status.
+- Main content gồm page header, metric cards, table/form/workflow.
+- Floating/inline actions như them mới, import, export.
 
-Cam giac thiet ke:
+Cảm gìác thiết kế:
 
-- Giao dien quan tri day du nhung khong bi roi.
-- Menu duoc gom nhom de giam tai nhan thuc.
-- Table va form la trung tam, khong phai hero marketing.
+- Giao diện quản trị đầy đủ nhưng không bị rối.
+- Menu được gồm nhóm để giảm tài nhận thức.
+- Table và form là trung tâm, không phải hero marketing.
 
 ### 10.2 Employee layout
 
-Employee layout gom:
+Employee layout gồm:
 
-- Sidebar ca nhan.
-- Navbar co search nhanh, theme toggle, notification.
-- Dashboard ca nhan.
-- Cac trang: tai san cua toi, yeu cau ho tro, cam nang tu phuc vu, ho so, doi mat khau, lich su.
+- Sidebar cả nhân.
+- Navbar có search nhanh, theme toggle, notification.
+- Dashboard cả nhân.
+- Các trang: tài sản của tối, yêu cầu hỗ trợ, cẩm nang tự phục vụ, hồ sơ, đời mật khẩu, lịch sử.
 
-Cam giac thiet ke:
+Cảm gìác thiết kế:
 
-- Gan gui hon Admin.
-- Uu tien viec nhan vien tim thay thong tin cua minh nhanh.
-- Card co nhieu trang thai ro rang: da dong bo, cho xu ly, can xac nhan.
+- Gần gũi hon Admin.
+- Ưu tiên việc nhân viên tìm thấy thông tin của minh nhanh.
+- Card có nhiều trạng thái rõ rang: đã đồng bộ, chờ xử lý, cần xác nhận.
 
 ## 11. Sidebar
 
 ### 11.1 Sidebar Admin
 
-Sidebar Admin nen gom cac nhom:
+Sidebar Admin nên gồm các nhóm:
 
 ```text
-Tong quan
-Quan ly to chuc
-  - Phong ban
-  - Nhan vien
-Quan ly tai san
-  - Danh muc
-  - Tai san
-  - Ban giao
-  - Bao tri
-  - Kiem ke
-  - So do mat bang
-Phan tich
-  - Bao cao
-  - Lich su dang nhap
-  - Lich su cham cong
-Ho tro
-  - Quan ly FAQ
-  - Gop y va phan hoi
+Tổng quan
+Quản lý tổ chức
+  - Phòng ban
+  - Nhân viên
+Quản lý tài sản
+  - Danh mục
+  - Tài sản
+  - Bàn giao
+  - Bảo trì
+  - Kiểm kê
+  - Sơ đồ mặt bằng
+Phân tích
+  - Báo cáo
+  - Lịch sử đăng nhập
+  - Lịch sử chấm công
+Hỗ trợ
+  - Quản lý FAQ
+  - Góp ý và phản hồi
   - Support chat
-Cai dat
+Cài đặt
 ```
 
 Style:
 
-- Nen sidebar: navy/green dark `#062B49`, `#06351F`, hoac gradient rat nhe.
-- Item active: emerald text + nen trong suot co opacity.
-- Item hover: nen xanh/emerald trong suot, khong dung nen trang trong dark sidebar.
-- Icon lucide co stroke 1.75-2px.
-- Khoang cach item dong deu.
-- Muc cha nen `font-bold`.
+- Nền sidebar: navy/green dark `#062B49`, `#06351F`, hoặc gradient rất nhẹ.
+- Item active: emerald text + nền trong suốt có opacity.
+- Item hover: nền xanh/emerald trong suốt, không dùng nền trắng trong dark sidebar.
+- Icon lucide có stroke 1.75-2px.
+- Khoảng cách item đồng đều.
+- Mục cha nên `font-bold`.
 
 ### 11.2 Sidebar Employee
 
 Menu:
 
 ```text
-Tong quan
-Tai san cua toi
-Yeu cau ho tro
-Cam nang tu phuc vu
-Ho so ca nhan
-Doi mat khau
-Lich su
-Cai dat
+Tổng quan
+Tài sản của tôi
+Yêu cầu hỗ trợ
+Cẩm nang tự phục vụ
+Hồ sơ cá nhân
+Đổi mật khẩu
+Lịch sử
+Cài đặt
 ```
 
-Vung user card cuoi sidebar:
+Vùng user card cuối sidebar:
 
-- Hien thi avatar.
-- Hien thi ten nhan vien that.
-- Hien thi email rut gon.
-- Nut logout bang icon.
-- Avatar nen co fallback initials neu anh loi.
+- Hiển thị avatar.
+- Hiển thị tên nhân viên thật.
+- Hiển thị email rút gọn.
+- Nút logout bằng icon.
+- Avatar nên có fallback initials nếu ảnh lỗi.
 
 ## 12. Navbar
 
-Navbar nen co:
+Navbar nên có:
 
 - Breadcrumb/section label.
-- Page title ngan.
+- Page title ngắn.
 - Global search.
-- Trang thai dong bo.
+- Trạng thái đồng bộ.
 - Toggle dark/light mode.
 - Notification button.
-- QR/app shortcut neu co.
+- QR/app shortcut nếu có.
 
 Style:
 
-- Light: nen trang co blur nhe, border bottom `#E2E8F0`.
-- Dark: nen `rgba(15, 23, 42, 0.82)`, border `rgba(148, 163, 184, 0.18)`.
-- Search input bo tron, co icon search, shortcut hint `Ctrl K`.
-- Trang thai dong bo dung badge emerald.
+- Light: nền trắng có blur nhe, border bottom `#E2E8F0`.
+- Dark: nên `rgba(15, 23, 42, 0.82)`, border `rgba(148, 163, 184, 0.18)`.
+- Search input bộ tròn, có icon search, shortcut hint `Ctrl K`.
+- Trạng thái đồng bộ dùng badge emerald.
 
 ## 13. Button system
 
 ### 13.1 Primary button
 
-Dung cho hanh dong chinh:
+Dùng cho hành động chính:
 
 ```text
 Nen: #059669 hoac #047857
@@ -420,11 +420,11 @@ Shadow: emerald glow nhe
 Radius: 10-12px
 ```
 
-Vi du:
+Ví dụ:
 
-- Them tai san.
-- Luu thay doi.
-- Xac nhan ban giao.
+- Them tài sản.
+- Lưu thấy đời.
+- Xác nhận bàn giao.
 - Import Excel.
 
 ### 13.2 Secondary button
@@ -444,39 +444,39 @@ Hover: #DC2626
 Text: #FFFFFF
 ```
 
-Dung cho:
+Dùng cho:
 
-- Xoa.
-- Khoa tai khoan.
-- Bao hong neu la hanh dong canh bao.
+- Xóa.
+- Khóa tài khoản.
+- Báo hỏng nếu là hành động cảnh báo.
 
 ### 13.4 Icon button
 
-Dung cho:
+Dùng cho:
 
-- Sua.
-- Xoa.
+- Sửa.
+- Xóa.
 - Loc.
-- Dong modal.
-- Thong bao.
-- Doi theme.
+- Động modal.
+- Thông báo.
+- Đời theme.
 
-Kich thuoc:
+Kích thước:
 
 ```text
 Desktop: 40-44px
 Mobile: 38-42px
 ```
 
-## 14. Card va metric
+## 14. Card và metric
 
-Metric card tren dashboard nen co:
+Metric card trên dashboard nên có:
 
-- Label nho uppercase.
-- So lieu lon, dam.
-- Icon trong o mau nhat.
-- Mo ta/trend nho.
-- Border va shadow mem.
+- Label nhỏ uppercase.
+- Số liệu lớn, đảm.
+- Icon trong o màu nhạt.
+- Mô tả/trend nhỏ.
+- Border và shadow mềm.
 
 Light mode:
 
@@ -498,26 +498,26 @@ Muted: #94A3B8
 
 Metric icon colors:
 
-- Tai san: blue/cyan.
-- Nhan vien: emerald.
-- Bao tri: amber.
-- Loi/hong: red.
-- Cong viec: purple.
+- Tài sản: blue/cyan.
+- Nhân viên: emerald.
+- Bảo trì: amber.
+- Lỗi/hỏng: red.
+- Công việc: purple.
 
 ## 15. Table
 
-Table la thanh phan quan trong cua Admin.
+Table là thành phần quản trong của Admin.
 
-Style khuyen nghi:
+Style khuyến nghị:
 
-- Header nen slate/emerald nhat.
-- Row hover ro nhung khong qua sang.
-- Text chinh dam vua.
-- Text phu xam.
-- Badge trang thai co mau rieng.
-- Action button dung icon.
-- Co empty state khi khong co du lieu.
-- Co loading skeleton khi dang tai.
+- Header nên slate/emerald nhạt.
+- Row hover rõ nhưng không qua sáng.
+- Text chính đảm vua.
+- Text phụ xám.
+- Badge trạng thái có màu riêng.
+- Action button dùng icon.
+- Có empty state khi không có dữ liệu.
+- Có loading skeleton khi đang tài.
 
 Light:
 
@@ -537,16 +537,16 @@ Border: rgba(148, 163, 184, 0.18)
 Hover: rgba(16, 185, 129, 0.08)
 ```
 
-## 16. Form va input
+## 16. Form và input
 
-Form nen co:
+Form nên có:
 
-- Label ro rang.
-- Placeholder ngan gon.
+- Label rõ rang.
+- Placeholder ngắn gon.
 - Focus ring emerald/cyan.
-- Loi validate hien thi ngay duoi input.
-- Disabled state ro.
-- Grid responsive 1 cot tren mobile, 2 cot tren desktop.
+- Lỗi validate hiển thị ngay dưới input.
+- Disabled state rõ.
+- Grid responsive 1 cột trên mobile, 2 cột trên desktop.
 
 Input light:
 
@@ -570,37 +570,37 @@ Focus border: #34D399
 Focus ring: rgba(52, 211, 153, 0.16)
 ```
 
-## 17. Modal va drawer
+## 17. Modal và drawer
 
-Modal dung cho:
+Modal dùng cho:
 
-- Them/sua phong ban.
-- Them/sua nhan vien.
-- Them/sua tai san.
+- Them/sửa phòng ban.
+- Them/sửa nhân viên.
+- Them/sửa tài sản.
 - Import Excel.
-- Xac nhan hanh dong.
+- Xác nhận hành động.
 
 Style:
 
-- Overlay mau den opacity 40-60%.
-- Modal surface sang/toi theo theme.
-- Header co title va nut dong.
-- Footer co cancel + primary action.
-- Mobile full-width gan nhu full screen.
+- Overlay màu đến opacity 40-60%.
+- Modal surface sáng/tối theo theme.
+- Header có title và nút động.
+- Footer có cancel + primary action.
+- Mobile full-width gần như full screen.
 - Desktop max-width 560-900px tuy form.
 
 ## 18. Toast notification
 
-Toast nen dung `react-hot-toast`.
+Toast nên dùng `react-hot-toast`.
 
-Nguyen tac:
+Nguyên tắc:
 
-- Thanh cong: emerald.
-- Loi: red.
-- Canh bao: amber.
+- Thành công: emerald.
+- Lỗi: red.
+- Cảnh báo: amber.
 - Info: blue.
-- Chu tieng Viet co dau.
-- Dark mode phai doc ro.
+- Chủ tiếng Việt có dấu.
+- Dark mode phải đọc rõ.
 
 Style toast light:
 
@@ -622,7 +622,7 @@ Shadow: 0 24px 60px rgba(0, 0, 0, 0.35)
 
 ## 19. Dark mode
 
-Dark mode cua project nen mang cam giac:
+Dark mode của project nên mang cảm giác:
 
 ```text
 Enterprise control room
@@ -630,22 +630,22 @@ Premium SaaS dashboard
 Dark emerald/navy workspace
 ```
 
-Quy tac dark mode:
+Quy tắc dark mode:
 
-- Khong de card nen trang trong dark mode.
-- Khong de text den tren nen toi.
-- So lieu metric phai dung mau sang.
-- Border dung opacity, khong dung vien trang qua manh.
-- Hover dung emerald/teal opacity thap.
-- Input co background toi va focus ring ro.
-- Empty state phai co icon/text du sang.
-- Map/floor plan can co contrast cao.
+- Không để card nền trắng trong dark mode.
+- Không để text đến trên nền tối.
+- Số liệu metric phải dùng màu sáng.
+- Border dùng opacity, không dùng viền trang qua mạnh.
+- Hover dùng emerald/teal opacity thap.
+- Input có background tối và focus ring rõ.
+- Empty state phải có icon/text đủ sáng.
+- Map/floor plan cần có contrast cáo.
 
-Bang mau dark:
+Bảng màu dark:
 
-| Thanh phan | Mau |
+| Thành phần | Màu |
 | --- | --- |
-| App background | `#06130F` hoac `#0B1220` |
+| App background | `#06130F` hoặc `#0B1220` |
 | Sidebar | `#062B1F`, `#062B49` |
 | Navbar | `rgba(15, 23, 42, 0.86)` |
 | Card | `rgba(15, 23, 42, 0.82)` |
@@ -658,9 +658,9 @@ Bang mau dark:
 
 ## 20. Light mode
 
-Light mode nen sach, sang, nhieu khoang tho:
+Light mode nên sạch, sáng, nhiều khoảng thở:
 
-| Thanh phan | Mau |
+| Thành phần | Màu |
 | --- | --- |
 | App background | `#F8FAFC` |
 | Main surface | `#FFFFFF` |
@@ -673,327 +673,327 @@ Light mode nen sach, sang, nhieu khoang tho:
 | Muted | `#64748B` |
 | Active | `#059669` |
 
-## 21. Admin Portal - cac man hinh chinh
+## 21. Admin Portal - các màn hình chính
 
 ### 21.1 Dashboard
 
-Noi dung:
+Nội dung:
 
-- Tong so phong ban.
-- Tong nhan vien.
-- Tong tai san.
-- Tong gia tri tai san.
-- Tai san theo trang thai.
-- Hoat dong gan day.
-- Canh bao/yeu cau can xu ly.
-
-UI:
-
-- Metric cards 4 cot desktop, 2 cot tablet, 1 cot mobile.
-- Chart/card co border radius 16px.
-- Cac so lieu lon dung font weight 800/900.
-
-### 21.2 Quan ly phong ban
-
-Chuc nang:
-
-- Danh sach phong ban.
-- Tim kiem.
-- Them/sua/xoa.
-- Gan truong phong/manager neu co.
+- Tổng số phòng ban.
+- Tổng nhân viên.
+- Tổng tài sản.
+- Tổng giá trị tài sản.
+- Tài sản theo trạng thái.
+- Hoạt động gần đây.
+- Cảnh báo/yêu cầu cần xử lý.
 
 UI:
 
-- Table ro rang.
-- Form modal ngan gon.
-- Empty state khi chua co phong ban.
+- Metric cards 4 cột desktop, 2 cột tablet, 1 cột mobile.
+- Chart/card có border radius 16px.
+- Các số liệu lớn dùng font weight 800/900.
 
-### 21.3 Quan ly nhan vien
+### 21.2 Quản lý phòng ban
 
 Chuc nang:
 
-- Danh sach nhan vien.
-- Loc theo phong ban/trang thai.
-- Tao ho so.
-- Tao/khoa tai khoan.
-- Cap nhat anh dai dien.
-- Import tu Excel.
+- Danh sách phòng ban.
+- Tìm kiếm.
+- Them/sửa/xóa.
+- Gần trường phòng/manager nếu có.
 
 UI:
 
-- Badge trang thai active/inactive.
-- Avatar co fallback initials.
-- Action icon gom xem/sua/khoa.
+- Table rõ rang.
+- Form modal ngắn gon.
+- Empty state khi chưa có phòng ban.
 
-### 21.4 Quan ly danh muc
+### 21.3 Quản lý nhân viên
 
 Chuc nang:
 
-- CRUD danh muc tai san.
-- Tim kiem theo ten/mo ta.
+- Danh sách nhân viên.
+- Lọc theo phòng ban/trạng thái.
+- Tạo hồ sơ.
+- Tạo/khóa tài khoản.
+- Cập nhật ảnh đại diện.
+- Import từ Excel.
 
 UI:
 
-- Table don gian.
-- So luong tai san theo danh muc co badge.
+- Badge trạng thái active/inactive.
+- Avatar có fallback initials.
+- Action icon gồm xem/sửa/khóa.
 
-### 21.5 Quan ly tai san
+### 21.4 Quản lý danh mục
 
 Chuc nang:
 
-- CRUD tai san.
-- Tim kiem/loc.
-- Upload anh.
+- CRUD danh mục tài sản.
+- Tìm kiếm theo tên/mô tả.
+
+UI:
+
+- Table đơn gìản.
+- Số lượng tài sản theo danh mục có badge.
+
+### 21.5 Quản lý tài sản
+
+Chuc nang:
+
+- CRUD tài sản.
+- Tìm kiếm/loc.
+- Upload ảnh.
 - Import Excel.
-- Xem trang thai va nguoi dang su dung.
+- Xem trạng thái và người đang sử dùng.
 
 UI:
 
-- Card/table ket hop.
-- Badge status ro mau.
-- Anh tai san co fallback.
+- Card/table kết hợp.
+- Badge status rõ màu.
+- Ảnh tài sản có fallback.
 
-### 21.6 Ban giao tai san
+### 21.6 Bàn giao tài sản
 
 Chuc nang:
 
-- Ban giao.
-- Thu hoi.
-- Chuyen giao.
-- Xem lich su.
+- Bàn giao.
+- Thử hồi.
+- Chuyển giao.
+- Xem lịch sử.
 
 UI:
 
 - Workflow cards.
-- Trang thai: cho xac nhan, da nhan, da tra.
-- Lich su hien thi timeline/table.
+- Trạng thái: cho xác nhận, đã nhân, đã trả.
+- Lịch sử hiển thị timeline/table.
 
-### 21.7 Bao tri
+### 21.7 Bảo trì
 
 Chuc nang:
 
-- Xem yeu cau bao tri.
-- Cap nhat trang thai.
-- Gan uu tien.
-- Ghi chu xu ly.
+- Xem yêu cầu bảo trì.
+- Cập nhật trạng thái.
+- Gần ưu tiên.
+- Ghi chú xử lý.
 
 UI:
 
 - Badge severity.
-- Filter theo trang thai.
-- Modal chi tiet.
+- Filter theo trạng thái.
+- Modal chi tiết.
 
-### 21.8 Kiem ke
+### 21.8 Kiểm kê
 
 Chuc nang:
 
-- Tao phien kiem ke.
-- Theo doi tien do.
-- Cap nhat ket qua tung tai san.
+- Tạo phiên kiểm kê.
+- Theo dõi tien do.
+- Cập nhật kết quả từng tài sản.
 
 UI:
 
 - Progress bar.
-- Cards thong ke: khop, thieu, hong, chua kiem.
+- Cards thống kê: khớp, thiếu, hỏng, chưa kiểm.
 
-### 21.9 Bao cao
+### 21.9 Báo cáo
 
 Chuc nang:
 
-- Tong quan tai san.
-- Tai san theo phong ban.
-- Chat luong du lieu.
-- Bao cao loc/tim kiem.
+- Tổng quan tài sản.
+- Tài sản theo phòng ban.
+- Chất lượng dữ liệu.
+- Báo cáo loc/tìm kiếm.
 
 UI:
 
 - Chart/cards/table.
-- Export neu co.
-- Mau chart dong bo navy/emerald/cyan/amber.
+- Export nếu có.
+- Màu chart đồng bộ navy/emerald/cyan/amber.
 
-### 21.10 So do mat bang
-
-Chuc nang:
-
-- Xem vi tri tai san trong van phong.
-- Hien thi toa do tai san.
-- Loc theo phong ban/trang thai.
-
-UI:
-
-- Dark mode can dam bao contrast cua marker va label.
-- Marker nen dung emerald/amber/red theo trang thai.
-
-## 22. Employee Portal - cac man hinh chinh
-
-### 22.1 Dashboard nhan vien
-
-Noi dung:
-
-- Loi chao theo ten nhan vien.
-- Tai san dang giu.
-- Yeu cau dang xu ly.
-- Cong viec can lam.
-- Widget cham cong.
-
-UI:
-
-- Card ca nhan gon.
-- Metric phai doc ro ca light/dark.
-- Neu so lieu 0, mau van phai du contrast.
-
-### 22.2 Tai san cua toi
+### 21.10 Sơ đồ mặt bằng
 
 Chuc nang:
 
-- Xem danh sach tai san duoc ban giao.
-- Xem chi tiet tung tai san.
-- Xac nhan ban giao.
-- Bao hong/su co.
+- Xem vị trí tài sản trong văn phòng.
+- Hiển thị tọa độ tài sản.
+- Lọc theo phòng ban/trạng thái.
 
 UI:
 
-- Chi tiet tai san chia 2 cot desktop.
-- Mobile stack 1 cot.
-- Dark mode khong de card trang gay kho doc.
-- Thong tin tai san gom: ten, ma, serial, danh muc, ngay nhan, tinh trang.
+- Dark mode cần đảm bảo contrast của marker và label.
+- Marker nên dùng emerald/amber/red theo trạng thái.
 
-### 22.3 Yeu cau ho tro
+## 22. Employee Portal - các màn hình chính
+
+### 22.1 Dashboard nhân viên
+
+Nội dung:
+
+- Lỗi chao theo tên nhân viên.
+- Tài sản đang giu.
+- Yêu cầu đang xử lý.
+- Công việc cần làm.
+- Widget chấm công.
+
+UI:
+
+- Card cả nhân gon.
+- Metric phải đọc rõ cả light/dark.
+- Nếu số liệu 0, màu vận phải dự contrast.
+
+### 22.2 Tài sản của tối
 
 Chuc nang:
 
-- Tao yeu cau ho tro.
-- Dinh kem file.
-- Theo doi trang thai.
-- Xem lich su phan hoi.
+- Xem danh sách tài sản được bàn giao.
+- Xem chi tiết từng tài sản.
+- Xác nhận bàn giao.
+- Báo hỏng/sử có.
 
 UI:
 
-- Form don gian.
-- Badge trang thai.
-- File dinh kem hien thi ro ten file.
+- Chi tiết tài sản chia 2 cột desktop.
+- Mobile stack 1 cột.
+- Dark mode không để card trang gay kho đọc.
+- Thông tin tài sản gồm: tên, mã, serial, danh mục, ngay nhân, tinh trang.
 
-### 22.4 Cam nang tu phuc vu
+### 22.3 Yêu cầu hỗ trợ
+
+Chuc nang:
+
+- Tạo yêu cầu hỗ trợ.
+- Định kèm file.
+- Theo dõi trạng thái.
+- Xem lịch sử phản hồi.
+
+UI:
+
+- Form đơn gìản.
+- Badge trạng thái.
+- File đính kèm hiển thị rõ tên file.
+
+### 22.4 Cảm nang tự phục vụ
 
 Chuc nang:
 
 - Xem FAQ.
-- Tim kiem cau hoi.
-- Chuyen sang tao phieu ho tro neu can.
+- Tìm kiếm cau hồi.
+- Chuyển sáng tạo phieu hỗ trợ nếu cần.
 
 UI:
 
 - FAQ accordion/card.
-- CTA tao phieu ho tro dung emerald gradient hoac primary button.
-- Dark mode dam bao text tren gradient doc duoc.
+- CTA tạo phieu hỗ trợ dùng emerald gradient hoặc primary button.
+- Dark mode đảm bảo text trên gradient đọc được.
 
-### 22.5 Ho so ca nhan
-
-Chuc nang:
-
-- Xem thong tin cong viec.
-- Xem thong tin ca nhan.
-- Xem so yeu ly lich.
-- Xem tai lieu/dinh kem.
-- Xem lich su cap nhat.
-- Cap nhat avatar.
-- Xuat ho so PDF neu co.
-
-UI:
-
-- Header profile co avatar lon.
-- Tabs ro rang.
-- Anh loi phai co fallback initials.
-
-### 22.6 Doi mat khau
+### 22.5 Hồ sơ cả nhân
 
 Chuc nang:
 
-- Nhap mat khau hien tai.
-- Nhap mat khau moi.
-- Xac nhan mat khau moi.
+- Xem thông tin công việc.
+- Xem thông tin cá nhân.
+- Xem số yêu lý lịch.
+- Xem tài liệu/định kèm.
+- Xem lịch sử cập nhật.
+- Cập nhật avatar.
+- Xuat hồ sơ PDF nếu có.
 
 UI:
 
-- Co nut hien/an mat khau.
-- Validate ro.
-- Toast thanh cong/loi.
+- Header profile có avatar lớn.
+- Tabs rõ rang.
+- Ảnh lỗi phải có fallback initials.
+
+### 22.6 Đời mật khẩu
+
+Chuc nang:
+
+- Nhập mật khẩu hiện tại.
+- Nhập mật khẩu mới.
+- Xác nhận mật khẩu mới.
+
+UI:
+
+- Có nút hiện/án mật khẩu.
+- Validate rõ.
+- Toast thành công/lỗi.
 
 ## 23. Search
 
-Project co search o navbar va trong tung page.
+Project có search ở navbar và trong từng page.
 
-Global search nen:
+Global search nên:
 
-- Hien thi shortcut `Ctrl K`.
-- Tim nhanh trang/chuc nang.
-- UI dong bo giua Admin va Employee.
-- Co keyboard focus ring.
-- Co empty state neu khong co ket qua.
+- Hiển thị shortcut `Ctrl K`.
+- Tìm nhanh trang/chuc nang.
+- UI đồng bộ giữa Admin và Employee.
+- Có keyboard focus ring.
+- Có empty state nếu không có kết quả.
 
-Search page/table nen:
+Search page/table nên:
 
-- Co placeholder cu the.
-- Khong trung aria-label voi field form khac.
-- Debounce nhe neu du lieu lon.
+- Có placeholder cụ thể.
+- Không trùng aria-label với field form khác.
+- Debounce nhẹ nếu dữ liệu lớn.
 
-## 24. Loading, empty va error state
+## 24. Loading, empty và error state
 
 ### 24.1 Loading
 
-Nen dung:
+Nên dùng:
 
 - Skeleton cho card/table.
-- Spinner nho trong button.
+- Spinner nhỏ trong button.
 - Disable button khi submitting.
 
 ### 24.2 Empty state
 
-Can co:
+Cần có:
 
 - Icon line style.
-- Tieu de ngan.
-- Mo ta ngan.
-- CTA neu phu hop.
+- Tiêu đề ngắn.
+- Mô tả ngắn.
+- CTA nếu phù hợp.
 
-Vi du:
+Ví dụ:
 
 ```text
-Chua co tai san nao
-Hay them tai san moi hoac import tu Excel de bat dau quan ly.
+Chưa có tài sản nào
+Hãy thêm tài sản mới hoặc import từ Excel để bắt đầu quản lý.
 ```
 
 ### 24.3 Error state
 
-Can co:
+Cần có:
 
-- Message ro, tieng Viet co dau.
-- Nut thu lai.
-- Khong show stack trace cho user.
+- Message rõ, tiếng Việt có dấu.
+- Nút thử lại.
+- Không show stack trace cho user.
 
 ## 25. Responsive
 
 ### 25.1 Desktop
 
-- Sidebar co dinh ben trai.
-- Main content rong, table day du cot.
-- Dashboard 3-4 cot.
-- Form co 2 cot.
+- Sidebar cố định bên trái.
+- Main content rộng, table đầy đủ cột.
+- Dashboard 3-4 cột.
+- Form có 2 cột.
 
 ### 25.2 Tablet
 
-- Sidebar co the collapse.
-- Dashboard 2 cot.
-- Table co horizontal scroll neu can.
-- Modal max-width nho hon.
+- Sidebar có thể collapse.
+- Dashboard 2 cột.
+- Table có horizontal scroll nếu cần.
+- Modal max-width nhỏ hon.
 
 ### 25.3 Mobile
 
-- Sidebar thanh drawer.
-- Navbar gon, search co the full-screen overlay.
-- Dashboard 1 cot.
-- Table chuyen sang card list neu can.
-- Button full width trong form quan trong.
+- Sidebar thành drawer.
+- Navbar gon, search có thể full-screen overlay.
+- Dashboard 1 cột.
+- Table chuyển sáng card list nếu cần.
+- Button full width trong form quản trong.
 
 Breakpoint goi y:
 
@@ -1007,18 +1007,18 @@ xl: 1280px
 
 ## 26. Accessibility
 
-Can dam bao:
+Cần đảm bảo:
 
-- Contrast text dat muc doc duoc.
-- Button co focus ring.
-- Input co label.
-- Icon button co aria-label/title.
-- Modal trap focus neu co the.
-- Khong chi dung mau de truyen dat trang thai.
-- Text trong button khong bi tran.
-- Anh co alt phu hop.
+- Contrast text dat mục đọc được.
+- Button có focus ring.
+- Input có label.
+- Icon button có aria-label/title.
+- Modal trap focus nếu có thể.
+- Không chỉ dùng màu để truyen dat trạng thái.
+- Text trong button không bị tràn.
+- Ảnh có alt phù hợp.
 
-Mau focus:
+Màu focus:
 
 ```text
 Light focus ring: rgba(16, 185, 129, 0.25)
@@ -1027,21 +1027,21 @@ Dark focus ring: rgba(52, 211, 153, 0.25)
 
 ## 27. Internationalization
 
-Frontend ho tro:
+Frontend hỗ trợ:
 
-- Tieng Viet.
-- Tieng Anh.
+- Tieng Viết.
+- Tieng Ảnh.
 
-Yeu cau chat luong:
+Yêu cầu chất lượng:
 
-- Khi chuyen sang English, tat ca menu/page/button/empty/error/toast can la English.
-- Khong de nua Viet nua Anh.
-- Khong dung tieng Viet khong dau trong toast.
-- Text nen quan ly tap trung de de bao tri.
+- Khi chuyển sáng English, tất cả menu/page/button/empty/error/toast cần là English.
+- Không để nửa Việt nửa Ảnh.
+- Không dùng tiếng Việt không dấu trong toast.
+- Text nên quản lý tập trung để dễ bảo trì.
 
 ## 28. API integration
 
-Frontend goi API qua client dung chung.
+Frontend goi API qua client dùng chung.
 
 Local:
 
@@ -1049,20 +1049,20 @@ Local:
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
-Deploy voi Amplify rewrite:
+Deploy với Amplify rewrite:
 
 ```env
 VITE_API_BASE_URL=/api
 ```
 
-Amplify rewrite can dam bao:
+Amplify rewrite cần đảm bảo:
 
 ```text
 /api/<*> -> API Gateway/Elastic Beanstalk backend
 /<*> -> /index.html
 ```
 
-Neu route React nhu `/login` bi 404 khi refresh, can co SPA rewrite:
+Nếu route React như `/login` bị 404 khi refresh, cần có SPA rewrite:
 
 ```json
 {
@@ -1072,11 +1072,11 @@ Neu route React nhu `/login` bi 404 khi refresh, can co SPA rewrite:
 }
 ```
 
-## 29. De xuat style cho template bao cao
+## 29. Để xuat style cho template báo cáo
 
-### 29.1 Trang bia
+### 29.1 Trang bìa
 
-Nen:
+Nên:
 
 ```text
 Gradient navy: #062B49 -> #0F172A
@@ -1085,16 +1085,16 @@ Text: #FFFFFF
 Subtitle: #CBD5E1
 ```
 
-Bo cuc:
+Bố cục:
 
-- Logo EAM Workspace dat giua hoac goc trai tren.
-- Tieu de: "Bao cao du an EAM Workspace".
+- Logo EAM Workspace dat giua hoặc góc trai trên.
+- Tiêu đề: "Báo cáo dự án EAM Workspace".
 - Subtitle: "Enterprise Asset Management System".
-- Thanh accent emerald mong o duoi tieu de.
+- Thành accent emerald mong o dưới tiêu đề.
 
-### 29.2 Trang muc luc
+### 29.2 Trang mục lục
 
-Nen:
+Nên:
 
 ```text
 Background: #F8FAFC
@@ -1102,19 +1102,19 @@ Heading: #062B49
 Accent number: #10B981
 ```
 
-### 29.3 Trang noi dung
+### 29.3 Trang nội dung
 
-Bo cuc:
+Bố cục:
 
-- Header nho co logo icon + ten chuong.
-- Footer co so trang va ten du an.
+- Header nhỏ có logo icon + tên chuong.
+- Footer có số trang và tên dự án.
 - Heading navy.
-- Bullet dung dau cham emerald.
-- Bang co header nen emerald rat nhat.
+- Bullet dùng đầu chấm emerald.
+- Bảng có header nên emerald rat nhạt.
 
-### 29.4 Trang chuong moi
+### 29.4 Trang chuong mới
 
-Nen:
+Nên:
 
 ```text
 Background: #0F172A
@@ -1125,17 +1125,17 @@ Subtitle: #CBD5E1
 
 ### 29.5 Trang screenshot UI
 
-Nen:
+Nên:
 
-- Nen `#F8FAFC`.
-- Screenshot dat trong frame bo tron 16px.
-- Shadow mem.
-- Caption mau `#64748B`.
-- Neu screenshot dark mode, nen trang phai co border de tach nen.
+- Nên `#F8FAFC`.
+- Screenshot dat trong frame bộ trọn 16px.
+- Shadow mềm.
+- Caption màu `#64748B`.
+- Nếu screenshot dark mode, nền trắng phải có border để tách nên.
 
-### 29.6 Trang ket qua/demo
+### 29.6 Trang kết quả/demo
 
-Nen:
+Nên:
 
 ```text
 Background: #ECFDF5
@@ -1143,16 +1143,16 @@ Heading: #065F46
 Badge: #10B981
 ```
 
-Dung cho:
+Dùng cho:
 
-- Ket qua deploy.
+- Kết quả deploy.
 - Health OK.
-- Test login thanh cong.
-- Cac tinh nang hoan thanh.
+- Test login thành công.
+- Các tính năng hoan thành.
 
-## 30. Mau chart cho bao cao/dashboard
+## 30. Màu chart cho báo cáo/dashboard
 
-Dung bo mau:
+Dùng bộ màu:
 
 ```text
 Emerald: #10B981
@@ -1173,50 +1173,50 @@ Mapping:
 - Task/Other: purple.
 - Unknown/Inactive: slate.
 
-## 31. Doan mo ta ngan co the dua vao bao cao
+## 31. Đoạn mô tả ngắn có thể đưa vào báo cáo
 
-Frontend cua EAM Workspace duoc xay dung bang React, Vite va Tailwind CSS, theo phong cach modern SaaS dashboard phu hop voi he thong quan ly tai san doanh nghiep. Giao dien duoc chia thanh Admin Portal va Employee Portal, moi portal co layout, sidebar, navbar va cac man hinh nghiep vu rieng. He thong ho tro light/dark mode, song ngu Viet-Anh, toast notification, global search, responsive layout va cac thanh phan UI tai su dung nhu card, table, form, modal, badge va button. Mau sac chu dao la navy, emerald va slate, tao cam giac chuyen nghiep, hien dai va dong bo voi logo EAM Workspace. Frontend duoc deploy len AWS Amplify va giao tiep voi Backend thong qua API Gateway/Elastic Beanstalk bang duong dan `/api`.
+Frontend của EAM Workspace được xây dựng bằng React, Vite và Tailwind CSS, theo phong cách modern SaaS dashboard phù hợp với hệ thống quản lý tài sản doanh nghiệp. Giao diện được chia thành Admin Portal và Employee Portal, mỗi portal có layout, sidebar, navbar và các màn hình nghiệp vụ riêng. Hệ thống hỗ trợ light/dark mode, song ngữ Việt-Anh, toast notification, global search, responsive layout và các thành phần UI tái sử dụng như card, table, form, modal, badge và button. Màu sắc chủ đạo là navy, emerald và slate, tạo cảm giác chuyên nghiệp, hiện đại và đồng bộ với logo EAM Workspace. Frontend được deploy lên AWS Amplify và giao tiếp với Backend thông qua API Gateway/Elastic Beanstalk bằng đường dẫn `/api`.
 
-## 32. Checklist UI truoc khi demo
+## 32. Checklist UI trước khi demo
 
-- Dang nhap admin thanh cong.
-- Dang nhap user thanh cong.
-- Tai khoan inactive bi chan.
-- Refresh `/login`, `/admin/dashboard`, `/employee/dashboard` khong bi 404.
-- Dark mode tren Admin dashboard doc ro.
-- Dark mode tren Employee tai san/ho so/cam nang doc ro.
-- Sidebar active/hover khong lam mat chu.
-- Search navbar hoat dong.
-- Toast hien thi tieng Viet co dau.
-- Table co loading/empty state.
-- Import Excel hien thi ket qua ro.
-- Upload avatar hien thi ngay sau khi cap nhat.
-- Anh upload qua deploy khong bi 404.
-- Mobile khong tran text, khong vo layout.
-- API `/api/health` OK tren domain deploy.
+- Đăng nhập admin thành công.
+- Đăng nhập user thành công.
+- Tài khoản inactive bị chặn.
+- Refresh `/login`, `/admin/dashboard`, `/employee/dashboard` không bị 404.
+- Dark mode trên Admin dashboard đọc rõ.
+- Dark mode trên Employee tài sản/hồ sơ/cẩm nang đọc rõ.
+- Sidebar active/hover không làm mất chữ.
+- Search navbar hoạt động.
+- Toast hiển thị tiếng Việt có dấu.
+- Table có loading/empty state.
+- Import Excel hiển thị kết quả rõ.
+- Upload avatar hiển thị ngay sau khi cập nhật.
+- Ảnh upload qua deploy không bị 404.
+- Mobile không tràn text, không vỡ layout.
+- API `/api/health` OK trên domain deploy.
 
-## 33. Checklist template bao cao
+## 33. Checklist template báo cáo
 
-Khi dua tai lieu nay sang template bao cao, nen yeu cau template:
+Khi đưa tài liệu này sang template báo cáo, nên yêu cầu template:
 
-- Doi mau chu dao sang navy/emerald/slate.
-- Dung logo EAM Workspace tren bia va header.
-- Thay cac mau cam/tim/beige khong lien quan neu template mau dang dung.
-- Dung Inter/Segoe UI thay cho font trang tri.
-- Dung table header emerald nhat.
-- Dung code block nen navy dam.
-- Dung screenshot frame co radius 16px va shadow mem.
-- Dung badge mau theo semantic status.
-- Them trang rieng cho Admin Portal, Employee Portal, Backend Architecture va AWS Deployment.
+- Đổi màu chủ đạo sang navy/emerald/slate.
+- Dùng logo EAM Workspace trên bìa và header.
+- Thay các màu cam/tím/beige không liên quan nếu template màu đang dùng.
+- Dùng Inter/Segoe UI thay cho font trang trí.
+- Dùng table header emerald nhạt.
+- Dùng code block nền navy đậm.
+- Dùng screenshot frame có radius 16px và shadow mềm.
+- Dùng badge màu theo semantic status.
+- Thêm trang riêng cho Admin Portal, Employee Portal, Backend Architecture và AWS Deployment.
 
-## 34. Tom tat nhan dien hinh anh
+## 34. Tóm tắt nhận diện hình ảnh
 
-Neu can gui cho nguoi sua template, co the gui doan nay:
+Nếu cần gửi cho người sửa template, có thể gửi đoạn này:
 
 ```text
-Du an EAM Workspace co phong cach modern SaaS / premium enterprise dashboard.
-Mau chinh la navy dam (#062B49, #0F172A), emerald (#10B981, #059669), teal/cyan (#14B8A6, #38BDF8) va slate neutral (#64748B, #E2E8F0, #F8FAFC).
-Logo la bieu tuong khoi tai san mau navy/trang ket hop shield check emerald.
-Template bao cao nen sach, hien dai, nhieu khoang trang, heading navy, accent emerald, table gon, card bo tron 14-18px, shadow mem.
-Tranh dung mau be/cam/tim qua nhieu vi khong hop voi nhan dien project.
+Dự án EAM Workspace có phong cách modern SaaS / premium enterprise dashboard.
+Màu chính là navy đậm (#062B49, #0F172A), emerald (#10B981, #059669), teal/cyan (#14B8A6, #38BDF8) và slate neutral (#64748B, #E2E8F0, #F8FAFC).
+Logo là biểu tượng khối tài sản màu navy/trắng kết hợp shield check emerald.
+Template báo cáo nên sạch, hiện đại, nhiều khoảng trắng, heading navy, accent emerald, table gọn, card bo tròn 14-18px, shadow mềm.
+Tránh dùng màu be/cam/tím quá nhiều vì không hợp với nhận diện project.
 ```

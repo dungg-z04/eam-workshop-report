@@ -1,36 +1,36 @@
-# Bao cao tong quan Backend - EAM Workspace
+# Báo cáo tổng quan Backend - EAM Workspace
 
-## 1. Muc dich tai lieu
+## 1. Mục đích tài liệu
 
-Tai lieu nay mo ta chi tiet phan Backend cua du an **EAM Workspace** - he thong quan ly tai san doanh nghiep. Noi dung duoc viet theo huong co the dua truc tiep vao bao cao thuc tap, thuyet minh ky thuat, hoac lam can cu de thiet ke slide/thuyet trinh.
+Tài liệu này mô tả chi tiết phần Backend của dự án **EAM Workspace** - hệ thống quản lý tài sản doanh nghiệp. Nội dung được viết theo hướng có thể đưa trực tiếp vào báo cáo thực tập, thuyết minh kỹ thuật, hoặc làm căn cứ để thiết kế slide/thuyết trình.
 
-Tai lieu tap trung vao:
+Tài liệu tập trung vào:
 
-- Muc tieu va vai tro cua Backend trong toan bo he thong.
-- Cong nghe, kien truc, luong xu ly va cac module nghiep vu.
-- Cau truc API, xac thuc, phan quyen, luu tru du lieu va trien khai AWS.
+- Mục tiêu và vai trò của Backend trong toàn bộ hệ thống.
+- Công nghệ, kiến trúc, luồng xử lý và các module nghiệp vụ.
+- Cấu trúc API, xác thực, phân quyền, lưu trữ dữ liệu và triển khai AWS.
 - Checklist test Backend khi demo.
 
-Luu y: khong dua mat khau, token, secret that vao bao cao. Cac bien moi truong trong tai lieu nay chi nen dung duoi dang placeholder.
+Lưu ý: không đưa mật khẩu, token, secret thật vào báo cáo. Các biến môi trường trong tài liệu này chỉ nên dùng dưới dạng placeholder.
 
-## 2. Tong quan he thong
+## 2. Tổng quan hệ thống
 
-**EAM Workspace** la mot ung dung quan ly tai san doanh nghiep, ho tro doanh nghiep theo doi tai san, nhan vien, phong ban, ban giao, bao tri, kiem ke, bao cao va cac cong viec lien quan den vong doi tai san.
+**EAM Workspace** là một ứng dụng quản lý tài sản doanh nghiệp, hỗ trợ doanh nghiệp theo dõi tài sản, nhân viên, phòng ban, bàn giao, bảo trì, kiểm kê, báo cáo và các công việc liên quan đến vòng đời tài sản.
 
-Backend dong vai tro la lop xu ly trung tam cua he thong:
+Backend đóng vai trò là lớp xử lý trung tâm của hệ thống:
 
-- Tiep nhan request tu Frontend.
-- Xac thuc nguoi dung va kiem tra quyen truy cap.
-- Xu ly logic nghiep vu quan ly tai san.
-- Doc/ghi du lieu vao MySQL thong qua Prisma ORM.
-- Tra ve du lieu da chuan hoa cho giao dien React.
-- Phuc vu file upload noi bo nhu anh dai dien, anh tai san, file dinh kem.
-- Gui email/OTP khi can.
-- Cung cap health check de kiem tra trang thai he thong khi deploy len AWS.
+- Tiếp nhận request từ Frontend.
+- Xác thực người dùng và kiểm tra quyền truy cập.
+- Xử lý logic nghiệp vụ quản lý tài sản.
+- Đọc/ghi dữ liệu vào MySQL thông qua Prisma ORM.
+- Trả về dữ liệu đã chuẩn hóa cho giao diện React.
+- Phục vụ file upload nội bộ như ảnh đại diện, ảnh tài sản, file đính kèm.
+- Gửi email/OTP khi cần.
+- Cung cấp health check để kiểm tra trạng thái hệ thống khi deploy lên AWS.
 
-## 3. Vai tro Backend trong kien truc tong the
+## 3. Vai trò Backend trong kiến trúc tổng thể
 
-Kien truc demo/deployment co the mo ta nhu sau:
+Kiến trúc demo/deployment có thể mô tả như sau:
 
 ```text
 User Browser
@@ -49,7 +49,7 @@ AWS Elastic Beanstalk - Node.js/Express Backend
 Amazon RDS MySQL - enterprise_asset_management
 ```
 
-Neu chay local:
+Nếu chạy local:
 
 ```text
 React Vite Frontend - localhost:5173
@@ -61,31 +61,31 @@ Express Backend - localhost:5000
 Local MySQL/XAMPP hoac RDS MySQL
 ```
 
-Backend duoc thiet ke de chay duoc ca local va production thong qua bien moi truong.
+Backend được thiết kế để chạy được cả local và production thông qua biến môi trường.
 
-## 4. Cong nghe su dung
+## 4. Công nghệ sử dụng
 
-| Thanh phan | Cong nghe | Vai tro |
+| Thành phần | Công nghệ | Vai trò |
 | --- | --- | --- |
-| Runtime | Node.js | Moi truong chay Backend |
-| Framework | Express.js | Xay dung REST API |
-| Database | MySQL | Luu tru du lieu nghiep vu |
-| ORM | Prisma | Quan ly schema, query va migration |
-| Authentication | JWT | Dang nhap va bao ve API |
-| Password hashing | bcrypt | Bam mat khau nguoi dung |
-| Validation | Middleware/request validation pattern | Kiem tra du lieu dau vao |
-| Logging | pino/pino-http | Ghi log request va loi he thong |
-| Security middleware | helmet, cors, rate limit | Tang an toan API |
-| File upload | multer/static file serving | Xu ly anh/file dinh kem |
-| Excel import | xlsx | Import nhan vien/tai san tu file Excel |
-| Email | nodemailer | Gui OTP/email thong bao |
-| Deployment | AWS Elastic Beanstalk | Chay Backend tren AWS |
+| Runtime | Node.js | Môi trường chạy Backend |
+| Framework | Express.js | Xây dựng REST API |
+| Database | MySQL | Lưu trữ dữ liệu nghiệp vụ |
+| ORM | Prisma | Quản lý schema, query và migration |
+| Authentication | JWT | Đăng nhập và bảo vệ API |
+| Password hashing | bcrypt | Băm mật khẩu người dùng |
+| Validation | Middleware/request validation pattern | Kiểm tra dữ liệu đầu vào |
+| Logging | pino/pino-http | Ghi log request và lỗi hệ thống |
+| Security middleware | helmet, cors, rate limit | Tăng an toàn API |
+| File upload | multer/static file serving | Xử lý ảnh/file đính kèm |
+| Excel import | xlsx | Import nhân viên/tài sản từ file Excel |
+| Email | nodemailer | Gửi OTP/email thông báo |
+| Deployment | AWS Elastic Beanstalk | Chạy Backend trên AWS |
 | Database production | Amazon RDS MySQL | Database cloud |
-| API proxy | Amazon API Gateway | Lam HTTPS endpoint va proxy ve Backend |
+| API proxy | Amazon API Gateway | Làm HTTPS endpoint và proxy về Backend |
 
-## 5. Cau truc thu muc Backend
+## 5. Cấu trúc thư mục Backend
 
-Cau truc Backend duoc chia theo huong tach ro cau hinh, app, routes, controllers/services va Prisma:
+Cấu trúc Backend được chia theo hướng tách rõ cấu hình, app, routes, controllers/services và Prisma:
 
 ```text
 backend/
@@ -136,30 +136,30 @@ backend/
     uploads/
 ```
 
-Y nghia thiet ke:
+Ý nghĩa thiết kế:
 
-- `src/app`: khoi tao Express app va start server.
-- `src/config`: doc bien moi truong, ket noi database, cau hinh logger.
-- `src/middleware`: middleware dung chung cho xac thuc, phan quyen, validate va bat loi.
-- `src/routes`: dang ky endpoint theo tung module.
-- `src/modules`: noi chua logic nghiep vu, service/controller tuy theo cach to chuc.
-- `prisma`: quan ly schema, migration va seed data.
+- `src/app`: khởi tạo Express app và start server.
+- `src/config`: đọc biến môi trường, kết nối database, cấu hình logger.
+- `src/middleware`: middleware dùng chung cho xác thực, phân quyền, validate và bắt lỗi.
+- `src/routes`: đăng ký endpoint theo từng module.
+- `src/modules`: nơi chứa logic nghiệp vụ, service/controller tùy theo cách tổ chức.
+- `prisma`: quản lý schema, migration và seed data.
 
-## 6. Luong khoi dong Backend
+## 6. Luồng khởi động Backend
 
-Khi chay Backend, server thuc hien cac buoc chinh:
+Khi chạy Backend, server thực hiện các bước chính:
 
-1. Doc bien moi truong tu `.env` hoac environment properties tren AWS.
-2. Validate cac bien bat buoc nhu `PORT`, `DATABASE_URL`, `JWT_SECRET`.
-3. Khoi tao Prisma Client.
-4. Kiem tra ket noi MySQL/RDS.
-5. Tao Express app.
-6. Gan middleware bao mat, CORS, JSON parser, static upload, logger.
-7. Dang ky routes API.
-8. Gan middleware xu ly 404 va error handler.
-9. Listen tren port cau hinh.
+1. Đọc biến môi trường từ `.env` hoặc environment properties trên AWS.
+2. Validate các biến bắt buộc như `PORT`, `DATABASE_URL`, `JWT_SECRET`.
+3. Khởi tạo Prisma Client.
+4. Kiểm tra kết nối MySQL/RDS.
+5. Tạo Express app.
+6. Gần middleware bảo mật, CORS, JSON parser, static upload, logger.
+7. Đăng ký routes API.
+8. Gần middleware xử lý 404 và error handler.
+9. Listen trên port cấu hình.
 
-Local thuong dung:
+Local thuong dùng:
 
 ```powershell
 cd backend
@@ -170,22 +170,22 @@ npx prisma db seed
 npm run dev
 ```
 
-Production tren Elastic Beanstalk thuong dung port:
+Production trên Elastic Beanstalk thuong dùng port:
 
 ```env
 PORT=8080
 NODE_ENV=production
 ```
 
-## 7. Chuan API
+## 7. Chuẩn API
 
-Backend su dung REST API theo prefix:
+Backend sử dùng REST API theo prefix:
 
 ```text
 /api
 ```
 
-Dang response chung:
+Dạng response chung:
 
 ```json
 {
@@ -195,7 +195,7 @@ Dang response chung:
 }
 ```
 
-Dang response loi:
+Dạng response lỗi:
 
 ```json
 {
@@ -206,82 +206,82 @@ Dang response loi:
 }
 ```
 
-Mot so dac diem:
+Một số đặc điểm:
 
-- Moi request co `requestId` de truy vet loi.
-- API loi 401 khi chua dang nhap.
-- API loi 403 khi khong du quyen hoac tai khoan bi khoa.
-- API loi 404 khi khong tim thay resource.
-- API loi 500 khi co loi he thong/database.
+- Mỗi request có `requestId` để truy vết lỗi.
+- API lỗi 401 khi chưa đăng nhập.
+- API lỗi 403 khi không đủ quyền hoặc tài khoản bị khóa.
+- API lỗi 404 khi không tìm thấy resource.
+- API lỗi 500 khi có lỗi hệ thống/database.
 
-## 8. Xac thuc va phan quyen
+## 8. Xác thực và phân quyền
 
-### 8.1 Dang nhap
+### 8.1 Đăng nhập
 
-Nguoi dung dang nhap bang email va password:
+Người dùng đăng nhập bảng email và password:
 
 ```http
 POST /api/auth/login
 ```
 
-Backend kiem tra:
+Backend kiểm tra:
 
-1. Email co ton tai khong.
-2. Mat khau co khop hash khong.
-3. Tai khoan co dang active khong.
-4. Nhan vien lien ket voi tai khoan co bi ngung hoat dong khong.
-5. Role cua nguoi dung la gi.
-6. Co can doi mat khau lan dau khong.
+1. Email có tồn tại không.
+2. Mật khẩu có khớp hash không.
+3. Tài khoản có đang active không.
+4. Nhân viên liên kết với tài khoản có bị ngừng hoạt động không.
+5. Role của người dùng là gì.
+6. Có cần đổi mật khẩu lan đầu không.
 
-Neu hop le, Backend tra ve JWT access token va thong tin user.
+Nếu hợp lệ, Backend trả về JWT access token và thông tin user.
 
 ### 8.2 JWT
 
-JWT duoc dung de bao ve API. Frontend gui token trong header:
+JWT được dùng để bảo vệ API. Frontend gửi token trong header:
 
 ```http
 Authorization: Bearer <access_token>
 ```
 
-Token gom cac thong tin can thiet:
+Token gồm các thông tin cần thiết:
 
 - `userId`
 - `email`
 - `role`
-- thoi gian het han
+- thời gian hết hạn
 
 ### 8.3 Middleware authenticate
 
-Middleware `authenticate` co nhiem vu:
+Middleware `authenticate` có nhiệm vụ:
 
-- Doc token tu request header.
-- Verify token bang `JWT_SECRET`.
-- Gan thong tin user vao `req.user`.
-- Tu choi request neu token thieu, sai hoac het han.
+- Đọc token từ request header.
+- Verify token bằng `JWT_SECRET`.
+- Gắn thông tin user vào `req.user`.
+- Từ chối request nếu token thiếu, sai hoặc hết hạn.
 
 ### 8.4 Middleware authorize
 
-Middleware `authorize` kiem tra role cua user:
+Middleware `authorize` kiểm tra role của user:
 
 ```text
-ADMIN: quan ly he thong trong pham vi doanh nghiep
-USER: nhan vien su dung tai san
+ADMIN: quản lý hệ thống trong phạm vi doanh nghiệp
+USER: nhân viên sử dụng tài sản
 ```
 
-Huong mo rong trong bao cao co the neu:
+Hướng mở rộng trong báo cáo có thể nêu:
 
 ```text
-SYSTEM_ADMIN: quan ly nen tang SaaS
-ORGANIZATION_OWNER: chu workspace doanh nghiep
-ADMIN: quan tri nhan su va tai san trong doanh nghiep
-USER: nhan vien su dung tai san
+SYSTEM_ADMIN: quản lý nền tảng SaaS
+ORGANIZATION_OWNER: chủ workspace doanh nghiệp
+ADMIN: quản trị nhân sự và tài sản trong doanh nghiệp
+USER: nhân viên sử dụng tài sản
 ```
 
-Trong MVP hien tai, du an tap trung vao `ADMIN` va `USER` de dam bao demo chay tron ven.
+Trong MVP hiện tại, dự án tập trung vào `ADMIN` và `USER` để đảm bảo demo chạy trọn vẹn.
 
-### 8.5 Tai khoan ngung hoat dong
+### 8.5 Tài khoản ngừng hoạt động
 
-Tai khoan/nhan vien ngung hoat dong khong duoc phep dang nhap. Khi login, Backend nen tra ve:
+Tài khoản/nhân viên ngừng hoạt động không được phép đăng nhập. Khi login, Backend nên trả về:
 
 ```json
 {
@@ -291,21 +291,21 @@ Tai khoan/nhan vien ngung hoat dong khong duoc phep dang nhap. Khi login, Backen
 }
 ```
 
-Day la luong quan trong khi demo tinh nang quan tri nhan vien.
+Đây là lượng quản trong khi demo tính năng quản trị nhân viên.
 
-## 9. Cac module nghiep vu chinh
+## 9. Các module nghiệp vụ chính
 
 ### 9.1 Auth module
 
 Chuc nang:
 
-- Dang nhap.
-- Lay thong tin user hien tai.
-- Doi mat khau.
-- Yeu cau doi mat khau lan dau.
-- Kiem tra trang thai tai khoan.
+- Đăng nhập.
+- Lấy thông tin user hiện tại.
+- Đời mật khẩu.
+- Yêu cầu đời mật khẩu lan đầu.
+- Kiểm tra trạng thái tài khoản.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 POST /api/auth/login
@@ -317,13 +317,13 @@ POST /api/auth/change-password
 
 Chuc nang:
 
-- Tao phong ban.
-- Cap nhat phong ban.
-- Xoa/khoa phong ban neu hop le.
-- Tim kiem theo ten/mo ta.
-- Quan ly nguoi phu trach phong ban.
+- Tạo phòng ban.
+- Cập nhật phòng ban.
+- Xóa/khóa phòng ban nếu hợp lệ.
+- Tìm kiếm theo tên/mô tả.
+- Quản lý người phụ trách phòng ban.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/departments
@@ -336,15 +336,15 @@ DELETE /api/departments/:id
 
 Chuc nang:
 
-- Quan ly ho so nhan vien.
-- Gan phong ban, chuc vu, trang thai.
-- Tao tai khoan user cho nhan vien.
-- Khoa/ngung hoat dong nhan vien.
-- Cap nhat anh dai dien.
-- Quan ly tai lieu dinh kem.
-- Import nhan vien tu Excel.
+- Quản lý hồ sơ nhân viên.
+- Gần phòng ban, chức vụ, trạng thái.
+- Tạo tài khoản user cho nhân viên.
+- Khóa/ngừng hoạt động nhân viên.
+- Cập nhật ảnh đại diện.
+- Quản lý tài liệu định kèm.
+- Import nhân viên từ Excel.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/employees
@@ -360,11 +360,11 @@ POST /api/employees/:id/avatar
 
 Chuc nang:
 
-- Quan ly danh muc tai san.
-- Tim kiem danh muc.
-- Theo doi so luong tai san theo danh muc.
+- Quản lý danh mục tài sản.
+- Tìm kiếm danh mục.
+- Theo dõi số lượng tài sản theo danh mục.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/categories
@@ -377,15 +377,15 @@ DELETE /api/categories/:id
 
 Chuc nang:
 
-- Tao tai san.
-- Cap nhat thong tin tai san.
-- Gan danh muc, serial number, gia tri, vi tri.
-- Gan anh tai san.
-- Loc theo trang thai, danh muc, phong ban, nguoi su dung.
-- Import tai san tu Excel.
-- Quan ly toa do hien thi tren so do mat bang.
+- Tạo tài sản.
+- Cập nhật thông tin tài sản.
+- Gắn danh mục, serial number, giá trị, vị trí.
+- Gần ảnh tài sản.
+- Lọc theo trạng thái, danh mục, phòng ban, người sử dụng.
+- Import tài sản từ Excel.
+- Quản lý tọa độ hiển thị trên sơ đồ mặt bằng.
 
-Trang thai tai san co the gom:
+Trạng thái tài sản có thể gồm:
 
 ```text
 AVAILABLE
@@ -396,7 +396,7 @@ RETIRED
 LOST
 ```
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/assets
@@ -412,14 +412,14 @@ POST /api/assets/:id/image
 
 Chuc nang:
 
-- Ban giao tai san cho nhan vien.
-- Thu hoi tai san.
-- Chuyen tai san tu nhan vien nay sang nhan vien khac.
-- Luu lich su ban giao.
-- Nhan vien xac nhan da nhan/tra tai san.
-- Luu chu ky xac nhan neu co.
+- Bàn giao tài sản cho nhân viên.
+- Thử hồi tài sản.
+- Chuyển tài sản từ nhân viên này sang nhân viên khác.
+- Lưu lịch sử bàn giao.
+- Nhân viên xác nhận đã nhân/trả tài sản.
+- Lưu chữ ký xác nhận nếu có.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/assignments/history
@@ -431,17 +431,17 @@ POST /api/assignments/:id/transfer
 POST /api/assignments/:id/confirm
 ```
 
-### 9.7 Maintenance va support module
+### 9.7 Maintenance và support module
 
 Chuc nang:
 
-- Nhan vien bao hong tai san.
-- Admin tiep nhan yeu cau bao tri.
-- Cap nhat trang thai xu ly.
-- Luu lich su su kien cua yeu cau.
-- Gan do uu tien, nguoi phu trach, ghi chu.
+- Nhân viên báo hỏng tài sản.
+- Admin tiếp nhận yêu cầu bảo trì.
+- Cập nhật trạng thái xử lý.
+- Lưu lịch sử sự kiện của yêu cầu.
+- Gần độ ưu tiên, người phụ trách, ghi chú.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/maintenance-requests
@@ -455,13 +455,13 @@ POST /api/support-requests
 
 Chuc nang:
 
-- Tao phien kiem ke.
-- Gan danh sach tai san can kiem ke.
-- Cap nhat ket qua kiem ke.
-- Theo doi tai san khop, lech, thieu, hong.
-- Tong hop bao cao sau kiem ke.
+- Tạo phiên kiểm kê.
+- Gán danh sách tài sản cần kiểm kê.
+- Cập nhật kết quả kiểm kê.
+- Theo dõi tài sản khớp, lệch, thiếu, hỏng.
+- Tổng hợp báo cáo sau kiểm kê.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/inventory-sessions
@@ -475,14 +475,14 @@ POST /api/inventory-sessions/:id/items
 
 Chuc nang:
 
-- Bao cao tong quan tai san.
-- Bao cao tai san theo phong ban.
-- Bao cao chat luong du lieu.
-- Bao cao trang thai tai san.
-- Bao cao bao tri/kiem ke.
-- Xuat du lieu cho dashboard.
+- Báo cáo tổng quan tài sản.
+- Báo cáo tài sản theo phòng ban.
+- Báo cáo chất lượng dữ liệu.
+- Báo cáo trạng thái tài sản.
+- Báo cáo bảo trì/kiểm kê.
+- Xuat dữ liệu cho dashboard.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/reports/summary
@@ -491,15 +491,15 @@ GET /api/reports/assets-by-department
 GET /api/reports/data-quality
 ```
 
-### 9.10 Locations va floor map module
+### 9.10 Locations và floor map module
 
 Chuc nang:
 
-- Quan ly vi tri/van phong.
-- Luu toa do tai san tren so do mat bang.
-- Ho tro Frontend hien thi ban do vi tri tai san trong van phong.
+- Quản lý vị trí/văn phòng.
+- Lưu tọa độ tài sản trên sơ đồ mặt bằng.
+- Hỗ trợ Frontend hiển thị bản đồ vị trí tài sản trong văn phòng.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/locations
@@ -507,16 +507,16 @@ POST /api/locations
 PUT /api/locations/:id
 ```
 
-### 9.11 FAQ, feedback va settings module
+### 9.11 FAQ, feedback và settings module
 
 Chuc nang:
 
-- Quan ly FAQ/cam nang tu phuc vu.
-- Nhan gop y va phan hoi tu nhan vien.
-- Ho tro file dinh kem feedback.
-- Admin thay doi trang thai xu ly.
+- Quản lý FAQ/cẩm nang tự phục vụ.
+- Nhân góp ý và phản hồi từ nhân viên.
+- Hỗ trợ file đính kèm feedback.
+- Admin thấy đời trạng thái xử lý.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/faqs
@@ -528,16 +528,16 @@ POST /api/feedbacks
 PUT /api/feedbacks/:id
 ```
 
-### 9.12 Attendance va login history
+### 9.12 Attendance và login history
 
 Chuc nang:
 
-- Ghi nhan check-in/check-out.
-- Luu lich su cham cong.
-- Luu lich su dang nhap.
-- Admin xem va tim kiem lich su.
+- Ghi nhân check-in/check-out.
+- Lưu lịch sử chấm công.
+- Lưu lịch sử đăng nhập.
+- Admin xem và tìm kiếm lịch sử.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/attendance/status
@@ -551,11 +551,11 @@ GET /api/login-histories
 
 Chuc nang:
 
-- Tao thong bao khi co su kien moi.
-- Dem so thong bao chua doc.
-- Danh dau da doc.
+- Tạo thông báo khi có sử kiến mới.
+- Đếm số thông báo chưa đọc.
+- Đánh dấu đã đọc.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/notifications
@@ -563,16 +563,16 @@ GET /api/notifications/unread-count
 PATCH /api/notifications/:id/read
 ```
 
-### 9.14 Support chat module
+### 9.14 Support chất module
 
 Chuc nang:
 
-- Nhan vien tao phien chat ho tro.
-- Admin xem danh sach phien chat.
-- Gui/nhan tin nhan.
-- Luu lich su trao doi.
+- Nhân viên tạo phiên chat hỗ trợ.
+- Admin xem danh sách phiên chat.
+- Gửi/nhân tin nhắn.
+- Lưu lịch sử trao đời.
 
-Endpoint tieu bieu:
+Endpoint tiêu biểu:
 
 ```http
 GET /api/support-chat/admin/sessions
@@ -580,38 +580,38 @@ GET /api/support-chat/sessions/:id/messages
 POST /api/support-chat/sessions/:id/messages
 ```
 
-## 10. Mo hinh du lieu chinh
+## 10. Mô hình dữ liệu chính
 
-| Bang/Model | Vai tro |
+| Bảng/Model | Vai trò |
 | --- | --- |
-| `users` | Tai khoan dang nhap, email, password hash, role, trang thai |
-| `employees` | Ho so nhan vien, phong ban, chuc vu, thong tin ca nhan |
-| `departments` | Phong ban trong doanh nghiep |
-| `asset_categories` | Danh muc tai san |
-| `assets` | Tai san, serial, gia tri, trang thai, hinh anh, vi tri |
-| `asset_assignments` | Lich su ban giao/thu hoi/chuyen giao tai san |
-| `maintenance_requests` | Yeu cau bao tri/sua chua |
-| `support_request_events` | Lich su xu ly yeu cau ho tro/bao tri |
-| `inventory_sessions` | Phien kiem ke |
-| `inventory_items` | Ket qua kiem ke tung tai san |
-| `locations` | Vi tri/van phong/toa do so do |
-| `notifications` | Thong bao trong he thong |
-| `faqs` | Cau hoi thuong gap/cam nang tu phuc vu |
-| `feedbacks` | Gop y va phan hoi cua nhan vien |
-| `login_histories` | Lich su dang nhap |
-| `time_attendances` | Du lieu cham cong |
-| `user_tasks` | Cong viec can lam cua nhan vien |
-| `chat_sessions` | Phien chat ho tro |
-| `chat_messages` | Tin nhan trong chat |
-| `employee_attachments` | File dinh kem ho so nhan vien |
-| `employee_profile_logs` | Lich su cap nhat ho so |
-| `department_asset_quotas` | Han muc tai san theo phong ban |
-| `department_audit_logs` | Nhat ky thay doi phong ban |
-| `password_reset_otps` | OTP dat lai mat khau |
+| `users` | Tài khoản đăng nhập, email, password hash, role, trạng thái |
+| `employees` | Hồ sơ nhân viên, phòng ban, chức vụ, thông tin cá nhân |
+| `departments` | Phòng ban trong doanh nghiệp |
+| `asset_categories` | Danh mục tài sản |
+| `assets` | Tài sản, serial, giá trị, trạng thái, hình ảnh, vị trí |
+| `asset_assignments` | Lịch sử bàn giao/thu hồi/chuyển giao tài sản |
+| `maintenance_requests` | Yêu cầu bảo trì/sửa chữa |
+| `support_request_events` | Lịch sử xử lý yêu cầu hỗ trợ/bảo trì |
+| `inventory_sessions` | Phiên kiểm kê |
+| `inventory_items` | Kết quả kiểm kê từng tài sản |
+| `locations` | Vị trí/văn phòng/tọa độ sơ đồ |
+| `notifications` | Thông báo trong hệ thống |
+| `faqs` | Câu hỏi thường gặp/cẩm nang tự phục vụ |
+| `feedbacks` | Góp ý và phản hồi của nhân viên |
+| `login_histories` | Lịch sử đăng nhập |
+| `time_attendances` | Dữ liệu chấm công |
+| `user_tasks` | Công việc cần làm của nhân viên |
+| `chat_sessions` | Phiên chat hỗ trợ |
+| `chat_messages` | Tin nhắn trong chat |
+| `employee_attachments` | File đính kèm hồ sơ nhân viên |
+| `employee_profile_logs` | Lịch sử cập nhật hồ sơ |
+| `department_asset_quotas` | Hạn mức tài sản theo phòng ban |
+| `department_audit_logs` | Nhật ký thay đổi phòng ban |
+| `password_reset_otps` | OTP đặt lại mật khẩu |
 
-## 11. Bien moi truong Backend
+## 11. Biến môi trường Backend
 
-Khong nen dua gia tri that vao bao cao. Nen viet theo dang:
+Không nên đưa giá trị thật vào báo cáo. Nên viết theo dạng:
 
 ```env
 NODE_ENV=production
@@ -641,63 +641,63 @@ RATE_LIMIT_REFILL_TOKENS_PER_SECOND=1
 RATE_LIMIT_TOKENS_PER_REQUEST=1
 ```
 
-Y nghia quan trong:
+Ý nghĩa quan trọng:
 
-- `DATABASE_URL`: chuoi ket noi MySQL/RDS.
-- `JWT_SECRET`: khoa ky token, phai la chuoi dai random.
-- `FRONTEND_ORIGIN(S)`: domain Frontend duoc phep goi API.
-- `PORT`: tren Elastic Beanstalk nen dung `8080`.
-- `MAIL_*`: cau hinh SMTP de gui email.
+- `DATABASE_URL`: chuỗi kết nối MySQL/RDS.
+- `JWT_SECRET`: khóa ký token, phải là chuỗi dài random.
+- `FRONTEND_ORIGIN(S)`: domain Frontend được phép gọi API.
+- `PORT`: trên Elastic Beanstalk nên dùng `8080`.
+- `MAIL_*`: cấu hình SMTP để gửi email.
 
-## 12. Bao mat
+## 12. Bảo mật
 
-Backend co cac lop bao ve chinh:
+Backend có các lớp bảo vệ chính:
 
-- Hash password bang bcrypt.
-- Xac thuc request bang JWT.
-- Phan quyen bang role.
-- Kiem tra account/employee inactive khi dang nhap.
-- CORS chi cho phep domain Frontend hop le.
-- Helmet de them security headers.
-- Rate limit de giam spam/brute force.
-- Khong luu secret vao source code.
-- Khong public log chua password/token.
-- Validate file upload va gioi han loai file.
+- Hash password bằng bcrypt.
+- Xác thực request bằng JWT.
+- Phân quyền bằng role.
+- Kiểm tra account/employee inactive khi đăng nhập.
+- CORS chỉ cho phép domain Frontend hợp lệ.
+- Helmet để them security headers.
+- Rate limit để giảm spam/brute force.
+- Không lưu secret vào source code.
+- Không public log chứa password/token.
+- Validate file upload và giới hạn loại file.
 
 ## 13. Import Excel
 
-Backend ho tro import du lieu tu file Excel cho:
+Backend hỗ trợ import dữ liệu từ file Excel cho:
 
-- Nhan vien.
-- Tai san.
+- Nhân viên.
+- Tài sản.
 
-Luong xu ly import:
+Luồng xử lý import:
 
 1. Frontend upload file `.xlsx`.
-2. Backend doc workbook bang thu vien Excel.
-3. Kiem tra sheet va cot bat buoc.
-4. Parse tung dong thanh object.
-5. Validate du lieu: email, ma nhan vien, ten, phong ban, serial number...
-6. Tao ban ghi moi hoac bao loi dong sai.
-7. Tra ve ket qua: tong dong thanh cong, dong loi, ly do loi.
+2. Backend đọc workbook bằng thư viện Excel.
+3. Kiểm tra sheet và cột bắt buộc.
+4. Parse từng dòng thành object.
+5. Validate dữ liệu: email, mã nhân viên, tên, phòng ban, serial number...
+6. Tạo bản ghi mới hoặc báo lỗi dòng sai.
+7. Trả về kết quả: tổng dòng thành công, dòng lỗi, lý do lỗi.
 
-Day la tinh nang ghi diem khi demo vi giai quyet duoc bai toan nhap lieu so luong lon.
+Đây là tính năng ghi điểm khi demo vì giải quyết được bài toán nhập liệu số lượng lớn.
 
 ## 14. File upload
 
-Backend phuc vu file upload cho:
+Backend phục vụ file upload cho:
 
-- Anh dai dien nhan vien.
-- Anh tai san.
-- File dinh kem feedback.
-- Tai lieu ho so nhan vien.
+- Ảnh đại diện nhân viên.
+- Ảnh tài sản.
+- File đính kèm feedback.
+- Tài liệu hồ sơ nhân viên.
 
-Trong demo hien tai co the dung local file storage tren Elastic Beanstalk instance. Khi len production that, nen can nhac chuyen sang Amazon S3 de:
+Trong demo hiện tại có thể dùng local file storage trên Elastic Beanstalk instance. Khi lên production thật, nên cần nhac chuyển sáng Amazon S3 để:
 
-- Khong mat file khi instance bi thay the.
-- De scale nhieu instance.
-- Co URL on dinh hon.
-- Quan ly quyen truy cap tot hon.
+- Không mất file khi instance bị thấy thế.
+- Để scale nhiều instance.
+- Có URL ổn định hon.
+- Quản lý quyền truy cập tot hon.
 
 ## 15. Health check
 
@@ -707,7 +707,7 @@ Endpoint health check:
 GET /api/health
 ```
 
-Response thanh cong:
+Response thành công:
 
 ```json
 {
@@ -719,28 +719,28 @@ Response thanh cong:
 }
 ```
 
-Endpoint nay duoc dung de:
+Endpoint này được dùng để:
 
-- Kiem tra Backend local.
-- Kiem tra Elastic Beanstalk health.
-- Kiem tra API Gateway proxy.
-- Kiem tra Amplify rewrite `/api`.
+- Kiểm tra Backend local.
+- Kiểm tra Elastic Beanstalk health.
+- Kiểm tra API Gateway proxy.
+- Kiểm tra Amplify rewrite `/api`.
 
 ## 16. Seed data
 
-Seed data giup demo nhanh ma khong can nhap tay:
+Seed data giup demo nhanh mã không cần nhập tay:
 
 - Admin account.
 - Employee account active.
 - Employee first-login account.
 - Employee inactive account.
-- Phong ban.
-- Nhan vien.
-- Danh muc tai san.
-- Tai san.
-- Ban giao.
-- Bao tri.
-- Kiem ke.
+- Phòng ban.
+- Nhân viên.
+- Danh mục tài sản.
+- Tài sản.
+- Bàn giao.
+- Bảo trì.
+- Kiểm kê.
 - FAQ.
 - Feedback.
 - Locations.
@@ -752,30 +752,30 @@ cd backend
 npx prisma db seed
 ```
 
-Tai khoan demo nen duoc ghi rieng trong phu luc bao cao hoac script demo, khong dua mat khau production that.
+Tài khoản demo nên được ghi riêng trong phụ lục báo cáo hoặc script demo, không đưa mật khẩu production thật.
 
-## 17. Deployment Backend tren AWS
+## 17. Deployment Backend trên AWS
 
-Thanh phan dung trong deployment:
+Thành phần dùng trong deployment:
 
-- **Elastic Beanstalk**: chay Node.js Express Backend.
-- **RDS MySQL**: luu database production/demo.
-- **API Gateway HTTP API**: tao HTTPS endpoint va proxy request `/api`.
-- **Security Group**: cho phep EB instance ket noi RDS port 3306.
-- **CloudWatch/EB logs**: theo doi loi va health.
+- **Elastic Beanstalk**: chạy Node.js Express Backend.
+- **RDS MySQL**: lưu database production/demo.
+- **API Gateway HTTP API**: tạo HTTPS endpoint và proxy request `/api`.
+- **Security Group**: cho phép EB instance kết nối RDS port 3306.
+- **CloudWatch/EB logs**: theo dõi lỗi và health.
 
-Luong deploy tom tat:
+Lượng deploy tom tất:
 
-1. Tao RDS MySQL.
-2. Chay migration/db push vao RDS.
-3. Seed du lieu demo.
-4. Tao source bundle Backend `.zip`.
-5. Tao Elastic Beanstalk environment Node.js.
+1. Tạo RDS MySQL.
+2. Chạy migration/db push vào RDS.
+3. Seed dữ liệu demo.
+4. Tạo source bundle Backend `.zip`.
+5. Tạo Elastic Beanstalk environment Node.js.
 6. Them environment properties.
-7. Kiem tra `GET /api/health`.
-8. Tao API Gateway proxy ve EB.
-9. Kiem tra HTTPS API Gateway.
-10. Cau hinh Amplify rewrite `/api/*`.
+7. Kiểm tra `GET /api/health`.
+8. Tạo API Gateway proxy về EB.
+9. Kiểm tra HTTPS API Gateway.
+10. Cấu hình Amplify rewrite `/api/*`.
 
 ## 18. Checklist test Backend
 
@@ -799,7 +799,7 @@ Invoke-RestMethod `
 
 ### 18.3 Test inactive account
 
-Ket qua dung la API phai tra ve `AUTH_ACCOUNT_INACTIVE`.
+Kết quả dùng là API phải trả về `AUTH_ACCOUNT_INACTIVE`.
 
 ```powershell
 Invoke-RestMethod `
@@ -812,36 +812,36 @@ Invoke-RestMethod `
 
 ### 18.4 Test CRUD core
 
-- Tao phong ban.
-- Sua phong ban.
-- Tao nhan vien.
-- Khoa nhan vien.
-- Tao danh muc.
-- Tao tai san.
-- Gan tai san cho nhan vien.
-- Thu hoi tai san.
+- Tạo phòng ban.
+- Sửa phòng ban.
+- Tạo nhân viên.
+- Khóa nhân viên.
+- Tạo danh mục.
+- Tạo tài sản.
+- Gần tài sản cho nhân viên.
+- Thử hồi tài sản.
 
-### 18.5 Test module nang cao
+### 18.5 Test module nang cáo
 
-- Import Excel nhan vien.
-- Import Excel tai san.
-- Bao hong tai san.
-- Tao phien kiem ke.
-- Xem bao cao.
-- Gui feedback co file dinh kem.
-- Cap nhat avatar.
+- Import Excel nhân viên.
+- Import Excel tài sản.
+- Báo hỏng tài sản.
+- Tạo phiên kiểm kê.
+- Xem báo cáo.
+- Gửi feedback có file đính kèm.
+- Cập nhật avatar.
 
-## 19. Diem noi bat Backend de dua vao bao cao
+## 19. Điểm nội bắt Backend để đưa vào báo cáo
 
-- Backend khong chi lam CRUD don gian ma xu ly duoc vong doi tai san.
-- Co phan quyen ro giua admin va nhan vien.
-- Co xac thuc JWT va bao ve API.
-- Co ket noi Prisma/MySQL, co seed data de demo.
-- Co workflow ban giao, bao tri, kiem ke va bao cao.
-- Co import Excel, upload file, notification, FAQ, feedback, login history.
-- Co kha nang deploy len AWS voi RDS, Elastic Beanstalk, API Gateway va Amplify.
-- Co health check va requestId giup debug khi trien khai.
+- Backend không chỉ làm CRUD đơn gìản mã xử lý được vòng đời tài sản.
+- Có phân quyền rõ gìữa admin và nhân viên.
+- Có xác thực JWT và bảo vệ API.
+- Có kết nối Prisma/MySQL, có seed data để demo.
+- Có workflow bàn giao, bảo trì, kiểm kê và báo cáo.
+- Có import Excel, upload file, notification, FAQ, feedback, login history.
+- Có khả năng deploy lên AWS với RDS, Elastic Beanstalk, API Gateway và Amplify.
+- Có health check và requestId giup debug khi triển khai.
 
-## 20. Doan mo ta ngan co the dua vao bao cao
+## 20. Đoạn mô tả ngắn có thể đưa vào báo cáo
 
-Backend cua EAM Workspace duoc xay dung bang Node.js va Express.js, su dung Prisma ORM de giao tiep voi MySQL. He thong cung cap cac REST API cho toan bo nghiep vu quan ly tai san doanh nghiep, bao gom quan ly nhan vien, phong ban, danh muc, tai san, ban giao, bao tri, kiem ke, bao cao, FAQ, feedback va thong bao. Backend ap dung JWT authentication, role-based authorization, password hashing, CORS, rate limiting va centralized error handling de dam bao tinh an toan va kha nang bao tri. Trong moi truong demo, Backend duoc deploy len AWS Elastic Beanstalk, ket noi Amazon RDS MySQL va duoc public thong qua API Gateway de Frontend tren AWS Amplify co the truy cap bang HTTPS.
+Backend của EAM Workspace được xây dựng bảng Node.js và Express.js, sử dùng Prisma ORM để giao tiếp với MySQL. Hệ thống cung cấp các REST API cho toàn bộ nghiệp vụ quản lý tài sản doanh nghiệp, báo gồm quản lý nhân viên, phòng ban, danh mục, tài sản, bàn giao, bảo trì, kiểm kê, báo cáo, FAQ, feedback và thông báo. Backend áp dụng JWT authentication, role-based authorization, password hashing, CORS, rate limiting và centralized error handling để đảm bảo tính án toàn và khả năng bảo trì. Trong mới trường demo, Backend được deploy lên AWS Elastic Beanstalk, kết nối Amazon RDS MySQL và được public thông qua API Gateway để Frontend trên AWS Amplify có thể truy cập bảng HTTPS.
