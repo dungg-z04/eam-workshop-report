@@ -1,18 +1,18 @@
 ---
-title: "Triển khai backend bằng Elastic Beanstalk"
+title: "Triá»ƒn khai backend báº±ng Elastic Beanstalk"
 date: 2024-01-01
 weight: 4
 chapter: false
 pre: " <b> 5.4. </b> "
 ---
 
-## Triển khai backend bằng Elastic Beanstalk
+## Triá»ƒn khai backend báº±ng Elastic Beanstalk
 
-Ở bước này, chúng ta sẽ đóng gói backend Node.js/Express và deploy lên AWS Elastic Beanstalk phía sau Application Load Balancer.
+á»ž bÆ°á»›c nÃ y, chÃºng ta sáº½ Ä‘Ã³ng gÃ³i backend Node.js/Express vÃ  deploy lÃªn AWS Elastic Beanstalk phÃ­a sau Application Load Balancer.
 
-## Bước 1: Kiểm tra backend local
+## BÆ°á»›c 1: Kiá»ƒm tra backend local
 
-Từ thư mục backend, cài dependency và kiểm tra backend có thể start:
+Tá»« thÆ° má»¥c backend, cÃ i dependency vÃ  kiá»ƒm tra backend cÃ³ thá»ƒ start:
 
 ```bash
 cd backend
@@ -20,19 +20,19 @@ npm ci
 npm start
 ```
 
-Entry point của backend là:
+Entry point cá»§a backend lÃ :
 
 ```text
 src/app/server.js
 ```
 
-Ứng dụng cần đọc port từ biến môi trường `PORT`.
+á»¨ng dá»¥ng cáº§n Ä‘á»c port tá»« biáº¿n mÃ´i trÆ°á»ng `PORT`.
 
-## Bước 2: Tạo backend source bundle
+## BÆ°á»›c 2: Táº¡o backend source bundle
 
-Tạo file ZIP từ nội dung bên trong thư mục `backend/`. Root của file ZIP phải chứa trực tiếp `package.json`.
+Táº¡o file ZIP tá»« ná»™i dung bÃªn trong thÆ° má»¥c `backend/`. Root cá»§a file ZIP pháº£i chá»©a trá»±c tiáº¿p `package.json`.
 
-Cấu trúc ZIP đúng:
+Cáº¥u trÃºc ZIP Ä‘Ãºng:
 
 ```text
 backend-eb-source.zip
@@ -44,7 +44,7 @@ backend-eb-source.zip
   eslint.config.js
 ```
 
-Cấu trúc ZIP sai:
+Cáº¥u trÃºc ZIP sai:
 
 ```text
 backend-eb-source.zip
@@ -52,26 +52,23 @@ backend-eb-source.zip
     package.json
 ```
 
-{{% notice warning %}}
-Không đưa `.env`, `node_modules` hoặc secret thật vào source bundle.
-{{% /notice %}}
 
-## Bước 3: Tạo Elastic Beanstalk application
+## BÆ°á»›c 3: Táº¡o Elastic Beanstalk application
 
-Mở Elastic Beanstalk console:
+Má»Ÿ Elastic Beanstalk console:
 
-1. Chọn **Create application**.
+1. Chá»n **Create application**.
 2. Application name: `eam-backend`.
 3. Platform: **Node.js**.
-4. Application code: upload file ZIP của backend.
-5. Environment type: dùng load-balanced environment nếu muốn ALB được tạo và quản lý cùng Elastic Beanstalk.
-6. Chọn VPC mục tiêu.
-7. Chọn private subnet cho backend instance nếu network design hỗ trợ.
-8. Gắn backend security group.
+4. Application code: upload file ZIP cá»§a backend.
+5. Environment type: dÃ¹ng load-balanced environment náº¿u muá»‘n ALB Ä‘Æ°á»£c táº¡o vÃ  quáº£n lÃ½ cÃ¹ng Elastic Beanstalk.
+6. Chá»n VPC má»¥c tiÃªu.
+7. Chá»n private subnet cho backend instance náº¿u network design há»— trá»£.
+8. Gáº¯n backend security group.
 
-## Bước 4: Cấu hình environment properties
+## BÆ°á»›c 4: Cáº¥u hÃ¬nh environment properties
 
-Trong Elastic Beanstalk environment properties, đặt:
+Trong Elastic Beanstalk environment properties, Ä‘áº·t:
 
 ```env
 NODE_ENV=production
@@ -94,23 +91,23 @@ MAIL_FROM=<mail-from-address>
 FRONTEND_ORIGIN=https://<amplify-domain>
 ```
 
-Giá trị `FRONTEND_ORIGIN` có thể cập nhật sau khi Amplify tạo URL frontend.
+GiÃ¡ trá»‹ `FRONTEND_ORIGIN` cÃ³ thá»ƒ cáº­p nháº­t sau khi Amplify táº¡o URL frontend.
 
-## Bước 5: Deploy và chờ health
+## BÆ°á»›c 5: Deploy vÃ  chá» health
 
-Upload và deploy backend source bundle. Chờ environment health chuyển xanh.
+Upload vÃ  deploy backend source bundle. Chá» environment health chuyá»ƒn xanh.
 
-Nếu environment unhealthy, kiểm tra:
+Náº¿u environment unhealthy, kiá»ƒm tra:
 
-- Backend có listen đúng `PORT=8080`.
-- `DATABASE_URL` đúng.
-- Backend security group có thể kết nối RDS port `3306`.
-- Các biến môi trường mail và JWT đã đủ.
-- Elastic Beanstalk logs không có startup error.
+- Backend cÃ³ listen Ä‘Ãºng `PORT=8080`.
+- `DATABASE_URL` Ä‘Ãºng.
+- Backend security group cÃ³ thá»ƒ káº¿t ná»‘i RDS port `3306`.
+- CÃ¡c biáº¿n mÃ´i trÆ°á»ng mail vÃ  JWT Ä‘Ã£ Ä‘á»§.
+- Elastic Beanstalk logs khÃ´ng cÃ³ startup error.
 
-## Bước 6: Chạy Prisma migration
+## BÆ°á»›c 6: Cháº¡y Prisma migration
 
-Sau khi backend có thể kết nối RDS, chạy migration từ máy có thể kết nối đến database:
+Sau khi backend cÃ³ thá»ƒ káº¿t ná»‘i RDS, cháº¡y migration tá»« mÃ¡y cÃ³ thá»ƒ káº¿t ná»‘i Ä‘áº¿n database:
 
 ```bash
 cd backend
@@ -118,25 +115,22 @@ npx prisma generate
 npx prisma migrate deploy
 ```
 
-Với database demo, có thể seed dữ liệu mẫu:
+Vá»›i database demo, cÃ³ thá»ƒ seed dá»¯ liá»‡u máº«u:
 
 ```bash
 npx prisma db seed
 ```
 
-{{% notice warning %}}
-Chỉ chạy seed trên database demo hoặc staging còn trống. Không seed production database nếu chưa kiểm tra kỹ.
-{{% /notice %}}
 
-## Bước 7: Kiểm tra backend health
+## BÆ°á»›c 7: Kiá»ƒm tra backend health
 
-Mở backend health endpoint:
+Má»Ÿ backend health endpoint:
 
 ```text
 http://<alb-dns-name>/api/health
 ```
 
-Kết quả mong đợi:
+Káº¿t quáº£ mong Ä‘á»£i:
 
 ```json
 {
@@ -148,12 +142,12 @@ Kết quả mong đợi:
 }
 ```
 
-## Kết quả của bước này
+## Káº¿t quáº£ cá»§a bÆ°á»›c nÃ y
 
-Ghi lại các giá trị:
+Ghi láº¡i cÃ¡c giÃ¡ trá»‹:
 
-- Tên Elastic Beanstalk environment
-- DNS name của Application Load Balancer
+- TÃªn Elastic Beanstalk environment
+- DNS name cá»§a Application Load Balancer
 - Backend security group
 - RDS endpoint
-- Kết quả health check của backend
+- Káº¿t quáº£ health check cá»§a backend

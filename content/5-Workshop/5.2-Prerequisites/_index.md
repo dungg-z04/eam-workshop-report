@@ -26,9 +26,6 @@ Use one AWS Region for all resources in this workshop. The IAM user or role shou
 - Amazon CloudWatch
 - AWS CloudTrail
 
-{{% notice warning %}}
-Do not use a root account for daily deployment work. Use an IAM user or IAM role with only the permissions required for this workshop.
-{{% /notice %}}
 
 ## Local tools
 

@@ -1,18 +1,18 @@
 ---
-title: "Triển khai frontend bằng Amplify Hosting"
+title: "Triá»ƒn khai frontend báº±ng Amplify Hosting"
 date: 2024-01-01
 weight: 5
 chapter: false
 pre: " <b> 5.5. </b> "
 ---
 
-## Triển khai frontend bằng Amplify Hosting
+## Triá»ƒn khai frontend báº±ng Amplify Hosting
 
-Ở bước này, chúng ta sẽ deploy frontend React lên AWS Amplify Hosting và kết nối frontend với backend thông qua Amplify rewrite rule.
+á»ž bÆ°á»›c nÃ y, chÃºng ta sáº½ deploy frontend React lÃªn AWS Amplify Hosting vÃ  káº¿t ná»‘i frontend vá»›i backend thÃ´ng qua Amplify rewrite rule.
 
-## Bước 1: Kiểm tra frontend build local
+## BÆ°á»›c 1: Kiá»ƒm tra frontend build local
 
-Từ thư mục frontend:
+Tá»« thÆ° má»¥c frontend:
 
 ```bash
 cd frontend
@@ -20,15 +20,15 @@ npm ci
 npm run build
 ```
 
-Output build production sẽ là:
+Output build production sáº½ lÃ :
 
 ```text
 dist/
 ```
 
-## Bước 2: Kiểm tra Amplify build settings
+## BÆ°á»›c 2: Kiá»ƒm tra Amplify build settings
 
-Repository có file `amplify.yml` cho cấu trúc monorepo:
+Repository cÃ³ file `amplify.yml` cho cáº¥u trÃºc monorepo:
 
 ```yaml
 version: 1
@@ -48,90 +48,87 @@ applications:
           - '**/*'
 ```
 
-## Bước 3: Tạo Amplify app
+## BÆ°á»›c 3: Táº¡o Amplify app
 
-Mở AWS Amplify console:
+Má»Ÿ AWS Amplify console:
 
-1. Chọn **New app** hoặc **Host web app**.
-2. Kết nối GitHub repository.
-3. Chọn branch cần deploy, thường là `main`.
-4. Đặt app root là `frontend` nếu Amplify hỏi monorepo app root.
-5. Kiểm tra build command:
+1. Chá»n **New app** hoáº·c **Host web app**.
+2. Káº¿t ná»‘i GitHub repository.
+3. Chá»n branch cáº§n deploy, thÆ°á»ng lÃ  `main`.
+4. Äáº·t app root lÃ  `frontend` náº¿u Amplify há»i monorepo app root.
+5. Kiá»ƒm tra build command:
 
 ```bash
 npm ci && npm run build
 ```
 
-6. Kiểm tra output directory:
+6. Kiá»ƒm tra output directory:
 
 ```text
 dist
 ```
 
-## Bước 4: Đặt biến môi trường frontend
+## BÆ°á»›c 4: Äáº·t biáº¿n mÃ´i trÆ°á»ng frontend
 
-Đặt biến môi trường sau trong Amplify:
+Äáº·t biáº¿n mÃ´i trÆ°á»ng sau trong Amplify:
 
 ```env
 VITE_API_BASE_URL=/api
 ```
 
-Biến này giúp browser gọi API qua cùng Amplify domain:
+Biáº¿n nÃ y giÃºp browser gá»i API qua cÃ¹ng Amplify domain:
 
 ```text
 https://<amplify-domain>/api/...
 ```
 
-## Bước 5: Cấu hình API rewrite
+## BÆ°á»›c 5: Cáº¥u hÃ¬nh API rewrite
 
-Sau khi app được tạo, mở **Rewrites and redirects**.
+Sau khi app Ä‘Æ°á»£c táº¡o, má»Ÿ **Rewrites and redirects**.
 
-Thêm rule này ở phía trên SPA fallback rule:
+ThÃªm rule nÃ y á»Ÿ phÃ­a trÃªn SPA fallback rule:
 
 | Source address | Target address | Type |
 | --- | --- | --- |
 | `/api/<*>` | `http://<alb-dns-name>/api/<*>` | `200 (Rewrite)` |
 
-Sau đó giữ SPA fallback rule cho React Router:
+Sau Ä‘Ã³ giá»¯ SPA fallback rule cho React Router:
 
 | Source address | Target address | Type |
 | --- | --- | --- |
-| `/<*>` | `/index.html` | `404 (Rewrite)` hoặc `404-200` |
+| `/<*>` | `/index.html` | `404 (Rewrite)` hoáº·c `404-200` |
 
-{{% notice warning %}}
-Rule `/api/<*>` phải nằm trên SPA fallback rule. Nếu không, API request có thể bị xử lý nhầm như frontend route.
-{{% /notice %}}
 
-## Bước 6: Cập nhật backend CORS origin
+## BÆ°á»›c 6: Cáº­p nháº­t backend CORS origin
 
-Sau khi Amplify deploy xong, copy URL mặc định của Amplify, ví dụ:
+Sau khi Amplify deploy xong, copy URL máº·c Ä‘á»‹nh cá»§a Amplify, vÃ­ dá»¥:
 
 ```text
 https://main.xxxxx.amplifyapp.com
 ```
 
-Cập nhật biến môi trường backend:
+Cáº­p nháº­t biáº¿n mÃ´i trÆ°á»ng backend:
 
 ```env
 FRONTEND_ORIGIN=https://main.xxxxx.amplifyapp.com
 ```
 
-Redeploy hoặc restart Elastic Beanstalk environment sau khi cập nhật giá trị này.
+Redeploy hoáº·c restart Elastic Beanstalk environment sau khi cáº­p nháº­t giÃ¡ trá»‹ nÃ y.
 
-## Bước 7: Mở ứng dụng
+## BÆ°á»›c 7: Má»Ÿ á»©ng dá»¥ng
 
-Mở URL Amplify trên trình duyệt và kiểm tra:
+Má»Ÿ URL Amplify trÃªn trÃ¬nh duyá»‡t vÃ  kiá»ƒm tra:
 
-- Trang login hiển thị.
-- Static assets tải đúng.
-- Refresh `/login`, `/admin/dashboard` hoặc `/employee/dashboard` không bị 404.
-- Browser DevTools cho thấy API request đi đến `/api/...` trên Amplify domain.
+- Trang login hiá»ƒn thá»‹.
+- Static assets táº£i Ä‘Ãºng.
+- Refresh `/login`, `/admin/dashboard` hoáº·c `/employee/dashboard` khÃ´ng bá»‹ 404.
+- Browser DevTools cho tháº¥y API request Ä‘i Ä‘áº¿n `/api/...` trÃªn Amplify domain.
 
-## Kết quả của bước này
+## Káº¿t quáº£ cá»§a bÆ°á»›c nÃ y
 
-Ghi lại:
+Ghi láº¡i:
 
 - Amplify app URL
-- ALB DNS name dùng trong rewrite rule
-- Giá trị `FRONTEND_ORIGIN`
-- Trạng thái frontend build
+- ALB DNS name dÃ¹ng trong rewrite rule
+- GiÃ¡ trá»‹ `FRONTEND_ORIGIN`
+- Tráº¡ng thÃ¡i frontend build

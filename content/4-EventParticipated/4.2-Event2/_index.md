@@ -6,11 +6,8 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: â€œGenAI-powered App-DB Modernization workshopâ€
 
 ### Event Objectives
 
@@ -21,21 +18,21 @@ pre: " <b> 4.2. </b> "
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Jignesh Shah** â€“ Director, Open Source Databases
+- **Erica Liu** â€“ Sr. GTM Specialist, AppMod
+- **Fabrianne Effendi** â€“ Assc. Specialist SA, Serverless Amazon Web Services
 
 ### Key Highlights
 
 #### Identifying the drawbacks of legacy application architecture
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- Long product release cycles â†’ Lost revenue/missed opportunities  
+- Inefficient operations â†’ Reduced productivity, higher costs  
+- Non-compliance with security regulations â†’ Security breaches, loss of reputation  
 
-#### Transitioning to modern application architecture – Microservices
+#### Transitioning to modern application architecture â€“ Microservices
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+Migrating to a modular system â€” each function is an **independent service** communicating via **events**, built on three core pillars:
 
 - **Queue Management**: Handle asynchronous tasks  
 - **Caching Strategy**: Optimize performance  
@@ -43,7 +40,7 @@ Migrating to a modular system — each function is an **independent service** co
 
 #### Domain-Driven Design (DDD)
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
+- **Four-step method**: Identify domain events â†’ arrange timeline â†’ identify actors â†’ define bounded contexts  
 - **Bookstore case study**: Demonstrates real-world DDD application  
 - **Context mapping**: 7 patterns for integrating bounded contexts  
 
@@ -55,7 +52,7 @@ Migrating to a modular system — each function is an **independent service** co
 
 #### Compute Evolution
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
+- **Shared Responsibility Model**: EC2 â†’ ECS â†’ Fargate â†’ Lambda  
 - **Serverless benefits**: No server management, auto-scaling, pay-for-value  
 - **Functions vs Containers**: Criteria for appropriate choice  
 
@@ -82,7 +79,7 @@ Migrating to a modular system — each function is an **independent service** co
 
 #### Modernization Strategy
 
-- **Phased approach**: No rushing — follow a clear roadmap  
+- **Phased approach**: No rushing â€” follow a clear roadmap  
 - **7Rs framework**: Multiple modernization paths depending on the application  
 - **ROI measurement**: Cost reduction + business agility  
 
@@ -96,7 +93,7 @@ Migrating to a modular system — each function is an **independent service** co
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending the **â€œGenAI-powered App-DB Modernizationâ€** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
 
 #### Learning from highly skilled speakers
 - Experts from AWS and major tech organizations shared **best practices** in modern application design.  

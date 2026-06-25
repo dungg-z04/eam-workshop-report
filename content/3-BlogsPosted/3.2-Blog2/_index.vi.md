@@ -5,27 +5,24 @@ weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 # SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Amazon EKS Pod Identity vá»«a bá»• sung tÃ­nh nÄƒng session policies, cho phÃ©p báº¡n thu háº¹p quyá»n IAM má»™t cÃ¡ch linh hoáº¡t vÃ  chÃ­nh xÃ¡c cho tá»«ng pod mÃ  khÃ´ng cáº§n táº¡o thÃªm nhiá»u IAM roles riÃªng biá»‡t. ÄÃ¢y lÃ  bÆ°á»›c tiáº¿n quan trá»ng giÃºp Ã¡p dá»¥ng nguyÃªn táº¯c least privilege hiá»‡u quáº£ hÆ¡n trong mÃ´i trÆ°á»ng Kubernetes quy mÃ´ lá»›n.
 
-Các điểm chính cần nắm:
+CÃ¡c Ä‘iá»ƒm chÃ­nh cáº§n náº¯m:
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* Session policy lÃ  má»™t IAM policy inline Ä‘Æ°á»£c chá»‰ Ä‘á»‹nh khi táº¡o hoáº·c cáº­p nháº­t Pod Identity association.
+* Quyá»n hiá»‡u quáº£ = intersection (giao) giá»¯a permissions cá»§a IAM role vÃ  session policy â†’ session policy chá»‰ cÃ³ thá»ƒ thu háº¹p, khÃ´ng thá»ƒ má»Ÿ rá»™ng quyá»n.
+* GiÃºp trÃ¡nh tÃ¬nh tráº¡ng over-permissioning khi reuse chung má»™t IAM role cho nhiá»u workloads cÃ³ nhu cáº§u khÃ¡c nhau.
+* Há»— trá»£ cáº£ same-account vÃ  cross-account (qua IAM role chaining).
+* Giáº£m Ä‘Ã¡ng ká»ƒ sá»‘ lÆ°á»£ng IAM roles cáº§n quáº£n lÃ½, trÃ¡nh cháº¡m giá»›i háº¡n quota IAM trong cluster lá»›n.
+* Cáº¥u hÃ¬nh dá»… dÃ ng qua AWS Management Console, AWS CLI hoáº·c AWS SDK khi táº¡o association giá»¯a Kubernetes ServiceAccount vÃ  IAM role.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+TÃ­nh nÄƒng nÃ y Ä‘áº·c biá»‡t há»¯u Ã­ch khi báº¡n cÃ³ nhiá»u á»©ng dá»¥ng cháº¡y trÃªn cÃ¹ng má»™t IAM role nhÆ°ng cáº§n giá»›i háº¡n quyá»n khÃ¡c nhau (vÃ­ dá»¥: má»™t pod chá»‰ Ä‘á»c S3 bucket cá»¥ thá»ƒ, pod khÃ¡c chá»‰ gá»i má»™t sá»‘ API nháº¥t Ä‘á»‹nh).
 
-...Hình ảnh...
+...HÃ¬nh áº£nh...
 
 ...Link...
 
-...Hướng dẫn...
+...HÆ°á»›ng dáº«n...

@@ -10,9 +10,6 @@ pre: " <b> 5.7. </b> "
 
 Clean up resources after the workshop to avoid unexpected AWS charges.
 
-{{% notice warning %}}
-Before deleting resources, export any data, screenshots, logs, or demo evidence needed for the report.
-{{% /notice %}}
 
 ## Step 1: Delete Amplify app
 
@@ -48,9 +45,6 @@ If the ALB was created manually:
 4. For demo environments, decide whether to skip or keep a final snapshot.
 5. Confirm deletion.
 
-{{% notice warning %}}
-Deleting RDS removes the application database. Keep a final snapshot if you need to preserve the data.
-{{% /notice %}}
 
 ## Step 5: Empty and delete S3 bucket
 

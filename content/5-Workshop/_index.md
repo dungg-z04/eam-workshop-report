@@ -22,9 +22,7 @@ The target architecture is designed for an internal demo environment. It uses AW
 - **Amazon SES** for OTP and email flows.
 - **Amazon CloudWatch** for logs and basic monitoring.
 
-{{% notice note %}}
 This workshop follows the demo deployment path: no Route 53, no custom domain, and no Amazon Cognito. Authentication is handled by the backend using JWT.
-{{% /notice %}}
 
 #### Architecture
 

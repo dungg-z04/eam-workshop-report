@@ -45,9 +45,6 @@ Create separate security groups for the load balancer, backend, and database.
 | `eam-backend-sg` | HTTP from `eam-alb-sg` | Allow only ALB traffic to reach the backend. |
 | `eam-rds-sg` | MySQL `3306` from `eam-backend-sg` | Allow only backend traffic to reach the database. |
 
-{{% notice warning %}}
-Do not open MySQL port `3306` to `0.0.0.0/0`. RDS should stay private.
-{{% /notice %}}
 
 ## Step 3: Create Amazon RDS for MySQL
 

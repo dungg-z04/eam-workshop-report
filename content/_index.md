@@ -1,44 +1,36 @@
 ---
-title: "Internship Report"
-date: 2024-01-01
+title: "EAM Workspace Internship Report"
+date: 2026-06-25
 weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+<section class="eam-hero">
+  <h1>EAM Workspace Internship Report</h1>
+  <p>A personal report documenting the EAM Workspace project, weekly worklog, AWS deployment proposal, workshop implementation, and self-evaluation.</p>
+</section>
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### Student Information
 
-### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+<div class="eam-profile">
+  <div class="eam-profile-item"><strong>Student</strong>Dung</div>
+  <div class="eam-profile-item"><strong>Project</strong>EAM Workspace</div>
+  <div class="eam-profile-item"><strong>Role</strong>Frontend and AWS deployment documentation</div>
+  <div class="eam-profile-item"><strong>Program</strong>Workforce Bootcamp - First Cloud AI Journey</div>
+  <div class="eam-profile-item"><strong>University</strong>Ho Chi Minh City University of Technology and Education</div>
+  <div class="eam-profile-item"><strong>Major</strong>Information Technology</div>
+</div>
 
-&emsp; **Phone Number:** 0989888999 
-
-&emsp; **Email:** Anguyenvan@gmail.com
-
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
-
-&emsp; **Major:** Information Technology
-
-&emsp; **Class:** AWS082025
-
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
-
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
-
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
-
-![Your profile picture](/images/avatar.png)
+![Profile picture](/images/avatar.png)
 
 ### Report Content
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+<ul class="eam-report-list">
+  <li><a href="1-Worklog/">Worklog</a><br>Weekly progress and learning record.</li>
+  <li><a href="2-Proposal/">Proposal</a><br>AWS architecture and deployment plan for EAM Workspace.</li>
+  <li><a href="3-BlogsPosted/">Blogs Posted</a><br>Technical posts and learning notes.</li>
+  <li><a href="4-EventParticipated/">Events Participated</a><br>Events and activities joined during the program.</li>
+  <li><a href="5-Workshop/">Workshop</a><br>Hands-on AWS deployment guide for EAM Workspace.</li>
+  <li><a href="6-Self-evaluation/">Self-evaluation</a><br>Reflection on outcomes, skills, and improvements.</li>
+  <li><a href="7-Feedback/">Sharing and Feedback</a><br>Summary of sharing, feedback, and lessons learned.</li>
+</ul>

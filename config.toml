@@ -1,60 +1,58 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+baseURL = "https://dungg-z04.github.io/eam-workshop-report/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
 
-# Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
-# For search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "RSS", "JSON" ]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "workshop"
-  # Git hub repo link
+  themeVariant = "eam"
   editURL = ""
-  description = ""
-  author = "thienlh@thienlu.com"
+  description = "Personal internship report and AWS deployment workshop for the EAM Workspace project."
+  author = "Dung"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  
-[Languages]
-[Languages.en]
-title = "Internship Report"
+
+[languages]
+[languages.en]
+title = "EAM Workspace Internship Report"
 weight = 1
-languageName = "English"
+locale = "en-US"
+label = "English"
 
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "https://awsstudygroup.com"
+[[languages.en.menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Repository"
+identifier = "GitHub Repository"
+url = "https://github.com/dungg-z04/eam-workshop-report"
 weight = 20
 
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-facebook'></i> AWS Study Group - FB Group"
-identifier = "AWS Study Group FB"
-url = "https://www.facebook.com/groups/awsstudygroupfcj"
-weight = 20
+[[languages.en.menu.shortcuts]]
+name = "<i class='fas fa-project-diagram'></i> EAM Workspace"
+identifier = "EAM Workspace"
+url = "/2-Proposal/"
+weight = 30
 
-[Languages.vi]
-title = "Báo cáo thực tập"
+[languages.vi]
+title = "Báo cáo thực tập EAM Workspace"
 weight = 2
-languageName = "Tiếng Việt"
+locale = "vi-VN"
+label = "Tiếng Việt"
 
-[[Languages.vi.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "http://awsstudygroup.com"
+[[languages.vi.menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Repository"
+identifier = "GitHub Repository"
+url = "https://github.com/dungg-z04/eam-workshop-report"
 weight = 20
 
-[[Languages.vi.menu.shortcuts]]
-name = "<i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB"
-identifier = "AWS Study Group FB"
-url = "https://www.facebook.com/groups/awsstudygroupfcj"
-weight = 20
+[[languages.vi.menu.shortcuts]]
+name = "<i class='fas fa-project-diagram'></i> EAM Workspace"
+identifier = "EAM Workspace"
+url = "/vi/2-Proposal/"
+weight = 30
 
 [markup]
   [markup.goldmark]

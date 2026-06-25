@@ -1,21 +1,21 @@
 ---
-title: "Chuẩn bị"
+title: "Chuáº©n bá»‹"
 date: 2024-01-01
 weight: 2
 chapter: false
 pre: " <b> 5.2. </b> "
 ---
 
-## Chuẩn bị
+## Chuáº©n bá»‹
 
-Trước khi triển khai, cần chuẩn bị AWS account, công cụ local, source code và các biến môi trường.
+TrÆ°á»›c khi triá»ƒn khai, cáº§n chuáº©n bá»‹ AWS account, cÃ´ng cá»¥ local, source code vÃ  cÃ¡c biáº¿n mÃ´i trÆ°á»ng.
 
 ## AWS account
 
-Sử dụng một AWS Region cố định cho toàn bộ tài nguyên trong workshop. IAM user hoặc role cần có quyền tạo và quản lý:
+Sá»­ dá»¥ng má»™t AWS Region cá»‘ Ä‘á»‹nh cho toÃ n bá»™ tÃ i nguyÃªn trong workshop. IAM user hoáº·c role cáº§n cÃ³ quyá»n táº¡o vÃ  quáº£n lÃ½:
 
 - AWS Amplify
-- Amazon EC2 và Security Groups
+- Amazon EC2 vÃ  Security Groups
 - Elastic Load Balancing
 - AWS Elastic Beanstalk
 - Amazon RDS
@@ -26,39 +26,36 @@ Sử dụng một AWS Region cố định cho toàn bộ tài nguyên trong work
 - Amazon CloudWatch
 - AWS CloudTrail
 
-{{% notice warning %}}
-Không nên dùng root account cho công việc triển khai hằng ngày. Hãy dùng IAM user hoặc IAM role với đúng các quyền cần thiết cho workshop.
-{{% /notice %}}
 
-## Công cụ local
+## CÃ´ng cá»¥ local
 
-Cài đặt và kiểm tra các công cụ sau:
+CÃ i Ä‘áº·t vÃ  kiá»ƒm tra cÃ¡c cÃ´ng cá»¥ sau:
 
-| Công cụ | Mục đích |
+| CÃ´ng cá»¥ | Má»¥c Ä‘Ã­ch |
 | --- | --- |
-| Node.js 20+ | Chạy backend và frontend local. |
-| npm | Cài dependency và chạy build script. |
-| Git | Quản lý source code và kết nối GitHub. |
+| Node.js 20+ | Cháº¡y backend vÃ  frontend local. |
+| npm | CÃ i dependency vÃ  cháº¡y build script. |
+| Git | Quáº£n lÃ½ source code vÃ  káº¿t ná»‘i GitHub. |
 | Hugo Extended | Build website workshop. |
-| MySQL client hoặc database tool | Tùy chọn, hữu ích khi kiểm tra database. |
-| Postman hoặc browser DevTools | Kiểm thử API endpoint. |
+| MySQL client hoáº·c database tool | TÃ¹y chá»n, há»¯u Ã­ch khi kiá»ƒm tra database. |
+| Postman hoáº·c browser DevTools | Kiá»ƒm thá»­ API endpoint. |
 
-Kiểm tra Node.js và npm:
+Kiá»ƒm tra Node.js vÃ  npm:
 
 ```bash
 node -v
 npm -v
 ```
 
-Kiểm tra Hugo:
+Kiá»ƒm tra Hugo:
 
 ```bash
 hugo version
 ```
 
-## Cấu trúc source code
+## Cáº¥u trÃºc source code
 
-Project có hai thư mục ứng dụng:
+Project cÃ³ hai thÆ° má»¥c á»©ng dá»¥ng:
 
 ```text
 quanlidoanhnghiep/
@@ -66,21 +63,21 @@ quanlidoanhnghiep/
   frontend/
 ```
 
-Entry runtime của backend:
+Entry runtime cá»§a backend:
 
 ```text
 backend/src/app/server.js
 ```
 
-Output build của frontend:
+Output build cá»§a frontend:
 
 ```text
 frontend/dist
 ```
 
-## Biến môi trường backend
+## Biáº¿n mÃ´i trÆ°á»ng backend
 
-Chuẩn bị các giá trị sau trước khi tạo Elastic Beanstalk environment:
+Chuáº©n bá»‹ cÃ¡c giÃ¡ trá»‹ sau trÆ°á»›c khi táº¡o Elastic Beanstalk environment:
 
 ```env
 NODE_ENV=production
@@ -103,38 +100,38 @@ MAIL_FROM=<mail-from-address>
 FRONTEND_ORIGIN=https://<amplify-domain>
 ```
 
-## Biến môi trường frontend
+## Biáº¿n mÃ´i trÆ°á»ng frontend
 
-Khi deploy bằng Amplify, dùng API path tương đối:
+Khi deploy báº±ng Amplify, dÃ¹ng API path tÆ°Æ¡ng Ä‘á»‘i:
 
 ```env
 VITE_API_BASE_URL=/api
 ```
 
-Cách này giúp browser gọi cùng origin của Amplify, còn Amplify sẽ rewrite `/api/<*>` đến backend load balancer.
+CÃ¡ch nÃ y giÃºp browser gá»i cÃ¹ng origin cá»§a Amplify, cÃ²n Amplify sáº½ rewrite `/api/<*>` Ä‘áº¿n backend load balancer.
 
-## Checklist đóng gói backend
+## Checklist Ä‘Ã³ng gÃ³i backend
 
-Khi đóng gói backend để deploy lên Elastic Beanstalk, file ZIP nên chứa các file và thư mục sau ngay ở root của ZIP:
+Khi Ä‘Ã³ng gÃ³i backend Ä‘á»ƒ deploy lÃªn Elastic Beanstalk, file ZIP nÃªn chá»©a cÃ¡c file vÃ  thÆ° má»¥c sau ngay á»Ÿ root cá»§a ZIP:
 
 - `package.json`
 - `package-lock.json`
 - `src/`
 - `prisma/`
-- các file cấu hình runtime cần thiết cho backend
+- cÃ¡c file cáº¥u hÃ¬nh runtime cáº§n thiáº¿t cho backend
 
-Không nên đưa vào:
+KhÃ´ng nÃªn Ä‘Æ°a vÃ o:
 
 - `node_modules/`
 - `.env`
-- secret thật
-- file upload local không cần thiết
+- secret tháº­t
+- file upload local khÃ´ng cáº§n thiáº¿t
 
-## Checklist sẵn sàng
+## Checklist sáºµn sÃ ng
 
-- [ ] Đã chọn AWS Region.
-- [ ] AWS account có quyền phù hợp.
-- [ ] Đã có source code backend và frontend.
-- [ ] Đã chuẩn bị biến môi trường backend.
-- [ ] Đã chuẩn bị `VITE_API_BASE_URL=/api` cho Amplify.
-- [ ] Thống nhất dùng hướng demo không có Route 53 hoặc custom domain.
+- [ ] ÄÃ£ chá»n AWS Region.
+- [ ] AWS account cÃ³ quyá»n phÃ¹ há»£p.
+- [ ] ÄÃ£ cÃ³ source code backend vÃ  frontend.
+- [ ] ÄÃ£ chuáº©n bá»‹ biáº¿n mÃ´i trÆ°á»ng backend.
+- [ ] ÄÃ£ chuáº©n bá»‹ `VITE_API_BASE_URL=/api` cho Amplify.
+- [ ] Thá»‘ng nháº¥t dÃ¹ng hÆ°á»›ng demo khÃ´ng cÃ³ Route 53 hoáº·c custom domain.

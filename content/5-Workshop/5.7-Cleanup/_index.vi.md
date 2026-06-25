@@ -1,108 +1,102 @@
 ---
-title: "Dọn dẹp tài nguyên"
+title: "Dá»n dáº¹p tÃ i nguyÃªn"
 date: 2024-01-01
 weight: 7
 chapter: false
 pre: " <b> 5.7. </b> "
 ---
 
-## Dọn dẹp tài nguyên
+## Dá»n dáº¹p tÃ i nguyÃªn
 
-Sau khi hoàn thành workshop, cần dọn dẹp tài nguyên để tránh phát sinh chi phí AWS ngoài dự kiến.
+Sau khi hoÃ n thÃ nh workshop, cáº§n dá»n dáº¹p tÃ i nguyÃªn Ä‘á»ƒ trÃ¡nh phÃ¡t sinh chi phÃ­ AWS ngoÃ i dá»± kiáº¿n.
 
-{{% notice warning %}}
-Trước khi xóa tài nguyên, hãy export dữ liệu, screenshot, log hoặc bằng chứng demo cần dùng cho báo cáo.
-{{% /notice %}}
 
-## Bước 1: Xóa Amplify app
+## BÆ°á»›c 1: XÃ³a Amplify app
 
-1. Mở AWS Amplify console.
-2. Chọn EAM frontend app.
-3. Xóa app hoặc disconnect branch.
-4. Xác nhận URL mặc định của Amplify không còn serve ứng dụng.
+1. Má»Ÿ AWS Amplify console.
+2. Chá»n EAM frontend app.
+3. XÃ³a app hoáº·c disconnect branch.
+4. XÃ¡c nháº­n URL máº·c Ä‘á»‹nh cá»§a Amplify khÃ´ng cÃ²n serve á»©ng dá»¥ng.
 
-## Bước 2: Terminate Elastic Beanstalk environment
+## BÆ°á»›c 2: Terminate Elastic Beanstalk environment
 
-1. Mở Elastic Beanstalk.
-2. Chọn environment `eam-backend`.
-3. Chọn **Terminate environment**.
-4. Chờ environment terminate hoàn toàn.
-5. Xác nhận các EC2 instance liên quan đã được xóa.
+1. Má»Ÿ Elastic Beanstalk.
+2. Chá»n environment `eam-backend`.
+3. Chá»n **Terminate environment**.
+4. Chá» environment terminate hoÃ n toÃ n.
+5. XÃ¡c nháº­n cÃ¡c EC2 instance liÃªn quan Ä‘Ã£ Ä‘Æ°á»£c xÃ³a.
 
-Nếu Elastic Beanstalk tạo Application Load Balancer, target group và Auto Scaling resources, hãy kiểm tra các tài nguyên đó đã được xóa.
+Náº¿u Elastic Beanstalk táº¡o Application Load Balancer, target group vÃ  Auto Scaling resources, hÃ£y kiá»ƒm tra cÃ¡c tÃ i nguyÃªn Ä‘Ã³ Ä‘Ã£ Ä‘Æ°á»£c xÃ³a.
 
-## Bước 3: Xóa Application Load Balancer nếu cần
+## BÆ°á»›c 3: XÃ³a Application Load Balancer náº¿u cáº§n
 
-Nếu ALB được tạo thủ công:
+Náº¿u ALB Ä‘Æ°á»£c táº¡o thá»§ cÃ´ng:
 
-1. Mở EC2 console.
-2. Vào **Load Balancers**.
-3. Xóa EAM backend ALB.
-4. Vào **Target Groups** và xóa target group không còn dùng.
+1. Má»Ÿ EC2 console.
+2. VÃ o **Load Balancers**.
+3. XÃ³a EAM backend ALB.
+4. VÃ o **Target Groups** vÃ  xÃ³a target group khÃ´ng cÃ²n dÃ¹ng.
 
-## Bước 4: Xóa RDS database
+## BÆ°á»›c 4: XÃ³a RDS database
 
-1. Mở RDS console.
-2. Chọn EAM MySQL database.
-3. Chọn **Delete**.
-4. Với môi trường demo, quyết định bỏ qua hoặc giữ final snapshot.
-5. Xác nhận xóa.
+1. Má»Ÿ RDS console.
+2. Chá»n EAM MySQL database.
+3. Chá»n **Delete**.
+4. Vá»›i mÃ´i trÆ°á»ng demo, quyáº¿t Ä‘á»‹nh bá» qua hoáº·c giá»¯ final snapshot.
+5. XÃ¡c nháº­n xÃ³a.
 
-{{% notice warning %}}
-Xóa RDS sẽ xóa database của ứng dụng. Hãy giữ final snapshot nếu cần bảo toàn dữ liệu.
-{{% /notice %}}
 
-## Bước 5: Empty và xóa S3 bucket
+## BÆ°á»›c 5: Empty vÃ  xÃ³a S3 bucket
 
-Nếu đã tạo S3 bucket:
+Náº¿u Ä‘Ã£ táº¡o S3 bucket:
 
-1. Mở S3 console.
+1. Má»Ÿ S3 console.
 2. Empty bucket.
-3. Xóa bucket.
-4. Xác nhận không còn file demo upload trong bucket.
+3. XÃ³a bucket.
+4. XÃ¡c nháº­n khÃ´ng cÃ²n file demo upload trong bucket.
 
-## Bước 6: Xóa security group và network resource
+## BÆ°á»›c 6: XÃ³a security group vÃ  network resource
 
-Xóa các security group không còn dùng:
+XÃ³a cÃ¡c security group khÃ´ng cÃ²n dÃ¹ng:
 
 - `eam-alb-sg`
 - `eam-backend-sg`
 - `eam-rds-sg`
 
-Nếu bạn tạo VPC riêng chỉ cho workshop này, hãy xóa thêm:
+Náº¿u báº¡n táº¡o VPC riÃªng chá»‰ cho workshop nÃ y, hÃ£y xÃ³a thÃªm:
 
 - NAT Gateway
-- Elastic IP gắn với NAT Gateway
+- Elastic IP gáº¯n vá»›i NAT Gateway
 - Route tables
 - Subnets
 - Internet Gateway
 - VPC
 
-## Bước 7: Dọn CloudWatch và secrets
+## BÆ°á»›c 7: Dá»n CloudWatch vÃ  secrets
 
-Kiểm tra và xóa các tài nguyên không còn dùng:
+Kiá»ƒm tra vÃ  xÃ³a cÃ¡c tÃ i nguyÃªn khÃ´ng cÃ²n dÃ¹ng:
 
 - CloudWatch log groups
 - CloudWatch alarms
 - Secrets Manager secrets
 - Parameter Store parameters
-- CloudTrail trails chỉ tạo cho workshop
+- CloudTrail trails chá»‰ táº¡o cho workshop
 
-## Checklist dọn dẹp cuối cùng
+## Checklist dá»n dáº¹p cuá»‘i cÃ¹ng
 
-- [ ] Đã xóa Amplify app.
-- [ ] Đã terminate Elastic Beanstalk environment.
-- [ ] Đã xóa ALB và target groups nếu tạo thủ công.
-- [ ] Đã xóa RDS database hoặc giữ final snapshot.
-- [ ] Đã empty và xóa S3 bucket.
-- [ ] Đã xóa security group.
-- [ ] Đã xóa network resource không còn dùng.
-- [ ] Đã kiểm tra CloudWatch logs và alarms.
-- [ ] Đã xóa secrets và parameters.
+- [ ] ÄÃ£ xÃ³a Amplify app.
+- [ ] ÄÃ£ terminate Elastic Beanstalk environment.
+- [ ] ÄÃ£ xÃ³a ALB vÃ  target groups náº¿u táº¡o thá»§ cÃ´ng.
+- [ ] ÄÃ£ xÃ³a RDS database hoáº·c giá»¯ final snapshot.
+- [ ] ÄÃ£ empty vÃ  xÃ³a S3 bucket.
+- [ ] ÄÃ£ xÃ³a security group.
+- [ ] ÄÃ£ xÃ³a network resource khÃ´ng cÃ²n dÃ¹ng.
+- [ ] ÄÃ£ kiá»ƒm tra CloudWatch logs vÃ  alarms.
+- [ ] ÄÃ£ xÃ³a secrets vÃ  parameters.
 
-## Nhắc nhở về chi phí
+## Nháº¯c nhá»Ÿ vá» chi phÃ­
 
-Các tài nguyên thường tiếp tục phát sinh chi phí là:
+CÃ¡c tÃ i nguyÃªn thÆ°á»ng tiáº¿p tá»¥c phÃ¡t sinh chi phÃ­ lÃ :
 
 - RDS database instances
 - NAT Gateway
@@ -111,4 +105,4 @@ Các tài nguyên thường tiếp tục phát sinh chi phí là:
 - Elastic IP addresses
 - CloudWatch log retention
 
-Luôn kiểm tra AWS Billing console sau khi dọn dẹp.
+LuÃ´n kiá»ƒm tra AWS Billing console sau khi dá»n dáº¹p.

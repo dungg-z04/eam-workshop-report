@@ -98,9 +98,6 @@ Then keep a SPA fallback rule for React Router:
 | --- | --- | --- |
 | `/<*>` | `/index.html` | `404 (Rewrite)` or `404-200` |
 
-{{% notice warning %}}
-The `/api/<*>` rule must be above the SPA fallback rule. Otherwise API requests may be treated as frontend routes.
-{{% /notice %}}
 
 ## Step 6: Update backend CORS origin
 

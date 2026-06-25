@@ -1,16 +1,16 @@
 ---
-title: "Chuẩn bị network và RDS"
+title: "Chuáº©n bá»‹ network vÃ  RDS"
 date: 2024-01-01
 weight: 3
 chapter: false
 pre: " <b> 5.3. </b> "
 ---
 
-## Chuẩn bị network và RDS
+## Chuáº©n bá»‹ network vÃ  RDS
 
-Ở bước này, chúng ta sẽ chuẩn bị network baseline và tạo Amazon RDS for MySQL. Database không nên public ra Internet.
+á»ž bÆ°á»›c nÃ y, chÃºng ta sáº½ chuáº©n bá»‹ network baseline vÃ  táº¡o Amazon RDS for MySQL. Database khÃ´ng nÃªn public ra Internet.
 
-## Mô hình network mục tiêu
+## MÃ´ hÃ¬nh network má»¥c tiÃªu
 
 {{< mermaid >}}
 flowchart LR
@@ -23,83 +23,80 @@ flowchart LR
     Private --> RDS["RDS MySQL"]
 {{< /mermaid >}}
 
-## Bước 1: Chọn hoặc tạo VPC
+## BÆ°á»›c 1: Chá»n hoáº·c táº¡o VPC
 
-Dùng VPC có sẵn nếu VPC đó đã có:
+DÃ¹ng VPC cÃ³ sáºµn náº¿u VPC Ä‘Ã³ Ä‘Ã£ cÃ³:
 
 - Internet Gateway.
-- Ít nhất hai public subnet ở hai Availability Zone.
-- Ít nhất hai private subnet ở hai Availability Zone.
-- NAT Gateway nằm trong public subnet.
-- Route table được cấu hình cho public và private routing.
+- Ãt nháº¥t hai public subnet á»Ÿ hai Availability Zone.
+- Ãt nháº¥t hai private subnet á»Ÿ hai Availability Zone.
+- NAT Gateway náº±m trong public subnet.
+- Route table Ä‘Æ°á»£c cáº¥u hÃ¬nh cho public vÃ  private routing.
 
-Nếu AWS account chưa có VPC phù hợp, hãy tạo VPC mới trong VPC console.
+Náº¿u AWS account chÆ°a cÃ³ VPC phÃ¹ há»£p, hÃ£y táº¡o VPC má»›i trong VPC console.
 
-## Bước 2: Tạo security group
+## BÆ°á»›c 2: Táº¡o security group
 
-Tạo các security group riêng cho load balancer, backend và database.
+Táº¡o cÃ¡c security group riÃªng cho load balancer, backend vÃ  database.
 
-| Security group | Inbound rule | Mục đích |
+| Security group | Inbound rule | Má»¥c Ä‘Ã­ch |
 | --- | --- | --- |
-| `eam-alb-sg` | HTTP `80` từ `0.0.0.0/0` | Cho phép user và Amplify rewrite traffic đi vào ALB. |
-| `eam-backend-sg` | HTTP từ `eam-alb-sg` | Chỉ cho ALB gọi vào backend. |
-| `eam-rds-sg` | MySQL `3306` từ `eam-backend-sg` | Chỉ cho backend kết nối database. |
+| `eam-alb-sg` | HTTP `80` tá»« `0.0.0.0/0` | Cho phÃ©p user vÃ  Amplify rewrite traffic Ä‘i vÃ o ALB. |
+| `eam-backend-sg` | HTTP tá»« `eam-alb-sg` | Chá»‰ cho ALB gá»i vÃ o backend. |
+| `eam-rds-sg` | MySQL `3306` tá»« `eam-backend-sg` | Chá»‰ cho backend káº¿t ná»‘i database. |
 
-{{% notice warning %}}
-Không mở port MySQL `3306` cho `0.0.0.0/0`. RDS cần nằm private.
-{{% /notice %}}
 
-## Bước 3: Tạo Amazon RDS for MySQL
+## BÆ°á»›c 3: Táº¡o Amazon RDS for MySQL
 
-Mở Amazon RDS console và tạo database:
+Má»Ÿ Amazon RDS console vÃ  táº¡o database:
 
-1. Chọn **Create database**.
-2. Chọn **Standard create**.
-3. Chọn engine **MySQL**.
-4. Chọn template **Dev/Test** chi phí thấp nếu có.
-5. Đặt DB instance identifier, ví dụ `eam-mysql-demo`.
-6. Đặt master username, ví dụ `asset_app`.
-7. Đặt mật khẩu mạnh và lưu ở nơi an toàn.
-8. Chọn instance class nhỏ cho môi trường demo.
-9. Chọn dung lượng storage nhỏ phù hợp để test.
-10. Ở **Connectivity**, chọn VPC mục tiêu.
-11. Chọn DB subnet group dùng private subnet.
-12. Đặt **Public access** là **No**.
-13. Gắn `eam-rds-sg`.
-14. Bật storage encryption.
-15. Đặt initial database name:
+1. Chá»n **Create database**.
+2. Chá»n **Standard create**.
+3. Chá»n engine **MySQL**.
+4. Chá»n template **Dev/Test** chi phÃ­ tháº¥p náº¿u cÃ³.
+5. Äáº·t DB instance identifier, vÃ­ dá»¥ `eam-mysql-demo`.
+6. Äáº·t master username, vÃ­ dá»¥ `asset_app`.
+7. Äáº·t máº­t kháº©u máº¡nh vÃ  lÆ°u á»Ÿ nÆ¡i an toÃ n.
+8. Chá»n instance class nhá» cho mÃ´i trÆ°á»ng demo.
+9. Chá»n dung lÆ°á»£ng storage nhá» phÃ¹ há»£p Ä‘á»ƒ test.
+10. á»ž **Connectivity**, chá»n VPC má»¥c tiÃªu.
+11. Chá»n DB subnet group dÃ¹ng private subnet.
+12. Äáº·t **Public access** lÃ  **No**.
+13. Gáº¯n `eam-rds-sg`.
+14. Báº­t storage encryption.
+15. Äáº·t initial database name:
 
 ```text
 enterprise_asset_management
 ```
 
-Chờ database chuyển sang trạng thái **Available**.
+Chá» database chuyá»ƒn sang tráº¡ng thÃ¡i **Available**.
 
-## Bước 4: Ghi lại thông tin kết nối
+## BÆ°á»›c 4: Ghi láº¡i thÃ´ng tin káº¿t ná»‘i
 
-Sau khi RDS available, ghi lại:
+Sau khi RDS available, ghi láº¡i:
 
 - RDS endpoint
-- Port, thường là `3306`
+- Port, thÆ°á»ng lÃ  `3306`
 - Database name
 - Username
 - Password
 
-Tạo backend `DATABASE_URL`:
+Táº¡o backend `DATABASE_URL`:
 
 ```env
 DATABASE_URL=mysql://asset_app:<password>@<rds-endpoint>:3306/enterprise_asset_management
 ```
 
-## Bước 5: Kiểm tra bảo mật
+## BÆ°á»›c 5: Kiá»ƒm tra báº£o máº­t
 
-Trước khi tiếp tục, kiểm tra:
+TrÆ°á»›c khi tiáº¿p tá»¥c, kiá»ƒm tra:
 
-- RDS public access là **No**.
-- Inbound rule của RDS chỉ cho `3306` từ backend security group.
-- Backend security group chỉ nhận traffic từ ALB security group.
-- ALB được gắn vào public subnet.
+- RDS public access lÃ  **No**.
+- Inbound rule cá»§a RDS chá»‰ cho `3306` tá»« backend security group.
+- Backend security group chá»‰ nháº­n traffic tá»« ALB security group.
+- ALB Ä‘Æ°á»£c gáº¯n vÃ o public subnet.
 
-## Kết quả mong đợi
+## Káº¿t quáº£ mong Ä‘á»£i
 
-Kết thúc bước này, project có một MySQL database private sẵn sàng cho backend deployment.
+Káº¿t thÃºc bÆ°á»›c nÃ y, project cÃ³ má»™t MySQL database private sáºµn sÃ ng cho backend deployment.

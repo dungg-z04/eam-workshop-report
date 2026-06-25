@@ -52,9 +52,6 @@ backend-eb-source.zip
     package.json
 ```
 
-{{% notice warning %}}
-Do not include `.env`, `node_modules`, or real secrets in the source bundle.
-{{% /notice %}}
 
 ## Step 3: Create Elastic Beanstalk application
 
@@ -124,9 +121,6 @@ For a demo database, you may seed sample data:
 npx prisma db seed
 ```
 
-{{% notice warning %}}
-Only run seed on an empty demo or staging database. Do not seed a production database without review.
-{{% /notice %}}
 
 ## Step 7: Test backend health
 
