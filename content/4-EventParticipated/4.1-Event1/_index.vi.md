@@ -94,3 +94,9 @@ Bên cạnh đó, tôi xem sự kiện là cơ hội để định hướng lạ
 Nhìn chung, sự kiện AWS First Cloud Journey Community Day đã mang lại cho tôi nhiều kiến thức thực tế và góc nhìn đa chiều về lĩnh vực cloud computing. Các nội dung được trình bày không chỉ giúp tôi hiểu thêm về các dịch vụ và công nghệ liên quan đến AWS, mà còn giúp tôi nhận thức rõ hơn về yêu cầu kỹ năng của ngành công nghệ thông tin hiện nay.
 
 Thông qua buổi event, tôi có thêm động lực để tiếp tục học tập, thực hành và hoàn thiện các kỹ năng cần thiết cho định hướng nghề nghiệp trong tương lai, đặc biệt là các mảng Cloud, DevOps, Backend và AI ứng dụng trên nền tảng AWS.
+
+## Hình ảnh sự kiện
+
+Một số hình ảnh được ghi lại trong quá trình tham gia sự kiện:
+
+![AWS First Cloud Journey Community Day](/eam-workshop-report/images/4-EventParticipated/4.1-Event1/z7976498940486_4005b6c6d8361abe3f1b76bdf4dd74ef.jpg)

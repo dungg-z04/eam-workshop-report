@@ -33,3 +33,17 @@ During the internship period, I participated in professional events related to A
 &emsp;**Role:** Participant in the First Cloud Journey program
 
 &emsp;**Main content:** Cloud Computing, AI Agents, Voice AI, DevOps AI Agents, AI in Human Resources, and secure enterprise AI deployment.
+
+---
+
+### [Event 3 - AWS & Swinburne Vietnam Cloud Computing Study Tour](4.3-Event3/)
+
+&emsp;**Event name:** AWS & Swinburne Vietnam Cloud Computing Study Tour
+
+&emsp;**Time:** Not specified in the provided material
+
+&emsp;**Format:** Video/knowledge-sharing and career orientation session
+
+&emsp;**Role:** Event content viewer
+
+&emsp;**Main content:** Cloud Computing, cloud job market, career skills, data engineering, AI, communication, networking, and growth mindset.

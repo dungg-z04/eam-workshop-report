@@ -94,3 +94,9 @@ In addition, I treated the event as an opportunity to adjust my personal learnin
 Overall, AWS First Cloud Journey Community Day gave me practical knowledge and a broader perspective on cloud computing. The sessions not only helped me understand more about AWS-related services and technologies, but also made me more aware of the skills required in the current information technology industry.
 
 Through this event, I gained more motivation to continue learning, practicing, and improving the skills needed for my future career direction, especially in Cloud, DevOps, Backend, and AI applications on AWS.
+
+## Event Images
+
+Some images recorded during the event:
+
+![AWS First Cloud Journey Community Day](/eam-workshop-report/images/4-EventParticipated/4.1-Event1/z7976498940486_4005b6c6d8361abe3f1b76bdf4dd74ef.jpg)

@@ -82,3 +82,19 @@ From a DevOps perspective, the project can be improved with standardized logs, h
 ## Conclusion
 
 FC Community Day provided a practical view of how cloud and AI are being applied in modern enterprises. The event reinforced that building a system is not only about implementing features, but also about operations, security, scalability, data governance, and user experience in real environments.
+
+## Event Images
+
+Some images recorded during the event:
+
+![FC Community Day](/eam-workshop-report/images/4-EventParticipated/4.2-Event2/Screenshot%202026-06-27%20090429.png)
+
+![FC Community Day](/eam-workshop-report/images/4-EventParticipated/4.2-Event2/Screenshot%202026-06-27%20091254.png)
+
+![FC Community Day](/eam-workshop-report/images/4-EventParticipated/4.2-Event2/Screenshot%202026-06-27%20093533.png)
+
+![FC Community Day](/eam-workshop-report/images/4-EventParticipated/4.2-Event2/Screenshot%202026-06-27%20094353.png)
+
+![FC Community Day](/eam-workshop-report/images/4-EventParticipated/4.2-Event2/Screenshot%202026-06-27%20102958.png)
+
+![FC Community Day](/eam-workshop-report/images/4-EventParticipated/4.2-Event2/Screenshot%202026-06-27%20103819.png)
