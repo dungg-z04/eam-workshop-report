@@ -24,16 +24,11 @@ weight = 1
 locale = "en-US"
 label = "English"
 
-[[languages.en.menu.shortcuts]]
-name = "<i class='fab fa-github'></i> GitHub Repository"
-identifier = "GitHub Repository"
-url = "https://github.com/dungg-z04/eam-workshop-report"
-weight = 20
 
 [[languages.en.menu.shortcuts]]
-name = "<i class='fas fa-project-diagram'></i> EAM Workspace"
+name = "<i class='fab fa-github'></i> EAM Workspace"
 identifier = "EAM Workspace"
-url = "/2-Proposal/"
+url = "https://github.com/dungg-z04/quanlidoanhnghiep.git"
 weight = 30
 
 [languages.vi]
@@ -42,16 +37,12 @@ weight = 2
 locale = "vi-VN"
 label = "Tiếng Việt"
 
-[[languages.vi.menu.shortcuts]]
-name = "<i class='fab fa-github'></i> GitHub Repository"
-identifier = "GitHub Repository"
-url = "https://github.com/dungg-z04/eam-workshop-report"
-weight = 20
+
 
 [[languages.vi.menu.shortcuts]]
-name = "<i class='fas fa-project-diagram'></i> EAM Workspace"
+name = "<i class='fab fa-github'></i> EAM Workspace"
 identifier = "EAM Workspace"
-url = "/vi/2-Proposal/"
+url = "https://github.com/dungg-z04/quanlidoanhnghiep.git"
 weight = 30
 
 [markup]

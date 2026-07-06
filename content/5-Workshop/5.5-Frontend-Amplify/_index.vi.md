@@ -1,18 +1,84 @@
 ---
-title: "Triá»ƒn khai frontend báº±ng Amplify Hosting"
+title: "Kết nối API Gateway và Amplify Hosting"
 date: 2024-01-01
 weight: 5
 chapter: false
 pre: " <b> 5.5. </b> "
 ---
 
-## Triá»ƒn khai frontend báº±ng Amplify Hosting
+## Kết nối API Gateway và Amplify Hosting
 
-á»ž bÆ°á»›c nÃ y, chÃºng ta sáº½ deploy frontend React lÃªn AWS Amplify Hosting vÃ  káº¿t ná»‘i frontend vá»›i backend thÃ´ng qua Amplify rewrite rule.
+Bước này tạo Amazon API Gateway HTTP API cho backend, sau đó deploy frontend React lên AWS Amplify Hosting và cấu hình rewrite `/api/*`.
 
-## BÆ°á»›c 1: Kiá»ƒm tra frontend build local
+## Bước 1: Tạo API Gateway HTTP API
 
-Tá»« thÆ° má»¥c frontend:
+Mở Amazon API Gateway console:
+
+1. Chọn **Create API**.
+2. Chọn **HTTP API**.
+3. Đặt tên, ví dụ `eam-backend-api`.
+4. Tạo integration trỏ đến backend Elastic Beanstalk endpoint.
+5. Tạo route proxy để nhận request được Amplify chuyển đến:
+
+```text
+ANY /{proxy+}
+```
+
+Route này cho phép API Gateway nhận các path như `/api/health`, `/api/auth/login`, `/uploads/...` và chuyển tiếp nguyên path đến backend.
+
+6. Tạo stage, ví dụ `$default` hoặc `prod`.
+7. Deploy API.
+
+Endpoint API Gateway sẽ có dạng:
+
+```text
+https://<api-id>.execute-api.<region>.amazonaws.com
+```
+
+![Tổng quan HTTP API trong Amazon API Gateway](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.1-api-gateway-overview.png)
+
+*Hình 5.5.1. Tổng quan HTTP API trong Amazon API Gateway.*
+
+API cần được tạo đúng tên và có endpoint public. Endpoint này sẽ được dùng trong Amplify rewrite để chuyển tiếp các request `/api/*` và `/uploads/*`.
+
+![Route proxy của API Gateway](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.2-api-gateway-route.png)
+
+*Hình 5.5.2. Route `ANY /{proxy+}` của API Gateway.*
+
+Tại phần Routes, cần đảm bảo route `ANY /{proxy+}` đã được tạo. Route này giúp API Gateway nhận mọi path cần chuyển đến backend, bao gồm `/api/health`, `/api/assets` và `/uploads/...`.
+
+![Integration của API Gateway trỏ đến Elastic Beanstalk](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.3-api-gateway-integration.png)
+
+*Hình 5.5.3. Integration của API Gateway trỏ đến Elastic Beanstalk backend.*
+
+Tại phần Integration, cần kiểm tra URI đang trỏ đến domain Elastic Beanstalk và có giữ biến `{proxy}`. Nếu integration không giữ path, backend có thể nhận sai endpoint và trả lỗi `404`.
+
+## Bước 2: Kiểm tra API Gateway
+
+Mở health endpoint qua API Gateway:
+
+```text
+https://<api-gateway-endpoint>/api/health
+```
+
+Nếu trả 404, kiểm tra lại:
+
+- Route `ANY /{proxy+}`.
+- Integration target đến đúng backend Elastic Beanstalk endpoint.
+- Stage đã deploy.
+- Parameter mapping hoặc path forwarding không làm mất prefix `/api`.
+- Backend phải nhận đúng đường dẫn gốc như `/api/health`, `/api/auth/login` hoặc `/api/assets`.
+- Integration URI có thể dùng `http://<elastic-beanstalk-domain>/{proxy}` khi route có biến `{proxy+}`.
+
+![Health endpoint qua API Gateway](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.4-api-gateway-health.png)
+
+*Hình 5.5.4. Health endpoint qua API Gateway trả kết quả thành công.*
+
+Khi gọi `/api/health` qua API Gateway, response cần trả `success: true` và `status: ok`. Kết quả này xác nhận route, integration và stage của API Gateway hoạt động đúng.
+
+## Bước 3: Kiểm tra frontend build local
+
+Từ thư mục frontend:
 
 ```bash
 cd frontend
@@ -20,15 +86,15 @@ npm ci
 npm run build
 ```
 
-Output build production sáº½ lÃ :
+Output build production:
 
 ```text
 dist/
 ```
 
-## BÆ°á»›c 2: Kiá»ƒm tra Amplify build settings
+## Bước 4: Kiểm tra Amplify build settings
 
-Repository cÃ³ file `amplify.yml` cho cáº¥u trÃºc monorepo:
+Repository có thể dùng file `amplify.yml` cho cấu trúc monorepo:
 
 ```yaml
 version: 1
@@ -48,87 +114,118 @@ applications:
           - '**/*'
 ```
 
-## BÆ°á»›c 3: Táº¡o Amplify app
+![Build settings của Amplify](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.6-amplify-build-settings.png)
 
-Má»Ÿ AWS Amplify console:
+*Hình 5.5.6. Build settings của Amplify với app root và output directory.*
 
-1. Chá»n **New app** hoáº·c **Host web app**.
-2. Káº¿t ná»‘i GitHub repository.
-3. Chá»n branch cáº§n deploy, thÆ°á»ng lÃ  `main`.
-4. Äáº·t app root lÃ  `frontend` náº¿u Amplify há»i monorepo app root.
-5. Kiá»ƒm tra build command:
+Build settings cần khớp với cấu trúc project: `appRoot` là `frontend`, build command là `npm ci && npm run build` và output directory là `dist`.
+
+## Bước 5: Tạo Amplify app
+
+Mở AWS Amplify console:
+
+1. Chọn **New app** hoặc **Host web app**.
+2. Kết nối GitHub repository.
+3. Chọn branch triển khai, ví dụ `aws-architecture`.
+4. Đặt monorepo root là `frontend` nếu Amplify yêu cầu.
+5. Kiểm tra build command:
 
 ```bash
 npm ci && npm run build
 ```
 
-6. Kiá»ƒm tra output directory:
+6. Kiểm tra output directory:
 
 ```text
 dist
 ```
 
-## BÆ°á»›c 4: Äáº·t biáº¿n mÃ´i trÆ°á»ng frontend
+![Amplify app kết nối branch aws-architecture](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.5-amplify-branch.png)
 
-Äáº·t biáº¿n mÃ´i trÆ°á»ng sau trong Amplify:
+*Hình 5.5.5. Amplify app kết nối đúng branch triển khai.*
+
+Branch deploy phải là branch chứa source frontend mới nhất. Sau khi kết nối, Amplify sẽ tự động build và publish frontend theo cấu hình đã chọn.
+
+![Amplify deployment thành công](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.8-amplify-build-success.png)
+
+*Hình 5.5.8. Amplify deployment thành công.*
+
+Khi deployment ở trạng thái `Deployed`, frontend đã được build và xuất bản thành công trên Amplify domain. Đây là điều kiện trước khi kiểm thử giao diện và rewrite API.
+
+## Bước 6: Đặt biến môi trường frontend
+
+Trong Amplify, đặt:
 
 ```env
 VITE_API_BASE_URL=/api
 ```
 
-Biáº¿n nÃ y giÃºp browser gá»i API qua cÃ¹ng Amplify domain:
+Biến này giúp browser gọi API qua cùng Amplify domain:
 
 ```text
 https://<amplify-domain>/api/...
 ```
 
-## BÆ°á»›c 5: Cáº¥u hÃ¬nh API rewrite
+## Bước 7: Cấu hình Amplify rewrite
 
-Sau khi app Ä‘Æ°á»£c táº¡o, má»Ÿ **Rewrites and redirects**.
+Sau khi app được tạo, mở **Rewrites and redirects**.
 
-ThÃªm rule nÃ y á»Ÿ phÃ­a trÃªn SPA fallback rule:
-
-| Source address | Target address | Type |
-| --- | --- | --- |
-| `/api/<*>` | `http://<alb-dns-name>/api/<*>` | `200 (Rewrite)` |
-
-Sau Ä‘Ã³ giá»¯ SPA fallback rule cho React Router:
+Thêm rule này ở phía trên SPA fallback rule:
 
 | Source address | Target address | Type |
 | --- | --- | --- |
-| `/<*>` | `/index.html` | `404 (Rewrite)` hoáº·c `404-200` |
+| `/api/<*>` | `https://<api-gateway-endpoint>/api/<*>` | `200 (Rewrite)` |
+| `/uploads/<*>` | `https://<api-gateway-endpoint>/uploads/<*>` | `200 (Rewrite)` |
 
+Sau đó giữ SPA fallback rule cho React Router:
 
-## BÆ°á»›c 6: Cáº­p nháº­t backend CORS origin
+| Source address | Target address | Type |
+| --- | --- | --- |
+| `/<*>` | `/index.html` | `404 (Rewrite)` hoặc `404-200` |
 
-Sau khi Amplify deploy xong, copy URL máº·c Ä‘á»‹nh cá»§a Amplify, vÃ­ dá»¥:
+Nếu rule `/api/<*>` hoặc `/uploads/<*>` đặt sai thứ tự, request API hoặc ảnh upload có thể bị trả về HTML của frontend, gây lỗi `404`, lỗi ảnh không hiển thị hoặc static assets bị lỗi MIME type.
+
+![Rewrite rules của Amplify](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.7-amplify-rewrite-rules.png)
+
+*Hình 5.5.7. Rewrite rules của Amplify chuyển tiếp `/api/<*>` và `/uploads/<*>` đến API Gateway.*
+
+Hai rule `/api/<*>` và `/uploads/<*>` phải nằm phía trên rule fallback `/index.html`. Thứ tự này đảm bảo request API và file upload đi đến API Gateway thay vì bị React Router xử lý như route frontend.
+
+## Bước 8: Cập nhật backend CORS origin
+
+Sau khi Amplify deploy xong, copy URL mặc định của Amplify:
 
 ```text
 https://main.xxxxx.amplifyapp.com
 ```
 
-Cáº­p nháº­t biáº¿n mÃ´i trÆ°á»ng backend:
+Nếu deploy từ branch khác, hãy dùng đúng domain của branch đó, ví dụ:
+
+```text
+https://aws-architecture.xxxxx.amplifyapp.com
+```
+
+Cập nhật biến môi trường backend:
 
 ```env
 FRONTEND_ORIGIN=https://main.xxxxx.amplifyapp.com
+FRONTEND_ORIGINS=https://main.xxxxx.amplifyapp.com
 ```
 
-Redeploy hoáº·c restart Elastic Beanstalk environment sau khi cáº­p nháº­t giÃ¡ trá»‹ nÃ y.
+Redeploy hoặc restart Elastic Beanstalk environment sau khi cập nhật giá trị này.
 
-## BÆ°á»›c 7: Má»Ÿ á»©ng dá»¥ng
+## Kết quả của bước này
 
-Má»Ÿ URL Amplify trÃªn trÃ¬nh duyá»‡t vÃ  kiá»ƒm tra:
+Ghi lại:
 
-- Trang login hiá»ƒn thá»‹.
-- Static assets táº£i Ä‘Ãºng.
-- Refresh `/login`, `/admin/dashboard` hoáº·c `/employee/dashboard` khÃ´ng bá»‹ 404.
-- Browser DevTools cho tháº¥y API request Ä‘i Ä‘áº¿n `/api/...` trÃªn Amplify domain.
+- API Gateway endpoint.
+- Amplify app URL.
+- Giá trị `FRONTEND_ORIGIN`.
+- Trạng thái frontend build.
+- Kết quả test `https://<amplify-domain>/api/health`.
 
-## Káº¿t quáº£ cá»§a bÆ°á»›c nÃ y
+![Health endpoint qua Amplify domain](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.9-amplify-health.png)
 
-Ghi láº¡i:
+*Hình 5.5.9. Health endpoint qua Amplify domain trả kết quả thành công.*
 
-- Amplify app URL
-- ALB DNS name dÃ¹ng trong rewrite rule
-- GiÃ¡ trá»‹ `FRONTEND_ORIGIN`
-- Tráº¡ng thÃ¡i frontend build
+Tại bước kiểm thử cuối, gọi `https://<amplify-domain>/api/health`. Request sẽ đi qua Amplify rewrite, API Gateway và Elastic Beanstalk trước khi trả về response thành công.

@@ -1,122 +1,84 @@
 ---
-title: "Event 2"
+title: "FCAJ Community Day"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
+# Event 2 - FC Community Day
 
-# BÃ i thu hoáº¡ch â€œGenAI-powered App-DB Modernization workshopâ€
+## Thông tin sự kiện
 
-### Má»¥c ÄÃ­ch Cá»§a Sá»± Kiá»‡n
+| Nội dung | Chi tiết |
+| --- | --- |
+| Tên sự kiện | FC Community Day |
+| Hình thức | Tổ chức trực tiếp kết hợp livestream |
+| Địa điểm | Tầng 26 và tầng 36, tòa nhà Bitexco Financial Tower |
+| Vai trò | Người tham dự |
+| Chủ đề chính | Cloud Computing, AI Agent, Voice AI, DevOps AI Agent, AI trong nhân sự và triển khai AI an toàn trong doanh nghiệp |
 
-- Chia sáº» best practices trong thiáº¿t káº¿ á»©ng dá»¥ng hiá»‡n Ä‘áº¡i
-- Giá»›i thiá»‡u phÆ°Æ¡ng phÃ¡p DDD vÃ  event-driven architecture
-- HÆ°á»›ng dáº«n lá»±a chá»n compute services phÃ¹ há»£p
-- Giá»›i thiá»‡u cÃ´ng cá»¥ AI há»— trá»£ development lifecycle
+## Tổng quan
 
-### Danh SÃ¡ch Diá»…n Giáº£
+FC Community Day là sự kiện cộng đồng công nghệ với nhiều phần chia sẻ từ các diễn giả đang làm việc trong lĩnh vực cloud, trí tuệ nhân tạo và chuyển đổi số doanh nghiệp. Nội dung sự kiện tập trung vào cách các doanh nghiệp ứng dụng cloud computing và AI trong vận hành thực tế, từ xử lý sự cố hệ thống, tối ưu chi phí, tự động hóa DevOps, xây dựng voice agent tiếng Việt cho đến ứng dụng AI trong tuyển dụng và quản trị nhân sự.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+Sự kiện có ý nghĩa thực tiễn vì các phần trình bày không chỉ dừng lại ở khái niệm kỹ thuật, mà còn đưa ra bài toán doanh nghiệp, kiến trúc giải pháp, demo sản phẩm và các kinh nghiệm triển khai trong môi trường production.
 
-### Ná»™i Dung Ná»•i Báº­t
+## Nội dung chính
 
-#### ÄÆ°a ra cÃ¡c áº£nh hÆ°á»Ÿng tiÃªu cá»±c cá»§a kiáº¿n trÃºc á»©ng dá»¥ng cÅ©
+### Cloud Thinker và định hướng nghề nghiệp Cloud Engineering
 
-- Thá»i gian release sáº£n pháº©m lÃ¢u â†’ Máº¥t doanh thu/bá» lá»¡ cÆ¡ há»™i
-- Hoáº¡t Ä‘á»™ng kÃ©m hiá»‡u quáº£ â†’ Máº¥t nÄƒng suáº¥t, tá»‘n kÃ©m chi phÃ­
-- KhÃ´ng tuÃ¢n thá»§ cÃ¡c quy Ä‘á»‹nh vá» báº£o máº­t â†’ Máº¥t an ninh, uy tÃ­n
+Phần chia sẻ của diễn giả Steve Trần tập trung vào hành trình phát triển nghề nghiệp trong lĩnh vực cloud. Diễn giả bắt đầu từ công việc liên quan đến quản lý server, sau đó chuyển sang học cloud và đạt các chứng chỉ AWS trong thời gian ngắn. Nội dung nhấn mạnh rằng thị trường cloud tại Việt Nam và khu vực ASEAN tăng trưởng mạnh nhờ nhu cầu chuyển đổi số, đặc biệt sau giai đoạn làm việc từ xa.
 
-#### Chuyá»ƒn Ä‘á»•i sang kiáº¿n trÃºc á»©ng dá»¥ng má»›i - Microservice Architecture
+Một điểm nổi bật là cách AI đang thay đổi yêu cầu đối với kỹ sư phần mềm và kỹ sư cloud. Doanh nghiệp không chỉ cần người biết lập trình, mà cần nhân sự có khả năng sử dụng AI để tăng năng suất, hiểu hệ thống ở mức kiến trúc và xử lý vấn đề trong môi trường vận hành thực tế.
 
-Chuyá»ƒn Ä‘á»•i thÃ nh há»‡ thá»‘ng modular â€“ tá»«ng chá»©c nÄƒng lÃ  má»™t **dá»‹ch vá»¥ Ä‘á»™c láº­p** giao tiáº¿p vá»›i nhau qua **sá»± kiá»‡n** vá»›i 3 trá»¥ cá»™t cá»‘t lÃµi:
+Cloud Thinker được giới thiệu như một nền tảng hỗ trợ vận hành cloud bằng AI, giúp tăng tốc quá trình điều tra sự cố, tối ưu chi phí FinOps, hỗ trợ kiểm thử bảo mật và giữ vai trò human-in-the-loop đối với các quyết định nhạy cảm trong production.
 
-- **Queue Management**: Xá»­ lÃ½ tÃ¡c vá»¥ báº¥t Ä‘á»“ng bá»™
-- **Caching Strategy:** Tá»‘i Æ°u performance
-- **Message Handling:** Giao tiáº¿p linh hoáº¡t giá»¯a services
+### Voice AI cho tiếng Việt
 
-#### Domain-Driven Design (DDD)
+Phần trình bày về Voice AI giới thiệu kiến trúc cơ bản của một hệ thống voice agent, bao gồm audio input, speech-to-text, language model và text-to-speech. Với tiếng Việt, bài toán trở nên phức tạp hơn do sự đa dạng về vùng miền, dấu thanh, ngữ điệu, giới tính giọng nói và cách ngắt nhịp trong hội thoại.
 
-- **PhÆ°Æ¡ng phÃ¡p 4 bÆ°á»›c**: XÃ¡c Ä‘á»‹nh domain events â†’ sáº¯p xáº¿p timeline â†’ identify actors â†’ xÃ¡c Ä‘á»‹nh bounded contexts
-- **Case study bookstore**: Minh há»a cÃ¡ch Ã¡p dá»¥ng DDD thá»±c táº¿
-- **Context mapping**: 7 patterns tÃ­ch há»£p bounded contexts
+Diễn giả trình bày cách hệ thống Voice AI được xây dựng theo pipeline speech-to-text rồi xử lý bằng language model trước khi chuyển ngược lại thành giọng nói. Cách tiếp cận này giúp kiểm soát tốt hơn độ chính xác, độ trễ và khả năng xử lý nghiệp vụ.
 
-#### Event-Driven Architecture
+Một số ứng dụng thực tế được đề cập gồm trợ lý giọng nói cho ngân hàng, chatbot hỗ trợ khách hàng, tự động hóa các thao tác như khóa thẻ và tích hợp tool calling để AI không chỉ trả lời FAQ mà còn thực hiện được quy trình nghiệp vụ.
 
-- **3 patterns tÃ­ch há»£p**: Publish/Subscribe, Point-to-point, Streaming
-- **Lá»£i Ã­ch**: Loose coupling, scalability, resilience
-- **So sÃ¡nh sync vs async**: Hiá»ƒu rÃµ trade-offs (sá»± Ä‘Ã¡nh Ä‘á»•i)
+### DevOps AI Agent
 
-#### Compute Evolution
+Phần DevOps AI Agent tập trung vào bài toán xử lý sự cố trong hệ thống cloud phức tạp. Khi hệ thống có nhiều service, nhiều nguồn log và nhiều đội vận hành, việc xác định nguyên nhân lỗi có thể mất nhiều thời gian, làm tăng MTTD và MTTR.
 
-- **Shared Responsibility Model**: Tá»« EC2 â†’ ECS â†’ Fargate â†’ Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lá»±a chá»n phÃ¹ há»£p
+Giải pháp AI Agent được trình bày theo quy trình: nhận alert, tổng hợp log, sinh giả thuyết nguyên nhân, kiểm chứng giả thuyết, đề xuất phương án giảm thiểu và đưa ra khuyến nghị cải thiện hệ thống. Điểm quan trọng là AI Agent không thay thế hoàn toàn con người, mà đóng vai trò tăng tốc phân tích và hỗ trợ kỹ sư đưa ra quyết định chính xác hơn.
 
-#### Amazon Q Developer
+Các case study cho thấy AI có thể rút ngắn đáng kể thời gian xử lý sự cố, đặc biệt với các hệ thống có observability tốt, dữ liệu vận hành đầy đủ và cơ chế phân quyền rõ ràng.
 
-- **SDLC automation**: Tá»« planning Ä‘áº¿n maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+### AI trong nhân sự doanh nghiệp
 
-### Nhá»¯ng GÃ¬ Há»c ÄÆ°á»£c
+Phần chia sẻ về AI trong nhân sự trình bày các khó khăn phổ biến của doanh nghiệp khi tuyển dụng, như sàng lọc CV thủ công, đánh giá ứng viên còn cảm tính, thời gian tuyển dụng kéo dài và rủi ro bảo mật dữ liệu ứng viên.
 
-#### TÆ° Duy Thiáº¿t Káº¿
+AI có thể hỗ trợ tự động trích xuất thông tin CV, so khớp kỹ năng với mô tả công việc, tạo báo cáo đánh giá ứng viên và hỗ trợ điều phối lịch phỏng vấn. Các công cụ như Amazon Q có thể được tùy biến thành agent cho từng phòng ban, giúp xử lý tài liệu nội bộ, tạo báo cáo và tự động hóa workflow.
 
-- **Business-first approach**: LuÃ´n báº¯t Ä‘áº§u tá»« business domain, khÃ´ng pháº£i technology
-- **Ubiquitous language**: Importance cá»§a common vocabulary giá»¯a business vÃ  tech teams
-- **Bounded contexts**: CÃ¡ch identify vÃ  manage complexity trong large systems
+Tuy nhiên, nội dung sự kiện cũng nhấn mạnh rằng AI chỉ nên hỗ trợ các tác vụ lặp lại hoặc phân tích ban đầu. Các quyết định chiến lược và đánh giá cuối cùng vẫn cần con người tham gia để đảm bảo tính công bằng và phù hợp với văn hóa doanh nghiệp.
 
-#### Kiáº¿n TrÃºc Ká»¹ Thuáº­t
+### Triển khai AI an toàn trong doanh nghiệp
 
-- **Event storming technique**: PhÆ°Æ¡ng phÃ¡p thá»±c táº¿ Ä‘á»ƒ mÃ´ hÃ¬nh hÃ³a quy trÃ¬nh kinh doanh
-- Sá»­ dá»¥ng **Event-driven communication** thay vÃ¬ synchronous calls
-- **Integration patterns**: Hiá»ƒu khi nÃ o dÃ¹ng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chá»n tá»« VM â†’ containers â†’ serverless
+Phần cuối của sự kiện đề cập đến nhu cầu triển khai AI agent trong môi trường doanh nghiệp một cách an toàn. Với các tổ chức có dữ liệu nhạy cảm, AI không nên truy cập hệ thống nội bộ qua Internet công cộng nếu không có kiểm soát phù hợp.
 
-#### Chiáº¿n LÆ°á»£c Hiá»‡n Äáº¡i HÃ³a
+Giải pháp được trình bày là sử dụng VPC Interface Endpoint, AWS PrivateLink và các MCP server để kết nối AI agent với hệ thống nội bộ qua mạng riêng. Cách thiết kế này giúp giảm rủi ro lộ dữ liệu, hạn chế tấn công man-in-the-middle, hỗ trợ kiểm soát truy cập và phù hợp hơn với yêu cầu bảo mật của doanh nghiệp.
 
-- **Phased approach**: KhÃ´ng rush, pháº£i cÃ³ roadmap rÃµ rÃ ng
-- **7Rs framework**: Nhiá»u con Ä‘Æ°á»ng khÃ¡c nhau tÃ¹y thuá»™c vÃ o Ä‘áº·c Ä‘iá»ƒm cá»§a má»—i á»©ng dá»¥ng
-- **ROI measurement**: Cost reduction + business agility
+## Kiến thức rút ra
 
-### á»¨ng Dá»¥ng VÃ o CÃ´ng Viá»‡c
+- Cloud và AI đang hội tụ mạnh trong vận hành doanh nghiệp, đặc biệt ở các mảng incident management, FinOps, DevOps và chăm sóc khách hàng.
+- AI Agent cần được thiết kế theo hướng có kiểm soát quyền truy cập, phạm vi hành động rõ ràng và có human-in-the-loop cho các quyết định quan trọng.
+- Voice AI tiếng Việt cần xử lý nhiều thách thức riêng về dữ liệu, giọng vùng miền, ngữ điệu và độ trễ hội thoại.
+- DevOps AI Agent có thể giảm thời gian điều tra sự cố nếu hệ thống có log, metric và topology đầy đủ.
+- AI trong nhân sự giúp tăng tốc tuyển dụng nhưng vẫn cần con người kiểm duyệt để tránh thiên kiến và đảm bảo phù hợp với văn hóa tổ chức.
+- Các mô hình triển khai AI trong doanh nghiệp cần đặt bảo mật, phân quyền và kiểm soát dữ liệu lên hàng đầu.
 
-- **Ãp dá»¥ng DDD** cho project hiá»‡n táº¡i: Event storming sessions vá»›i business team
-- **Refactor microservices**: Sá»­ dá»¥ng bounded contexts Ä‘á»ƒ identify service boundaries
-- **Implement event-driven patterns**: Thay tháº¿ má»™t sá»‘ sync calls báº±ng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho má»™t sá»‘ use cases phÃ¹ há»£p
-- **Try Amazon Q Developer**: Integrate vÃ o development workflow Ä‘á»ƒ boost productivity
+## Liên hệ với project EAM Workspace
 
-### Tráº£i nghiá»‡m trong event
+Các nội dung trong FC Community Day có liên hệ trực tiếp với project EAM Workspace. Hệ thống quản lý tài sản doanh nghiệp cần backend ổn định, cơ chế logging rõ ràng, phân quyền người dùng, kiểm soát dữ liệu và khả năng mở rộng khi số lượng tài sản, nhân viên và workflow tăng lên.
 
-Tham gia workshop **â€œGenAI-powered App-DB Modernizationâ€** lÃ  má»™t tráº£i nghiá»‡m ráº¥t bá»• Ã­ch, giÃºp tÃ´i cÃ³ cÃ¡i nhÃ¬n toÃ n diá»‡n vá» cÃ¡ch hiá»‡n Ä‘áº¡i hÃ³a á»©ng dá»¥ng vÃ  cÆ¡ sá»Ÿ dá»¯ liá»‡u báº±ng cÃ¡c phÆ°Æ¡ng phÃ¡p vÃ  cÃ´ng cá»¥ hiá»‡n Ä‘áº¡i. Má»™t sá»‘ tráº£i nghiá»‡m ná»•i báº­t:
+Từ góc nhìn DevOps, project có thể cải thiện thêm bằng cách chuẩn hóa log, health check, monitoring và cảnh báo để giảm thời gian phát hiện lỗi. Từ góc nhìn AI, trong tương lai hệ thống có thể tích hợp các tính năng như trợ lý nội bộ hỗ trợ tra cứu tài sản, tự động phân loại yêu cầu hỗ trợ, gợi ý lịch bảo trì hoặc tạo báo cáo tài sản theo ngôn ngữ tự nhiên.
 
-#### Há»c há»i tá»« cÃ¡c diá»…n giáº£ cÃ³ chuyÃªn mÃ´n cao
-- CÃ¡c diá»…n giáº£ Ä‘áº¿n tá»« AWS vÃ  cÃ¡c tá»• chá»©c cÃ´ng nghá»‡ lá»›n Ä‘Ã£ chia sáº» **best practices** trong thiáº¿t káº¿ á»©ng dá»¥ng hiá»‡n Ä‘áº¡i.
-- Qua cÃ¡c case study thá»±c táº¿, tÃ´i hiá»ƒu rÃµ hÆ¡n cÃ¡ch Ã¡p dá»¥ng **Domain-Driven Design (DDD)** vÃ  **Event-Driven Architecture** vÃ o cÃ¡c project lá»›n.
+## Kết luận
 
-#### Tráº£i nghiá»‡m ká»¹ thuáº­t thá»±c táº¿
-- Tham gia cÃ¡c phiÃªn trÃ¬nh bÃ y vá» **event storming** giÃºp tÃ´i hÃ¬nh dung cÃ¡ch **mÃ´ hÃ¬nh hÃ³a quy trÃ¬nh kinh doanh** thÃ nh cÃ¡c domain events.
-- Há»c cÃ¡ch **phÃ¢n tÃ¡ch microservices** vÃ  xÃ¡c Ä‘á»‹nh **bounded contexts** Ä‘á»ƒ quáº£n lÃ½ sá»± phá»©c táº¡p cá»§a há»‡ thá»‘ng lá»›n.
-- Hiá»ƒu rÃµ trade-offs giá»¯a **synchronous vÃ  asynchronous communication** cÅ©ng nhÆ° cÃ¡c pattern tÃ­ch há»£p nhÆ° **pub/sub, point-to-point, streaming**.
-
-#### á»¨ng dá»¥ng cÃ´ng cá»¥ hiá»‡n Ä‘áº¡i
-- Trá»±c tiáº¿p tÃ¬m hiá»ƒu vá» **Amazon Q Developer**, cÃ´ng cá»¥ AI há»— trá»£ SDLC tá»« láº­p káº¿ hoáº¡ch Ä‘áº¿n maintenance.
-- Há»c cÃ¡ch **tá»± Ä‘á»™ng hÃ³a code transformation** vÃ  pilot serverless vá»›i **AWS Lambda**, tá»« Ä‘Ã³ nÃ¢ng cao nÄƒng suáº¥t phÃ¡t triá»ƒn.
-
-#### Káº¿t ná»‘i vÃ  trao Ä‘á»•i
-- Workshop táº¡o cÆ¡ há»™i trao Ä‘á»•i trá»±c tiáº¿p vá»›i cÃ¡c chuyÃªn gia, Ä‘á»“ng nghiá»‡p vÃ  team business, giÃºp **nÃ¢ng cao ngÃ´n ngá»¯ chung (ubiquitous language)** giá»¯a business vÃ  tech.
-- Qua cÃ¡c vÃ­ dá»¥ thá»±c táº¿, tÃ´i nháº­n ra táº§m quan trá»ng cá»§a **business-first approach**, luÃ´n báº¯t Ä‘áº§u tá»« nhu cáº§u kinh doanh thay vÃ¬ chá»‰ táº­p trung vÃ o cÃ´ng nghá»‡.
-
-#### BÃ i há»c rÃºt ra
-- Viá»‡c Ã¡p dá»¥ng DDD vÃ  event-driven patterns giÃºp giáº£m **coupling**, tÄƒng **scalability** vÃ  **resilience** cho há»‡ thá»‘ng.
-- Chiáº¿n lÆ°á»£c hiá»‡n Ä‘áº¡i hÃ³a cáº§n **phased approach** vÃ  Ä‘o lÆ°á»ng **ROI**, khÃ´ng nÃªn vá»™i vÃ ng chuyá»ƒn Ä‘á»•i toÃ n bá»™ há»‡ thá»‘ng.
-- CÃ¡c cÃ´ng cá»¥ AI nhÆ° Amazon Q Developer cÃ³ thá»ƒ **boost productivity** náº¿u Ä‘Æ°á»£c tÃ­ch há»£p vÃ o workflow phÃ¡t triá»ƒn hiá»‡n táº¡i.
-
-#### Má»™t sá»‘ hÃ¬nh áº£nh khi tham gia sá»± kiá»‡n
-* ThÃªm cÃ¡c hÃ¬nh áº£nh cá»§a cÃ¡c báº¡n táº¡i Ä‘Ã¢y
-> Tá»•ng thá»ƒ, sá»± kiá»‡n khÃ´ng chá»‰ cung cáº¥p kiáº¿n thá»©c ká»¹ thuáº­t mÃ  cÃ²n giÃºp tÃ´i thay Ä‘á»•i cÃ¡ch tÆ° duy vá» thiáº¿t káº¿ á»©ng dá»¥ng, hiá»‡n Ä‘áº¡i hÃ³a há»‡ thá»‘ng vÃ  phá»‘i há»£p hiá»‡u quáº£ hÆ¡n giá»¯a cÃ¡c team.
+FC Community Day mang lại cái nhìn thực tế về cách cloud và AI đang được ứng dụng trong doanh nghiệp hiện đại. Sự kiện giúp củng cố nhận thức rằng việc xây dựng hệ thống không chỉ là triển khai chức năng, mà còn cần quan tâm đến vận hành, bảo mật, khả năng mở rộng, dữ liệu và trải nghiệm người dùng trong môi trường thực tế.

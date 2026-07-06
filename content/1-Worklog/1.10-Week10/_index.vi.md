@@ -1,56 +1,45 @@
----
-title: "Worklog Tuáº§n 10"
-date: 2024-01-01
-weight: 2
+﻿---
+title: "Worklog Tuần 10"
+date: 2026-06-19
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
+## Worklog Tuần 10
 
-### Má»¥c tiÃªu tuáº§n 10:
+**Thời gian:** 19/06/2026 - 25/06/2026
 
-* Káº¿t ná»‘i, lÃ m quen vá»›i cÃ¡c thÃ nh viÃªn trong First Cloud AI Journey.
-* Hiá»ƒu dá»‹ch vá»¥ AWS cÆ¡ báº£n, cÃ¡ch dÃ¹ng console & CLI.
+Tuần này chuyển trọng tâm từ phát triển tính năng sang triển khai AWS. Backend, database, API Gateway và frontend được kết nối thành một luồng chạy thật để kiểm tra hệ thống qua môi trường public.
 
-### CÃ¡c cÃ´ng viá»‡c cáº§n triá»ƒn khai trong tuáº§n nÃ y:
-| Thá»© | CÃ´ng viá»‡c                                                                                                                                                                                   | NgÃ y báº¯t Ä‘áº§u | NgÃ y hoÃ n thÃ nh | Nguá»“n tÃ i liá»‡u                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - LÃ m quen vá»›i cÃ¡c thÃ nh viÃªn FCAJ <br> - Äá»c vÃ  lÆ°u Ã½ cÃ¡c ná»™i quy, quy Ä‘á»‹nh táº¡i Ä‘Æ¡n vá»‹ thá»±c táº­p                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - TÃ¬m hiá»ƒu AWS vÃ  cÃ¡c loáº¡i dá»‹ch vá»¥ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Táº¡o AWS Free Tier account <br> - TÃ¬m hiá»ƒu AWS Console & AWS CLI <br> - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o AWS account <br>&emsp; + CÃ i AWS CLI & cáº¥u hÃ¬nh <br> &emsp; + CÃ¡ch sá»­ dá»¥ng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - TÃ¬m hiá»ƒu EC2 cÆ¡ báº£n: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - CÃ¡c cÃ¡ch remote SSH vÃ o EC2 <br> - TÃ¬m hiá»ƒu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o EC2 instance <br>&emsp; + Káº¿t ná»‘i SSH <br>&emsp; + Gáº¯n EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Mục tiêu tuần 10:
+
+- Triển khai backend lên Elastic Beanstalk và kết nối RDS MySQL.
+- Cấu hình API Gateway làm điểm vào cho backend.
+- Deploy frontend bằng Amplify và cấu hình rewrite cho API/upload.
+
+### Các công việc cần triển khai trong tuần này:
+
+| Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ 6 | - Chuẩn bị RDS MySQL, security group và `DATABASE_URL` cho backend production. | 19/06/2026 | 19/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Tạo source bundle backend và kiểm tra cấu trúc ZIP phù hợp với Elastic Beanstalk Linux. | 20/06/2026 | 20/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Tạo/cấu hình Elastic Beanstalk environment và cập nhật environment properties. | 21/06/2026 | 21/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Cấu hình SES/SMTP, OTP, JWT, rate limit và CORS origin cho backend. | 22/06/2026 | 22/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Kiểm tra health endpoint trực tiếp qua Elastic Beanstalk và xử lý lỗi startup nếu có. | 23/06/2026 | 23/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Tạo API Gateway HTTP API, proxy route, integration đến Elastic Beanstalk và stage deploy. | 24/06/2026 | 24/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Deploy frontend bằng Amplify, cấu hình build settings, `/api/*`, `/uploads/*` rewrite và SPA fallback. | 25/06/2026 | 25/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+
+### Kết quả đạt được tuần 10:
+
+- Backend đã được đóng gói, cấu hình environment properties và kiểm tra health endpoint.
+- API Gateway đã chuyển tiếp request đến Elastic Beanstalk thông qua proxy route và integration.
+- Frontend Amplify đã có build settings, rewrite `/api/*`, `/uploads/*` và SPA fallback để phục vụ ứng dụng production demo.
+
+### Kế hoạch tuần tiếp theo
+
+- Kiểm thử production, xử lý lỗi upload/inactive account và hoàn thiện tài liệu workshop.
 
 
-### Káº¿t quáº£ Ä‘áº¡t Ä‘Æ°á»£c tuáº§n 10:
-
-* Hiá»ƒu AWS lÃ  gÃ¬ vÃ  náº¯m Ä‘Æ°á»£c cÃ¡c nhÃ³m dá»‹ch vá»¥ cÆ¡ báº£n: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* ÄÃ£ táº¡o vÃ  cáº¥u hÃ¬nh AWS Free Tier account thÃ nh cÃ´ng.
-
-* LÃ m quen vá»›i AWS Management Console vÃ  biáº¿t cÃ¡ch tÃ¬m, truy cáº­p, sá»­ dá»¥ng dá»‹ch vá»¥ tá»« giao diá»‡n web.
-
-* CÃ i Ä‘áº·t vÃ  cáº¥u hÃ¬nh AWS CLI trÃªn mÃ¡y tÃ­nh bao gá»“m:
-  * Access Key
-  * Secret Key
-  * Region máº·c Ä‘á»‹nh
-  * ...
-
-* Sá»­ dá»¥ng AWS CLI Ä‘á»ƒ thá»±c hiá»‡n cÃ¡c thao tÃ¡c cÆ¡ báº£n nhÆ°:
-
-  * Kiá»ƒm tra thÃ´ng tin tÃ i khoáº£n & cáº¥u hÃ¬nh
-  * Láº¥y danh sÃ¡ch region
-  * Xem dá»‹ch vá»¥ EC2
-  * Táº¡o vÃ  quáº£n lÃ½ key pair
-  * Kiá»ƒm tra thÃ´ng tin dá»‹ch vá»¥ Ä‘ang cháº¡y
-  * ...
-
-* CÃ³ kháº£ nÄƒng káº¿t ná»‘i giá»¯a giao diá»‡n web vÃ  CLI Ä‘á»ƒ quáº£n lÃ½ tÃ i nguyÃªn AWS song song.
-* ...
 
 

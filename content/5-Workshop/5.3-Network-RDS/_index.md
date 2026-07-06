@@ -6,64 +6,78 @@ chapter: false
 pre: " <b> 5.3. </b> "
 ---
 
-## Prepare network and RDS
+## Prepare Network and RDS
 
-In this step, you will prepare the network baseline and create an Amazon RDS for MySQL database. The database should not be publicly accessible.
+This step prepares the MySQL database for the backend. For a demo environment, the default VPC or an existing VPC can be used as long as the Elastic Beanstalk backend can connect to Amazon RDS through port `3306`.
 
-## Target network layout
+## Target Connection Model
 
 {{< mermaid >}}
 flowchart LR
-    Internet["Internet"] --> IGW["Internet Gateway"]
-    IGW --> Public["Public Subnets\n2 Availability Zones"]
-    Public --> ALB["Application Load Balancer"]
-    Public --> NAT["NAT Gateway"]
-    NAT --> Private["Private Subnets\n2 Availability Zones"]
-    Private --> EB["Elastic Beanstalk Instance"]
-    Private --> RDS["RDS MySQL"]
+    APIGW["Amazon API Gateway"] --> EB["Elastic Beanstalk Backend"]
+    EB --> SGBackend["Backend Security Group"]
+    SGBackend --> RDS["Amazon RDS MySQL"]
+    RDS --> SGRDS["RDS Security Group"]
 {{< /mermaid >}}
 
-## Step 1: Select or create a VPC
+## Step 1: Choose a VPC
 
-Use an existing VPC if it already has:
+Use one VPC for Elastic Beanstalk and RDS. The VPC should have:
 
-- An Internet Gateway.
-- At least two public subnets across two Availability Zones.
-- At least two private subnets across two Availability Zones.
-- A NAT Gateway in a public subnet.
-- Route tables configured for public and private routing.
+- Subnets for the Elastic Beanstalk environment.
+- A subnet group for RDS.
+- Suitable Internet routing so the backend can receive public requests through Elastic Beanstalk.
+- Separate security groups for backend and database.
 
-If your account does not have a suitable VPC, create one using the VPC console.
+For a short demo workshop, the setup can be simpler than a production multi-subnet architecture.
 
-## Step 2: Create security groups
+![VPC used by Elastic Beanstalk and RDS](/eam-workshop-report/images/5-Workshop/5.3-Network-RDS/5.3.1-vpc-subnets.png)
 
-Create separate security groups for the load balancer, backend, and database.
+*Figure 5.3.1. VPC used by Elastic Beanstalk and RDS.*
+
+The VPC and CIDR in this view should match the environment used by the backend and database. Elastic Beanstalk and RDS should be in the same VPC or have suitable routing for secure connectivity.
+
+## Step 2: Create Security Groups
+
+Create or verify these security groups:
 
 | Security group | Inbound rule | Purpose |
 | --- | --- | --- |
-| `eam-alb-sg` | HTTP `80` from `0.0.0.0/0` | Allow users and Amplify rewrite traffic to reach the ALB. |
-| `eam-backend-sg` | HTTP from `eam-alb-sg` | Allow only ALB traffic to reach the backend. |
-| `eam-rds-sg` | MySQL `3306` from `eam-backend-sg` | Allow only backend traffic to reach the database. |
+| `eam-backend-sg` | HTTP from the Internet or the selected Elastic Beanstalk configuration | Allow API Gateway to call the backend endpoint. |
+| `eam-rds-sg` | MySQL `3306` from `eam-backend-sg` | Allow only the backend to connect to the database. |
 
+The most important rule is that RDS should not open `3306` to the entire Internet. Only the backend security group should be allowed to access the database.
+
+![Elastic Beanstalk backend security group](/eam-workshop-report/images/5-Workshop/5.3-Network-RDS/5.3.2-backend-security-group.png)
+
+*Figure 5.3.2. Elastic Beanstalk backend security group.*
+
+On the backend security group screen, record the Security group ID because it will be used as the source for the RDS inbound rule.
+
+![RDS security group allowing backend MySQL access](/eam-workshop-report/images/5-Workshop/5.3-Network-RDS/5.3.3-rds-security-group.png)
+
+*Figure 5.3.3. RDS security group allowing backend access to port 3306.*
+
+On the RDS security group screen, ensure that the MySQL/Aurora `3306` inbound rule allows only the backend security group as the source, not `0.0.0.0/0`.
 
 ## Step 3: Create Amazon RDS for MySQL
 
-Open the Amazon RDS console and create a database:
+Open the Amazon RDS console and create the database:
 
 1. Choose **Create database**.
-2. Select **Standard create**.
-3. Choose **MySQL** as the engine.
-4. Choose a low-cost **Dev/Test** template if available.
-5. Set DB instance identifier, for example `eam-mysql-demo`.
-6. Set master username, for example `asset_app`.
-7. Set a strong password and store it securely.
-8. Choose a small instance class for demo usage.
-9. Set storage to a small size suitable for testing.
+2. Choose **Standard create**.
+3. Select **MySQL** as the engine.
+4. Choose a **Dev/Test** or low-cost template.
+5. Set the DB instance identifier, for example `eam-mysql-demo`.
+6. Set the master username, for example `asset_app`.
+7. Set a strong password and store it safely.
+8. Choose a small instance class for the demo environment.
+9. Choose a suitable storage size for testing.
 10. In **Connectivity**, select the target VPC.
-11. Select a DB subnet group that uses private subnets.
-12. Set **Public access** to **No**.
+11. Choose an appropriate DB subnet group.
+12. If possible, set **Public access** to **No**.
 13. Attach `eam-rds-sg`.
-14. Enable storage encryption.
+14. Enable storage encryption if needed.
 15. Set the initial database name:
 
 ```text
@@ -72,7 +86,13 @@ enterprise_asset_management
 
 Wait until the database status becomes **Available**.
 
-## Step 4: Record connection information
+![RDS database in Available status](/eam-workshop-report/images/5-Workshop/5.3-Network-RDS/5.3.4-rds-available.png)
+
+*Figure 5.3.4. RDS database in Available status.*
+
+When the database status is `Available`, RDS is ready to accept connections. Continue with backend configuration only after this status is stable.
+
+## Step 4: Record Connection Information
 
 After RDS is available, record:
 
@@ -82,21 +102,27 @@ After RDS is available, record:
 - Username
 - Password
 
-Build the backend `DATABASE_URL`:
+Create the backend `DATABASE_URL`:
 
 ```env
 DATABASE_URL=mysql://asset_app:<password>@<rds-endpoint>:3306/enterprise_asset_management
 ```
 
-## Step 5: Validate security
+![RDS connectivity and security information](/eam-workshop-report/images/5-Workshop/5.3-Network-RDS/5.3.5-rds-connectivity.png)
+
+*Figure 5.3.5. RDS connectivity and security information.*
+
+In the Connectivity & security section, collect the correct endpoint, port, VPC, and security group. These values are used to create the Elastic Beanstalk `DATABASE_URL`.
+
+## Step 5: Security Check
 
 Before continuing, check:
 
-- RDS public access is **No**.
-- RDS inbound rule only allows `3306` from the backend security group.
-- Backend security group only allows traffic from the ALB security group.
-- ALB is attached to public subnets.
+- RDS does not expose the database port to the entire Internet.
+- The RDS inbound rule allows `3306` only from the backend security group.
+- Backend and RDS are in the same VPC or have suitable routing.
+- Database username/password are stored safely and are not committed to source code.
 
-## Expected result
+## Expected Result
 
-At the end of this step, the project has a private MySQL database ready for the backend deployment.
+At the end of this step, the project has a MySQL database ready for the Elastic Beanstalk backend through `DATABASE_URL`.

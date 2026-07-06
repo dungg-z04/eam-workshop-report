@@ -6,44 +6,46 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-# Triá»ƒn khai EAM Workspace trÃªn AWS
+# Triển khai EAM Workspace trên AWS
 
-#### Tá»•ng quan
+#### Tổng quan
 
-Trong workshop nÃ y, chÃºng ta sáº½ triá»ƒn khai **EAM Workspace**, má»™t há»‡ thá»‘ng quáº£n lÃ½ tÃ i sáº£n doanh nghiá»‡p, lÃªn AWS. á»¨ng dá»¥ng bao gá»“m frontend React, backend Node.js/Express vÃ  cÆ¡ sá»Ÿ dá»¯ liá»‡u MySQL Ä‘Æ°á»£c quáº£n lÃ½ báº±ng Prisma.
+Workshop này hướng dẫn triển khai **EAM Workspace**, hệ thống quản lý tài sản doanh nghiệp, lên AWS theo mô hình demo full-stack. Ứng dụng gồm giao diện React/Vite, backend Node.js/Express, Prisma ORM và database MySQL.
 
-Kiáº¿n trÃºc má»¥c tiÃªu Ä‘Æ°á»£c thiáº¿t káº¿ cho mÃ´i trÆ°á»ng demo ná»™i bá»™. Kiáº¿n trÃºc sá»­ dá»¥ng cÃ¡c dá»‹ch vá»¥ managed cá»§a AWS Ä‘á»ƒ viá»‡c triá»ƒn khai Ä‘Æ¡n giáº£n, thá»±c táº¿ vÃ  kiá»ƒm soÃ¡t chi phÃ­ tá»‘t hÆ¡n:
+Luồng triển khai được thiết kế để phù hợp với project đã thực hiện trong kỳ thực tập: frontend chạy trên AWS Amplify Hosting, API public đi qua Amazon API Gateway, backend chạy trên AWS Elastic Beanstalk và dữ liệu lưu trong Amazon RDS for MySQL.
+
+Các dịch vụ chính:
 
 - **AWS Amplify Hosting** cho frontend React.
-- **Application Load Balancer** lÃ m entry point public cho backend.
-- **AWS Elastic Beanstalk** Ä‘á»ƒ cháº¡y backend Node.js/Express.
-- **Amazon RDS for MySQL** Ä‘á»ƒ lÆ°u dá»¯ liá»‡u á»©ng dá»¥ng.
-- **Amazon S3** cho thiáº¿t káº¿ lÆ°u trá»¯ file sáºµn sÃ ng production.
-- **Amazon SES** cho OTP vÃ  email flow.
-- **Amazon CloudWatch** cho log vÃ  monitoring cÆ¡ báº£n.
+- **Amazon API Gateway HTTP API** cho route `/api/*`.
+- **AWS Elastic Beanstalk** cho backend Node.js/Express.
+- **Amazon RDS for MySQL** cho dữ liệu ứng dụng.
+- **Amazon S3** cho hướng lưu trữ file sẵn sàng production.
+- **Amazon SES** cho OTP và email flow.
+- **Amazon CloudWatch** cho log và kiểm tra lỗi.
 
-Workshop nÃ y Ä‘i theo hÆ°á»›ng triá»ƒn khai demo: khÃ´ng dÃ¹ng Route 53, khÃ´ng dÃ¹ng custom domain vÃ  khÃ´ng dÃ¹ng Amazon Cognito. XÃ¡c thá»±c hiá»‡n do backend xá»­ lÃ½ báº±ng JWT.
+Workshop này dùng hướng demo: không dùng Route 53, không dùng custom domain và không dùng Amazon Cognito. Xác thực được backend xử lý bằng JWT.
 
-#### Kiáº¿n trÃºc
+#### Kiến trúc
 
 {{< mermaid >}}
 flowchart LR
-    User["TrÃ¬nh duyá»‡t ngÆ°á»i dÃ¹ng"] --> Amplify["AWS Amplify Hosting\nReact Frontend"]
-    Amplify --> Rewrite["Rewrite /api"]
-    Rewrite --> ALB["Application Load Balancer"]
-    ALB --> EB["Elastic Beanstalk\nNode.js Backend"]
-    EB --> RDS["Amazon RDS MySQL\nPrivate Subnet"]
-    EB --> S3["Amazon S3\nPrivate Bucket"]
+    User["Trình duyệt người dùng"] --> Amplify["AWS Amplify Hosting\nReact Frontend"]
+    Amplify --> Rewrite["Rewrite /api/*"]
+    Rewrite --> APIGW["Amazon API Gateway\nHTTP API"]
+    APIGW --> EB["AWS Elastic Beanstalk\nNode.js Backend"]
+    EB --> RDS["Amazon RDS MySQL"]
+    EB --> S3["Amazon S3\nProduction-ready File Storage"]
     EB --> SES["Amazon SES"]
     EB --> CW["CloudWatch Logs"]
 {{< /mermaid >}}
 
-#### Ná»™i dung
+#### Nội dung
 
-1. [Tá»•ng quan workshop](5.1-Workshop-overview/)
-2. [Chuáº©n bá»‹](5.2-Prerequisites/)
-3. [Chuáº©n bá»‹ network vÃ  RDS](5.3-Network-RDS/)
-4. [Triá»ƒn khai backend báº±ng Elastic Beanstalk](5.4-Backend-Elastic-Beanstalk/)
-5. [Triá»ƒn khai frontend báº±ng Amplify Hosting](5.5-Frontend-Amplify/)
-6. [Kiá»ƒm thá»­, monitoring vÃ  xá»­ lÃ½ lá»—i](5.6-Test-Monitor/)
-7. [Dá»n dáº¹p tÃ i nguyÃªn](5.7-Cleanup/)
+1. [Tổng quan workshop](5.1-Workshop-overview/)
+2. [Chuẩn bị](5.2-Prerequisites/)
+3. [Chuẩn bị network và RDS](5.3-Network-RDS/)
+4. [Triển khai backend bằng Elastic Beanstalk](5.4-Backend-Elastic-Beanstalk/)
+5. [Kết nối API Gateway và Amplify Hosting](5.5-Frontend-Amplify/)
+6. [Kiểm thử, monitoring và xử lý lỗi](5.6-Test-Monitor/)
+7. [Dọn dẹp tài nguyên](5.7-Cleanup/)

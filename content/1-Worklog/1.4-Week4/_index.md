@@ -1,54 +1,45 @@
----
+﻿---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-08
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
+## Week 4 Worklog
+
+**Period:** 08/05/2026 - 14/05/2026
+
+With login and API foundations in place, this week focused on the core admin CRUD screens. These modules are important because asset management depends on categories, departments, employees, and asset records.
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Complete CRUD screens for categories, departments, employees, and assets.
+- Standardize tables, forms, modals, and interaction states.
+- Continue learning AWS migration, operations, and monitoring services.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Complete asset category management with list, create, update, and status changes.<br>- Learned about AWS migration services.<br>&emsp; + Noted the main concepts for the report. | 08/05/2026 | 08/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Complete department management and data filtering/searching.<br>- Learned about AWS DMS and Schema Conversion Tool.<br>&emsp; + Checked where it could be used in EAM Workspace. | 09/05/2026 | 09/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Complete employee management with department, position, and status display.<br>- Learned about AWS Elastic Disaster Recovery.<br>&emsp; + Noted why recovery planning matters for production systems. | 10/05/2026 | 10/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Complete asset management with lists, forms, and asset status display.<br>- Learned about Lambda and serverless automation.<br>&emsp; + Read the material and recorded steps useful for deployment. | 11/05/2026 | 11/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Standardize data tables, modals, and forms across admin modules.<br>- Learned about Tags and Resource Groups.<br>&emsp; + Practiced grouping resources by project, environment, and purpose. | 12/05/2026 | 12/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Add hover, focus, and disabled states for buttons and inputs.<br>- Learned about Systems Manager and Session Manager.<br>&emsp; + Checked how Session Manager can connect to instances without opening SSH broadly. | 13/05/2026 | 13/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Review CRUD flows and prepare for asset assignment workflows.<br>- Learned about advanced CloudWatch and Grafana overview.<br>&emsp; + Noted how dashboards help monitor application health. | 14/05/2026 | 14/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- The main admin CRUD modules had basic interfaces and actions for later business workflows.
+- Tables, forms, and modals became more consistent across screens.
+- Gained more context about AWS migration, Systems Manager, CloudWatch, and operations support.
 
-* Successfully created and configured an AWS Free Tier account.
+### Plan for Next Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Develop asset assignment, return, and maintenance workflows.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

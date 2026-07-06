@@ -8,15 +8,15 @@ pre: " <b> 5.2. </b> "
 
 ## Prerequisites
 
-Before starting the deployment, prepare the AWS account, local tools, source code, and environment variables.
+Before deployment, prepare the AWS account, local tools, source code, and environment variables required by the backend and frontend.
 
-## AWS account
+## AWS Account
 
-Use one AWS Region for all resources in this workshop. The IAM user or role should be allowed to create and manage:
+Use one AWS Region for all workshop resources. The IAM user or role should be able to create and manage:
 
-- AWS Amplify
+- AWS Amplify Hosting
+- Amazon API Gateway
 - Amazon EC2 and Security Groups
-- Elastic Load Balancing
 - AWS Elastic Beanstalk
 - Amazon RDS
 - Amazon S3
@@ -26,17 +26,23 @@ Use one AWS Region for all resources in this workshop. The IAM user or role shou
 - Amazon CloudWatch
 - AWS CloudTrail
 
+After selecting the Region, check the top-right corner of the AWS Console to ensure all actions are performed in the same Region.
 
-## Local tools
+![AWS Region used for the workshop](/eam-workshop-report/images/5-Workshop/5.2-Prerequisites/5.2.1-aws-region.png)
 
-Install and verify these tools:
+*Figure 5.2.1. AWS Region used for the workshop.*
+
+The selected Region should be the Region used throughout the workshop. Keeping one Region helps avoid connectivity issues between Elastic Beanstalk, API Gateway, RDS, and SES.
+
+## Local Tools
+
+Install and verify the following tools:
 
 | Tool | Purpose |
 | --- | --- |
-| Node.js 20+ | Run backend and frontend locally. |
+| Node.js 20+ | Run the backend and frontend locally. |
 | npm | Install dependencies and run build scripts. |
 | Git | Manage source code and connect to GitHub. |
-| Hugo Extended | Build the workshop website. |
 | MySQL client or database tool | Optional, useful for checking the database. |
 | Postman or browser DevTools | Test API endpoints. |
 
@@ -47,15 +53,17 @@ node -v
 npm -v
 ```
 
-Check Hugo:
+The result should show the installed Node.js and npm versions on the local machine.
 
-```bash
-hugo version
-```
+![Checking Node.js and npm on the local machine](/eam-workshop-report/images/5-Workshop/5.2-Prerequisites/5.2.3-local-tools.png)
 
-## Source code structure
+*Figure 5.2.3. Checking Node.js and npm on the local machine.*
 
-The project contains two application folders:
+If both commands return valid versions, the local environment is ready for installing dependencies, building the frontend, and checking the backend before AWS deployment.
+
+## Source Code Structure
+
+The project has two application folders:
 
 ```text
 quanlidoanhnghiep/
@@ -69,15 +77,25 @@ Backend runtime entry:
 backend/src/app/server.js
 ```
 
-Frontend build output:
+Frontend production output:
 
 ```text
 frontend/dist
 ```
 
-## Backend environment variables
+## Check the Deployment Branch
 
-Prepare these values before creating the Elastic Beanstalk environment:
+Before connecting AWS Amplify, identify the GitHub branch used for frontend deployment.
+
+![GitHub branch used for Amplify frontend deployment](/eam-workshop-report/images/5-Workshop/5.2-Prerequisites/5.2.2-github-branch.png)
+
+*Figure 5.2.2. GitHub branch used for Amplify frontend deployment.*
+
+Record the correct deployment branch, for example `aws-architecture`, because Amplify will build and deploy the frontend from this branch.
+
+## Backend Environment Variables
+
+Prepare these values before creating or updating the Elastic Beanstalk environment:
 
 ```env
 NODE_ENV=production
@@ -98,21 +116,48 @@ MAIL_USER=<mail-user>
 MAIL_PASSWORD=<mail-password>
 MAIL_FROM=<mail-from-address>
 FRONTEND_ORIGIN=https://<amplify-domain>
+FRONTEND_ORIGINS=https://<amplify-domain>
 ```
 
-## Frontend environment variable
+## Prepare SES/SMTP
 
-For Amplify deployment, use a relative API path:
+The backend uses email for OTP or notification messages, so SMTP information should be prepared before configuring Elastic Beanstalk. For the demo environment, an email identity can be verified instead of a custom sending domain.
+
+Preparation steps:
+
+1. Open **Amazon SES** in the same Region used for the workshop.
+2. Go to **Verified identities** and create an **Email address** identity.
+3. Enter the sender email address used for the demo.
+4. Open the mailbox and confirm the verification link sent by Amazon SES.
+5. After the email address becomes **Verified**, create **SMTP credentials** in SES.
+6. Store the SMTP username and SMTP password for the Elastic Beanstalk environment variables.
+
+Related environment variables:
+
+```env
+MAIL_HOST=email-smtp.<region>.amazonaws.com
+MAIL_PORT=587
+MAIL_SECURE=false
+MAIL_USER=<ses-smtp-username>
+MAIL_PASSWORD=<ses-smtp-password>
+MAIL_FROM=<verified-email-address>
+```
+
+If SES is still in sandbox mode, emails can only be sent to verified recipient addresses. This is still enough for a demo workshop to test OTP or notification email behavior.
+
+## Frontend Environment Variable
+
+When deploying with Amplify, use a relative API path:
 
 ```env
 VITE_API_BASE_URL=/api
 ```
 
-This allows the browser to call the same Amplify origin, while Amplify rewrites `/api/<*>` to the backend load balancer.
+This allows the browser to call the same Amplify origin, while Amplify rewrites `/api/*` to the Amazon API Gateway endpoint.
 
-## Backend package checklist
+## Backend Packaging Checklist
 
-When packaging the backend for Elastic Beanstalk, the ZIP file should contain these files and folders at the root of the ZIP:
+When packaging the backend for Elastic Beanstalk, the ZIP file should contain these files and folders at the root:
 
 - `package.json`
 - `package-lock.json`
@@ -125,13 +170,14 @@ Do not include:
 - `node_modules/`
 - `.env`
 - real secrets
-- unnecessary local uploads
+- unnecessary local upload files
 
-## Readiness checklist
+## Readiness Checklist
 
-- [ ] AWS Region is selected.
-- [ ] AWS account has required permissions.
+- [ ] AWS Region selected.
+- [ ] AWS account has the required permissions.
 - [ ] Backend and frontend source code are available.
 - [ ] Backend environment variables are prepared.
-- [ ] `VITE_API_BASE_URL=/api` is ready for Amplify.
-- [ ] The deployment will use the demo path without Route 53 or custom domain.
+- [ ] `VITE_API_BASE_URL=/api` is prepared for Amplify.
+- [ ] RDS endpoint or RDS creation plan is ready.
+- [ ] Demo path without Route 53 or custom domain is confirmed.

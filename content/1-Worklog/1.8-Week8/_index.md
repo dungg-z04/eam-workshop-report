@@ -1,54 +1,45 @@
----
+﻿---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
+## Week 8 Worklog
+
+**Period:** 05/06/2026 - 11/06/2026
+
+This week expanded the system to the employee experience and settings pages. Besides the admin portal, the employee portal needed to show data according to each user's permissions.
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Build the employee dashboard and personal user pages.
+- Complete Settings, FAQ, feedback, and dark/light mode.
+- Fix dark mode display issues in several modules.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Review SYSTEM_ADMIN, ORGANIZATION_OWNER, ADMIN, and USER roles.<br>- Learned about AWS Backup and data protection strategy.<br>&emsp; + Noted the main concepts for the report. | 05/06/2026 | 05/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Clarify account scope and owner/admin/system admin responsibilities.<br>- Learned about VPC Peering and Transit Gateway.<br>&emsp; + Checked where it could be used in EAM Workspace. | 06/06/2026 | 06/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Build employee dashboard, assigned assets, profile, password change, and personal history screens.<br>- Learned about SQS and SNS for events/messages.<br>&emsp; + Checked how queues and notifications can support async workflows. | 07/06/2026 | 07/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Upgrade Settings with dark/light mode, language, FAQ, and feedback.<br>- Learned about Docker, ECS, and container basics.<br>&emsp; + Read the material and recorded steps useful for deployment. | 08/06/2026 | 08/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Move the dark/light toggle to the navbar and keep language switching in Settings.<br>- Learned about CodePipeline and CI/CD.<br>&emsp; + Checked the build, test, and deploy steps of an automated pipeline. | 09/06/2026 | 09/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Fix dark mode issues in dashboard, assignment, maintenance, inventory, reports, and floor map views.<br>- Learned about Step Functions and orchestration.<br>&emsp; + Compared workflow orchestration with normal API request handling. | 10/06/2026 | 10/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Standardize toast notifications and prepare ideas for Excel import and floor map.<br>- Learned about serverless, microservices, and application modernization.<br>&emsp; + Noted how these ideas affect scaling and long-term maintenance. | 11/06/2026 | 11/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- The employee portal included dashboard, assigned assets, profile, password change, and personal history screens.
+- Settings, FAQ, and feedback were improved for a more complete user experience.
+- Dark mode issues were fixed across multiple screens, making theme switching more stable.
 
-* Successfully created and configured an AWS Free Tier account.
+### Plan for Next Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Prepare data, improve search, Excel import, floor map, and AWS deployment planning.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

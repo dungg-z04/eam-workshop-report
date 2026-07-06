@@ -1,54 +1,45 @@
----
+﻿---
 title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
+## Week 5 Worklog
+
+**Period:** 15/05/2026 - 21/05/2026
+
+This week focused on workflows around the asset lifecycle. Assignment, return, transfer, and maintenance features helped the system track how assets are actually used over time.
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Build the asset assignment interface and forms.
+- Add return, transfer, and maintenance workflows.
+- Test state changes with sample data.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Build the asset assignment management interface and list assignable assets.<br>- Learned about CloudWatch Logs for troubleshooting.<br>&emsp; + Noted the main concepts for the report. | 15/05/2026 | 15/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Create forms to select assets and receiving employees.<br>- Learned about CloudWatch Metrics and monitoring dashboards.<br>&emsp; + Checked where it could be used in EAM Workspace. | 16/05/2026 | 16/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Display assignment status and asset usage history.<br>- Learned about CloudTrail and account activity auditing.<br>&emsp; + Checked how AWS records actions for tracking and troubleshooting. | 17/05/2026 | 17/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Build the asset return workflow and update status after returns.<br>- Learned about SNS and SQS for messaging.<br>&emsp; + Read the material and recorded steps useful for deployment. | 18/05/2026 | 18/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Add asset transfer between employees/departments.<br>- Learned about Step Functions and workflow orchestration.<br>&emsp; + Looked at multi-step flows that could match asset handover or maintenance processes. | 19/05/2026 | 19/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Develop maintenance screens, processing status, and maintenance notes.<br>- Learned about AWS Backup and data protection.<br>&emsp; + Noted backup ideas for database and file data. | 20/05/2026 | 20/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Test assignment, return, transfer, and maintenance flows with sample data.<br>- Connected monitoring, backup, and messaging with EAM Workspace.<br>&emsp; + Noted which parts can support operations and reliability. | 21/05/2026 | 21/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- The assignment interface supported selecting assets, choosing employees, and tracking processing status.
+- Return, transfer, and maintenance workflows made asset status more realistic.
+- CloudWatch, CloudTrail, SNS, SQS, and Step Functions self-study helped connect monitoring and workflow ideas to the project.
 
-* Successfully created and configured an AWS Free Tier account.
+### Plan for Next Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Complete inventory, reporting, and data-state handling.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

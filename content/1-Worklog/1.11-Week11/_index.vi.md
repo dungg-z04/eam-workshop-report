@@ -1,56 +1,45 @@
----
-title: "Worklog Tuáº§n 11"
-date: 2024-01-01
-weight: 2
+﻿---
+title: "Worklog Tuần 11"
+date: 2026-06-26
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
+## Worklog Tuần 11
 
-### Má»¥c tiÃªu tuáº§n 11:
+**Thời gian:** 26/06/2026 - 02/07/2026
 
-* Káº¿t ná»‘i, lÃ m quen vá»›i cÃ¡c thÃ nh viÃªn trong First Cloud AI Journey.
-* Hiá»ƒu dá»‹ch vá»¥ AWS cÆ¡ báº£n, cÃ¡ch dÃ¹ng console & CLI.
+Sau khi hệ thống đã deploy, tuần này tập trung kiểm thử production và xử lý các lỗi phát sinh trong môi trường thật. Đây cũng là giai đoạn bổ sung ảnh chụp và nội dung cho phần workshop của báo cáo.
 
-### CÃ¡c cÃ´ng viá»‡c cáº§n triá»ƒn khai trong tuáº§n nÃ y:
-| Thá»© | CÃ´ng viá»‡c                                                                                                                                                                                   | NgÃ y báº¯t Ä‘áº§u | NgÃ y hoÃ n thÃ nh | Nguá»“n tÃ i liá»‡u                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - LÃ m quen vá»›i cÃ¡c thÃ nh viÃªn FCAJ <br> - Äá»c vÃ  lÆ°u Ã½ cÃ¡c ná»™i quy, quy Ä‘á»‹nh táº¡i Ä‘Æ¡n vá»‹ thá»±c táº­p                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - TÃ¬m hiá»ƒu AWS vÃ  cÃ¡c loáº¡i dá»‹ch vá»¥ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Táº¡o AWS Free Tier account <br> - TÃ¬m hiá»ƒu AWS Console & AWS CLI <br> - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o AWS account <br>&emsp; + CÃ i AWS CLI & cáº¥u hÃ¬nh <br> &emsp; + CÃ¡ch sá»­ dá»¥ng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - TÃ¬m hiá»ƒu EC2 cÆ¡ báº£n: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - CÃ¡c cÃ¡ch remote SSH vÃ o EC2 <br> - TÃ¬m hiá»ƒu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o EC2 instance <br>&emsp; + Káº¿t ná»‘i SSH <br>&emsp; + Gáº¯n EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Mục tiêu tuần 11:
+
+- Kiểm thử các flow chính trên môi trường Amplify production.
+- Sửa lỗi upload ảnh, rewrite `/uploads/*` và tài khoản inactive.
+- Bổ sung ảnh chụp, nội dung workshop và tài liệu triển khai.
+
+### Các công việc cần triển khai trong tuần này:
+
+| Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ 6 | - Kiểm thử login admin qua Amplify và xác nhận API đi qua Amplify rewrite, API Gateway, Elastic Beanstalk. | 26/06/2026 | 26/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Sửa lỗi upload ảnh/avatar, kiểm tra `/uploads/*` rewrite và response ảnh trả `200`. | 27/06/2026 | 27/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Sửa logic tài khoản inactive và xác nhận tài khoản ngừng hoạt động không đăng nhập được. | 28/06/2026 | 28/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Kiểm thử regression các flow chính: dashboard, tài sản, nhân viên, phòng ban, bàn giao và bảo trì. | 29/06/2026 | 29/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Chụp ảnh AWS Console cho workshop: RDS, security group, Elastic Beanstalk, API Gateway và Amplify. | 30/06/2026 | 30/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Bổ sung nội dung workshop, mô tả từng ảnh và làm rõ SES/SMTP, Prisma migration. | 01/07/2026 | 01/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Chuẩn hóa tài liệu backend/frontend và đối chiếu lại với nội dung worklog/proposal. | 02/07/2026 | 02/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+
+### Kết quả đạt được tuần 11:
+
+- Các flow chính như đăng nhập admin, dashboard, quản lý tài sản, nhân viên, phòng ban, bàn giao và bảo trì đã được kiểm thử lại.
+- Các lỗi tích hợp quan trọng như upload ảnh và inactive account được xử lý rõ ràng hơn.
+- Phần workshop có thêm ảnh chụp AWS Console và mô tả cụ thể cho từng bước triển khai.
+
+### Kế hoạch tuần tiếp theo
+
+- Hoàn thiện báo cáo cuối kỳ, rà soát toàn bộ site Hugo và chuẩn bị nộp.
 
 
-### Káº¿t quáº£ Ä‘áº¡t Ä‘Æ°á»£c tuáº§n 11:
-
-* Hiá»ƒu AWS lÃ  gÃ¬ vÃ  náº¯m Ä‘Æ°á»£c cÃ¡c nhÃ³m dá»‹ch vá»¥ cÆ¡ báº£n: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* ÄÃ£ táº¡o vÃ  cáº¥u hÃ¬nh AWS Free Tier account thÃ nh cÃ´ng.
-
-* LÃ m quen vá»›i AWS Management Console vÃ  biáº¿t cÃ¡ch tÃ¬m, truy cáº­p, sá»­ dá»¥ng dá»‹ch vá»¥ tá»« giao diá»‡n web.
-
-* CÃ i Ä‘áº·t vÃ  cáº¥u hÃ¬nh AWS CLI trÃªn mÃ¡y tÃ­nh bao gá»“m:
-  * Access Key
-  * Secret Key
-  * Region máº·c Ä‘á»‹nh
-  * ...
-
-* Sá»­ dá»¥ng AWS CLI Ä‘á»ƒ thá»±c hiá»‡n cÃ¡c thao tÃ¡c cÆ¡ báº£n nhÆ°:
-
-  * Kiá»ƒm tra thÃ´ng tin tÃ i khoáº£n & cáº¥u hÃ¬nh
-  * Láº¥y danh sÃ¡ch region
-  * Xem dá»‹ch vá»¥ EC2
-  * Táº¡o vÃ  quáº£n lÃ½ key pair
-  * Kiá»ƒm tra thÃ´ng tin dá»‹ch vá»¥ Ä‘ang cháº¡y
-  * ...
-
-* CÃ³ kháº£ nÄƒng káº¿t ná»‘i giá»¯a giao diá»‡n web vÃ  CLI Ä‘á»ƒ quáº£n lÃ½ tÃ i nguyÃªn AWS song song.
-* ...
 
 

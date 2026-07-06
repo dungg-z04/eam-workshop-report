@@ -1,54 +1,45 @@
----
+﻿---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-19
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
+## Week 10 Worklog
+
+**Period:** 19/06/2026 - 25/06/2026
+
+This week shifted from feature development to AWS deployment. Backend, database, API Gateway, and frontend hosting were connected into a real public demo flow.
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Deploy the backend to Elastic Beanstalk and connect it to RDS MySQL.
+- Configure API Gateway as the backend entry point.
+- Deploy the frontend with Amplify and configure API/upload rewrites.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Prepare RDS MySQL, security groups, and `DATABASE_URL` for the production backend. | 19/06/2026 | 19/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Create the backend source bundle and verify the ZIP structure for Elastic Beanstalk Linux. | 20/06/2026 | 20/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Create/configure the Elastic Beanstalk environment and update environment properties. | 21/06/2026 | 21/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Configure SES/SMTP, OTP, JWT, rate limit, and CORS origins for the backend. | 22/06/2026 | 22/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Test the health endpoint directly through Elastic Beanstalk and resolve startup issues if needed. | 23/06/2026 | 23/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Create the API Gateway HTTP API, proxy route, Elastic Beanstalk integration, and deployment stage. | 24/06/2026 | 24/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Deploy the frontend with Amplify and configure build settings, `/api/*`, `/uploads/*` rewrites, and SPA fallback. | 25/06/2026 | 25/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- The backend was packaged, configured with environment properties, and validated through the health endpoint.
+- API Gateway forwarded requests to Elastic Beanstalk through a proxy route and integration.
+- Amplify was configured with build settings, `/api/*`, `/uploads/*`, and SPA fallback rules for the production demo.
 
-* Successfully created and configured an AWS Free Tier account.
+### Plan for Next Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Run production testing, fix upload/inactive-account issues, and complete workshop documentation.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

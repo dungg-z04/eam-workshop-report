@@ -1,54 +1,45 @@
----
+﻿---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-01
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
+## Week 3 Worklog
+
+**Period:** 01/05/2026 - 07/05/2026
+
+This week moved the frontend from static screens to API-connected flows. The main work covered login, token storage, current-user checks, and service layers for later admin modules.
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Connect the login form to the backend API.
+- Handle tokens, protected routes, and frontend authentication state.
+- Create service layers for the main API groups.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Connect the login form to the backend API and handle login responses.<br>- Learned about Amazon S3 and static website hosting.<br>&emsp; + Noted the main concepts for the report. | 01/05/2026 | 01/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Store login tokens and attach them to subsequent requests.<br>- Learned about Amazon RDS, DB instances, endpoints, backups, and engines.<br>&emsp; + Checked where it could be used in EAM Workspace. | 02/05/2026 | 02/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Create a current-user API flow and synchronize authentication state on the frontend.<br>- Learned about DynamoDB and NoSQL use cases.<br>&emsp; + Compared NoSQL storage with the relational data model used in the project. | 03/05/2026 | 03/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Build protected routes based on authentication state and access rights.<br>- Learned about CloudWatch metrics, logs, and alarms.<br>&emsp; + Read the material and recorded steps useful for deployment. | 04/05/2026 | 04/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Start creating separate frontend services for each API group.<br>- Learned about CloudFront and CDN for web applications.<br>&emsp; + Checked how a CDN can improve frontend loading speed. | 05/05/2026 | 05/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Add loading and empty states for data lists.<br>- Learned about Route 53, DNS, hosted zones, and records.<br>&emsp; + Noted how domains can point to frontend or API endpoints. | 06/05/2026 | 06/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Review login, token, and API call flows before building admin CRUD screens.<br>- Learned about AWS CLI and command-line service operations.<br>&emsp; + Practiced reading common CLI command formats for AWS services. | 07/05/2026 | 07/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- The basic login flow could call the backend, store tokens, and reuse them in later requests.
+- Protected routes limited access to authenticated screens.
+- Loading and empty states were added so API-driven screens responded more clearly.
 
-* Successfully created and configured an AWS Free Tier account.
+### Plan for Next Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Complete admin CRUD screens for categories, departments, employees, and assets.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

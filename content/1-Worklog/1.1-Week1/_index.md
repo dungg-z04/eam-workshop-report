@@ -1,55 +1,45 @@
----
+﻿---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-04-17
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
+## Week 1 Worklog
 
+**Period:** 17/04/2026 - 23/04/2026
+
+The first week focused on internship orientation, report requirements, and the frontend role in EAM Workspace. Additional AWS learning also started from the basic cloud concepts needed for later deployment work.
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand the internship goal, project scope, and report structure.
+- Clarify the frontend responsibilities in EAM Workspace.
+- Start learning AWS fundamentals such as cloud concepts, console, IAM, VPC, and EC2.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Attend the internship orientation, review report requirements, and identify EAM Workspace as the enterprise asset management project.<br>- Learned about Cloud Computing overview, AWS Global Infrastructure, and AWS Management Console.<br>&emsp; + Noted the main concepts for the report. | 17/04/2026 | 17/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Analyze the frontend role in the team and identify modules such as login, dashboard, assets, assignments, and reports.<br>- Learned about AWS Free Tier.<br>&emsp; + Practiced creating an AWS account and checking basic cost-control notes. | 18/04/2026 | 18/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Summarize project requirements, prepare notes, and align the direction for the admin interface.<br>- Learned about AWS Budgets and cost alerts.<br>&emsp; + Practiced opening AWS Console and checking basic management actions. | 19/04/2026 | 19/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Review the initial source code structure and learn the business scope: assets, employees, departments, assignments, maintenance, and inventory.<br>- Learned about Compute, Storage, Database, Networking, and Security service groups.<br>&emsp; + Checked where it could be used in EAM Workspace. | 20/04/2026 | 20/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Clarify frontend screens, especially admin layout, sidebar, navbar, data tables, and input forms.<br>- Learned the IAM overview and the principle of least privilege.<br>&emsp; + Checked how IAM controls access inside an AWS account. | 21/04/2026 | 21/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Define the frontend stack with React, Vite, TailwindCSS, React Router, and API service layers.<br>- Learned about VPC, subnets, route tables, and security groups.<br>&emsp; + Mapped these components to the backend network setup. | 22/04/2026 | 22/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Prepare the module-by-module frontend implementation plan and record risks to test in later weeks.<br>- Learned about EC2, AMIs, instance types, and virtual servers for backend deployment.<br>&emsp; + Noted what is needed when choosing a backend runtime environment. | 23/04/2026 | 23/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Understood EAM Workspace as an enterprise asset management system with assets, employees, departments, assignments, maintenance, and inventory.
+- Defined the frontend stack: React, Vite, TailwindCSS, React Router, and API service layers.
+- Built an initial AWS foundation for deeper learning in IAM, VPC, EC2, and deployment services.
 
-* Successfully created and configured an AWS Free Tier account.
+### Plan for Next Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Continue setting up the frontend foundation with React, Vite, TailwindCSS, and React Router.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

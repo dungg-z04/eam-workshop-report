@@ -12,16 +12,25 @@ chapter: false
 
 ### Thông tin sinh viên
 
-<div class="eam-profile">
-  <div class="eam-profile-item"><strong>Sinh viên</strong>Dung</div>
-  <div class="eam-profile-item"><strong>Dự án</strong>EAM Workspace</div>
-  <div class="eam-profile-item"><strong>Vai trò</strong>Frontend và tài liệu triển khai AWS</div>
-  <div class="eam-profile-item"><strong>Chương trình</strong>Workforce Bootcamp - First Cloud AI Journey</div>
-  <div class="eam-profile-item"><strong>Trường</strong>Đại học Sư phạm Kỹ thuật TP.HCM</div>
-  <div class="eam-profile-item"><strong>Ngành</strong>Công nghệ thông tin</div>
-</div>
-
-![Ảnh đại diện](/images/avatar.png)
+<section class="eam-student-panel">
+  <aside class="eam-student-card">
+    <img class="eam-avatar" src="/eam-workshop-report/images/avatar.png" alt="Ảnh đại diện Cù Đức Dũng">
+    <div>
+      <h2>Cù Đức Dũng</h2>
+    </div>
+  </aside>
+  <div class="eam-student-details">
+    <div class="eam-detail-item"><strong>Số điện thoại</strong><span>0343399957</span></div>
+    <div class="eam-detail-item"><strong>Email</strong><span>ducdung29092@gmail.com</span></div>
+    <div class="eam-detail-item"><strong>Dự án</strong><span>EAM Workspace</span></div>
+    <div class="eam-detail-item"><strong>Trường</strong><span>HUTECH - Đại học Công nghệ TP.HCM</span></div>
+    <div class="eam-detail-item"><strong>Ngành</strong><span>Công nghệ thông tin</span></div>
+    <div class="eam-detail-item"><strong>Lớp</strong><span>22DTHH1</span></div>
+    <div class="eam-detail-item eam-detail-wide"><strong>Công ty thực tập</strong><span>Công ty TNHH Amazon Web Services Viet Nam</span></div>
+    <div class="eam-detail-item eam-detail-wide"><strong>Vị trí thực tập</strong><span>Workforce Bootcamp - First Cloud AI Journey</span></div>
+    <div class="eam-detail-item eam-detail-wide"><strong>Thời gian thực tập</strong><span>Từ ngày 17/04/2026 đến ngày 10/07/2026</span></div>
+  </div>
+</section>
 
 ### Nội dung báo cáo
 

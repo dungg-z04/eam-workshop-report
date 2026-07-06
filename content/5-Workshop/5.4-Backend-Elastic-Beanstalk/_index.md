@@ -6,11 +6,11 @@ chapter: false
 pre: " <b> 5.4. </b> "
 ---
 
-## Deploy backend with Elastic Beanstalk
+## Deploy Backend with Elastic Beanstalk
 
-In this step, you will package the Node.js/Express backend and deploy it to AWS Elastic Beanstalk behind an Application Load Balancer.
+This step packages the Node.js/Express backend and deploys it to AWS Elastic Beanstalk. The backend will receive requests from API Gateway and connect to Amazon RDS for MySQL.
 
-## Step 1: Check backend locally
+## Step 1: Check the Backend Locally
 
 From the backend folder, install dependencies and verify that the backend can start:
 
@@ -20,15 +20,19 @@ npm ci
 npm start
 ```
 
-The backend entry point is:
+Backend entry point:
 
 ```text
 src/app/server.js
 ```
 
-The application should read the port from the `PORT` environment variable.
+The application must read the port from the `PORT` environment variable. On Elastic Beanstalk, use:
 
-## Step 2: Create a backend source bundle
+```env
+PORT=8080
+```
+
+## Step 2: Create the Backend Source Bundle
 
 Create a ZIP file from the contents inside the `backend/` folder. The ZIP root must contain `package.json` directly.
 
@@ -40,8 +44,6 @@ backend-eb-source.zip
   package-lock.json
   src/
   prisma/
-  jest.config.cjs
-  eslint.config.js
 ```
 
 Incorrect ZIP structure:
@@ -52,8 +54,15 @@ backend-eb-source.zip
     package.json
 ```
 
+Do not include `.env`, `node_modules`, or real secrets in the ZIP file.
 
-## Step 3: Create Elastic Beanstalk application
+![Backend source bundle with the correct Elastic Beanstalk deployment structure](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.1-source-bundle.png)
+
+*Figure 5.4.1. Backend source bundle with the correct Elastic Beanstalk deployment structure.*
+
+The ZIP should contain `package.json`, `package-lock.json`, `src/`, and `prisma/` directly at the root. If the ZIP contains an extra outer `backend/` folder, Elastic Beanstalk may fail to start the application.
+
+## Step 3: Create the Elastic Beanstalk Application
 
 Open the Elastic Beanstalk console:
 
@@ -61,12 +70,20 @@ Open the Elastic Beanstalk console:
 2. Application name: `eam-backend`.
 3. Platform: **Node.js**.
 4. Application code: upload the backend ZIP file.
-5. Environment type: use a load-balanced environment if you want the ALB to be created and managed with Elastic Beanstalk.
-6. Select the target VPC.
-7. Select private subnets for backend instances if your network design supports it.
-8. Attach the backend security group.
+5. Environment name: for example `eam-backend-prod`.
+6. Select the appropriate VPC and subnet.
+7. Attach the backend security group.
+8. Create the environment and wait for provisioning to finish.
 
-## Step 4: Configure environment properties
+If an old environment is stuck in `Severe`, `No Data`, `CREATE_FAILED`, or `DELETE_FAILED`, creating a new environment and pointing it to the same RDS database can save time.
+
+![Elastic Beanstalk environment creation page for the backend](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.2-create-eb-environment.png)
+
+*Figure 5.4.2. Elastic Beanstalk environment creation page for the backend.*
+
+On the environment creation screen, verify the application name, environment name, Node.js platform, and uploaded source bundle. This is the foundation for running the backend on Elastic Beanstalk.
+
+## Step 4: Configure Environment Properties
 
 In Elastic Beanstalk environment properties, set:
 
@@ -89,48 +106,26 @@ MAIL_USER=<mail-user>
 MAIL_PASSWORD=<mail-password>
 MAIL_FROM=<mail-from-address>
 FRONTEND_ORIGIN=https://<amplify-domain>
+FRONTEND_ORIGINS=https://<amplify-domain>
 ```
 
-The `FRONTEND_ORIGIN` value can be updated after Amplify creates the frontend URL.
+`FRONTEND_ORIGIN` and `FRONTEND_ORIGINS` can be updated after Amplify creates the frontend URL.
 
-## Step 5: Deploy and wait for health
+![Elastic Beanstalk environment properties](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.4-eb-env-properties.png)
 
-Upload and deploy the backend source bundle. Wait until the environment health is green.
+*Figure 5.4.4. Elastic Beanstalk environment properties with sensitive values hidden.*
 
-If the environment is unhealthy, check:
+Important variables to verify include `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN`, and `PORT=8080`. Hide secrets before including the screenshot in the report.
 
-- The backend is listening on `PORT=8080`.
-- `DATABASE_URL` is correct.
-- The backend security group can reach RDS on port `3306`.
-- Required mail and JWT environment variables are present.
-- Elastic Beanstalk logs show no startup error.
+## Step 5: Deploy and Check Health
 
-## Step 6: Run Prisma migration
-
-After the backend can reach RDS, run migrations from a machine that can connect to the database:
-
-```bash
-cd backend
-npx prisma generate
-npx prisma migrate deploy
-```
-
-For a demo database, you may seed sample data:
-
-```bash
-npx prisma db seed
-```
-
-
-## Step 7: Test backend health
-
-Open the backend health endpoint:
+After deployment, check the backend endpoint directly:
 
 ```text
-http://<alb-dns-name>/api/health
+http://<elastic-beanstalk-domain>/api/health
 ```
 
-Expected result:
+Expected response:
 
 ```json
 {
@@ -142,12 +137,58 @@ Expected result:
 }
 ```
 
-## Output of this step
+![Elastic Beanstalk environment in OK status](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.3-eb-health-ok.png)
+
+*Figure 5.4.3. Elastic Beanstalk environment in OK status.*
+
+This screen should show the environment health as OK. It indicates that Elastic Beanstalk has provisioned the resources and the backend has no critical startup failure.
+
+![Backend health endpoint on Elastic Beanstalk](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.5-eb-health-endpoint.png)
+
+*Figure 5.4.5. Backend health endpoint on Elastic Beanstalk returning a successful response.*
+
+The `/api/health` result should return `success: true` and `status: ok`. If this endpoint works, the backend is ready to be exposed through API Gateway.
+
+If the health check fails, check:
+
+- The backend listens on `PORT=8080`.
+- `DATABASE_URL` is correct.
+- The backend security group can connect to RDS port `3306`.
+- `JWT_SECRET` is long enough and not empty.
+- Mail/OTP/rate limit variables are configured.
+- Elastic Beanstalk logs do not show startup errors.
+
+## Step 6: Run Prisma Migration and Seed
+
+After the backend can connect to RDS, run migration from an environment that can access the database. Before running the commands, check that the local `.env` file or environment variables point to the correct RDS endpoint, not `localhost:3306`.
+
+```bash
+cd backend
+npx prisma generate
+npx prisma migrate deploy
+```
+
+If the local machine cannot reach RDS because of security group, network, or VPN restrictions, do not run the migration directly from local. Instead, run it from an environment that can access the database, such as an EC2/bastion instance in the same VPC, an authorized CI/CD environment, or a temporarily configured network path for migration.
+
+For a demo database, seed sample data after migration succeeds:
+
+```bash
+npx prisma db seed
+```
+
+If Prisma reports that it cannot connect to `localhost:3306`, the `DATABASE_URL` is usually still using the local database configuration. Update it to the RDS format:
+
+```env
+DATABASE_URL=mysql://asset_app:<password>@<rds-endpoint>:3306/enterprise_asset_management
+```
+
+## Result of This Step
 
 Record these values:
 
-- Elastic Beanstalk environment name
-- Application Load Balancer DNS name
-- Backend security group
-- RDS endpoint
-- Backend health check result
+- Elastic Beanstalk application name.
+- Elastic Beanstalk environment name.
+- Backend endpoint/domain.
+- Backend security group.
+- RDS endpoint.
+- `/api/health` health check result.

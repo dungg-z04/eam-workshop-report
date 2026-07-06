@@ -1,122 +1,96 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "AWS First Cloud Journey Community Day"
+date: 2026-06-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+# Event 1 AWS First Cloud Journey Community Day
 
-# BÃ i thu hoáº¡ch â€œGenAI-powered App-DB Modernization workshopâ€
+| Thông tin | Nội dung |
+| --- | --- |
+| Thời gian | Ngày 06/06/2026 |
+| Địa điểm | Tầng 26, Tòa nhà Bitexco Financial Tower |
+| Vai trò | Người tham dự chương trình First Cloud Journey |
+| Hình thức tham gia | Tham gia trực tiếp |
+| Chủ đề chính | Cloud Computing, DevOps, Security, AI, WebSocket, Teamwork và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin |
+| Danh sách diễn giả | Tran Trung Vinh - System Administrator at Central Retail Group; Bảo Huỳnh - Junior Cloud Native Developer Endava Vietnam; Lê Hoàng Gia Đại; Nguyễn Quốc Bảo; Trương Huy Phước; Việt Phát |
 
-### Má»¥c ÄÃ­ch Cá»§a Sá»± Kiá»‡n
+## 1. Mục đích tham gia sự kiện
 
-- Chia sáº» best practices trong thiáº¿t káº¿ á»©ng dá»¥ng hiá»‡n Ä‘áº¡i
-- Giá»›i thiá»‡u phÆ°Æ¡ng phÃ¡p DDD vÃ  event-driven architecture
-- HÆ°á»›ng dáº«n lá»±a chá»n compute services phÃ¹ há»£p
-- Giá»›i thiá»‡u cÃ´ng cá»¥ AI há»— trá»£ development lifecycle
+Buổi sự kiện AWS First Cloud Journey Community Day là một hoạt động chuyên môn giúp sinh viên và người mới bắt đầu trong lĩnh vực điện toán đám mây có cơ hội tiếp cận kiến thức thực tế từ các diễn giả đang làm việc trong ngành. Thông qua các phần trình bày đa dạng, sự kiện giúp người tham dự hiểu rõ hơn về cách các công nghệ hiện đại như AWS, Docker, Machine Learning, WebSocket, GraphRAG và DevOps được ứng dụng trong môi trường thực tế.
 
-### Danh SÃ¡ch Diá»…n Giáº£
+Mục đích tham gia của tôi là mở rộng kiến thức ngoài phạm vi lý thuyết đã học, đặc biệt là các chủ đề liên quan đến triển khai ứng dụng trên cloud, bảo mật hệ thống, xây dựng kiến trúc thời gian thực và định hướng phát triển nghề nghiệp trong lĩnh vực Cloud/DevOps. Đây cũng là cơ hội để tôi quan sát cách các chuyên gia trình bày giải pháp, phân tích vấn đề và chia sẻ kinh nghiệm làm việc trong môi trường doanh nghiệp.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+## 2. Nội dung chính của sự kiện
 
-### Ná»™i Dung Ná»•i Báº­t
+Sự kiện gồm nhiều phần chia sẻ với các chủ đề khác nhau. Mặc dù mỗi phần có trọng tâm riêng, tất cả đều liên quan đến quá trình xây dựng năng lực kỹ thuật cho người học AWS, từ nền tảng triển khai phần mềm, bảo mật, trí tuệ nhân tạo cho đến kỹ năng làm việc nhóm và định hướng nghề nghiệp.
 
-#### ÄÆ°a ra cÃ¡c áº£nh hÆ°á»Ÿng tiÃªu cá»±c cá»§a kiáº¿n trÃºc á»©ng dá»¥ng cÅ©
+### 2.1. Docker - A Containerization Technology
 
-- Thá»i gian release sáº£n pháº©m lÃ¢u â†’ Máº¥t doanh thu/bá» lá»¡ cÆ¡ há»™i
-- Hoáº¡t Ä‘á»™ng kÃ©m hiá»‡u quáº£ â†’ Máº¥t nÄƒng suáº¥t, tá»‘n kÃ©m chi phÃ­
-- KhÃ´ng tuÃ¢n thá»§ cÃ¡c quy Ä‘á»‹nh vá» báº£o máº­t â†’ Máº¥t an ninh, uy tÃ­n
+Phần trình bày về Docker giới thiệu khái niệm containerization và vai trò của Docker trong quá trình phát triển, kiểm thử và triển khai phần mềm. Diễn giả giải thích sự khác nhau giữa virtualization và containerization, trong đó container được xem là giải pháp nhẹ hơn, linh hoạt hơn và phù hợp với các hệ thống cloud-native hiện đại.
 
-#### Chuyá»ƒn Ä‘á»•i sang kiáº¿n trÃºc á»©ng dá»¥ng má»›i - Microservice Architecture
+Nội dung này giúp tôi hiểu rằng Docker không chỉ là công cụ chạy ứng dụng trong container, mà còn là một phần quan trọng trong quy trình DevOps. Khi sử dụng Docker, lập trình viên có thể đóng gói ứng dụng cùng các thư viện, cấu hình và môi trường chạy cần thiết, từ đó hạn chế lỗi do khác biệt môi trường giữa máy cá nhân, máy chủ kiểm thử và môi trường triển khai thật.
 
-Chuyá»ƒn Ä‘á»•i thÃ nh há»‡ thá»‘ng modular â€“ tá»«ng chá»©c nÄƒng lÃ  má»™t **dá»‹ch vá»¥ Ä‘á»™c láº­p** giao tiáº¿p vá»›i nhau qua **sá»± kiá»‡n** vá»›i 3 trá»¥ cá»™t cá»‘t lÃµi:
+Đối với quá trình học AWS, kiến thức về Docker có ý nghĩa thực tế vì nhiều dịch vụ hiện đại như Amazon ECS, Amazon EKS hoặc các quy trình CI/CD đều liên quan đến container. Việc nắm được Docker giúp tôi có nền tảng tốt hơn để tiếp cận các mô hình triển khai ứng dụng hiện đại trên cloud.
 
-- **Queue Management**: Xá»­ lÃ½ tÃ¡c vá»¥ báº¥t Ä‘á»“ng bá»™
-- **Caching Strategy:** Tá»‘i Æ°u performance
-- **Message Handling:** Giao tiáº¿p linh hoáº¡t giá»¯a services
+### 2.2. Machine Learning-based Network Intrusion Detection System (NIDS) on AWS
 
-#### Domain-Driven Design (DDD)
+Phần trình bày về AWS WAF và Machine Learning-based NIDS tập trung vào vấn đề bảo mật ứng dụng web và phát hiện tấn công mạng. Diễn giả giới thiệu AWS WAF như một lớp bảo vệ ứng dụng web ở tầng HTTP/HTTPS, có khả năng ngăn chặn các kiểu tấn công phổ biến như SQL Injection, Cross-site Scripting, bot traffic, brute force và các yêu cầu bất thường.
 
-- **PhÆ°Æ¡ng phÃ¡p 4 bÆ°á»›c**: XÃ¡c Ä‘á»‹nh domain events â†’ sáº¯p xáº¿p timeline â†’ identify actors â†’ xÃ¡c Ä‘á»‹nh bounded contexts
-- **Case study bookstore**: Minh há»a cÃ¡ch Ã¡p dá»¥ng DDD thá»±c táº¿
-- **Context mapping**: 7 patterns tÃ­ch há»£p bounded contexts
+Bên cạnh đó, diễn giả cũng phân tích hạn chế của phương pháp bảo mật dựa trên luật cố định. Các quy tắc truyền thống có hiệu quả với những mẫu tấn công đã biết, nhưng có thể gặp khó khăn trước các kỹ thuật tấn công mới, tấn công zero-day hoặc các hành vi bất thường chưa được định nghĩa trước. Từ đó, phần trình bày đưa ra hướng tiếp cận kết hợp AWS WAF với Machine Learning để xây dựng hệ thống NIDS có khả năng học từ dữ liệu mạng và phát hiện dấu hiệu bất thường.
 
-#### Event-Driven Architecture
+Nội dung này giúp tôi nhận thức rõ hơn rằng bảo mật trên cloud không chỉ dừng lại ở việc cấu hình firewall hoặc rule, mà cần kết hợp nhiều lớp phòng thủ. Việc ứng dụng Machine Learning vào phát hiện xâm nhập cho thấy xu hướng bảo mật hiện đại đang chuyển từ phát hiện dựa trên chữ ký sang phát hiện dựa trên hành vi.
 
-- **3 patterns tÃ­ch há»£p**: Publish/Subscribe, Point-to-point, Streaming
-- **Lá»£i Ã­ch**: Loose coupling, scalability, resilience
-- **So sÃ¡nh sync vs async**: Hiá»ƒu rÃµ trade-offs (sá»± Ä‘Ã¡nh Ä‘á»•i)
+### 2.3. From IT Helpdesk to Senior Sysadmin
 
-#### Compute Evolution
+Phần chia sẻ về hành trình từ IT Helpdesk đến Senior Sysadmin mang tính định hướng nghề nghiệp rất thực tế. Diễn giả trình bày quá trình bắt đầu từ vị trí hỗ trợ người dùng, sau đó từng bước phát triển kỹ năng về Linux, networking, hạ tầng hệ thống, tự xây dựng môi trường lab và chuyển dần sang vai trò quản trị hệ thống.
 
-- **Shared Responsibility Model**: Tá»« EC2 â†’ ECS â†’ Fargate â†’ Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lá»±a chá»n phÃ¹ há»£p
+Một điểm quan trọng được nhấn mạnh là người làm hạ tầng cần có tư duy vận hành ổn định, khả năng xử lý sự cố, kỹ năng ghi chép tài liệu, giám sát hệ thống và không thử nghiệm trực tiếp trên môi trường production nếu chưa có kế hoạch an toàn. Ngoài ra, diễn giả cũng chia sẻ sự thay đổi tư duy khi chuyển từ môi trường on-premise sang cloud, bao gồm khả năng mở rộng linh hoạt, mô hình trả phí theo mức sử dụng, dịch vụ quản lý sẵn và Infrastructure as Code.
 
-#### Amazon Q Developer
+Đối với cá nhân tôi, phần này giúp tôi hiểu rõ hơn về mối liên hệ giữa Sysadmin, Cloud và DevOps. Để phát triển trong lĩnh vực cloud, người học không chỉ cần biết sử dụng dịch vụ AWS mà còn cần nắm nền tảng hệ điều hành, mạng máy tính, bảo mật và tự động hóa.
 
-- **SDLC automation**: Tá»« planning Ä‘áº¿n maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+### 2.4. Multiplayer in the Cloud - Connecting Godot Clients with AWS WebSockets
 
-### Nhá»¯ng GÃ¬ Há»c ÄÆ°á»£c
+Phần trình bày về Multiplayer in the Cloud giới thiệu cách xây dựng hệ thống kết nối thời gian thực giữa các client Godot bằng AWS WebSocket. Diễn giả phân tích một số phương án giao tiếp trong game hoặc ứng dụng thời gian thực như UDP/ENet, WebSocket và HTTP Polling, đồng thời giải thích ưu điểm, hạn chế và trường hợp sử dụng phù hợp của từng phương án.
 
-#### TÆ° Duy Thiáº¿t Káº¿
+Kiến trúc được trình bày sử dụng API Gateway WebSocket để duy trì kết nối giữa client và backend, AWS Lambda để xử lý logic sự kiện, DynamoDB để lưu trạng thái kết nối và CloudWatch để ghi log, giám sát hệ thống. Đây là một ví dụ thực tế về kiến trúc serverless, trong đó hệ thống có thể xử lý kết nối và trao đổi dữ liệu mà không cần tự quản lý máy chủ truyền thống.
 
-- **Business-first approach**: LuÃ´n báº¯t Ä‘áº§u tá»« business domain, khÃ´ng pháº£i technology
-- **Ubiquitous language**: Importance cá»§a common vocabulary giá»¯a business vÃ  tech teams
-- **Bounded contexts**: CÃ¡ch identify vÃ  manage complexity trong large systems
+Qua phần này, tôi hiểu thêm về cách AWS hỗ trợ xây dựng các ứng dụng real-time như chat, lobby game, hệ thống ghép cặp người chơi hoặc ứng dụng cần trao đổi dữ liệu liên tục. Nội dung này cũng giúp tôi liên hệ tốt hơn giữa kiến thức backend, cloud và kiến trúc serverless.
 
-#### Kiáº¿n TrÃºc Ká»¹ Thuáº­t
+### 2.5. The Art of Effective Teamwork
 
-- **Event storming technique**: PhÆ°Æ¡ng phÃ¡p thá»±c táº¿ Ä‘á»ƒ mÃ´ hÃ¬nh hÃ³a quy trÃ¬nh kinh doanh
-- Sá»­ dá»¥ng **Event-driven communication** thay vÃ¬ synchronous calls
-- **Integration patterns**: Hiá»ƒu khi nÃ o dÃ¹ng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chá»n tá»« VM â†’ containers â†’ serverless
+Phần trình bày về kỹ năng làm việc nhóm tập trung vào các nguyên tắc giúp tăng hiệu quả cộng tác trong một tập thể. Diễn giả nhấn mạnh bốn yếu tố quan trọng gồm mục tiêu rõ ràng và thống nhất, phân công đúng người đúng việc, giao tiếp cởi mở và lắng nghe chủ động, cũng như tinh thần trách nhiệm cá nhân.
 
-#### Chiáº¿n LÆ°á»£c Hiá»‡n Äáº¡i HÃ³a
+Ngoài các nguyên tắc làm việc nhóm, nội dung còn giới thiệu một số công cụ hỗ trợ quản lý và giao tiếp như ClickUp, Trello, Slack, Google Workspace và Discord. Các công cụ này giúp nhóm theo dõi tiến độ, phân chia nhiệm vụ, trao đổi thông tin và lưu trữ tài liệu một cách có hệ thống hơn.
 
-- **Phased approach**: KhÃ´ng rush, pháº£i cÃ³ roadmap rÃµ rÃ ng
-- **7Rs framework**: Nhiá»u con Ä‘Æ°á»ng khÃ¡c nhau tÃ¹y thuá»™c vÃ o Ä‘áº·c Ä‘iá»ƒm cá»§a má»—i á»©ng dá»¥ng
-- **ROI measurement**: Cost reduction + business agility
+Đối với quá trình thực tập và làm đồ án, phần này có giá trị thực tiễn vì các dự án công nghệ thường yêu cầu sự phối hợp giữa nhiều thành viên. Tôi nhận thấy rằng kỹ năng kỹ thuật là cần thiết, nhưng kỹ năng giao tiếp, quản lý công việc và trách nhiệm cá nhân cũng ảnh hưởng trực tiếp đến kết quả của dự án.
 
-### á»¨ng Dá»¥ng VÃ o CÃ´ng Viá»‡c
+### 2.6. GraphRAG - Build GraphRAG Applications Using Amazon Bedrock and Amazon Neptune
 
-- **Ãp dá»¥ng DDD** cho project hiá»‡n táº¡i: Event storming sessions vá»›i business team
-- **Refactor microservices**: Sá»­ dá»¥ng bounded contexts Ä‘á»ƒ identify service boundaries
-- **Implement event-driven patterns**: Thay tháº¿ má»™t sá»‘ sync calls báº±ng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho má»™t sá»‘ use cases phÃ¹ há»£p
-- **Try Amazon Q Developer**: Integrate vÃ o development workflow Ä‘á»ƒ boost productivity
+Phần trình bày về GraphRAG giới thiệu một hướng tiếp cận mới trong lĩnh vực trí tuệ nhân tạo, kết hợp giữa Retrieval-Augmented Generation và dữ liệu dạng đồ thị. RAG truyền thống giúp mô hình ngôn ngữ lớn truy xuất thông tin từ kho dữ liệu bên ngoài để tạo câu trả lời có căn cứ hơn. Tuy nhiên, khi câu hỏi cần suy luận qua nhiều thực thể và nhiều mối quan hệ, GraphRAG có thể hỗ trợ tốt hơn nhờ khả năng biểu diễn dữ liệu dưới dạng node và edge.
 
-### Tráº£i nghiá»‡m trong event
+Diễn giả trình bày cách xây dựng ứng dụng GraphRAG bằng Amazon Bedrock và Amazon Neptune. Trong đó, Amazon Bedrock hỗ trợ làm việc với các mô hình AI tạo sinh và knowledge base, còn Amazon Neptune đóng vai trò lưu trữ và xử lý dữ liệu đồ thị. Sự kết hợp này giúp hệ thống không chỉ tìm kiếm thông tin theo nội dung, mà còn khai thác được quan hệ giữa các thực thể để cải thiện khả năng suy luận.
 
-Tham gia workshop **â€œGenAI-powered App-DB Modernizationâ€** lÃ  má»™t tráº£i nghiá»‡m ráº¥t bá»• Ã­ch, giÃºp tÃ´i cÃ³ cÃ¡i nhÃ¬n toÃ n diá»‡n vá» cÃ¡ch hiá»‡n Ä‘áº¡i hÃ³a á»©ng dá»¥ng vÃ  cÆ¡ sá»Ÿ dá»¯ liá»‡u báº±ng cÃ¡c phÆ°Æ¡ng phÃ¡p vÃ  cÃ´ng cá»¥ hiá»‡n Ä‘áº¡i. Má»™t sá»‘ tráº£i nghiá»‡m ná»•i báº­t:
+Qua phần này, tôi có thêm góc nhìn về việc ứng dụng AWS trong lĩnh vực AI. Nội dung giúp tôi hiểu rằng cloud không chỉ cung cấp tài nguyên máy chủ, lưu trữ hoặc mạng, mà còn cung cấp các dịch vụ cấp cao phục vụ xây dựng ứng dụng thông minh, đặc biệt là các hệ thống hỏi đáp, tìm kiếm tri thức và phân tích dữ liệu phức tạp.
 
-#### Há»c há»i tá»« cÃ¡c diá»…n giáº£ cÃ³ chuyÃªn mÃ´n cao
-- CÃ¡c diá»…n giáº£ Ä‘áº¿n tá»« AWS vÃ  cÃ¡c tá»• chá»©c cÃ´ng nghá»‡ lá»›n Ä‘Ã£ chia sáº» **best practices** trong thiáº¿t káº¿ á»©ng dá»¥ng hiá»‡n Ä‘áº¡i.
-- Qua cÃ¡c case study thá»±c táº¿, tÃ´i hiá»ƒu rÃµ hÆ¡n cÃ¡ch Ã¡p dá»¥ng **Domain-Driven Design (DDD)** vÃ  **Event-Driven Architecture** vÃ o cÃ¡c project lá»›n.
+## 3. Bài học rút ra
 
-#### Tráº£i nghiá»‡m ká»¹ thuáº­t thá»±c táº¿
-- Tham gia cÃ¡c phiÃªn trÃ¬nh bÃ y vá» **event storming** giÃºp tÃ´i hÃ¬nh dung cÃ¡ch **mÃ´ hÃ¬nh hÃ³a quy trÃ¬nh kinh doanh** thÃ nh cÃ¡c domain events.
-- Há»c cÃ¡ch **phÃ¢n tÃ¡ch microservices** vÃ  xÃ¡c Ä‘á»‹nh **bounded contexts** Ä‘á»ƒ quáº£n lÃ½ sá»± phá»©c táº¡p cá»§a há»‡ thá»‘ng lá»›n.
-- Hiá»ƒu rÃµ trade-offs giá»¯a **synchronous vÃ  asynchronous communication** cÅ©ng nhÆ° cÃ¡c pattern tÃ­ch há»£p nhÆ° **pub/sub, point-to-point, streaming**.
+Sau khi tham gia sự kiện, tôi rút ra được nhiều bài học liên quan đến cả kỹ thuật và kỹ năng nghề nghiệp. Về mặt kỹ thuật, tôi hiểu rõ hơn vai trò của Docker trong triển khai ứng dụng, cách AWS hỗ trợ xây dựng kiến trúc serverless, tầm quan trọng của bảo mật nhiều lớp và tiềm năng của AI trên nền tảng AWS. Các chủ đề như WebSocket, Machine Learning-based NIDS và GraphRAG giúp tôi nhận thấy rằng hệ sinh thái AWS có thể được ứng dụng trong nhiều lĩnh vực khác nhau, từ bảo mật, game, backend thời gian thực đến trí tuệ nhân tạo.
 
-#### á»¨ng dá»¥ng cÃ´ng cá»¥ hiá»‡n Ä‘áº¡i
-- Trá»±c tiáº¿p tÃ¬m hiá»ƒu vá» **Amazon Q Developer**, cÃ´ng cá»¥ AI há»— trá»£ SDLC tá»« láº­p káº¿ hoáº¡ch Ä‘áº¿n maintenance.
-- Há»c cÃ¡ch **tá»± Ä‘á»™ng hÃ³a code transformation** vÃ  pilot serverless vá»›i **AWS Lambda**, tá»« Ä‘Ã³ nÃ¢ng cao nÄƒng suáº¥t phÃ¡t triá»ƒn.
+Về định hướng nghề nghiệp, buổi chia sẻ của diễn giả về hành trình từ IT Helpdesk đến Senior Sysadmin giúp tôi nhận ra rằng việc phát triển trong ngành công nghệ cần bắt đầu từ nền tảng vững chắc và quá trình học tập liên tục. Những kỹ năng như networking, Linux, troubleshooting, monitoring, automation và documentation đều rất quan trọng đối với người làm cloud hoặc DevOps.
 
-#### Káº¿t ná»‘i vÃ  trao Ä‘á»•i
-- Workshop táº¡o cÆ¡ há»™i trao Ä‘á»•i trá»±c tiáº¿p vá»›i cÃ¡c chuyÃªn gia, Ä‘á»“ng nghiá»‡p vÃ  team business, giÃºp **nÃ¢ng cao ngÃ´n ngá»¯ chung (ubiquitous language)** giá»¯a business vÃ  tech.
-- Qua cÃ¡c vÃ­ dá»¥ thá»±c táº¿, tÃ´i nháº­n ra táº§m quan trá»ng cá»§a **business-first approach**, luÃ´n báº¯t Ä‘áº§u tá»« nhu cáº§u kinh doanh thay vÃ¬ chá»‰ táº­p trung vÃ o cÃ´ng nghá»‡.
+Về kỹ năng mềm, phần trình bày về teamwork giúp tôi hiểu rằng làm việc nhóm hiệu quả cần có mục tiêu chung, phân công rõ ràng, giao tiếp thường xuyên và tinh thần trách nhiệm. Đây là những yếu tố cần thiết không chỉ trong thực tập mà còn trong môi trường doanh nghiệp sau này.
 
-#### BÃ i há»c rÃºt ra
-- Viá»‡c Ã¡p dá»¥ng DDD vÃ  event-driven patterns giÃºp giáº£m **coupling**, tÄƒng **scalability** vÃ  **resilience** cho há»‡ thá»‘ng.
-- Chiáº¿n lÆ°á»£c hiá»‡n Ä‘áº¡i hÃ³a cáº§n **phased approach** vÃ  Ä‘o lÆ°á»ng **ROI**, khÃ´ng nÃªn vá»™i vÃ ng chuyá»ƒn Ä‘á»•i toÃ n bá»™ há»‡ thá»‘ng.
-- CÃ¡c cÃ´ng cá»¥ AI nhÆ° Amazon Q Developer cÃ³ thá»ƒ **boost productivity** náº¿u Ä‘Æ°á»£c tÃ­ch há»£p vÃ o workflow phÃ¡t triá»ƒn hiá»‡n táº¡i.
+## 4. Đóng góp cá nhân
 
-#### Má»™t sá»‘ hÃ¬nh áº£nh khi tham gia sá»± kiá»‡n
-* ThÃªm cÃ¡c hÃ¬nh áº£nh cá»§a cÃ¡c báº¡n táº¡i Ä‘Ã¢y
-> Tá»•ng thá»ƒ, sá»± kiá»‡n khÃ´ng chá»‰ cung cáº¥p kiáº¿n thá»©c ká»¹ thuáº­t mÃ  cÃ²n giÃºp tÃ´i thay Ä‘á»•i cÃ¡ch tÆ° duy vá» thiáº¿t káº¿ á»©ng dá»¥ng, hiá»‡n Ä‘áº¡i hÃ³a há»‡ thá»‘ng vÃ  phá»‘i há»£p hiá»‡u quáº£ hÆ¡n giá»¯a cÃ¡c team.
+Trong quá trình tham gia sự kiện, tôi chủ động lắng nghe các phần trình bày, ghi chú lại những nội dung liên quan đến AWS, Docker, bảo mật, serverless và AI để phục vụ cho báo cáo thực tập. Tôi cũng đối chiếu các kiến thức được chia sẻ với những nội dung đã học trong chương trình AWS Study Group nhằm củng cố lại kiến thức nền tảng và nhận diện các chủ đề cần tiếp tục tìm hiểu sâu hơn.
+
+Bên cạnh đó, tôi xem sự kiện là cơ hội để định hướng lại kế hoạch học tập cá nhân. Sau buổi event, tôi xác định cần tiếp tục rèn luyện thêm các kỹ năng thực hành như triển khai ứng dụng bằng Docker, tìm hiểu các dịch vụ serverless của AWS, nâng cao kiến thức bảo mật cloud và thực hành các mô hình triển khai ứng dụng thực tế.
+
+## 5. Kết luận
+
+Nhìn chung, sự kiện AWS First Cloud Journey Community Day đã mang lại cho tôi nhiều kiến thức thực tế và góc nhìn đa chiều về lĩnh vực cloud computing. Các nội dung được trình bày không chỉ giúp tôi hiểu thêm về các dịch vụ và công nghệ liên quan đến AWS, mà còn giúp tôi nhận thức rõ hơn về yêu cầu kỹ năng của ngành công nghệ thông tin hiện nay.
+
+Thông qua buổi event, tôi có thêm động lực để tiếp tục học tập, thực hành và hoàn thiện các kỹ năng cần thiết cho định hướng nghề nghiệp trong tương lai, đặc biệt là các mảng Cloud, DevOps, Backend và AI ứng dụng trên nền tảng AWS.

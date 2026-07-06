@@ -1,56 +1,45 @@
----
-title: "Worklog Tuáº§n 1"
-date: 2024-01-01
+﻿---
+title: "Worklog Tuần 1"
+date: 2026-04-17
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
+## Worklog Tuần 1
 
-### Má»¥c tiÃªu tuáº§n 1:
+**Thời gian:** 17/04/2026 - 23/04/2026
 
-* Káº¿t ná»‘i, lÃ m quen vá»›i cÃ¡c thÃ nh viÃªn trong First Cloud AI Journey.
-* Hiá»ƒu dá»‹ch vá»¥ AWS cÆ¡ báº£n, cÃ¡ch dÃ¹ng console & CLI.
+Tuần đầu tiên chủ yếu dành cho việc làm quen với chương trình thực tập, đọc kỹ yêu cầu báo cáo và xác định vai trò trong project EAM Workspace. Song song với phần định hướng, nội dung AWS nền tảng được bắt đầu từ các khái niệm nền tảng để có cơ sở cho những tuần triển khai sau.
 
-### CÃ¡c cÃ´ng viá»‡c cáº§n triá»ƒn khai trong tuáº§n nÃ y:
-| Thá»© | CÃ´ng viá»‡c                                                                                                                                                                                   | NgÃ y báº¯t Ä‘áº§u | NgÃ y hoÃ n thÃ nh | Nguá»“n tÃ i liá»‡u                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - LÃ m quen vá»›i cÃ¡c thÃ nh viÃªn FCAJ <br> - Äá»c vÃ  lÆ°u Ã½ cÃ¡c ná»™i quy, quy Ä‘á»‹nh táº¡i Ä‘Æ¡n vá»‹ thá»±c táº­p                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - TÃ¬m hiá»ƒu AWS vÃ  cÃ¡c loáº¡i dá»‹ch vá»¥ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Táº¡o AWS Free Tier account <br> - TÃ¬m hiá»ƒu AWS Console & AWS CLI <br> - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o AWS account <br>&emsp; + CÃ i AWS CLI & cáº¥u hÃ¬nh <br> &emsp; + CÃ¡ch sá»­ dá»¥ng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - TÃ¬m hiá»ƒu EC2 cÆ¡ báº£n: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - CÃ¡c cÃ¡ch remote SSH vÃ o EC2 <br> - TÃ¬m hiá»ƒu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o EC2 instance <br>&emsp; + Káº¿t ná»‘i SSH <br>&emsp; + Gáº¯n EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Mục tiêu tuần 1:
+
+- Nắm được mục tiêu thực tập, phạm vi project và cách tổ chức báo cáo.
+- Xác định rõ nhiệm vụ frontend trong hệ thống EAM Workspace.
+- Bắt đầu tìm hiểu các khái niệm AWS cơ bản như cloud, console, IAM, VPC và EC2.
+
+### Các công việc cần triển khai trong tuần này:
+
+| Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ 6 | - Tham gia định hướng thực tập, đọc yêu cầu báo cáo và xác định project EAM Workspace là hệ thống quản lý tài sản doanh nghiệp.<br>- Tìm hiểu tổng quan Cloud Computing, AWS Global Infrastructure và AWS Management Console.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 17/04/2026 | 17/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Phân tích vai trò frontend trong nhóm, xác định các module cần hỗ trợ như đăng nhập, dashboard, tài sản, bàn giao và báo cáo.<br>- Tìm hiểu AWS Free Tier.<br>&emsp; + Thực hành: tạo AWS account và kiểm tra các lưu ý kiểm soát chi phí. | 18/04/2026 | 18/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Tổng hợp yêu cầu project, chuẩn bị tài liệu ghi chú và thống nhất hướng phát triển giao diện quản trị.<br>- Tìm hiểu AWS Budgets và cảnh báo chi phí.<br>&emsp; + Thực hành: mở AWS Console và kiểm tra các thao tác quản lý cơ bản. | 19/04/2026 | 19/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Đọc cấu trúc source code ban đầu và làm quen nghiệp vụ quản lý tài sản, nhân viên, phòng ban, bàn giao, bảo trì và kiểm kê.<br>- Tìm hiểu nhóm dịch vụ Compute, Storage, Database, Networking và Security.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 20/04/2026 | 20/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Làm rõ các màn hình frontend cần phụ trách, đặc biệt là layout admin, sidebar, navbar, bảng dữ liệu và form nhập liệu.<br>- Tìm hiểu IAM ở mức tổng quan và nguyên tắc phân quyền tối thiểu.<br>&emsp; + Xem cách IAM giúp kiểm soát quyền truy cập trong AWS account. | 21/04/2026 | 21/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Xác định stack frontend gồm React, Vite, TailwindCSS, React Router và API service layer.<br>- Tìm hiểu VPC, subnet, route table và security group ở mức cơ bản.<br>&emsp; + Thực hành đọc tài liệu và ghi chú các bước cần dùng khi triển khai. | 22/04/2026 | 22/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Chuẩn bị kế hoạch triển khai giao diện theo từng module và ghi nhận các rủi ro cần kiểm thử trong các tuần sau.<br>- Tìm hiểu EC2, AMI, instance type và vai trò của máy chủ ảo trong triển khai backend.<br>&emsp; + So sánh với nhu cầu triển khai frontend/backend của project. | 23/04/2026 | 23/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+
+### Kết quả đạt được tuần 1:
+
+- Hiểu được EAM Workspace là hệ thống quản lý tài sản doanh nghiệp, gồm các luồng chính như quản lý tài sản, nhân viên, phòng ban, bàn giao, bảo trì và kiểm kê.
+- Xác định được stack frontend phù hợp cho project: React, Vite, TailwindCSS, React Router và API service layer.
+- Có nền tảng AWS ban đầu để tiếp tục tìm hiểu sâu hơn về IAM, VPC, EC2 và các dịch vụ triển khai ứng dụng.
+
+### Kế hoạch tuần tiếp theo
+
+- Tiếp tục dựng nền tảng frontend bằng React, Vite, TailwindCSS và React Router.
 
 
-### Káº¿t quáº£ Ä‘áº¡t Ä‘Æ°á»£c tuáº§n 1:
-
-* Hiá»ƒu AWS lÃ  gÃ¬ vÃ  náº¯m Ä‘Æ°á»£c cÃ¡c nhÃ³m dá»‹ch vá»¥ cÆ¡ báº£n: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* ÄÃ£ táº¡o vÃ  cáº¥u hÃ¬nh AWS Free Tier account thÃ nh cÃ´ng.
-
-* LÃ m quen vá»›i AWS Management Console vÃ  biáº¿t cÃ¡ch tÃ¬m, truy cáº­p, sá»­ dá»¥ng dá»‹ch vá»¥ tá»« giao diá»‡n web.
-
-* CÃ i Ä‘áº·t vÃ  cáº¥u hÃ¬nh AWS CLI trÃªn mÃ¡y tÃ­nh bao gá»“m:
-  * Access Key
-  * Secret Key
-  * Region máº·c Ä‘á»‹nh
-  * ...
-
-* Sá»­ dá»¥ng AWS CLI Ä‘á»ƒ thá»±c hiá»‡n cÃ¡c thao tÃ¡c cÆ¡ báº£n nhÆ°:
-
-  * Kiá»ƒm tra thÃ´ng tin tÃ i khoáº£n & cáº¥u hÃ¬nh
-  * Láº¥y danh sÃ¡ch region
-  * Xem dá»‹ch vá»¥ EC2
-  * Táº¡o vÃ  quáº£n lÃ½ key pair
-  * Kiá»ƒm tra thÃ´ng tin dá»‹ch vá»¥ Ä‘ang cháº¡y
-  * ...
-
-* CÃ³ kháº£ nÄƒng káº¿t ná»‘i giá»¯a giao diá»‡n web vÃ  CLI Ä‘á»ƒ quáº£n lÃ½ tÃ i nguyÃªn AWS song song.
-* ...
 
 

@@ -1,56 +1,45 @@
----
-title: "Worklog Tuáº§n 7"
-date: 2024-01-01
-weight: 1
+﻿---
+title: "Worklog Tuần 7"
+date: 2026-05-29
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
+## Worklog Tuần 7
 
-### Má»¥c tiÃªu tuáº§n 7:
+**Thời gian:** 29/05/2026 - 04/06/2026
 
-* Káº¿t ná»‘i, lÃ m quen vá»›i cÃ¡c thÃ nh viÃªn trong First Cloud AI Journey.
-* Hiá»ƒu dá»‹ch vá»¥ AWS cÆ¡ báº£n, cÃ¡ch dÃ¹ng console & CLI.
+Tuần này dành nhiều thời gian để chỉnh lại trải nghiệm sử dụng. Các màn hình đã có chức năng được rà soát về bố cục, khoảng cách, responsive và trạng thái hiển thị để giao diện nhất quán hơn khi dùng lâu dài.
 
-### CÃ¡c cÃ´ng viá»‡c cáº§n triá»ƒn khai trong tuáº§n nÃ y:
-| Thá»© | CÃ´ng viá»‡c                                                                                                                                                                                   | NgÃ y báº¯t Ä‘áº§u | NgÃ y hoÃ n thÃ nh | Nguá»“n tÃ i liá»‡u                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - LÃ m quen vá»›i cÃ¡c thÃ nh viÃªn FCAJ <br> - Äá»c vÃ  lÆ°u Ã½ cÃ¡c ná»™i quy, quy Ä‘á»‹nh táº¡i Ä‘Æ¡n vá»‹ thá»±c táº­p                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - TÃ¬m hiá»ƒu AWS vÃ  cÃ¡c loáº¡i dá»‹ch vá»¥ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Táº¡o AWS Free Tier account <br> - TÃ¬m hiá»ƒu AWS Console & AWS CLI <br> - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o AWS account <br>&emsp; + CÃ i AWS CLI & cáº¥u hÃ¬nh <br> &emsp; + CÃ¡ch sá»­ dá»¥ng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - TÃ¬m hiá»ƒu EC2 cÆ¡ báº£n: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - CÃ¡c cÃ¡ch remote SSH vÃ o EC2 <br> - TÃ¬m hiá»ƒu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thá»±c hÃ nh:** <br>&emsp; + Táº¡o EC2 instance <br>&emsp; + Káº¿t ná»‘i SSH <br>&emsp; + Gáº¯n EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Mục tiêu tuần 7:
+
+- Nâng cấp giao diện admin dashboard và các màn hình quản trị.
+- Cải thiện responsive, spacing, hover và active state.
+- Chuẩn bị checklist kiểm thử UI thủ công.
+
+### Các công việc cần triển khai trong tuần này:
+
+| Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ 6 | - Rà soát lại cấu trúc React, routing, layout và các màn hình đã hoàn thiện.<br>- Tìm hiểu AWS Organizations và quản lý nhiều tài khoản.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 29/05/2026 | 29/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Nâng cấp giao diện admin dashboard với sidebar, navbar, card, bảng và form rõ ràng hơn.<br>- Tìm hiểu IAM policy condition và permission boundary.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 30/05/2026 | 30/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Cải thiện responsive cho desktop và mobile layout.<br>- Tìm hiểu VPC Endpoint và truy cập private đến dịch vụ AWS.<br>&emsp; + Thực hành đọc tài liệu và ghi chú các bước cần dùng khi triển khai. | 31/05/2026 | 31/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Bổ sung loading, empty và error state cho các màn hình quan trọng.<br>- Tìm hiểu private access đến S3 qua VPC Endpoint.<br>&emsp; + So sánh với nhu cầu triển khai frontend/backend của project. | 01/06/2026 | 01/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Kiểm tra lại login flow để không phá vỡ API/state hiện có.<br>- Tìm hiểu AWS WAF rule và cách bảo vệ API.<br>&emsp; + Xem cách rule có thể lọc request theo IP, path hoặc pattern phổ biến. | 02/06/2026 | 02/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Sửa các lỗi nhỏ ở sidebar hover, active state và spacing.<br>- Tìm hiểu KMS key, encryption at rest và encryption in transit.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 03/06/2026 | 03/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Chuẩn bị checklist kiểm thử UI thủ công cho admin dashboard.<br>- Tìm hiểu tổng hợp IAM, VPC Endpoint, WAF và KMS cho bảo mật hệ thống.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 04/06/2026 | 04/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+
+### Kết quả đạt được tuần 7:
+
+- Giao diện admin trở nên rõ ràng và nhất quán hơn ở sidebar, navbar, card, bảng và form.
+- Các trạng thái loading, empty và error được rà soát lại để tránh cảm giác giao diện bị đứng khi dữ liệu chưa tải xong.
+- Hoàn thành checklist kiểm thử UI để dùng cho các vòng regression sau.
+
+### Kế hoạch tuần tiếp theo
+
+- Hoàn thiện user portal, cài đặt, FAQ, feedback và dark mode.
 
 
-### Káº¿t quáº£ Ä‘áº¡t Ä‘Æ°á»£c tuáº§n 7:
-
-* Hiá»ƒu AWS lÃ  gÃ¬ vÃ  náº¯m Ä‘Æ°á»£c cÃ¡c nhÃ³m dá»‹ch vá»¥ cÆ¡ báº£n: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* ÄÃ£ táº¡o vÃ  cáº¥u hÃ¬nh AWS Free Tier account thÃ nh cÃ´ng.
-
-* LÃ m quen vá»›i AWS Management Console vÃ  biáº¿t cÃ¡ch tÃ¬m, truy cáº­p, sá»­ dá»¥ng dá»‹ch vá»¥ tá»« giao diá»‡n web.
-
-* CÃ i Ä‘áº·t vÃ  cáº¥u hÃ¬nh AWS CLI trÃªn mÃ¡y tÃ­nh bao gá»“m:
-  * Access Key
-  * Secret Key
-  * Region máº·c Ä‘á»‹nh
-  * ...
-
-* Sá»­ dá»¥ng AWS CLI Ä‘á»ƒ thá»±c hiá»‡n cÃ¡c thao tÃ¡c cÆ¡ báº£n nhÆ°:
-
-  * Kiá»ƒm tra thÃ´ng tin tÃ i khoáº£n & cáº¥u hÃ¬nh
-  * Láº¥y danh sÃ¡ch region
-  * Xem dá»‹ch vá»¥ EC2
-  * Táº¡o vÃ  quáº£n lÃ½ key pair
-  * Kiá»ƒm tra thÃ´ng tin dá»‹ch vá»¥ Ä‘ang cháº¡y
-  * ...
-
-* CÃ³ kháº£ nÄƒng káº¿t ná»‘i giá»¯a giao diá»‡n web vÃ  CLI Ä‘á»ƒ quáº£n lÃ½ tÃ i nguyÃªn AWS song song.
-* ...
 
 

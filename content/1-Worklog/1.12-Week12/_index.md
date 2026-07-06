@@ -1,54 +1,43 @@
----
+﻿---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-07-03
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
+## Week 12 Worklog
+
+**Period:** 03/07/2026 - 10/07/2026
+
+The final week was used to complete the report, review the Hugo site, and prepare the submission. Most work focused on consistency, presentation quality, and summarizing the internship results.
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Review all report sections and bilingual content.
+- Check the Hugo UI, images, links, sidebar, and language switching.
+- Prepare the demo flow and finalize the report.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Work planned and completed this week:
 
+| Day | Work performed | Start date | End date | References |
+| --- | --- | --- | --- | --- |
+| Friday | - Review all sections: Worklog, Proposal, Blogs Posted, Events, Workshop, and Self-Assessment. | 03/07/2026 | 03/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Polish the Hugo report UI, sidebar, Vietnamese rendering, avatar, logo, and student information layout. | 04/07/2026 | 04/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Build Hugo and check warnings, image links, bilingual content, and language-switch navigation issues. | 05/07/2026 | 05/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Review workshop sections 5.1-5.6 and ensure screenshots are placed under the correct steps with varied descriptions. | 06/07/2026 | 06/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Complete self-assessment and sharing/feedback based on project outcomes. | 07/07/2026 | 07/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Check the report against project requirements and standardize dates and terminology. | 08/07/2026 | 08/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Prepare the demo flow and recheck production endpoints and test accounts for presentation. | 09/07/2026 | 09/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Summarize the internship period, finalize the final report, and prepare the submission. | 10/07/2026 | 10/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Worklog, Proposal, Blogs Posted, Events, Workshop, Self-Assessment, and Sharing/Feedback were checked and updated.
+- The report UI was improved for Vietnamese rendering, avatar, logo, and student information layout.
+- The final summary was completed and the report content was prepared for submission.
 
-* Successfully created and configured an AWS Free Tier account.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
 
-* Used AWS CLI to perform basic operations such as:
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

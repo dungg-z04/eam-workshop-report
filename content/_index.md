@@ -12,16 +12,25 @@ chapter: false
 
 ### Student Information
 
-<div class="eam-profile">
-  <div class="eam-profile-item"><strong>Student</strong>Dung</div>
-  <div class="eam-profile-item"><strong>Project</strong>EAM Workspace</div>
-  <div class="eam-profile-item"><strong>Role</strong>Frontend and AWS deployment documentation</div>
-  <div class="eam-profile-item"><strong>Program</strong>Workforce Bootcamp - First Cloud AI Journey</div>
-  <div class="eam-profile-item"><strong>University</strong>Ho Chi Minh City University of Technology and Education</div>
-  <div class="eam-profile-item"><strong>Major</strong>Information Technology</div>
-</div>
-
-![Profile picture](/images/avatar.png)
+<section class="eam-student-panel">
+  <aside class="eam-student-card">
+    <img class="eam-avatar" src="/eam-workshop-report/images/avatar.png" alt="Profile picture of Cu Duc Dung">
+    <div>
+      <h2>Cu Duc Dung</h2>
+    </div>
+  </aside>
+  <div class="eam-student-details">
+    <div class="eam-detail-item"><strong>Phone</strong><span>0343399957</span></div>
+    <div class="eam-detail-item"><strong>Email</strong><span>ducdung29092@gmail.com</span></div>
+    <div class="eam-detail-item"><strong>Project</strong><span>EAM Workspace</span></div>
+    <div class="eam-detail-item"><strong>University</strong><span>HUTECH - Ho Chi Minh City University of Technology</span></div>
+    <div class="eam-detail-item"><strong>Major</strong><span>Information Technology</span></div>
+    <div class="eam-detail-item"><strong>Class</strong><span>22DTHH1</span></div>
+    <div class="eam-detail-item eam-detail-wide"><strong>Internship Company</strong><span>Amazon Web Services Viet Nam Company Limited</span></div>
+    <div class="eam-detail-item eam-detail-wide"><strong>Internship Position</strong><span>Workforce Bootcamp - First Cloud AI Journey</span></div>
+    <div class="eam-detail-item eam-detail-wide"><strong>Internship Duration</strong><span>From 17/04/2026 to 10/07/2026</span></div>
+  </div>
+</section>
 
 ### Report Content
 
