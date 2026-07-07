@@ -10,13 +10,11 @@ During the internship period, I participated in professional events related to A
 
 ### [Event 1 - AWS First Cloud Journey Community Day](4.1-Event1/)
 
-&emsp;**Event name:** AWS First Cloud Journey Community Day
-
 &emsp;**Date:** June 6, 2026
 
 &emsp;**Location:** 26th Floor, Bitexco Financial Tower
 
-&emsp;**Role:** Participant in the First Cloud Journey program
+&emsp;**Role:** Attendee
 
 &emsp;**Main content:** Cloud Computing, DevOps, Security, AI, WebSocket, Teamwork, and career orientation in information technology.
 
@@ -24,13 +22,11 @@ During the internship period, I participated in professional events related to A
 
 ### [Event 2 - FCAJ Community Day](4.2-Event2/)
 
-&emsp;**Event name:** FC Community Day
-
-&emsp;**Date & time:** June 27, 2026
+&emsp;**Date:** June 27, 2026
 
 &emsp;**Location:** 26th floor, Bitexco Financial Tower, with livestream
 
-&emsp;**Role:** Participant in the First Cloud Journey program
+&emsp;**Role:** Attendee
 
 &emsp;**Main content:** Cloud Computing, AI Agents, Voice AI, DevOps AI Agents, AI in Human Resources, and secure enterprise AI deployment.
 
@@ -38,12 +34,10 @@ During the internship period, I participated in professional events related to A
 
 ### [Event 3 - AWS & Swinburne Vietnam Cloud Computing Study Tour](4.3-Event3/)
 
-&emsp;**Event name:** AWS & Swinburne Vietnam Cloud Computing Study Tour
+&emsp;**Date:** July 4, 2026
 
-&emsp;**Time:** Not specified in the provided material
+&emsp;**Location:** 26th floor, Bitexco Financial Tower, with livestream
 
-&emsp;**Format:** Video/knowledge-sharing and career orientation session
-
-&emsp;**Role:** Event content viewer
+&emsp;**Role:** Attendee
 
 &emsp;**Main content:** Cloud Computing, cloud job market, career skills, data engineering, AI, communication, networking, and growth mindset.

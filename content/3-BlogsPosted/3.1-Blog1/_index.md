@@ -71,3 +71,8 @@ aws eks describe-cluster --name my-cluster \
 ## Conclusion
 
 Customer-routed control plane egress makes Amazon EKS more suitable for environments that require strict network control. Instead of only managing traffic from worker nodes and workloads, users gain additional control over part of the outbound traffic from the Kubernetes API Server. This improves privacy, supports auditing, reduces risk when using internal webhooks or OIDC providers, and helps deploy EKS in enterprise systems with high security requirements.
+
+<figure class="blog-group-post">
+  <img src="/eam-workshop-report/images/3-BlogsPosted/3.1-Blog1/z8015011259421_45011c103e179a80db527ae8099b0baa.jpg" alt="Blog post 1 shared in the AWS group">
+  <figcaption>Blog post shared in the AWS group.</figcaption>
+</figure>

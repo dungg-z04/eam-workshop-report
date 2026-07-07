@@ -29,7 +29,7 @@ This workshop follows the demo deployment path: no Route 53, no custom domain, a
 #### Architecture
 
 {{< mermaid >}}
-flowchart LR
+graph LR
     User["User Browser"] --> Amplify["AWS Amplify Hosting\nReact Frontend"]
     Amplify --> Rewrite["Rewrite /api/*"]
     Rewrite --> APIGW["Amazon API Gateway\nHTTP API"]

@@ -1,19 +1,19 @@
 ---
-title: "AWS First Cloud Journey Community Day"
+title: "Event 1: AWS First Cloud Journey Community Day"
 date: 2026-06-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Event 1 AWS First Cloud Journey Community Day
+## Thông tin sự kiện
 
 | Thông tin | Nội dung |
 | --- | --- |
 | Thời gian | Ngày 06/06/2026 |
 | Địa điểm | Tầng 26, Tòa nhà Bitexco Financial Tower |
-| Vai trò | Người tham dự chương trình First Cloud Journey |
 | Hình thức tham gia | Tham gia trực tiếp |
+| Vai trò | Người tham dự |
 | Chủ đề chính | Cloud Computing, DevOps, Security, AI, WebSocket, Teamwork và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin |
 | Danh sách diễn giả | Tran Trung Vinh - System Administrator at Central Retail Group; Bảo Huỳnh - Junior Cloud Native Developer Endava Vietnam; Lê Hoàng Gia Đại; Nguyễn Quốc Bảo; Trương Huy Phước; Việt Phát |
 

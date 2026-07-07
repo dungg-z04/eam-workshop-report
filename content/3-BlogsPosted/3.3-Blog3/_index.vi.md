@@ -48,3 +48,7 @@ Hình minh họa vòng lặp hoạt động của AWS Continuum, dựa trên cá
 
 AWS Continuum thể hiện định hướng mới trong lĩnh vực cloud security, nơi AI được sử dụng để tăng tốc quá trình phát hiện, đánh giá và khắc phục lỗ hổng. Thay vì chỉ cung cấp thông tin cho con người quan sát, hệ thống hướng đến việc tạo ra các hành động có căn cứ, có thể kiểm chứng và từng bước tự động hóa dưới sự kiểm soát của đội ngũ bảo mật.
 
+<figure class="blog-group-post">
+  <img src="/eam-workshop-report/images/3-BlogsPosted/3.3-Blog3/z8015011261961_733583f041bf45f21cbc876601b453b1.jpg" alt="Bài đăng blog 3 trên group AWS">
+  <figcaption>Bài đăng đã chia sẻ trong group AWS.</figcaption>
+</figure>

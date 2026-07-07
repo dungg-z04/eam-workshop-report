@@ -76,3 +76,8 @@ kubectl port-forward svc/kiali 20001:20001 -n istio-system
 ## Kết luận
 
 Bài blog cho thấy EKS Auto Mode và Istio Ambient Mesh là hai công nghệ bổ trợ tốt cho nhau trong quá trình triển khai Kubernetes hiện đại trên AWS. EKS Auto Mode giúp đơn giản hóa vận hành hạ tầng, còn Istio Ambient Mesh cung cấp khả năng bảo mật và kiểm soát lưu lượng theo hướng nhẹ hơn so với mô hình sidecar truyền thống. Đây là một hướng tiếp cận phù hợp cho các hệ thống microservices cần tính bảo mật, khả năng quan sát và khả năng mở rộng cao trong môi trường cloud-native.
+
+<figure class="blog-group-post">
+  <img src="/eam-workshop-report/images/3-BlogsPosted/3.2-Blog2/z8015011259315_7c6dbb49988bf6d90190842f5ae5b0ba.jpg" alt="Bài đăng blog 2 trên group AWS">
+  <figcaption>Bài đăng đã chia sẻ trong group AWS.</figcaption>
+</figure>

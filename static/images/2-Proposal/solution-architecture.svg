@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">EAM Workspace AWS Solution Architecture</title>
+  <desc id="desc">Architecture diagram showing users accessing AWS Amplify Hosting, API requests routed through Amazon API Gateway to AWS Elastic Beanstalk, and the backend connecting to Amazon RDS, Amazon SES, CloudWatch, S3, Secrets Manager, and Parameter Store.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#eef7f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #475569; }
+      .group-title { font: 700 15px Arial, sans-serif; fill: #0f766e; letter-spacing: .5px; text-transform: uppercase; }
+      .box-title { font: 700 20px Arial, sans-serif; fill: #0f172a; }
+      .box-sub { font: 400 14px Arial, sans-serif; fill: #475569; }
+      .small { font: 400 13px Arial, sans-serif; fill: #64748b; }
+      .badge { font: 700 12px Arial, sans-serif; fill: #0f766e; }
+      .box { fill: #ffffff; stroke: #dbe7e2; stroke-width: 1.5; filter: url(#shadow); }
+      .aws { fill: #fff7ed; stroke: #fdba74; }
+      .data { fill: #eff6ff; stroke: #93c5fd; }
+      .support { fill: #f8fafc; stroke: #cbd5e1; stroke-dasharray: 6 5; }
+      .line { fill: none; stroke: #0f766e; stroke-width: 3; marker-end: url(#arrow); }
+      .dash { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+      .pill { fill: #ecfdf5; stroke: #99f6e4; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" rx="28" fill="url(#bg)"/>
+  <text x="64" y="72" class="title">EAM Workspace Solution Architecture</text>
+  <text x="64" y="104" class="subtitle">Web-based enterprise asset management system deployed with managed AWS services</text>
+
+  <rect x="64" y="135" width="1152" height="500" rx="24" fill="#ffffff" opacity="0.72" stroke="#dbe7e2"/>
+  <text x="94" y="172" class="group-title">Main Request Flow</text>
+
+  <rect class="box" x="96" y="220" width="170" height="112" rx="18"/>
+  <circle cx="132" cy="260" r="18" fill="#ecfdf5" stroke="#99f6e4"/>
+  <path d="M123 260a9 9 0 1 0 18 0a9 9 0 1 0-18 0M132 269v17M116 295c5-12 27-12 32 0" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+  <text x="158" y="252" class="box-title">Users</text>
+  <text x="158" y="277" class="box-sub">Admin Portal</text>
+  <text x="158" y="298" class="box-sub">Employee Portal</text>
+
+  <rect class="box aws" x="326" y="220" width="190" height="112" rx="18"/>
+  <text x="354" y="253" class="box-title">AWS Amplify</text>
+  <text x="354" y="278" class="box-sub">React frontend hosting</text>
+  <text x="354" y="300" class="box-sub">SPA + rewrite rules</text>
+
+  <rect class="box aws" x="576" y="220" width="190" height="112" rx="18"/>
+  <text x="604" y="253" class="box-title">API Gateway</text>
+  <text x="604" y="278" class="box-sub">HTTP API endpoint</text>
+  <text x="604" y="300" class="box-sub">Proxy /api/* requests</text>
+
+  <rect class="box aws" x="826" y="220" width="200" height="112" rx="18"/>
+  <text x="854" y="253" class="box-title">Elastic Beanstalk</text>
+  <text x="854" y="278" class="box-sub">Node.js / Express API</text>
+  <text x="854" y="300" class="box-sub">Business logic layer</text>
+
+  <rect class="box data" x="1066" y="220" width="118" height="112" rx="18"/>
+  <text x="1090" y="253" class="box-title">RDS</text>
+  <text x="1090" y="278" class="box-sub">MySQL</text>
+  <text x="1090" y="300" class="box-sub">Business data</text>
+
+  <path class="line" d="M266 276H316"/>
+  <path class="line" d="M516 276H566"/>
+  <path class="line" d="M766 276H816"/>
+  <path class="line" d="M1026 276H1056"/>
+
+  <rect class="pill" x="388" y="357" width="68" height="28" rx="14"/>
+  <text x="403" y="376" class="badge">/api/*</text>
+  <path class="dash" d="M421 332V352"/>
+
+  <text x="94" y="428" class="group-title">Supporting and Production Extension Services</text>
+
+  <rect class="box aws" x="112" y="466" width="180" height="92" rx="16"/>
+  <text x="140" y="498" class="box-title">Amazon SES</text>
+  <text x="140" y="523" class="box-sub">OTP and email</text>
+
+  <rect class="box support" x="338" y="466" width="180" height="92" rx="16"/>
+  <text x="366" y="498" class="box-title">Amazon S3</text>
+  <text x="366" y="523" class="box-sub">Asset images/files</text>
+
+  <rect class="box support" x="564" y="466" width="200" height="92" rx="16"/>
+  <text x="592" y="498" class="box-title">Secrets Manager</text>
+  <text x="592" y="523" class="box-sub">Sensitive credentials</text>
+
+  <rect class="box support" x="810" y="466" width="210" height="92" rx="16"/>
+  <text x="838" y="498" class="box-title">Parameter Store</text>
+  <text x="838" y="523" class="box-sub">Runtime configuration</text>
+
+  <rect class="box aws" x="1066" y="466" width="118" height="92" rx="16"/>
+  <text x="1087" y="498" class="box-title">CloudWatch</text>
+  <text x="1087" y="523" class="box-sub">Logs</text>
+
+  <path class="dash" d="M902 332C760 388 360 380 210 456"/>
+  <path class="dash" d="M926 332C820 390 540 386 428 456"/>
+  <path class="dash" d="M946 332C870 390 708 390 664 456"/>
+  <path class="dash" d="M968 332C950 382 925 398 915 456"/>
+  <path class="dash" d="M990 332C1070 380 1122 398 1125 456"/>
+
+  <rect x="94" y="588" width="1090" height="28" rx="14" fill="#f8fafc" stroke="#dbe7e2"/>
+  <text x="114" y="607" class="small">Legend: solid arrows = main application traffic, dashed arrows = supporting or production-extension integrations.</text>
+</svg>

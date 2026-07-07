@@ -6,8 +6,6 @@ chapter: false
 pre: " <b> 5.7. </b> "
 ---
 
-## Clean Up Resources
-
 After completing the workshop for deploying **EAM Workspace** on AWS, unused resources should be cleaned up to avoid unexpected AWS charges. In this workshop, the main resources include **AWS Amplify Hosting**, **Amazon API Gateway**, **AWS Elastic Beanstalk**, **Amazon RDS for MySQL**, **Amazon SES**, security groups, and related logs/metrics.
 
 Before deleting resources, capture the important screens for the report. These screenshots show that the project was deployed, tested, and has a clear cleanup plan.
@@ -218,12 +216,12 @@ After cleaning up the main resources, verify cost status:
 
 ## Final Cleanup Checklist
 
-- [ ] Resource list recorded.
-- [ ] Amplify app/branch screenshot captured before deletion or disconnect.
-- [ ] Unused API Gateway deleted.
-- [ ] Elastic Beanstalk environment terminated.
-- [ ] RDS database deleted or stopped according to demo needs.
-- [ ] SES identity and SMTP credential checked.
-- [ ] Security groups without dependencies deleted.
-- [ ] CloudWatch log groups checked.
-- [ ] Billing/Cost Explorer checked after cleanup.
+- Resource list recorded.
+- Amplify app/branch screenshot captured before deletion or disconnect.
+- Unused API Gateway deleted.
+- Elastic Beanstalk environment terminated.
+- RDS database deleted or stopped according to demo needs.
+- SES identity and SMTP credential checked.
+- Security groups without dependencies deleted.
+- CloudWatch log groups checked.
+- Billing/Cost Explorer checked after cleanup.

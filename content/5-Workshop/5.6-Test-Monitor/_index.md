@@ -169,14 +169,14 @@ For a demo environment, simple CloudWatch alarms can be created:
 
 ## Validation Checklist
 
-- [ ] Frontend opens from the Amplify URL.
-- [ ] `GET /api/health` succeeds through Elastic Beanstalk.
-- [ ] `GET /api/health` succeeds through API Gateway.
-- [ ] `GET /api/health` succeeds through Amplify rewrite.
-- [ ] Admin login works.
-- [ ] Employee login works.
-- [ ] Main CRUD workflows work.
-- [ ] Asset assignment workflow works.
-- [ ] Support request workflow works.
-- [ ] Inactive accounts are blocked from signing in.
-- [ ] Browser DevTools shows no CORS errors.
+- Frontend opens from the Amplify URL.
+- `GET /api/health` succeeds through Elastic Beanstalk.
+- `GET /api/health` succeeds through API Gateway.
+- `GET /api/health` succeeds through Amplify rewrite.
+- Admin login works.
+- Employee login works.
+- Main CRUD workflows work.
+- Asset assignment workflow works.
+- Support request workflow works.
+- Inactive accounts are blocked from signing in.
+- Browser DevTools shows no CORS errors.

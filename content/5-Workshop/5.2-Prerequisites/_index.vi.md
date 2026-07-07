@@ -174,10 +174,10 @@ Không nên đưa vào:
 
 ## Checklist sẵn sàng
 
-- [ ] Đã chọn AWS Region.
-- [ ] AWS account có quyền phù hợp.
-- [ ] Đã có source code backend và frontend.
-- [ ] Đã chuẩn bị biến môi trường backend.
-- [ ] Đã chuẩn bị `VITE_API_BASE_URL=/api` cho Amplify.
-- [ ] Đã xác định endpoint RDS hoặc kế hoạch tạo RDS.
-- [ ] Thống nhất dùng hướng demo không có Route 53 hoặc custom domain.
+- Đã chọn AWS Region.
+- AWS account có quyền phù hợp.
+- Đã có source code backend và frontend.
+- Đã chuẩn bị biến môi trường backend.
+- Đã chuẩn bị `VITE_API_BASE_URL=/api` cho Amplify.
+- Đã xác định endpoint RDS hoặc kế hoạch tạo RDS.
+- Thống nhất dùng hướng demo không có Route 53 hoặc custom domain.

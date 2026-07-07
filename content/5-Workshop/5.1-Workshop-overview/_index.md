@@ -38,7 +38,7 @@ First, the AWS environment, source code, and required configuration variables ar
 After the backend is healthy and the `/api/health` endpoint returns a successful response, Amazon API Gateway is created as the public entry point for the backend. The React/Vite frontend is deployed to AWS Amplify Hosting, and rewrite rules are configured so `/api/*` and `/uploads/*` requests from the Amplify domain are forwarded to API Gateway. Finally, the system is validated through the main workflows, including admin login, employee login, asset management, asset assignment, API requests in DevTools, and inactive account login blocking.
 
 {{< mermaid >}}
-flowchart TD
+graph TD
     A["Prepare AWS account, source code, and environment variables"] --> B["Create or configure RDS MySQL"]
     B --> C["Package the backend source bundle"]
     C --> D["Deploy backend to Elastic Beanstalk"]

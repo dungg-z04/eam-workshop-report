@@ -13,7 +13,7 @@ Bước này chuẩn bị database MySQL cho backend. Với môi trường demo,
 ## Mô hình kết nối mục tiêu
 
 {{< mermaid >}}
-flowchart LR
+graph LR
     APIGW["Amazon API Gateway"] --> EB["Elastic Beanstalk Backend"]
     EB --> SGBackend["Backend Security Group"]
     SGBackend --> RDS["Amazon RDS MySQL"]

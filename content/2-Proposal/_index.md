@@ -16,7 +16,7 @@ The project topic is **EAM Workspace**, a web-based Enterprise Asset Management 
 
 EAM Workspace helps a company manage employees, departments, assets, assignments, maintenance requests, inventory sessions, reports, feedback, FAQ content, attendance records, login history, notifications, and support chat in one centralized workspace. Instead of storing information separately in spreadsheets, chat messages, or internal files, the system brings the main business workflows into one application with clear access control for administrators and employees.
 
-The system was developed as a team project by five members. It includes a React frontend, a Node.js/Express backend, a MySQL database managed through Prisma, and an AWS deployment plan. This report focuses on building the UI, integrating APIs, learning AWS services, deploying the full-stack demo, and documenting the workshop during the internship period from **17/04/2026 to 10/07/2026**.
+The system was developed as a team project by five members. It includes a React frontend, a Node.js/Express backend, a MySQL database managed through Prisma, and an AWS deployment plan. This proposal presents the project background, system purpose, problem statement, proposed solution, deployment architecture, implementation plan, risks, and expected outcomes of the full project.
 
 In the demo deployment, the AWS architecture uses AWS Amplify Hosting for the frontend, Amazon API Gateway as the public API layer, AWS Elastic Beanstalk for the Node.js backend, Amazon RDS for MySQL for business data, Amazon SES for outbound email, and Amazon CloudWatch for logging/monitoring. Services such as Amazon S3, AWS Secrets Manager, AWS Systems Manager Parameter Store, and AWS CloudTrail are included as future production-ready extensions.
 
@@ -26,7 +26,7 @@ EAM Workspace is used to help a company manage the full asset lifecycle, from cr
 
 For administrators, the system helps track asset lists, asset status, current users, assignment history, maintenance requests, inventory data, and summary reports. For employees, the system provides a self-service portal to view assigned assets, submit support requests, update profile information, and follow activities related to their assets.
 
-The main goal of the project is not only to build a functional asset management web application, but also to practice deploying a full-stack system on AWS, configuring frontend-backend-database connectivity, testing a public environment, and controlling cost after deployment.
+The main goal of the project is to build a functional asset management web application and propose a suitable cloud deployment model so the system can run reliably, remain accessible, support monitoring, and be extended in the future.
 
 ### 3. Problem Statement
 
@@ -48,7 +48,7 @@ EAM Workspace solves these problems by providing a centralized web application w
 - **Admin Portal**: used by administrators to manage employees, departments, asset categories, assets, assignments, maintenance requests, inventory sessions, locations, reports, feedback, FAQ content, attendance history, login history, and support chat.
 - **Employee Portal**: used by employees to view assigned assets, check asset details, submit support requests, view FAQ content, update profile information, change password, check personal history, and interact with support.
 
-The application is deployed to AWS so that the frontend, backend, database, and supporting services can run in a cloud environment that is easier to access, monitor, and extend. During the internship, AWS self-learning was carried out alongside product development, covering AWS accounts, IAM, networking, compute, database, storage, deployment, monitoring, and cost optimization.
+The application is proposed to be deployed on AWS so that the frontend, backend, database, and supporting services can run in a cloud environment that is easier to access, monitor, and extend. The cloud architecture allows the team to validate the system in an environment closer to real operation than local development alone, while also creating a foundation for file storage, secrets management, monitoring, and cost control.
 
 #### Benefits
 
@@ -62,20 +62,9 @@ The application is deployed to AWS so that the frontend, backend, database, and 
 
 The proposed AWS deployment architecture follows a simple full-stack web application model for an internal demo environment. The current deployment mode does not require Route 53 or a custom domain. Users access the default AWS Amplify Hosting URL, and frontend API calls are rewritten through `/api/*` to Amazon API Gateway. API Gateway then forwards requests to the backend running on AWS Elastic Beanstalk, and the backend connects to Amazon RDS for MySQL.
 
-{{< mermaid >}}
-flowchart LR
-    User["User Browser"] --> Amplify["AWS Amplify Hosting\nReact Frontend"]
-    Amplify --> Rewrite["Amplify Rewrite Rule\n/api/*"]
-    Rewrite --> APIGW["Amazon API Gateway\nHTTP API"]
-    APIGW --> EB["AWS Elastic Beanstalk\nNode.js Backend"]
-    EB --> RDS["Amazon RDS for MySQL\nPrivate Subnet"]
-    EB --> S3["Amazon S3\nProduction Extension"]
-    EB --> SES["Amazon SES\nEmail / OTP"]
-    EB --> SSM["SSM Parameter Store\nProduction Extension"]
-    EB --> Secrets["AWS Secrets Manager\nProduction Extension"]
-    EB --> CW["Amazon CloudWatch\nLogs and Alarms"]
-    CloudTrail["AWS CloudTrail\nProduction Extension"] --> Audit["Audit Trail"]
-{{< /mermaid >}}
+![EAM Workspace solution architecture on AWS](/eam-workshop-report/images/2-Proposal/architecture-overview.png)
+
+*EAM Workspace solution architecture on AWS. The main flow goes from users to Amplify Hosting, API Gateway, Elastic Beanstalk, and RDS; services such as SES, S3, Secrets Manager, Parameter Store, and CloudWatch support email, storage, configuration, security, and monitoring.*
 
 #### AWS Services Used
 
@@ -101,13 +90,13 @@ flowchart LR
 
 ### 5. Technical Implementation Plan
 
-#### Phase 1: Requirement Analysis and UI Planning
+#### Phase 1: Requirement Analysis and System Planning
 
 - Analyze the asset management problem and define the core modules.
 - Identify two user groups: administrators and employees.
 - Design the main user flows for asset creation, assignment, return, maintenance, inventory, reporting, and employee self-service.
-- Build reusable UI patterns for the Admin Portal.
-- Study AWS fundamentals such as account setup, cost management, IAM, Regions, Availability Zones, and basic cloud concepts.
+- Define the overall architecture including frontend, backend, database, and deployment environment.
+- Prepare team working conventions, repository structure, development branches, and integration plan.
 
 #### Phase 2: Backend and Database Foundation
 
@@ -123,7 +112,7 @@ flowchart LR
 - Integrate API calls with the backend.
 - Add loading, empty, error, and toast states.
 - Review responsive behavior and dark/light mode.
-- Continue AWS self-learning on compute, storage, database, networking, and deployment services to prepare for the deployment phase.
+- Prepare the frontend build configuration so it can be deployed to a cloud environment.
 
 #### Phase 4: AWS Deployment
 
@@ -150,18 +139,18 @@ flowchart LR
 
 | Period | Milestone | Expected Result |
 | --- | --- | --- |
-| Week 1 | Project orientation and AWS fundamentals | Frontend role, local environment, and basic AWS concepts are prepared. |
-| Week 2 | React app and admin layout setup | Routes, sidebar, layout, and reusable base components are created. |
-| Week 3 | Login, token handling, and API layer | Protected routes, token handling, and service layer are ready for backend integration. |
-| Week 4 | Core admin CRUD screens | Asset, employee, department, form, and table screens are implemented. |
-| Week 5 | Asset workflow development | Assignment, return, transfer, and maintenance workflows are developed. |
-| Week 6 | Inventory, reporting, and data states | Inventory, reports, charts, empty states, and data states are completed. |
-| Week 7 | UI experience refinement | Responsive layout, dark mode, loading states, toasts, and UI error handling are improved. |
-| Week 8 | User portal and extended modules | Employee dashboard, assigned assets, FAQ, feedback, Excel import, and floor map are completed. |
-| Week 9 | AWS deployment preparation | Production build, environment configuration, deployment documentation, and integration issues are reviewed. |
-| Week 10 | AWS deployment | RDS, Elastic Beanstalk, API Gateway, and Amplify are deployed; the health endpoint and login flow are tested. |
-| Week 11 | Production testing and workshop documentation | Integration issues are fixed, key screens are tested, workshop screenshots are captured, and deployment guidance is expanded. |
-| Week 12 | Final report completion | The Hugo site, self-evaluation, sharing/feedback, cleanup section, and final submission materials are reviewed. |
+| Week 1 | Project kickoff | Define the topic, functional scope, user groups, technology stack, and team working plan. |
+| Week 2 | Frontend foundation | Set up the React app structure, routing, layout, sidebar, and base UI components. |
+| Week 3 | Authentication and API layer | Complete login flow, token handling, protected routes, and service layer for backend integration. |
+| Week 4 | Core administration modules | Implement asset, employee, department, form, and data table screens. |
+| Week 5 | Asset lifecycle workflows | Develop assignment, return, transfer, and maintenance workflows. |
+| Week 6 | Inventory and reporting | Add inventory, reports, charts, statistics, and data states. |
+| Week 7 | User experience improvement | Improve responsive behavior, dark mode, loading states, toast notifications, and UI error handling. |
+| Week 8 | Employee portal and extended modules | Add employee dashboard, assigned assets, FAQ, feedback, Excel import, and floor map features. |
+| Week 9 | Cloud deployment preparation | Review production build, environment variables, connection settings, and AWS deployment documentation. |
+| Week 10 | AWS demo deployment | Deploy the system with RDS, Elastic Beanstalk, API Gateway, and Amplify; test endpoints and login flow. |
+| Week 11 | Integration testing and stabilization | Fix integration issues and validate upload, CORS, API routing, account status, and core functions. |
+| Week 12 | Documentation and handover | Review the report, workshop, cleanup process, validation results, and final submission materials. |
 
 ### 7. Budget Estimation
 
@@ -208,7 +197,7 @@ After completing this project and workshop, the expected outcomes are:
 - A MySQL database schema that stores the core business data of the system.
 - A practical AWS deployment model using Amplify, API Gateway, Elastic Beanstalk, RDS, SES, and CloudWatch, with future extension directions for S3, Secrets Manager, and Parameter Store.
 - A step-by-step workshop that another learner can follow to deploy and validate the system.
-- A better understanding of full-stack deployment, cloud networking, environment variables, CORS, database connectivity, monitoring, and clean-up on AWS.
+- A clear solution proposal that explains how the system solves enterprise asset management problems and how it can be deployed on AWS.
 
 ### 10. Future Improvements
 

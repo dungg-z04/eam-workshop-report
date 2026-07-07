@@ -77,3 +77,8 @@ kubectl port-forward svc/kiali 20001:20001 -n istio-system
 ## Conclusion
 
 The blog shows that EKS Auto Mode and Istio Ambient Mesh complement each other well when deploying modern Kubernetes workloads on AWS. EKS Auto Mode simplifies infrastructure operations, while Istio Ambient Mesh provides security and traffic control in a lighter way than the traditional sidecar model. This is a suitable approach for microservices systems that require security, observability, and scalability in a cloud-native environment.
+
+<figure class="blog-group-post">
+  <img src="/eam-workshop-report/images/3-BlogsPosted/3.2-Blog2/z8015011259315_7c6dbb49988bf6d90190842f5ae5b0ba.jpg" alt="Blog post 2 shared in the AWS group">
+  <figcaption>Blog post shared in the AWS group.</figcaption>
+</figure>

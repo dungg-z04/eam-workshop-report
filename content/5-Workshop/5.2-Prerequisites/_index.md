@@ -34,6 +34,16 @@ After selecting the Region, check the top-right corner of the AWS Console to ens
 
 The selected Region should be the Region used throughout the workshop. Keeping one Region helps avoid connectivity issues between Elastic Beanstalk, API Gateway, RDS, and SES.
 
+## Check the Deployment Branch
+
+Before connecting AWS Amplify, identify the GitHub branch used for frontend deployment.
+
+![GitHub branch used for Amplify frontend deployment](/eam-workshop-report/images/5-Workshop/5.2-Prerequisites/5.2.2-github-branch.png)
+
+*Figure 5.2.2. GitHub branch used for Amplify frontend deployment.*
+
+Record the correct deployment branch, for example `aws-architecture`, because Amplify will build and deploy the frontend from this branch.
+
 ## Local Tools
 
 Install and verify the following tools:
@@ -83,15 +93,7 @@ Frontend production output:
 frontend/dist
 ```
 
-## Check the Deployment Branch
 
-Before connecting AWS Amplify, identify the GitHub branch used for frontend deployment.
-
-![GitHub branch used for Amplify frontend deployment](/eam-workshop-report/images/5-Workshop/5.2-Prerequisites/5.2.2-github-branch.png)
-
-*Figure 5.2.2. GitHub branch used for Amplify frontend deployment.*
-
-Record the correct deployment branch, for example `aws-architecture`, because Amplify will build and deploy the frontend from this branch.
 
 ## Backend Environment Variables
 
@@ -174,10 +176,10 @@ Do not include:
 
 ## Readiness Checklist
 
-- [ ] AWS Region selected.
-- [ ] AWS account has the required permissions.
-- [ ] Backend and frontend source code are available.
-- [ ] Backend environment variables are prepared.
-- [ ] `VITE_API_BASE_URL=/api` is prepared for Amplify.
-- [ ] RDS endpoint or RDS creation plan is ready.
-- [ ] Demo path without Route 53 or custom domain is confirmed.
+- AWS Region selected.
+- AWS account has the required permissions.
+- Backend and frontend source code are available.
+- Backend environment variables are prepared.
+- `VITE_API_BASE_URL=/api` is prepared for Amplify.
+- RDS endpoint or RDS creation plan is ready.
+- Demo path without Route 53 or custom domain is confirmed.

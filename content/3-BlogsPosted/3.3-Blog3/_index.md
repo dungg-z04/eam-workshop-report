@@ -48,4 +48,7 @@ The following diagram illustrates the AWS Continuum operating loop based on the 
 
 AWS Continuum reflects a new direction in cloud security, where AI is used to accelerate vulnerability discovery, assessment, and remediation. Instead of only providing information for humans to observe, the system aims to produce grounded, verifiable actions and gradually automate them under the control of security teams.
 
-
+<figure class="blog-group-post">
+  <img src="/eam-workshop-report/images/3-BlogsPosted/3.3-Blog3/z8015011261961_733583f041bf45f21cbc876601b453b1.jpg" alt="Blog post 3 shared in the AWS group">
+  <figcaption>Blog post shared in the AWS group.</figcaption>
+</figure>

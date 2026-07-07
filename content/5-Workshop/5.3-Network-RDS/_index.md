@@ -13,7 +13,7 @@ This step prepares the MySQL database for the backend. For a demo environment, t
 ## Target Connection Model
 
 {{< mermaid >}}
-flowchart LR
+graph LR
     APIGW["Amazon API Gateway"] --> EB["Elastic Beanstalk Backend"]
     EB --> SGBackend["Backend Security Group"]
     SGBackend --> RDS["Amazon RDS MySQL"]

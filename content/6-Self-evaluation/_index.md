@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-# Self-Assessment
 
 During the internship period from **17/04/2026 to 10/07/2026** at **Amazon Web Services Vietnam Company Limited** in the **Workforce Bootcamp - First Cloud AI Journey** program, I had the opportunity to approach AWS in a more practical way through self-learning, events, AWS Blog reading, project deployment, and workshop documentation.
 

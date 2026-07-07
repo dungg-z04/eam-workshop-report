@@ -217,12 +217,12 @@ Sau khi cleanup các tài nguyên chính, cần kiểm tra chi phí:
 
 ## Checklist dọn dẹp cuối cùng
 
-- [ ] Đã ghi lại danh sách tài nguyên được tạo trong workshop.
-- [ ] Đã chụp ảnh Amplify app/branch trước khi xóa hoặc disconnect.
-- [ ] Đã xóa API Gateway không còn sử dụng.
-- [ ] Đã terminate Elastic Beanstalk environment.
-- [ ] Đã xóa hoặc tạm dừng RDS database theo nhu cầu demo.
-- [ ] Đã kiểm tra SES identity và SMTP credential.
-- [ ] Đã xóa security group không còn dependency.
-- [ ] Đã kiểm tra CloudWatch log groups.
-- [ ] Đã kiểm tra Billing/Cost Explorer sau cleanup.
+- Đã ghi lại danh sách tài nguyên được tạo trong workshop.
+- Đã chụp ảnh Amplify app/branch trước khi xóa hoặc disconnect.
+- Đã xóa API Gateway không còn sử dụng.
+- Đã terminate Elastic Beanstalk environment.
+- Đã xóa hoặc tạm dừng RDS database theo nhu cầu demo.
+- Đã kiểm tra SES identity và SMTP credential.
+- Đã xóa security group không còn dependency.
+- Đã kiểm tra CloudWatch log groups.
+- Đã kiểm tra Billing/Cost Explorer sau cleanup.

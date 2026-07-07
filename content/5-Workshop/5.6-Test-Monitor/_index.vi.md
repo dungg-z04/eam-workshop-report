@@ -170,14 +170,14 @@ Với môi trường demo, có thể tạo các CloudWatch alarm đơn giản:
 
 ## Checklist xác nhận
 
-- [ ] Frontend mở được từ Amplify URL.
-- [ ] `GET /api/health` trả success qua Elastic Beanstalk.
-- [ ] `GET /api/health` trả success qua API Gateway.
-- [ ] `GET /api/health` trả success qua Amplify rewrite.
-- [ ] Admin login hoạt động.
-- [ ] Employee login hoạt động.
-- [ ] Workflow CRUD chính hoạt động.
-- [ ] Workflow bàn giao tài sản hoạt động.
-- [ ] Workflow yêu cầu hỗ trợ hoạt động.
-- [ ] Tài khoản inactive bị chặn đăng nhập.
-- [ ] Không có lỗi CORS trong browser DevTools.
+- Frontend mở được từ Amplify URL.
+- `GET /api/health` trả success qua Elastic Beanstalk.
+- `GET /api/health` trả success qua API Gateway.
+- `GET /api/health` trả success qua Amplify rewrite.
+- Admin login hoạt động.
+- Employee login hoạt động.
+- Workflow CRUD chính hoạt động.
+- Workflow bàn giao tài sản hoạt động.
+- Workflow yêu cầu hỗ trợ hoạt động.
+- Tài khoản inactive bị chặn đăng nhập.
+- Không có lỗi CORS trong browser DevTools.

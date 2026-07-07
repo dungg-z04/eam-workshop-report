@@ -29,7 +29,7 @@ Workshop này dùng hướng demo: không dùng Route 53, không dùng custom do
 #### Kiến trúc
 
 {{< mermaid >}}
-flowchart LR
+graph LR
     User["Trình duyệt người dùng"] --> Amplify["AWS Amplify Hosting\nReact Frontend"]
     Amplify --> Rewrite["Rewrite /api/*"]
     Rewrite --> APIGW["Amazon API Gateway\nHTTP API"]

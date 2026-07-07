@@ -72,3 +72,8 @@ aws eks describe-cluster --name my-cluster \
 ## Kết luận 
 
 Tính năng customer-routed control plane egress giúp Amazon EKS phù hợp hơn với các môi trường yêu cầu kiểm soát mạng nghiêm ngặt. Thay vì chỉ quản lý lưu lượng của worker nodes và workloads, người dùng có thêm khả năng kiểm soát một phần lưu lượng outbound từ Kubernetes API Server. Điều này giúp tăng tính riêng tư, hỗ trợ kiểm toán, giảm rủi ro khi sử dụng webhook hoặc OIDC provider nội bộ và giúp triển khai EKS trong các hệ thống doanh nghiệp có yêu cầu bảo mật cao.
+
+<figure class="blog-group-post">
+  <img src="/eam-workshop-report/images/3-BlogsPosted/3.1-Blog1/z8015011259421_45011c103e179a80db527ae8099b0baa.jpg" alt="Bài đăng blog 1 trên group AWS">
+  <figcaption>Bài đăng đã chia sẻ trong group AWS.</figcaption>
+</figure>

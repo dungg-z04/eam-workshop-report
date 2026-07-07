@@ -1,20 +1,19 @@
 ---
-title: "FCAJ Community Day"
-date: 2024-01-01
-weight: 1
+title: "Event 2: FCAJ Community Day"
+date: 2026-06-27
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Event 2 - FC Community Day
 
 ## Thông tin sự kiện
 
 | Nội dung | Chi tiết |
 | --- | --- |
-| Tên sự kiện | FC Community Day |
-| Hình thức | Tổ chức trực tiếp kết hợp livestream |
-| Địa điểm | Tầng 26 và tầng 36, tòa nhà Bitexco Financial Tower |
+| Thời gian | Ngày 27/06/2026 |
+| Địa điểm | Tầng 26 , tòa nhà Bitexco Financial Tower |
+| Hình thức tham gia | Tham gia trực tuyến |
 | Vai trò | Người tham dự |
 | Chủ đề chính | Cloud Computing, AI Agent, Voice AI, DevOps AI Agent, AI trong nhân sự và triển khai AI an toàn trong doanh nghiệp |
 

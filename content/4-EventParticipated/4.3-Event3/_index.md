@@ -1,22 +1,19 @@
 ---
-title: "AWS & Swinburne Vietnam Cloud Computing Study Tour"
-date: 2024-01-01
+title: "Event 3: AWS & Swinburne Vietnam Cloud Computing Study Tour"
+date: 2026-07-04
 weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# Event 3 - AWS & Swinburne Vietnam Cloud Computing Study Tour
-
 ## Event Information
 
 | Item | Details |
 | --- | --- |
-| Event name | AWS & Swinburne Vietnam Cloud Computing Study Tour |
-| Format | Video/knowledge-sharing and career orientation session |
-| Time | Not specified in the provided material |
-| Related organizations | AWS, Swinburne Vietnam, First Cloud AI Journey community, and invited industry speakers |
-| Role | Event content viewer |
+| Date | July 4, 2026 |
+| Location | 26th floor, Bitexco Financial Tower |
+| Participation format | Online participation |
+| Role | Attendee |
 | Main topics | Cloud Computing, cloud job market, career skills, data engineering, AI, communication, networking, and growth mindset |
 
 ## Overview

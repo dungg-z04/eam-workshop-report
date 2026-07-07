@@ -10,13 +10,11 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 ### [Event 1 - AWS First Cloud Journey Community Day](4.1-Event1/)
 
-&emsp;**Tên sự kiện:** AWS First Cloud Journey Community Day
-
 &emsp;**Thời gian:** Ngày 06/06/2026
 
 &emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự chương trình First Cloud Journey
+&emsp;**Vai trò trong sự kiện:** Người tham dự 
 
 &emsp;**Nội dung chính:** Cloud Computing, DevOps, Security, AI, WebSocket, Teamwork và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin.
 
@@ -24,13 +22,11 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 ### [Event 2 - FCAJ Community Day](4.2-Event2/)
 
-&emsp;**Tên sự kiện:** FC Community Day
-
 &emsp;**Thời gian:** Ngày 27/06/2026
 
 &emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, kết hợp livestream
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự chương trình First Cloud Journey
+&emsp;**Vai trò trong sự kiện:** Người tham dự 
 
 &emsp;**Nội dung chính:** Cloud Computing, AI Agent, Voice AI, DevOps AI Agent, AI trong nhân sự và triển khai AI an toàn trong doanh nghiệp.
 
@@ -38,12 +34,11 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 ### [Event 3 - AWS & Swinburne Vietnam Cloud Computing Study Tour](4.3-Event3/)
 
-&emsp;**Tên sự kiện:** AWS & Swinburne Vietnam Cloud Computing Study Tour
 
-&emsp;**Thời gian:** Không ghi rõ trong tài liệu cung cấp
+&emsp;**Thời gian:** Ngày 04/07/2026
 
-&emsp;**Hình thức:** Video/phiên chia sẻ kiến thức và định hướng nghề nghiệp
+&emsp;**Địa điểm::** Tầng 26, Tòa nhà Bitexco Financial Tower, kết hợp livestream
 
-&emsp;**Vai trò trong sự kiện:** Người theo dõi nội dung sự kiện
+&emsp;**Vai trò trong sự kiện:** Người tham dự 
 
 &emsp;**Nội dung chính:** Cloud Computing, thị trường việc làm cloud, kỹ năng nghề nghiệp, data engineering, AI, giao tiếp, networking và tư duy phát triển.

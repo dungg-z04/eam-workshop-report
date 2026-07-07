@@ -1,20 +1,19 @@
 ---
-title: "FCAJ Community Day"
-date: 2024-01-01
-weight: 1
+title: "Event 2: FCAJ Community Day"
+date: 2026-06-27
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Event 2 - FC Community Day
 
 ## Event Information
 
 | Item | Details |
 | --- | --- |
-| Event name | FC Community Day |
-| Format | In-person event with livestream |
-| Location | 26th and 36th floors, Bitexco Financial Tower |
+| Date | June 27, 2026 |
+| Location | 26th floor, Bitexco Financial Tower |
+| Participation format | Online participation |
 | Role | Attendee |
 | Main topics | Cloud Computing, AI Agents, Voice AI, DevOps AI Agents, AI in Human Resources, and secure enterprise AI deployment |
 
