@@ -8,6 +8,8 @@ pre: " <b> 3.3. </b> "
 
 # AWS Continuum: Bảo mật ở tốc độ máy
 
+> Đã đăng trên [AWS Study Group VN](https://www.facebook.com/groups/660548818043427/) vào ngày 30/06/2026.
+
 **Nguồn:** [AWS Security Blog - Introducing AWS Continuum: Security at machine speed](https://aws.amazon.com/vi/blogs/security/introducing-aws-continuum-security-at-machine-speed/)
 
 Bài blog giới thiệu AWS Continuum, một hướng tiếp cận mới của AWS nhằm hỗ trợ các đội ngũ bảo mật xử lý lỗ hổng mã nguồn ở tốc độ máy. Thay vì chỉ thu thập telemetry, lưu trữ, truy vấn và xây dựng dashboard để theo dõi, AWS nhấn mạnh mô hình mới gồm telemetry, context, reasoning và actions.

@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-This section summarizes the technical blog posts I reviewed and shared during the internship program. The selected articles focus on Amazon EKS, Kubernetes operations, service mesh security, private networking, and AI-assisted cloud security on AWS.
+This section summarizes the technical blog posts we reviewed and shared during the internship program. The selected articles focus on Amazon EKS, Kubernetes operations, service mesh security, private networking, and AI-assisted cloud security on AWS.
 
 ### [Blog 1 - Amazon EKS now supports control plane egress through your VPC](3.1-Blog1/)
 

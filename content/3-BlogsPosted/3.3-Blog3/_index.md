@@ -8,6 +8,8 @@ pre: " <b> 3.3. </b> "
 
 # AWS Continuum: Security at Machine Speed
 
+> Posted on [AWS Study Group VN](https://www.facebook.com/groups/660548818043427/) on June 30, 2026.
+
 **Source:** [AWS Security Blog - Introducing AWS Continuum: Security at machine speed](https://aws.amazon.com/vi/blogs/security/introducing-aws-continuum-security-at-machine-speed/)
 
 This blog post introduces AWS Continuum, a new AWS approach designed to help security teams handle code vulnerabilities at machine speed. Instead of only collecting telemetry, storing it, querying it, and building dashboards for monitoring, AWS emphasizes a new model built around telemetry, context, reasoning, and actions.

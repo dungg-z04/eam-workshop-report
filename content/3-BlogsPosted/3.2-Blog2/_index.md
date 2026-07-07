@@ -8,6 +8,8 @@ pre: " <b> 3.2. </b> "
 
 # Amazon EKS Auto Mode and Istio Ambient Mesh
 
+> Posted on [AWS Study Group VN](https://www.facebook.com/groups/660548818043427/) on June 24, 2026
+
 **Source:** [AWS Containers Blog - Better Together: Amazon EKS Auto Mode and Istio Ambient Mesh](https://aws.amazon.com/blogs/containers/better-together-amazon-eks-auto-mode-and-istio-ambient-mesh/)
 
 

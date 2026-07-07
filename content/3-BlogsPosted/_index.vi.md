@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-Phần này tổng hợp các bài blog kỹ thuật mình đã đọc và chia sẻ trong quá trình thực tập. Các chủ đề được chọn tập trung vào Amazon EKS, vận hành Kubernetes, bảo mật service mesh, private networking và ứng dụng AI trong cloud security trên AWS.
+Phần này tổng hợp các bài blog kỹ thuật nhóm em đã đọc và chia sẻ trong quá trình thực tập. Các chủ đề được chọn tập trung vào Amazon EKS, vận hành Kubernetes, bảo mật service mesh, private networking và ứng dụng AI trong cloud security trên AWS.
 
 ### [Blog 1 - Amazon EKS now supports control plane egress through your VPC](3.1-Blog1/)
 

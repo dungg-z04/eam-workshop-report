@@ -7,8 +7,6 @@ pre: " <b> 7. </b> "
 ---
 
 
-This section summarizes my personal feedback after joining the **Workforce Bootcamp - First Cloud AI Journey** program at Amazon Web Services Vietnam. The feedback focuses on my learning experience, mentor and team support, the connection between the program and my Information Technology major, and suggestions that could improve the experience for future interns.
-
 ## 1. Overall Evaluation
 
 ### 1.1. Internship Environment

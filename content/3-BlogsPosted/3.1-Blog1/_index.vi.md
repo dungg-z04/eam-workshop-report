@@ -8,6 +8,8 @@ pre: " <b> 3.1. </b> "
 
 # Amazon EKS now supports control plane egress through your VPC
 
+> Đã đăng trên [AWS Study Group VN](https://www.facebook.com/groups/660548818043427/) vào ngày 23/06/2026.
+
 **Nguồn:** [Amazon EKS now supports control plane egress through your VPC](https://aws.amazon.com/blogs/containers/amazon-eks-now-supports-control-plane-egress-through-your-vpc/)
 
 Amazon EKS đã bổ sung khả năng customer-routed control plane egress, cho phép định tuyến một số lưu lượng outbound từ Kubernetes API Server đi qua chính Amazon VPC của người dùng. Tính năng này giúp doanh nghiệp kiểm soát tốt hơn đường đi của các request do control plane khởi tạo, chẳng hạn như admission webhook callback, truy vấn OIDC provider và aggregate API server request.

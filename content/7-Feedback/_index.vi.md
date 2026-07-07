@@ -6,9 +6,6 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-
-Phần này ghi lại cảm nhận của em sau khi tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey** tại Công ty TNHH Amazon Web Services Việt Nam. Nội dung tập trung vào trải nghiệm học tập, sự hỗ trợ từ mentor và team, mức độ phù hợp với chuyên ngành Công nghệ thông tin, cũng như những góp ý để chương trình có thể hỗ trợ thực tập sinh tốt hơn.
-
 ## 1. Đánh giá chung
 
 ### 1.1. Môi trường thực tập
