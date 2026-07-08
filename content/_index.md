@@ -35,11 +35,11 @@ chapter: false
 ### Report Content
 
 <ul class="eam-report-list">
-  <li><a href="1-Worklog/">Worklog</a><br>Weekly progress and learning record.</li>
-  <li><a href="2-Proposal/">Proposal</a><br>AWS architecture and deployment plan for EAM Workspace.</li>
-  <li><a href="3-BlogsPosted/">Blogs Posted</a><br>Technical posts and learning notes.</li>
-  <li><a href="4-EventParticipated/">Events Participated</a><br>Events and activities joined during the program.</li>
-  <li><a href="5-Workshop/">Workshop</a><br>Hands-on AWS deployment guide for EAM Workspace.</li>
-  <li><a href="6-Self-evaluation/">Self-evaluation</a><br>Reflection on outcomes, skills, and improvements.</li>
-  <li><a href="7-Feedback/">Sharing and Feedback</a><br>Summary of sharing, feedback, and lessons learned.</li>
+  <li><a href="/eam-workshop-report/1-worklog/">Worklog</a><br>Weekly progress and learning record.</li>
+  <li><a href="/eam-workshop-report/2-proposal/">Proposal</a><br>AWS architecture and deployment plan for EAM Workspace.</li>
+  <li><a href="/eam-workshop-report/3-blogsposted/">Blogs Posted</a><br>Technical posts and learning notes.</li>
+  <li><a href="/eam-workshop-report/4-eventparticipated/">Events Participated</a><br>Events and activities joined during the program.</li>
+  <li><a href="/eam-workshop-report/5-workshop/">Workshop</a><br>Hands-on AWS deployment guide for EAM Workspace.</li>
+  <li><a href="/eam-workshop-report/6-self-evaluation/">Self-evaluation</a><br>Reflection on outcomes, skills, and improvements.</li>
+  <li><a href="/eam-workshop-report/7-feedback/">Sharing and Feedback</a><br>Summary of sharing, feedback, and lessons learned.</li>
 </ul>

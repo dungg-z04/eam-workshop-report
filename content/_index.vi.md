@@ -35,11 +35,11 @@ chapter: false
 ### Nội dung báo cáo
 
 <ul class="eam-report-list">
-  <li><a href="1-Worklog/">Worklog</a><br>Nhật ký tiến độ và nội dung đã học theo từng tuần.</li>
-  <li><a href="2-Proposal/">Proposal</a><br>Đề xuất kiến trúc và kế hoạch triển khai AWS cho EAM Workspace.</li>
-  <li><a href="3-BlogsPosted/">Các bài blog đã đăng</a><br>Ghi chú học tập và các bài viết kỹ thuật.</li>
-  <li><a href="4-EventParticipated/">Các sự kiện đã tham gia</a><br>Các hoạt động đã tham gia trong chương trình.</li>
-  <li><a href="5-Workshop/">Workshop</a><br>Hướng dẫn thực hành triển khai EAM Workspace trên AWS.</li>
-  <li><a href="6-Self-evaluation/">Tự đánh giá</a><br>Tổng kết kết quả, kỹ năng đạt được và điểm cần cải thiện.</li>
-  <li><a href="7-Feedback/">Chia sẻ và góp ý</a><br>Phần chia sẻ, phản hồi và bài học rút ra.</li>
+  <li><a href="/eam-workshop-report/vi/1-worklog/">Worklog</a><br>Nhật ký tiến độ và nội dung đã học theo từng tuần.</li>
+  <li><a href="/eam-workshop-report/vi/2-proposal/">Proposal</a><br>Đề xuất kiến trúc và kế hoạch triển khai AWS cho EAM Workspace.</li>
+  <li><a href="/eam-workshop-report/vi/3-blogsposted/">Các bài blog đã đăng</a><br>Ghi chú học tập và các bài viết kỹ thuật.</li>
+  <li><a href="/eam-workshop-report/vi/4-eventparticipated/">Các sự kiện đã tham gia</a><br>Các hoạt động đã tham gia trong chương trình.</li>
+  <li><a href="/eam-workshop-report/vi/5-workshop/">Workshop</a><br>Hướng dẫn thực hành triển khai EAM Workspace trên AWS.</li>
+  <li><a href="/eam-workshop-report/vi/6-self-evaluation/">Tự đánh giá</a><br>Tổng kết kết quả, kỹ năng đạt được và điểm cần cải thiện.</li>
+  <li><a href="/eam-workshop-report/vi/7-feedback/">Chia sẻ và góp ý</a><br>Phần chia sẻ, phản hồi và bài học rút ra.</li>
 </ul>

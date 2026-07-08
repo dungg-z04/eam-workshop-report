@@ -26,4 +26,4 @@ Nguồn: [AWS Security Blog - Introducing AWS Continuum: Security at machine spe
 
 Bài viết giới thiệu AWS Continuum, một hướng tiếp cận mới giúp đội ngũ bảo mật xử lý lỗ hổng mã nguồn nhanh hơn bằng AI. Nội dung tập trung vào vòng đời xử lý lỗ hổng gồm discovery, prioritization, validation, mitigation và remediation.
 
-Mình chọn các chủ đề này vì chúng liên quan trực tiếp đến vận hành cloud-native, bảo mật networking trong Kubernetes, quản trị hạ tầng hiện đại và xu hướng Agentic AI trong cloud security trên AWS.
+

@@ -26,4 +26,4 @@ Source: [AWS Security Blog - Introducing AWS Continuum: Security at machine spee
 
 This post introduces AWS Continuum, a new approach that helps security teams handle code vulnerabilities faster with AI. The content focuses on the vulnerability lifecycle: discovery, prioritization, validation, mitigation, and remediation.
 
-I chose these topics because they are closely related to cloud-native operations, secure Kubernetes networking, modern infrastructure governance, and the Agentic AI trend in cloud security on AWS.
+

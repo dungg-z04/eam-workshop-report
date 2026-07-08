@@ -37,7 +37,7 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 &emsp;**Thời gian:** Ngày 04/07/2026
 
-&emsp;**Địa điểm::** Tầng 26, Tòa nhà Bitexco Financial Tower, kết hợp livestream
+&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, kết hợp livestream
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
