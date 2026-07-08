@@ -111,9 +111,9 @@ FRONTEND_ORIGINS=https://<amplify-domain>
 
 `FRONTEND_ORIGIN` và `FRONTEND_ORIGINS` có thể cập nhật sau khi Amplify tạo URL frontend.
 
-![Environment properties của Elastic Beanstalk](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.4-eb-env-properties.png)
+![Environment properties của Elastic Beanstalk](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.3-eb-env-properties.png)
 
-*Hình 5.4.4. Environment properties của Elastic Beanstalk sau khi che thông tin nhạy cảm.*
+*Hình 5.4.3. Environment properties của Elastic Beanstalk sau khi che thông tin nhạy cảm.*
 
 Các biến quan trọng cần được kiểm tra gồm `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN` và `PORT=8080`. Khi đưa vào báo cáo, các secret phải được che để tránh lộ thông tin nhạy cảm.
 
@@ -137,9 +137,9 @@ Kết quả mong đợi:
 }
 ```
 
-![Elastic Beanstalk environment ở trạng thái OK](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.3-eb-health-ok.png)
+![Elastic Beanstalk environment ở trạng thái OK](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.4-eb-health-ok.png)
 
-*Hình 5.4.3. Elastic Beanstalk environment ở trạng thái OK.*
+*Hình 5.4.4. Elastic Beanstalk environment ở trạng thái OK.*
 
 Màn hình này cần hiển thị environment health ở trạng thái OK. Đây là dấu hiệu Elastic Beanstalk đã provision tài nguyên và backend không gặp lỗi startup nghiêm trọng.
 

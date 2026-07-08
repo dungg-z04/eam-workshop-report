@@ -113,9 +113,9 @@ applications:
           - '**/*'
 ```
 
-![Amplify build settings](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.6-amplify-build-settings.png)
+![Amplify build settings](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.5-amplify-build-settings.png)
 
-*Figure 5.5.6. Amplify build settings with app root and output directory.*
+*Figure 5.5.5. Amplify build settings with app root and output directory.*
 
 On the build settings screen, verify that `appRoot` is `frontend`, the build command is `npm ci && npm run build`, and the output directory is `dist`.
 
@@ -139,15 +139,15 @@ npm ci && npm run build
 dist
 ```
 
-![Amplify app connected to the aws-architecture branch](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.5-amplify-branch.png)
+![Amplify app connected to the aws-architecture branch](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.6-amplify-branch.png)
 
-*Figure 5.5.5. Amplify app connected to the deployment branch.*
+*Figure 5.5.6. Amplify app connected to the deployment branch.*
 
 On the Amplify app screen, verify that the deployment branch is the branch that contains the latest frontend source. Amplify will automatically build and publish the frontend from this branch.
 
-![Successful Amplify deployment](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.8-amplify-build-success.png)
+![Successful Amplify deployment](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.7-amplify-build-success.png)
 
-*Figure 5.5.8. Successful Amplify deployment.*
+*Figure 5.5.7. Successful Amplify deployment.*
 
 When the deployment status is `Deployed`, the frontend has been built and published successfully on the Amplify domain. This is required before testing the UI and API rewrite.
 
@@ -184,9 +184,9 @@ Then keep the SPA fallback rule for React Router:
 
 If the `/api/<*>` or `/uploads/<*>` rule is in the wrong order, API and upload requests may return frontend HTML or static assets may fail with MIME type errors.
 
-![Amplify rewrite rules](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.7-amplify-rewrite-rules.png)
+![Amplify rewrite rules](/eam-workshop-report/images/5-Workshop/5.5-Frontend-Amplify/5.5.8-amplify-rewrite-rules.png)
 
-*Figure 5.5.7. Amplify rewrite rules forwarding `/api/<*>` and `/uploads/<*>` to API Gateway.*
+*Figure 5.5.8. Amplify rewrite rules forwarding `/api/<*>` and `/uploads/<*>` to API Gateway.*
 
 The `/api/<*>` and `/uploads/<*>` rules should stay above the `/index.html` fallback. This order ensures API and upload requests go to API Gateway instead of being handled as frontend routes.
 

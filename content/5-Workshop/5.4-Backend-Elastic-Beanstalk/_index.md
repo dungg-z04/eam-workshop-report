@@ -111,9 +111,9 @@ FRONTEND_ORIGINS=https://<amplify-domain>
 
 `FRONTEND_ORIGIN` and `FRONTEND_ORIGINS` can be updated after Amplify creates the frontend URL.
 
-![Elastic Beanstalk environment properties](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.4-eb-env-properties.png)
+![Elastic Beanstalk environment properties](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.3-eb-env-properties.png)
 
-*Figure 5.4.4. Elastic Beanstalk environment properties with sensitive values hidden.*
+*Figure 5.4.3. Elastic Beanstalk environment properties with sensitive values hidden.*
 
 Important variables to verify include `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN`, and `PORT=8080`. Hide secrets before including the screenshot in the report.
 
@@ -137,9 +137,9 @@ Expected response:
 }
 ```
 
-![Elastic Beanstalk environment in OK status](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.3-eb-health-ok.png)
+![Elastic Beanstalk environment in OK status](/eam-workshop-report/images/5-Workshop/5.4-Backend-Elastic-Beanstalk/5.4.4-eb-health-ok.png)
 
-*Figure 5.4.3. Elastic Beanstalk environment in OK status.*
+*Figure 5.4.4. Elastic Beanstalk environment in OK status.*
 
 This screen should show the environment health as OK. It indicates that Elastic Beanstalk has provisioned the resources and the backend has no critical startup failure.
 
