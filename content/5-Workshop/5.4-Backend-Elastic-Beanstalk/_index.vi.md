@@ -115,7 +115,7 @@ FRONTEND_ORIGINS=https://<amplify-domain>
 
 *Hình 5.4.3. Environment properties của Elastic Beanstalk sau khi che thông tin nhạy cảm.*
 
-Các biến quan trọng cần được kiểm tra gồm `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN` và `PORT=8080`. Khi đưa vào báo cáo, các secret phải được che để tránh lộ thông tin nhạy cảm.
+Các biến quan trọng cần được kiểm tra gồm `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN` và `PORT=8080`. 
 
 ## Bước 5: Deploy và kiểm tra health
 

@@ -115,7 +115,7 @@ FRONTEND_ORIGINS=https://<amplify-domain>
 
 *Figure 5.4.3. Elastic Beanstalk environment properties with sensitive values hidden.*
 
-Important variables to verify include `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN`, and `PORT=8080`. Hide secrets before including the screenshot in the report.
+Important variables to verify include `DATABASE_URL`, `JWT_SECRET`, `MAIL_HOST`, `MAIL_USER`, `MAIL_PASSWORD`, `FRONTEND_ORIGIN`, and `PORT=8080`.
 
 ## Step 5: Deploy and Check Health
 

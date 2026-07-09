@@ -49,22 +49,13 @@ Các bước thực hiện:
 1. Mở **AWS Amplify** console.
 2. Chọn app frontend của project, ví dụ `quanlidoanhnghiep`.
 3. Chọn branch deploy đang dùng, ví dụ `aws-architecture`.
-4. Chụp lại màn hình app/branch trước khi xóa.
-5. Nếu muốn dọn hoàn toàn, chọn **App settings** hoặc **General settings** và thực hiện xóa app.
-6. Xác nhận domain Amplify không còn được sử dụng cho demo.
+4. Chọn **App settings** hoặc **General settings** và thực hiện xóa app.
 
-Nếu vẫn cần giữ frontend để trình bày báo cáo, có thể tạm thời chưa xóa Amplify, nhưng cần ghi chú rằng tài nguyên này vẫn còn tồn tại.
 
 ![Amplify app cleanup](/eam-workshop-report/images/5-Workshop/5.7-Cleanup/5.7.1-amplify-cleanup.png)
 
-*Hình 5.7.1. AWS Amplify app `quanlidoanhnghiep` và branch `aws-architecture` được kiểm tra trước khi cleanup. Ảnh này ghi nhận frontend đã được deploy thành công, có domain Amplify đang hoạt động và là tài nguyên cần xử lý nếu không tiếp tục duy trì bản demo.*
+*Hình 5.7.1. AWS Amplify app `quanlidoanhnghiep` và branch `aws-architecture`.*
 
-Sau khi ghi nhận ảnh này, thực hiện cleanup Amplify theo hướng:
-
-1. Nếu không cần giữ frontend demo, vào **App settings** -> **General settings** -> **Delete app**.
-2. Nếu chỉ muốn dừng branch deploy, chọn branch `aws-architecture` và disconnect/delete branch.
-3. Kiểm tra lại domain Amplify sau khi xóa để bảo đảm URL public không còn truy cập được.
-4. Nếu vẫn giữ app để trình bày báo cáo, cần ghi chú lại rằng Amplify vẫn đang được duy trì và tiếp tục theo dõi chi phí trong Billing.
 
 ## Bước 3: Xóa Amazon API Gateway
 
@@ -75,23 +66,15 @@ Các bước thực hiện:
 1. Mở **Amazon API Gateway** console.
 2. Chọn HTTP API của project, ví dụ `eam-backend-http-api`.
 3. Kiểm tra route `ANY /{proxy+}` và integration đang trỏ đến Elastic Beanstalk backend.
-4. Chụp lại màn hình danh sách API hoặc trang route/integration.
-5. Chọn **Delete** để xóa API nếu không còn cần sử dụng.
-6. Kiểm tra lại danh sách API để xác nhận API đã được xóa.
+4. Chọn **Delete** để xóa API nếu không còn cần sử dụng.
+5. Kiểm tra lại danh sách API để xác nhận API đã được xóa.
 
 Sau khi xóa API Gateway, các URL dạng `https://...execute-api.ap-southeast-1.amazonaws.com/...` sẽ không còn hoạt động.
 
 ![API Gateway cleanup](/eam-workshop-report/images/5-Workshop/5.7-Cleanup/5.7.2-api-gateway-cleanup.png)
 
-*Hình 5.7.2. HTTP API `eam-backend-http-api` trong Amazon API Gateway trước khi xóa. Màn hình này giúp xác nhận đúng API public endpoint của backend, tránh xóa nhầm API không thuộc project.*
+*Hình 5.7.2. HTTP API `eam-backend-http-api` trong Amazon API Gateway trước khi xóa.*
 
-Sau khi chụp lại API, thực hiện cleanup như sau:
-
-1. Chọn đúng HTTP API `eam-backend-http-api`.
-2. Kiểm tra lại route `ANY /{proxy+}` và integration đang trỏ về Elastic Beanstalk backend.
-3. Nếu không còn dùng frontend/backend demo, chọn **Delete** để xóa API.
-4. Sau khi xóa, thử truy cập lại API endpoint hoặc kiểm tra danh sách API để xác nhận API không còn tồn tại.
-5. Nếu frontend Amplify vẫn còn giữ, cần cập nhật lại cấu hình rewrite hoặc ghi chú rằng các request `/api/*` sẽ không còn hoạt động.
 
 ## Bước 4: Terminate Elastic Beanstalk environment
 
@@ -101,11 +84,10 @@ Các bước thực hiện:
 
 1. Mở **Elastic Beanstalk** console.
 2. Chọn environment backend, ví dụ `eam-backend-prod-v8`.
-3. Chụp lại màn hình environment trước khi terminate, gồm health, platform và domain.
-4. Chọn **Actions** -> **Terminate environment**.
-5. Nhập tên environment để xác nhận nếu AWS yêu cầu.
-6. Chờ đến khi environment chuyển sang trạng thái terminated.
-7. Kiểm tra EC2 console để bảo đảm instance do Elastic Beanstalk tạo đã được dừng/xóa.
+3. Chọn **Actions** -> **Terminate environment**.
+4. Nhập tên environment để xác nhận nếu AWS yêu cầu.
+5. Chờ đến khi environment chuyển sang trạng thái terminated.
+6. Kiểm tra EC2 console để bảo đảm instance do Elastic Beanstalk tạo đã được dừng/xóa.
 
 Nếu Elastic Beanstalk chưa terminate được do dependency, cần kiểm tra thêm security group, load balancer hoặc EC2 resource liên quan.
 
@@ -113,13 +95,7 @@ Nếu Elastic Beanstalk chưa terminate được do dependency, cần kiểm tra
 
 *Hình 5.7.3. Elastic Beanstalk environment `eam-backend-prod-v8` trước khi terminate. Ảnh thể hiện environment backend đang ở trạng thái hoạt động ổn định, có domain riêng và là tài nguyên có thể phát sinh chi phí nếu tiếp tục chạy.*
 
-Để cleanup backend trên Elastic Beanstalk:
 
-1. Vào environment `eam-backend-prod-v8`.
-2. Chọn **Actions** -> **Terminate environment**.
-3. Nhập chính xác tên environment nếu AWS yêu cầu xác nhận.
-4. Chờ trạng thái chuyển sang terminated, sau đó kiểm tra EC2 để bảo đảm instance/load balancer do environment tạo đã được xóa.
-5. Nếu terminate bị lỗi do dependency, kiểm tra thêm Load Balancer, Auto Scaling group, network interface và security group liên quan.
 
 ## Bước 5: Xóa hoặc tạm dừng Amazon RDS for MySQL
 
@@ -129,25 +105,15 @@ Các bước thực hiện:
 
 1. Mở **Amazon RDS** console.
 2. Chọn database MySQL của project EAM Workspace.
-3. Chụp lại màn hình database list hoặc database detail.
-4. Nếu cần giữ dữ liệu, tạo snapshot trước khi xóa.
-5. Nếu không cần giữ dữ liệu, chọn **Delete**.
-6. Với môi trường demo, có thể chọn không tạo final snapshot nếu dữ liệu không còn cần thiết.
-7. Xác nhận database đã chuyển sang trạng thái deleting/deleted.
+3. Nếu cần giữ dữ liệu, tạo snapshot trước khi xóa.
+4. Chọn database database `eam-mysql` -> **Actions** -> **Delete**.
+5. Xác nhận database đã chuyển sang trạng thái deleting/deleted.
+6. Sau khi RDS bị xóa, kiểm tra lại security group liên quan vì có thể không còn dependency và có thể xóa tiếp.
 
-Nếu chưa muốn xóa RDS ngay, cần tạm dừng database nếu phù hợp và tiếp tục theo dõi chi phí trong Billing.
 
 ![RDS cleanup](/eam-workshop-report/images/5-Workshop/5.7-Cleanup/5.7.4-rds-cleanup.png)
 
 *Hình 5.7.4. Amazon RDS database `eam-mysql` được kiểm tra trước khi cleanup. Đây là tài nguyên cần chú ý vì database instance vẫn có thể phát sinh chi phí khi còn ở trạng thái available.*
-
-Đối với RDS, cần cleanup cẩn thận hơn vì dữ liệu có thể bị mất:
-
-1. Nếu cần giữ dữ liệu demo, tạo snapshot trước khi xóa database.
-2. Nếu dữ liệu không còn cần thiết, chọn database `eam-mysql` -> **Actions** -> **Delete**.
-3. Với môi trường demo, có thể bỏ chọn final snapshot nếu đã chắc chắn không cần khôi phục dữ liệu.
-4. Xác nhận database chuyển sang trạng thái deleting/deleted.
-5. Sau khi RDS bị xóa, kiểm tra lại security group liên quan vì có thể không còn dependency và có thể xóa tiếp.
 
 ## Bước 6: Kiểm tra Amazon SES
 
@@ -159,21 +125,12 @@ Các bước thực hiện:
 2. Kiểm tra email identity đã xác thực.
 3. Kiểm tra SMTP credential/IAM user đã tạo cho SES.
 4. Nếu không còn sử dụng, xóa IAM user hoặc credential liên quan đến SMTP.
-5. Không đưa SMTP password vào ảnh chụp hoặc báo cáo.
 
-Nếu vẫn giữ SES để tiếp tục demo chức năng email, cần bảo quản credential cẩn thận và không commit vào GitHub.
 
 ![SES cleanup](/eam-workshop-report/images/5-Workshop/5.7-Cleanup/5.7.5-ses-cleanup.png)
 
-*Hình 5.7.5. Amazon SES email identity đã được xác thực tại region Singapore. Ảnh này dùng để ghi nhận cấu hình gửi email/OTP của backend, đồng thời nhắc rằng SMTP credential cần được quản lý riêng và không đưa thông tin nhạy cảm vào báo cáo.*
+*Hình 5.7.5. Amazon SES email identity đã được xác thực tại region Singapore.*
 
-Với SES, phần cleanup tập trung vào identity và credential:
-
-1. Nếu không còn dùng chức năng gửi email/OTP, có thể xóa email identity trong Amazon SES.
-2. Vào IAM để tìm SMTP user/credential đã tạo cho SES.
-3. Xóa access key hoặc IAM user nếu không còn sử dụng.
-4. Kiểm tra lại biến môi trường trên Elastic Beanstalk hoặc file `.env` local, không để `MAIL_USER`, `MAIL_PASSWORD` hoặc SMTP secret bị commit lên GitHub.
-5. Không chụp hoặc đưa SMTP password vào báo cáo.
 
 ## Bước 7: Xóa security group và tài nguyên phụ thuộc
 
@@ -187,7 +144,7 @@ Các bước thực hiện:
 4. Chỉ xóa security group khi không còn resource nào phụ thuộc.
 5. Nếu AWS báo lỗi dependency, kiểm tra lại EC2 instance, load balancer, RDS hoặc network interface.
 
-Không nên xóa default security group hoặc security group không thuộc workshop.
+Không nên xóa default security group hoặc security group không liên quan.
 
 ## Bước 8: Kiểm tra CloudWatch và Billing
 
@@ -205,7 +162,7 @@ Các tài nguyên cần chú ý nhất về chi phí gồm RDS database, EC2/Ela
 
 ![Billing check](/eam-workshop-report/images/5-Workshop/5.7-Cleanup/5.7.6-billing-check.png)
 
-*Hình 5.7.6. Billing and Cost Management được dùng để theo dõi chi phí sau quá trình triển khai AWS. Màn hình Cost summary và Cost breakdown giúp kiểm tra các khoản phát sinh theo dịch vụ như RDS, EC2, VPC và Amplify.*
+*Hình 5.7.6. Billing and Cost Management được dùng để theo dõi chi phí sau quá trình triển khai AWS.*
 
 Sau khi cleanup các tài nguyên chính, cần kiểm tra chi phí:
 
