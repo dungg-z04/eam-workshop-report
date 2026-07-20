@@ -31,6 +31,12 @@ identifier = "EAM Workspace"
 url = "https://github.com/dungg-z04/quanlidoanhnghiep.git"
 weight = 30
 
+[[languages.en.menu.shortcuts]]
+name = "<i class='fas fa-external-link-alt'></i> Project"
+identifier = "demo-project"
+url = "https://www.eam-workspace.click"
+weight = 31
+
 [languages.vi]
 title = "Báo cáo thực tập EAM Workspace"
 weight = 2
@@ -44,6 +50,12 @@ name = "<i class='fab fa-github'></i> EAM Workspace"
 identifier = "EAM Workspace"
 url = "https://github.com/dungg-z04/quanlidoanhnghiep.git"
 weight = 30
+
+[[languages.vi.menu.shortcuts]]
+name = "<i class='fas fa-external-link-alt'></i> Project"
+identifier = "demo-project"
+url = "https://www.eam-workspace.click"
+weight = 31
 
 [markup]
   [markup.goldmark]

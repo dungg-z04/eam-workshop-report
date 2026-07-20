@@ -8,7 +8,7 @@ pre: " <b> 1. </b> "
 
 ## Worklog
 
-This Worklog records the EAM Workspace project progress during the internship period from **17/04/2026 to 10/07/2026**. AWS learning is adjusted to focus on services actually used in the project, such as RDS, Elastic Beanstalk, API Gateway, Amplify Hosting, SES, S3, CloudWatch, and Billing. Harder topics such as networking, RDS, backend deployment, and frontend rewrites are spread across multiple days to reflect a more realistic learning timeline.
+This Worklog records the process of working on the EAM Workspace project during my internship. The content is organized by week, with AWS learning adjusted to closely follow the services actually used in the project, such as RDS, Elastic Beanstalk, API Gateway, Amplify Hosting, SES, S3, CloudWatch, and Billing. More difficult topics, including networking, RDS, backend deployment, and frontend rewrite configuration, are spread across multiple days to better reflect the actual learning progress.
 
 | Week | Time | Main content |
 | --- | --- | --- |

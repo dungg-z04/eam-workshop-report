@@ -8,7 +8,7 @@ pre: " <b> 1. </b> "
 
 ## Worklog
 
-Mục Worklog ghi lại quá trình thực hiện project EAM Workspace trong giai đoạn thực tập từ **17/04/2026 đến 10/07/2026**. Nội dung được chia theo từng tuần, trong đó phần tìm hiểu AWS được điều chỉnh để bám sát các dịch vụ thật sự sử dụng trong project như RDS, Elastic Beanstalk, API Gateway, Amplify Hosting, SES, S3, CloudWatch và Billing. Những nội dung khó như network, RDS, deployment backend và rewrite frontend được trải ra nhiều ngày để phản ánh tiến độ học thực tế hơn.
+Mục Worklog ghi lại quá trình thực hiện project EAM Workspace trong giai đoạn thực tập của em. Nội dung được chia theo từng tuần, trong đó phần tìm hiểu AWS được điều chỉnh để bám sát các dịch vụ thật sự sử dụng trong project như RDS, Elastic Beanstalk, API Gateway, Amplify Hosting, SES, S3, CloudWatch và Billing. Những nội dung khó như network, RDS, deployment backend và rewrite frontend được trải ra nhiều ngày để phản ánh tiến độ học thực tế hơn.
 
 | Tuần | Thời gian | Nội dung chính |
 | --- | --- | --- |
