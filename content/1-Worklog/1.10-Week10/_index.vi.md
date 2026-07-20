@@ -10,36 +10,32 @@ pre: " <b> 1.10. </b> "
 
 **Thời gian:** 19/06/2026 - 25/06/2026
 
-Tuần này chuyển trọng tâm từ phát triển tính năng sang triển khai AWS. Backend, database, API Gateway và frontend được kết nối thành một luồng chạy thật để kiểm tra hệ thống qua môi trường public.
+Tuần 10 tập trung vào triển khai RDS, Elastic Beanstalk, API Gateway và Amplify.
 
 ### Mục tiêu tuần 10:
 
-- Triển khai backend lên Elastic Beanstalk và kết nối RDS MySQL.
-- Cấu hình API Gateway làm điểm vào cho backend.
-- Deploy frontend bằng Amplify và cấu hình rewrite cho API/upload.
+- Hoàn thiện phần RDS, EB environment properties, Prisma migration, API health và Amplify rewrite theo tiến độ project.
+- Tìm hiểu triển khai RDS, Elastic Beanstalk, API Gateway và Amplify gắn với kiến trúc EAM Workspace.
+- Ghi nhận lỗi kỹ thuật, kết quả kiểm thử và các điểm cần xử lý trong tuần.
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| Thứ 6 | - Chuẩn bị RDS MySQL, security group và `DATABASE_URL` cho backend production. | 19/06/2026 | 19/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 7 | - Tạo source bundle backend và kiểm tra cấu trúc ZIP phù hợp với Elastic Beanstalk Linux. | 20/06/2026 | 20/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Chủ nhật | - Tạo/cấu hình Elastic Beanstalk environment và cập nhật environment properties. | 21/06/2026 | 21/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 2 | - Cấu hình SES/SMTP, OTP, JWT, rate limit và CORS origin cho backend. | 22/06/2026 | 22/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 3 | - Kiểm tra health endpoint trực tiếp qua Elastic Beanstalk và xử lý lỗi startup nếu có. | 23/06/2026 | 23/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 4 | - Tạo API Gateway HTTP API, proxy route, integration đến Elastic Beanstalk và stage deploy. | 24/06/2026 | 24/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 5 | - Deploy frontend bằng Amplify, cấu hình build settings, `/api/*`, `/uploads/*` rewrite và SPA fallback. | 25/06/2026 | 25/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 6 | - Thực hiện phần RDS, EB environment properties, Prisma migration, API health và Amplify rewrite theo tiến độ project.<br>- Tìm hiểu AWS liên quan đến triển khai RDS, Elastic Beanstalk, API Gateway và Amplify, chỉ chọn nội dung có dùng trong EAM Workspace. | 19/06/2026 | 19/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Tiếp tục hoàn thiện RDS, EB environment properties, Prisma migration, API health và Amplify rewrite, kiểm tra dữ liệu và trạng thái giao diện.<br>- Ghi chú cấu hình AWS cần cho frontend, backend hoặc database. | 20/06/2026 | 20/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Kiểm thử lỗi thường gặp trong RDS, EB environment properties, Prisma migration, API health và Amplify rewrite.<br>- Đối chiếu cấu hình AWS với luồng triển khai thật của project. | 21/06/2026 | 21/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Cập nhật component/API hoặc tài liệu liên quan đến RDS, EB environment properties, Prisma migration, API health và Amplify rewrite.<br>- Ghi lại biến môi trường, endpoint hoặc rule cần dùng khi deploy. | 22/06/2026 | 22/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Rà soát loading, empty, error state và dữ liệu đầu vào.<br>- Tìm hiểu cách debug nếu phần triển khai RDS, Elastic Beanstalk, API Gateway và Amplify cấu hình sai. | 23/06/2026 | 23/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Rà soát luồng triển khai production gồm RDS, Elastic Beanstalk, API Gateway và Amplify.<br>- Kiểm tra health API, rewrite rule và luồng frontend gọi backend sau khi public. | 24/06/2026 | 24/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Kiểm tra lại các phần đã hoàn thành trong tuần 10 và xác định lỗi còn tồn tại.<br>- Xác định công việc kỹ thuật cần xử lý trong tuần tiếp theo. | 25/06/2026 | 25/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 10:
 
-- Backend đã được đóng gói, cấu hình environment properties và kiểm tra health endpoint.
-- API Gateway đã chuyển tiếp request đến Elastic Beanstalk thông qua proxy route và integration.
-- Frontend Amplify đã có build settings, rewrite `/api/*`, `/uploads/*` và SPA fallback để phục vụ ứng dụng production demo.
+- Hoàn thiện được phần RDS, EB environment properties, Prisma migration, API health và Amplify rewrite ở mức phù hợp với tiến độ demo.
+- Nội dung AWS trong tuần bám trực tiếp vào project: triển khai RDS, Elastic Beanstalk, API Gateway và Amplify.
+- Có thêm ghi chú kỹ thuật phục vụ kiểm thử và triển khai các tuần sau.
 
 ### Kế hoạch tuần tiếp theo
 
-- Kiểm thử production, xử lý lỗi upload/inactive account và hoàn thiện tài liệu workshop.
-
-
-
-
+- Kiểm thử production kỹ hơn, theo dõi log và bổ sung monitoring.

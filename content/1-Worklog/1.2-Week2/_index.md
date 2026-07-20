@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 2 Worklog"
+title: "Worklog Week 2"
 date: 2026-04-24
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-## Week 2 Worklog
+## Worklog Week 2
 
-**Period:** 24/04/2026 - 30/04/2026
+**Time:** 24/04/2026 - 30/04/2026
 
-After the project scope became clearer, this week focused on building the frontend foundation. Layouts, routes, and shared components were prepared first so later business screens could be developed more consistently.
+Week 2 focused on frontend foundation, VPC, and security groups for deployment preparation.
 
-### Week 2 Objectives:
+### Week 2 goals:
 
-- Initialize the frontend with React + Vite and configure TailwindCSS.
-- Create the first admin layout with sidebar, navbar, and main content area.
-- Build reusable components and an API client skeleton.
+- Complete layout, routes, components, API endpoint, and basic networking according to the project schedule.
+- Study frontend foundation, VPC, and security groups for deployment preparation in relation to the EAM Workspace architecture.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Initialize the React + Vite frontend project and verify the folder structure.<br>- Learned about IAM users, groups, policies, and roles.<br>&emsp; + Noted the main concepts for the report. | 24/04/2026 | 24/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Configure TailwindCSS and create initial style tokens for the admin interface.<br>- Learned about least privilege and IAM Roles for EC2.<br>&emsp; + Checked where it could be used in EAM Workspace. | 25/04/2026 | 25/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Create folders for `components`, `pages`, `layouts`, `services`, and `routes`.<br>- Learned about Amazon VPC, Internet Gateway, NAT Gateway, and Network ACLs.<br>&emsp; + Checked how public and private traffic can be separated. | 26/04/2026 | 26/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Build the first admin layout with sidebar, navbar, and main content area.<br>- Learned about Security Groups and protection for EC2/RDS.<br>&emsp; + Read the material and recorded steps useful for deployment. | 27/04/2026 | 27/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Create the basic login screen and configure React Router.<br>- Learned about EC2, EBS volumes, key pairs, and Elastic IP.<br>&emsp; + Checked the role of each part when deploying a backend server. | 28/04/2026 | 28/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Create base components such as Button, Input, Form Field, Table, Card, and Empty State.<br>- Learned about AWS Cloud9 and cloud-based development environments.<br>&emsp; + Noted how a browser-based IDE can support quick AWS practice. | 29/04/2026 | 29/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Create an API client skeleton to standardize backend API calls.<br>- Connected IAM, VPC, and EC2 with backend deployment needs.<br>&emsp; + Noted which permissions and network settings are required before deployment. | 30/04/2026 | 30/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on layout, routes, components, API endpoint, and basic networking based on the project schedule.<br>- Studied AWS topics related to frontend foundation, VPC, and security groups for deployment preparation, selecting only what was used in EAM Workspace. | 24/04/2026 | 24/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving layout, routes, components, API endpoint, and basic networking, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 25/04/2026 | 25/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in layout, routes, components, API endpoint, and basic networking.<br>- Mapped AWS configuration to the real project deployment flow. | 26/04/2026 | 26/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to layout, routes, components, API endpoint, and basic networking.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 27/04/2026 | 27/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug incorrect frontend foundation, VPC, and security groups for deployment preparation configuration. | 28/04/2026 | 28/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Studied how VPC, subnets, and security groups affect connectivity between the backend and database.<br>- Identified the network rules required for backend access to MySQL on RDS later. | 29/04/2026 | 29/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 2 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 30/04/2026 | 30/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 2 Achievements:
+### Week 2 results:
 
-- Completed a scalable frontend folder structure with components, pages, layouts, services, and routes.
-- Prepared base components such as Button, Input, Table, Card, and Empty State for admin screens.
-- Understood how IAM, VPC, and EC2 relate to later backend deployment needs.
+- Completed layout, routes, components, API endpoint, and basic networking to a level suitable for the demo progress.
+- AWS learning stayed directly connected to the project: frontend foundation, VPC, and security groups for deployment preparation.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Connect login to backend APIs and build protected routes.
-
-
-
-
+- Complete login, protected routes, and prepare real API integration.

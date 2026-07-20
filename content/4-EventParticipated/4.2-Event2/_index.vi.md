@@ -25,7 +25,7 @@ Sự kiện có ý nghĩa thực tiễn vì các phần trình bày không chỉ
 
 ## Nội dung chính
 
-### Cloud Thinker và định hướng nghề nghiệp Cloud Engineering
+### 1. Cloud Thinker và định hướng nghề nghiệp Cloud Engineering
 
 Phần chia sẻ của diễn giả Steve Trần tập trung vào hành trình phát triển nghề nghiệp trong lĩnh vực cloud. Diễn giả bắt đầu từ công việc liên quan đến quản lý server, sau đó chuyển sang học cloud và đạt các chứng chỉ AWS trong thời gian ngắn. Nội dung nhấn mạnh rằng thị trường cloud tại Việt Nam và khu vực ASEAN tăng trưởng mạnh nhờ nhu cầu chuyển đổi số, đặc biệt sau giai đoạn làm việc từ xa.
 
@@ -33,7 +33,7 @@ Một điểm nổi bật là cách AI đang thay đổi yêu cầu đối với
 
 Cloud Thinker được giới thiệu như một nền tảng hỗ trợ vận hành cloud bằng AI, giúp tăng tốc quá trình điều tra sự cố, tối ưu chi phí FinOps, hỗ trợ kiểm thử bảo mật và giữ vai trò human-in-the-loop đối với các quyết định nhạy cảm trong production.
 
-### Voice AI cho tiếng Việt
+### 2. Voice AI cho tiếng Việt
 
 Phần trình bày về Voice AI giới thiệu kiến trúc cơ bản của một hệ thống voice agent, bao gồm audio input, speech-to-text, language model và text-to-speech. Với tiếng Việt, bài toán trở nên phức tạp hơn do sự đa dạng về vùng miền, dấu thanh, ngữ điệu, giới tính giọng nói và cách ngắt nhịp trong hội thoại.
 
@@ -41,7 +41,7 @@ Diễn giả trình bày cách hệ thống Voice AI được xây dựng theo p
 
 Một số ứng dụng thực tế được đề cập gồm trợ lý giọng nói cho ngân hàng, chatbot hỗ trợ khách hàng, tự động hóa các thao tác như khóa thẻ và tích hợp tool calling để AI không chỉ trả lời FAQ mà còn thực hiện được quy trình nghiệp vụ.
 
-### DevOps AI Agent
+### 3. DevOps AI Agent
 
 Phần DevOps AI Agent tập trung vào bài toán xử lý sự cố trong hệ thống cloud phức tạp. Khi hệ thống có nhiều service, nhiều nguồn log và nhiều đội vận hành, việc xác định nguyên nhân lỗi có thể mất nhiều thời gian, làm tăng MTTD và MTTR.
 
@@ -49,7 +49,7 @@ Giải pháp AI Agent được trình bày theo quy trình: nhận alert, tổng
 
 Các case study cho thấy AI có thể rút ngắn đáng kể thời gian xử lý sự cố, đặc biệt với các hệ thống có observability tốt, dữ liệu vận hành đầy đủ và cơ chế phân quyền rõ ràng.
 
-### AI trong nhân sự doanh nghiệp
+### 4. AI trong nhân sự doanh nghiệp
 
 Phần chia sẻ về AI trong nhân sự trình bày các khó khăn phổ biến của doanh nghiệp khi tuyển dụng, như sàng lọc CV thủ công, đánh giá ứng viên còn cảm tính, thời gian tuyển dụng kéo dài và rủi ro bảo mật dữ liệu ứng viên.
 
@@ -57,7 +57,7 @@ AI có thể hỗ trợ tự động trích xuất thông tin CV, so khớp kỹ
 
 Tuy nhiên, nội dung sự kiện cũng nhấn mạnh rằng AI chỉ nên hỗ trợ các tác vụ lặp lại hoặc phân tích ban đầu. Các quyết định chiến lược và đánh giá cuối cùng vẫn cần con người tham gia để đảm bảo tính công bằng và phù hợp với văn hóa doanh nghiệp.
 
-### Triển khai AI an toàn trong doanh nghiệp
+### 5. Triển khai AI an toàn trong doanh nghiệp
 
 Phần cuối của sự kiện đề cập đến nhu cầu triển khai AI agent trong môi trường doanh nghiệp một cách an toàn. Với các tổ chức có dữ liệu nhạy cảm, AI không nên truy cập hệ thống nội bộ qua Internet công cộng nếu không có kiểm soát phù hợp.
 
@@ -71,12 +71,6 @@ Giải pháp được trình bày là sử dụng VPC Interface Endpoint, AWS Pr
 - DevOps AI Agent có thể giảm thời gian điều tra sự cố nếu hệ thống có log, metric và topology đầy đủ.
 - AI trong nhân sự giúp tăng tốc tuyển dụng nhưng vẫn cần con người kiểm duyệt để tránh thiên kiến và đảm bảo phù hợp với văn hóa tổ chức.
 - Các mô hình triển khai AI trong doanh nghiệp cần đặt bảo mật, phân quyền và kiểm soát dữ liệu lên hàng đầu.
-
-## Liên hệ với project EAM Workspace
-
-Các nội dung trong FC Community Day có liên hệ trực tiếp với project EAM Workspace. Hệ thống quản lý tài sản doanh nghiệp cần backend ổn định, cơ chế logging rõ ràng, phân quyền người dùng, kiểm soát dữ liệu và khả năng mở rộng khi số lượng tài sản, nhân viên và workflow tăng lên.
-
-Từ góc nhìn DevOps, project có thể cải thiện thêm bằng cách chuẩn hóa log, health check, monitoring và cảnh báo để giảm thời gian phát hiện lỗi. Từ góc nhìn AI, trong tương lai hệ thống có thể tích hợp các tính năng như trợ lý nội bộ hỗ trợ tra cứu tài sản, tự động phân loại yêu cầu hỗ trợ, gợi ý lịch bảo trì hoặc tạo báo cáo tài sản theo ngôn ngữ tự nhiên.
 
 ## Kết luận
 

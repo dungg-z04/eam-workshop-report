@@ -25,7 +25,7 @@ The event was practical because the sessions did not only introduce technical co
 
 ## Key Topics
 
-### Cloud Thinker and the Cloud Engineering Career Path
+### 1. Cloud Thinker and the Cloud Engineering Career Path
 
 Steve Tran shared his career journey in cloud engineering, starting from server-related work and then moving into cloud learning and AWS certifications. The session emphasized that the cloud market in Vietnam and ASEAN has grown strongly due to digital transformation, especially after the shift toward remote work.
 
@@ -33,7 +33,7 @@ A key point was that AI is changing the expectations for software and cloud engi
 
 Cloud Thinker was introduced as an AI-powered cloud operations platform that helps accelerate incident investigation, optimize FinOps processes, support security testing, and keep human-in-the-loop decisions for sensitive production environments.
 
-### Voice AI for Vietnamese Users
+### 2. Voice AI for Vietnamese Users
 
 The Voice AI session introduced the core architecture of a voice agent, including audio input, speech-to-text, language model processing, and text-to-speech output. For Vietnamese, the problem is more challenging because of regional accents, tones, speech rhythm, gender recognition, and natural turn-taking.
 
@@ -41,7 +41,7 @@ The speakers explained why a speech-to-text, language model, and text-to-speech 
 
 Real-world use cases included voice assistants for banking, customer support automation, card-blocking workflows, and tool calling so the AI can perform business processes instead of only answering FAQ questions.
 
-### DevOps AI Agent
+### 3. DevOps AI Agent
 
 The DevOps AI Agent session focused on incident response in complex cloud systems. When a system includes many services, log sources, and operations teams, root-cause analysis can take a long time and increase MTTD and MTTR.
 
@@ -49,7 +49,7 @@ The AI Agent workflow includes receiving alerts, aggregating logs, generating hy
 
 The case studies showed that AI can significantly reduce troubleshooting time, especially in systems with good observability, complete operational data, and clear permission boundaries.
 
-### AI in Enterprise Human Resources
+### 4. AI in Enterprise Human Resources
 
 The HR session discussed common recruitment challenges, such as manual CV screening, subjective evaluation, long time-to-hire, and sensitive candidate data protection.
 
@@ -57,7 +57,7 @@ AI can support CV parsing, skill matching, candidate evaluation reports, and int
 
 However, the event also emphasized that AI should support repetitive and analytical tasks. Strategic and final hiring decisions still require human review to ensure fairness and cultural fit.
 
-### Secure Enterprise AI Deployment
+### 5. Secure Enterprise AI Deployment
 
 The final topic covered the need to deploy AI agents securely in enterprise environments. For organizations with sensitive data, AI should not access internal systems through the public Internet without proper controls.
 
@@ -72,11 +72,6 @@ The proposed approach uses VPC Interface Endpoints, AWS PrivateLink, and MCP ser
 - AI in HR can speed up recruitment, but human review is still needed to reduce bias and maintain organizational fit.
 - Enterprise AI deployment must prioritize security, access control, and data governance.
 
-## Connection to the EAM Workspace Project
-
-The FC Community Day topics are directly related to the EAM Workspace project. An enterprise asset management system needs stable backend services, clear logging, user authorization, data control, and scalability as the number of assets, employees, and workflows increases.
-
-From a DevOps perspective, the project can be improved with standardized logs, health checks, monitoring, and alerts to reduce issue detection time. From an AI perspective, future versions could include internal assistants for asset lookup, automatic support request classification, maintenance suggestions, or natural-language asset reports.
 
 ## Conclusion
 

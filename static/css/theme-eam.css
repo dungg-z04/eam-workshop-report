@@ -122,6 +122,36 @@ a:hover {
   text-align: center;
 }
 
+.event-gallery {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.5rem auto 0;
+  max-width: 980px;
+}
+
+.event-gallery img {
+  border: 1px solid var(--EAM-BORDER);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(16, 43, 58, 0.08);
+  display: block;
+  height: auto;
+  margin: 0 !important;
+  max-height: 360px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.event-gallery-compact img {
+  max-height: 320px;
+}
+
+@media (max-width: 780px) {
+  .event-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 #top-bar {
   background: rgba(247, 250, 249, 0.96);
   border-bottom: 1px solid var(--EAM-BORDER);

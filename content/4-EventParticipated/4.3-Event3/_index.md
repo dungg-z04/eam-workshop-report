@@ -24,19 +24,19 @@ The content did not only focus on AWS services or cloud architecture. It also co
 
 ## Key Topics
 
-### AWS and Swinburne Vietnam Partnership
+### 1. AWS and Swinburne Vietnam Partnership
 
 The opening section introduced the purpose of the study tour and the connection between AWS and Swinburne Vietnam students. It showed that cloud computing is not just a standalone technology area, but an important foundation for many modern businesses and industries.
 
 Through the session, students could access practical enterprise perspectives, understand how companies apply cloud, and see more clearly what skills are expected when entering the job market.
 
-### Cloud Computing Market Trends in Vietnam
+### 2. Cloud Computing Market Trends in Vietnam
 
 An AWS Vietnam representative shared insights about cloud market growth, talent demand, and changes in how enterprises deploy technology infrastructure. One important point was the **Cloud First** mindset, where organizations consider cloud solutions before traditional infrastructure.
 
 The session also emphasized that cloud talent expectations are increasing. Even fresher or internship positions may require knowledge of cloud-native architecture, Kubernetes, networking, security, and the ability to learn new tools quickly.
 
-### First Cloud AI Journey Community and Continuous Learning
+### 3. First Cloud AI Journey Community and Continuous Learning
 
 The First Cloud AI Journey community was presented as a learning environment where students and early-career professionals can access cloud knowledge, AI topics, and real experience from the community. A key lesson was that technical capability should be developed together with visibility and consistent learning.
 
@@ -48,25 +48,25 @@ Career Growth = Capability x Visibility x Consistency
 
 In this model, **Capability** means technical competence, **Visibility** means being seen by the community and employers, and **Consistency** means sustained learning and practice over time.
 
-### Differences Between Academic Learning and Real Data Engineering Work
+### 4. Differences Between Academic Learning and Real Data Engineering Work
 
 The data engineering session showed a clear difference between academic exercises and real-world projects. In academic settings, data is usually clean, project scope is clear, and timelines are flexible. In real work, data can be messy, requirements can change quickly, and results may directly affect business decisions.
 
 Therefore, data and cloud professionals need more than programming skills. They also need to understand data quality, failure handling, security, APIs, distributed systems, and cross-team collaboration.
 
-### AI in Learning and Work
+### 5. AI in Learning and Work
 
 The session also discussed how AI supports learning and work. AI can help write code, create diagrams, summarize documents, or suggest approaches to solving problems. However, students should not fully outsource their thinking to AI. They still need to validate outputs, understand the problem, and keep critical thinking.
 
 This is especially important for technology students because AI is evolving quickly, making fast learning, information filtering, and strong fundamentals more important than ever.
 
-### Soft Skills, Communication, and Career Mindset
+### 6. Soft Skills, Communication, and Career Mindset
 
 The soft skills sessions emphasized that technology careers do not depend only on technical ability. Early-career professionals need to practice communication, question-asking, overcoming fear of mistakes, proactive collaboration, and building trust in the workplace.
 
 Practical advice included asking when something is unclear, explaining problems clearly, looking for opportunities, maintaining a learning attitude, and treating failure as part of growth.
 
-### Perspective From a Solution Architect and Alumnus
+### 7. Perspective From a Solution Architect and Alumnus
 
 The final sharing section offered practical advice for technology students. The speaker emphasized that university learning is an important foundation, but it is not enough on its own for industry readiness. Students need to build projects, join communities, learn how to use AI effectively, and develop the ability to ask meaningful questions.
 
@@ -81,12 +81,6 @@ A notable point was that employers often value **attitude** first, followed by s
 - Communication, question-asking, networking, and consistency strongly influence career opportunities.
 - Data engineering and cloud engineering both require technical understanding and business context.
 - Career growth requires a combination of capability, visibility, and consistent learning.
-
-## Connection to the EAM Workspace Project
-
-The event content is strongly connected to the EAM Workspace project. When building an enterprise asset management system, understanding the business problem is as important as implementing the technical stack. The system needs more than a frontend, backend, and database; it must solve real needs such as asset tracking, user authorization, history tracing, reporting, and long-term data usability.
-
-From a cloud perspective, the project practices topics mentioned in the session, such as deploying an application to AWS, connecting the backend to a database, controlling environment variables, testing a health endpoint, monitoring, and cleaning up resources after the demo. From a career perspective, the project also builds self-learning, documentation, troubleshooting, and knowledge-sharing skills.
 
 ## Conclusion
 

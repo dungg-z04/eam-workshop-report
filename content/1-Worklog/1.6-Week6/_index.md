@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 6 Worklog"
+title: "Worklog Week 6"
 date: 2026-05-22
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-## Week 6 Worklog
+## Worklog Week 6
 
-**Period:** 22/05/2026 - 28/05/2026
+**Time:** 22/05/2026 - 28/05/2026
 
-After the main business workflows, this week focused on inventory and reports. These screens help administrators summarize asset status and view the system from a higher level.
+Week 6 focused on inventory, reporting, file-related S3 needs, and secret/env var handling.
 
-### Week 6 Objectives:
+### Week 6 goals:
 
-- Build inventory screens and inventory session management.
-- Add reports, charts, and statistic cards.
-- Review loading, empty, and error states across data screens.
+- Complete inventory, dashboard, reports, possible S3 usage, and sensitive information according to the project schedule.
+- Study inventory, reporting, file-related S3 needs, and secret/env var handling in relation to the EAM Workspace architecture.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Build inventory session screens and inventory session lists.<br>- Learned about S3 lifecycle and object storage management.<br>&emsp; + Noted the main concepts for the report. | 22/05/2026 | 22/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Create inventory session forms and update inventory progress.<br>- Learned about data encryption with AWS KMS.<br>&emsp; + Checked where it could be used in EAM Workspace. | 23/05/2026 | 23/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Handle asset statuses after inventory, such as ready, in use, maintenance, lost, or disposed.<br>- Learned about Secrets Manager and secret management.<br>&emsp; + Checked why database passwords and mail credentials should be stored carefully. | 24/05/2026 | 24/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Build overview reports and asset reports.<br>- Learned about Parameter Store and application configuration.<br>&emsp; + Read the material and recorded steps useful for deployment. | 25/05/2026 | 25/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Add charts and statistic cards to the admin dashboard.<br>- Learned about WAF and web application protection.<br>&emsp; + Checked basic rules that can reduce abnormal requests to APIs. | 26/05/2026 | 26/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Check empty, loading, and error states across data screens.<br>- Learned about GuardDuty, Macie, and Security Hub overview.<br>&emsp; + Noted the role of each service in security monitoring. | 27/05/2026 | 27/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Review inventory/reporting workflows and prepare for overall UI improvement.<br>- Learned security thinking for APIs, databases, and employee data.<br>&emsp; + Listed the main areas that need access control and data protection. | 28/05/2026 | 28/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on inventory, dashboard, reports, possible S3 usage, and sensitive information based on the project schedule.<br>- Studied AWS topics related to inventory, reporting, file-related S3 needs, and secret/env var handling, selecting only what was used in EAM Workspace. | 22/05/2026 | 22/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving inventory, dashboard, reports, possible S3 usage, and sensitive information, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 23/05/2026 | 23/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in inventory, dashboard, reports, possible S3 usage, and sensitive information.<br>- Mapped AWS configuration to the real project deployment flow. | 24/05/2026 | 24/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to inventory, dashboard, reports, possible S3 usage, and sensitive information.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 25/05/2026 | 25/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug incorrect inventory, reporting, file-related S3 needs, and secret/env var handling configuration. | 26/05/2026 | 26/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Checked the file upload flow and how asset file paths were stored in the system.<br>- Noted configuration variables related to S3, secrets, and production environment. | 27/05/2026 | 27/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 6 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 28/05/2026 | 28/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 6 Achievements:
+### Week 6 results:
 
-- Inventory workflows supported session creation, progress tracking, and asset status updates.
-- Dashboard and report screens gained summary data for faster status review.
-- Self-study on S3 lifecycle, KMS, Secrets Manager, WAF, and Security Hub expanded the security and operations perspective.
+- Completed inventory, dashboard, reports, possible S3 usage, and sensitive information to a level suitable for the demo progress.
+- AWS learning stayed directly connected to the project: inventory, reporting, file-related S3 needs, and secret/env var handling.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Improve UI, responsiveness, and user experience.
-
-
-
-
+- Improve UI responsiveness and prepare wider screen testing.

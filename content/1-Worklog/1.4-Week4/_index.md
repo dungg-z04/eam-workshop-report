@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 4 Worklog"
+title: "Worklog Week 4"
 date: 2026-05-08
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-## Week 4 Worklog
+## Worklog Week 4
 
-**Period:** 08/05/2026 - 14/05/2026
+**Time:** 08/05/2026 - 14/05/2026
 
-With login and API foundations in place, this week focused on the core admin CRUD screens. These modules are important because asset management depends on categories, departments, employees, and asset records.
+Week 4 focused on admin CRUD, RDS endpoint, port 3306, and backend security group.
 
-### Week 4 Objectives:
+### Week 4 goals:
 
-- Complete CRUD screens for categories, departments, employees, and assets.
-- Standardize tables, forms, modals, and interaction states.
-- Continue learning AWS migration, operations, and monitoring services.
+- Complete assets, employees, departments, categories, and database connectivity according to the project schedule.
+- Study admin CRUD, RDS endpoint, port 3306, and backend security group in relation to the EAM Workspace architecture.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Complete asset category management with list, create, update, and status changes.<br>- Learned about AWS migration services.<br>&emsp; + Noted the main concepts for the report. | 08/05/2026 | 08/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Complete department management and data filtering/searching.<br>- Learned about AWS DMS and Schema Conversion Tool.<br>&emsp; + Checked where it could be used in EAM Workspace. | 09/05/2026 | 09/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Complete employee management with department, position, and status display.<br>- Learned about AWS Elastic Disaster Recovery.<br>&emsp; + Noted why recovery planning matters for production systems. | 10/05/2026 | 10/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Complete asset management with lists, forms, and asset status display.<br>- Learned about Lambda and serverless automation.<br>&emsp; + Read the material and recorded steps useful for deployment. | 11/05/2026 | 11/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Standardize data tables, modals, and forms across admin modules.<br>- Learned about Tags and Resource Groups.<br>&emsp; + Practiced grouping resources by project, environment, and purpose. | 12/05/2026 | 12/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Add hover, focus, and disabled states for buttons and inputs.<br>- Learned about Systems Manager and Session Manager.<br>&emsp; + Checked how Session Manager can connect to instances without opening SSH broadly. | 13/05/2026 | 13/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Review CRUD flows and prepare for asset assignment workflows.<br>- Learned about advanced CloudWatch and Grafana overview.<br>&emsp; + Noted how dashboards help monitor application health. | 14/05/2026 | 14/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on assets, employees, departments, categories, and database connectivity based on the project schedule.<br>- Studied AWS topics related to admin CRUD, RDS endpoint, port 3306, and backend security group, selecting only what was used in EAM Workspace. | 08/05/2026 | 08/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving assets, employees, departments, categories, and database connectivity, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 09/05/2026 | 09/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in assets, employees, departments, categories, and database connectivity.<br>- Mapped AWS configuration to the real project deployment flow. | 10/05/2026 | 10/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to assets, employees, departments, categories, and database connectivity.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 11/05/2026 | 11/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug incorrect admin CRUD, RDS endpoint, port 3306, and backend security group configuration. | 12/05/2026 | 12/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Checked how to locate the RDS endpoint and identify the MySQL port required by the backend.<br>- Reviewed the security group so the backend could connect to the database correctly. | 13/05/2026 | 13/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 4 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 14/05/2026 | 14/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 4 Achievements:
+### Week 4 results:
 
-- The main admin CRUD modules had basic interfaces and actions for later business workflows.
-- Tables, forms, and modals became more consistent across screens.
-- Gained more context about AWS migration, Systems Manager, CloudWatch, and operations support.
+- Completed assets, employees, departments, categories, and database connectivity to a level suitable for the demo progress.
+- AWS learning stayed directly connected to the project: admin CRUD, RDS endpoint, port 3306, and backend security group.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Develop asset assignment, return, and maintenance workflows.
-
-
-
-
+- Develop assignment, return, transfer, and maintenance flows.

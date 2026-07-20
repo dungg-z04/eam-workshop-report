@@ -10,36 +10,32 @@ pre: " <b> 1.3. </b> "
 
 **Thời gian:** 01/05/2026 - 07/05/2026
 
-Tuần này bắt đầu chuyển từ phần giao diện tĩnh sang luồng có kết nối API. Trọng tâm là đăng nhập, lưu token, kiểm tra người dùng hiện tại và chuẩn bị lớp service để các màn hình admin có thể dùng chung.
+Tuần 3 tập trung vào đăng nhập, protected route, RDS MySQL, Prisma và DATABASE_URL.
 
 ### Mục tiêu tuần 3:
 
-- Kết nối form đăng nhập với backend API.
-- Xử lý token, protected route và trạng thái đăng nhập trên frontend.
-- Tạo service layer cho các nhóm API chính.
+- Hoàn thiện phần login, token, protected route, database schema và migration theo tiến độ project.
+- Tìm hiểu đăng nhập, protected route, RDS MySQL, Prisma và DATABASE_URL gắn với kiến trúc EAM Workspace.
+- Ghi nhận lỗi kỹ thuật, kết quả kiểm thử và các điểm cần xử lý trong tuần.
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| Thứ 6 | - Kết nối form đăng nhập với API backend và xử lý phản hồi đăng nhập.<br>- Tìm hiểu Amazon S3 và static website hosting.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 01/05/2026 | 01/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 7 | - Lưu token đăng nhập và gắn token vào các request tiếp theo.<br>- Tìm hiểu Amazon RDS, DB instance, endpoint, backup và database engine.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 02/05/2026 | 02/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Chủ nhật | - Tạo API kiểm tra user hiện tại và đồng bộ trạng thái đăng nhập trên frontend.<br>- Tìm hiểu DynamoDB và các trường hợp dùng NoSQL.<br>&emsp; + Thực hành đọc tài liệu và ghi chú các bước cần dùng khi triển khai. | 03/05/2026 | 03/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 2 | - Xây dựng protected route theo trạng thái đăng nhập và quyền truy cập.<br>- Tìm hiểu CloudWatch metrics, logs và alarms.<br>&emsp; + So sánh với nhu cầu triển khai frontend/backend của project. | 04/05/2026 | 04/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 3 | - Bắt đầu tạo service frontend riêng cho từng nhóm API.<br>- Tìm hiểu CloudFront và CDN cho ứng dụng web.<br>&emsp; + Xem cách CDN giúp frontend tải nhanh hơn và giảm tải cho origin. | 05/05/2026 | 05/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 4 | - Bổ sung loading state và empty state cho các danh sách dữ liệu.<br>- Tìm hiểu Route 53, DNS, hosted zone và record.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 06/05/2026 | 06/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 5 | - Rà lại luồng đăng nhập, token và gọi API để chuẩn bị xây dựng CRUD admin.<br>- Tìm hiểu AWS CLI.<br>&emsp; + Thực hành: xem cách cài đặt, cấu hình và gọi dịch vụ AWS bằng dòng lệnh. | 07/05/2026 | 07/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 6 | - Thực hiện phần login, token, protected route, database schema và migration theo tiến độ project.<br>- Tìm hiểu AWS liên quan đến đăng nhập, protected route, RDS MySQL, Prisma và DATABASE_URL, chỉ chọn nội dung có dùng trong EAM Workspace. | 01/05/2026 | 01/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Tiếp tục hoàn thiện login, token, protected route, database schema và migration, kiểm tra dữ liệu và trạng thái giao diện.<br>- Ghi chú cấu hình AWS cần cho frontend, backend hoặc database. | 02/05/2026 | 02/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Kiểm thử lỗi thường gặp trong login, token, protected route, database schema và migration.<br>- Đối chiếu cấu hình AWS với luồng triển khai thật của project. | 03/05/2026 | 03/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Cập nhật component/API hoặc tài liệu liên quan đến login, token, protected route, database schema và migration.<br>- Ghi lại biến môi trường, endpoint hoặc rule cần dùng khi deploy. | 04/05/2026 | 04/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Rà soát loading, empty, error state và dữ liệu đầu vào.<br>- Tìm hiểu cách debug nếu phần đăng nhập, protected route, RDS MySQL, Prisma và DATABASE_URL cấu hình sai. | 05/05/2026 | 05/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Ghi lại các bước cấu hình DATABASE_URL cho Prisma và MySQL.<br>- Kiểm tra luồng migrate/seed để chuẩn bị khi chuyển từ local sang RDS. | 06/05/2026 | 06/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Kiểm tra lại các phần đã hoàn thành trong tuần 3 và xác định lỗi còn tồn tại.<br>- Xác định công việc kỹ thuật cần xử lý trong tuần tiếp theo. | 07/05/2026 | 07/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 3:
 
-- Luồng đăng nhập cơ bản đã có thể gọi backend, lưu token và dùng token cho các request tiếp theo.
-- Protected route giúp giới hạn truy cập vào các màn hình cần đăng nhập.
-- Các trạng thái loading và empty state bắt đầu được bổ sung để giao diện phản hồi tốt hơn khi gọi API.
+- Hoàn thiện được phần login, token, protected route, database schema và migration ở mức phù hợp với tiến độ demo.
+- Nội dung AWS trong tuần bám trực tiếp vào project: đăng nhập, protected route, RDS MySQL, Prisma và DATABASE_URL.
+- Có thêm ghi chú kỹ thuật phục vụ kiểm thử và triển khai các tuần sau.
 
 ### Kế hoạch tuần tiếp theo
 
-- Hoàn thiện các màn hình CRUD admin cho danh mục, phòng ban, nhân viên và tài sản.
-
-
-
-
+- Hoàn thiện các màn hình CRUD quản trị với dữ liệu thật hoặc dữ liệu gần thật.

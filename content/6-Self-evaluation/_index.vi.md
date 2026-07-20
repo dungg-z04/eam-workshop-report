@@ -93,25 +93,25 @@ Quá trình này giúp em hiểu rằng tài liệu kỹ thuật tốt không ch
 
 ## 3. Điểm mạnh
 
-- Em có tinh thần chủ động khi tìm hiểu dịch vụ AWS phục vụ cho project.
-- Em biết liên hệ kiến thức AWS đã học với kiến trúc triển khai EAM Workspace.
-- Em có khả năng đọc tài liệu, blog kỹ thuật và viết lại thành nội dung báo cáo dễ theo dõi.
-- Em hiểu được luồng triển khai full-stack cơ bản trên AWS gồm frontend, API, backend và database.
-- Em cải thiện kỹ năng viết workshop, mô tả ảnh minh họa và trình bày kết quả kiểm thử.
+- em có tinh thần chủ động khi tìm hiểu dịch vụ AWS phục vụ cho project.
+- em biết liên hệ kiến thức AWS đã học với kiến trúc triển khai EAM Workspace.
+- em có khả năng đọc tài liệu, blog kỹ thuật và viết lại thành nội dung báo cáo dễ theo dõi.
+- em hiểu được luồng triển khai full-stack cơ bản trên AWS gồm frontend, API, backend và database.
+- em cải thiện kỹ năng viết workshop, mô tả ảnh minh họa và trình bày kết quả kiểm thử.
 
 ## 4. Điểm cần cải thiện
 
-- Em cần thực hành sâu hơn với AWS CLI và Infrastructure as Code để giảm phụ thuộc vào thao tác thủ công trên console.
-- Em cần luyện thêm cách đọc CloudWatch Logs và debug lỗi backend trên môi trường cloud.
-- Em cần hiểu rõ hơn về network nâng cao như private subnet, NAT Gateway, VPC Endpoint và security best practices.
-- Em cần học thêm về bảo mật secrets, phân quyền IAM chi tiết và cách tách môi trường dev/staging/production.
-- Em cần rèn luyện thêm khả năng tối ưu chi phí AWS khi thiết kế kiến trúc triển khai.
+- em cần thực hành sâu hơn với AWS CLI và Infrastructure as Code để giảm phụ thuộc vào thao tác thủ công trên console.
+- em cần luyện thêm cách đọc CloudWatch Logs và debug lỗi backend trên môi trường cloud.
+- em cần hiểu rõ hơn về network nâng cao như private subnet, NAT Gateway, VPC Endpoint và security best practices.
+- em cần học thêm về bảo mật secrets, phân quyền IAM chi tiết và cách tách môi trường dev/staging/production.
+- em cần rèn luyện thêm khả năng tối ưu chi phí AWS khi thiết kế kiến trúc triển khai.
 
 ## 5. Bài học rút ra
 
 Qua kỳ thực tập, em nhận ra AWS không chỉ là công cụ triển khai ứng dụng, mà còn là cách tiếp cận để xây dựng hệ thống có khả năng vận hành tốt hơn. Khi đưa project lên AWS, em phải suy nghĩ nhiều hơn về kiến trúc, quyền truy cập, database, endpoint, monitoring và khả năng mở rộng.
 
-Em cũng nhận ra rằng học cloud cần đi kèm thực hành. Nếu chỉ đọc tài liệu, các dịch vụ như Amplify, API Gateway, Elastic Beanstalk, RDS hay SES khá rời rạc. Nhưng khi đặt chúng vào một project cụ thể, vai trò của từng dịch vụ trở nên rõ ràng hơn.
+em cũng nhận ra rằng học cloud cần đi kèm thực hành. Nếu chỉ đọc tài liệu, các dịch vụ như Amplify, API Gateway, Elastic Beanstalk, RDS hay SES khá rời rạc. Nhưng khi đặt chúng vào một project cụ thể, vai trò của từng dịch vụ trở nên rõ ràng hơn.
 
 Quan trọng hơn, quá trình viết workshop giúp em biết cách biến kinh nghiệm triển khai thành tài liệu. Đây là kỹ năng rất cần thiết khi làm việc trong môi trường cloud, vì mỗi bước cấu hình đều cần được ghi lại rõ ràng để người khác có thể kiểm tra, lặp lại hoặc cải thiện.
 
@@ -126,4 +126,4 @@ Sau kỳ thực tập, em mong muốn tiếp tục học sâu hơn về AWS theo
 - Thực hành backup/restore database và tối ưu chi phí AWS cho môi trường demo.
 - Tiếp tục hoàn thiện EAM Workspace theo hướng gần với production-ready hơn.
 
-Nhìn chung, kỳ thực tập tại AWS giúp em có cái nhìn thực tế hơn về cloud computing. Em không chỉ học thêm dịch vụ AWS, mà còn hiểu cách kết hợp các dịch vụ đó để triển khai một hệ thống web hoàn chỉnh, có thể kiểm thử và có tài liệu hướng dẫn rõ ràng.
+Nhìn chung, kỳ thực tập tại AWS giúp em có cái nhìn thực tế hơn về cloud computing. em không chỉ học thêm dịch vụ AWS, mà còn hiểu cách kết hợp các dịch vụ đó để triển khai một hệ thống web hoàn chỉnh, có thể kiểm thử và có tài liệu hướng dẫn rõ ràng.

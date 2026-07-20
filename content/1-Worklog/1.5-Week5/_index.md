@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 5 Worklog"
+title: "Worklog Week 5"
 date: 2026-05-15
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-## Week 5 Worklog
+## Worklog Week 5
 
-**Period:** 15/05/2026 - 21/05/2026
+**Time:** 15/05/2026 - 21/05/2026
 
-This week focused on workflows around the asset lifecycle. Assignment, return, transfer, and maintenance features helped the system track how assets are actually used over time.
+Week 5 focused on assignment, maintenance, and Elastic Beanstalk backend preparation.
 
-### Week 5 Objectives:
+### Week 5 goals:
 
-- Build the asset assignment interface and forms.
-- Add return, transfer, and maintenance workflows.
-- Test state changes with sample data.
+- Complete assignment, return, maintenance, source bundle, and environment properties according to the project schedule.
+- Study assignment, maintenance, and Elastic Beanstalk backend preparation in relation to the EAM Workspace architecture.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Build the asset assignment management interface and list assignable assets.<br>- Learned about CloudWatch Logs for troubleshooting.<br>&emsp; + Noted the main concepts for the report. | 15/05/2026 | 15/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Create forms to select assets and receiving employees.<br>- Learned about CloudWatch Metrics and monitoring dashboards.<br>&emsp; + Checked where it could be used in EAM Workspace. | 16/05/2026 | 16/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Display assignment status and asset usage history.<br>- Learned about CloudTrail and account activity auditing.<br>&emsp; + Checked how AWS records actions for tracking and troubleshooting. | 17/05/2026 | 17/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Build the asset return workflow and update status after returns.<br>- Learned about SNS and SQS for messaging.<br>&emsp; + Read the material and recorded steps useful for deployment. | 18/05/2026 | 18/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Add asset transfer between employees/departments.<br>- Learned about Step Functions and workflow orchestration.<br>&emsp; + Looked at multi-step flows that could match asset handover or maintenance processes. | 19/05/2026 | 19/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Develop maintenance screens, processing status, and maintenance notes.<br>- Learned about AWS Backup and data protection.<br>&emsp; + Noted backup ideas for database and file data. | 20/05/2026 | 20/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Test assignment, return, transfer, and maintenance flows with sample data.<br>- Connected monitoring, backup, and messaging with EAM Workspace.<br>&emsp; + Noted which parts can support operations and reliability. | 21/05/2026 | 21/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on assignment, return, maintenance, source bundle, and environment properties based on the project schedule.<br>- Studied AWS topics related to assignment, maintenance, and Elastic Beanstalk backend preparation, selecting only what was used in EAM Workspace. | 15/05/2026 | 15/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving assignment, return, maintenance, source bundle, and environment properties, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 16/05/2026 | 16/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in assignment, return, maintenance, source bundle, and environment properties.<br>- Mapped AWS configuration to the real project deployment flow. | 17/05/2026 | 17/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to assignment, return, maintenance, source bundle, and environment properties.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 18/05/2026 | 18/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug incorrect assignment, maintenance, and Elastic Beanstalk backend preparation configuration. | 19/05/2026 | 19/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Practiced packaging the backend source code in a structure suitable for Elastic Beanstalk.<br>- Reviewed the environment variables required in EB before deployment. | 20/05/2026 | 20/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 5 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 21/05/2026 | 21/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 5 Achievements:
+### Week 5 results:
 
-- The assignment interface supported selecting assets, choosing employees, and tracking processing status.
-- Return, transfer, and maintenance workflows made asset status more realistic.
-- CloudWatch, CloudTrail, SNS, SQS, and Step Functions self-study helped connect monitoring and workflow ideas to the project.
+- Completed assignment, return, maintenance, source bundle, and environment properties to a level suitable for the demo progress.
+- AWS learning stayed directly connected to the project: assignment, maintenance, and Elastic Beanstalk backend preparation.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Complete inventory, reporting, and data-state handling.
-
-
-
-
+- Complete inventory/reporting and continue preparing database/deployment.

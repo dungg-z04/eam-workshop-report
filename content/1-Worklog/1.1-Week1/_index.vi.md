@@ -10,36 +10,32 @@ pre: " <b> 1.1. </b> "
 
 **Thời gian:** 17/04/2026 - 23/04/2026
 
-Tuần đầu tiên chủ yếu dành cho việc làm quen với chương trình thực tập, đọc kỹ yêu cầu báo cáo và xác định vai trò trong project EAM Workspace. Song song với phần định hướng, nội dung AWS nền tảng được bắt đầu từ các khái niệm nền tảng để có cơ sở cho những tuần triển khai sau.
+Tuần 1 tập trung vào định hướng project, AWS Console, IAM cơ bản và kiểm soát chi phí. 
 
 ### Mục tiêu tuần 1:
 
-- Nắm được mục tiêu thực tập, phạm vi project và cách tổ chức báo cáo.
-- Xác định rõ nhiệm vụ frontend trong hệ thống EAM Workspace.
-- Bắt đầu tìm hiểu các khái niệm AWS cơ bản như cloud, console, IAM, VPC và EC2.
+- Hoàn thiện phần phạm vi EAM Workspace, vai trò frontend và các dịch vụ AWS sẽ dùng theo tiến độ project.
+- Tìm hiểu định hướng project, AWS Console, IAM cơ bản và kiểm soát chi phí gắn với kiến trúc EAM Workspace.
+- Ghi nhận lỗi kỹ thuật, kết quả kiểm thử và các điểm cần xử lý trong tuần.
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| Thứ 6 | - Tham gia định hướng thực tập, đọc yêu cầu báo cáo và xác định project EAM Workspace là hệ thống quản lý tài sản doanh nghiệp.<br>- Tìm hiểu tổng quan Cloud Computing, AWS Global Infrastructure và AWS Management Console.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 17/04/2026 | 17/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 7 | - Phân tích vai trò frontend trong nhóm, xác định các module cần hỗ trợ như đăng nhập, dashboard, tài sản, bàn giao và báo cáo.<br>- Tìm hiểu AWS Free Tier.<br>&emsp; + Thực hành: tạo AWS account và kiểm tra các lưu ý kiểm soát chi phí. | 18/04/2026 | 18/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Chủ nhật | - Tổng hợp yêu cầu project, chuẩn bị tài liệu ghi chú và thống nhất hướng phát triển giao diện quản trị.<br>- Tìm hiểu AWS Budgets và cảnh báo chi phí.<br>&emsp; + Thực hành: mở AWS Console và kiểm tra các thao tác quản lý cơ bản. | 19/04/2026 | 19/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 2 | - Đọc cấu trúc source code ban đầu và làm quen nghiệp vụ quản lý tài sản, nhân viên, phòng ban, bàn giao, bảo trì và kiểm kê.<br>- Tìm hiểu nhóm dịch vụ Compute, Storage, Database, Networking và Security.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 20/04/2026 | 20/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 3 | - Làm rõ các màn hình frontend cần phụ trách, đặc biệt là layout admin, sidebar, navbar, bảng dữ liệu và form nhập liệu.<br>- Tìm hiểu IAM ở mức tổng quan và nguyên tắc phân quyền tối thiểu.<br>&emsp; + Xem cách IAM giúp kiểm soát quyền truy cập trong AWS account. | 21/04/2026 | 21/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 4 | - Xác định stack frontend gồm React, Vite, TailwindCSS, React Router và API service layer.<br>- Tìm hiểu VPC, subnet, route table và security group ở mức cơ bản.<br>&emsp; + Thực hành đọc tài liệu và ghi chú các bước cần dùng khi triển khai. | 22/04/2026 | 22/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 5 | - Chuẩn bị kế hoạch triển khai giao diện theo từng module và ghi nhận các rủi ro cần kiểm thử trong các tuần sau.<br>- Tìm hiểu EC2, AMI, instance type và vai trò của máy chủ ảo trong triển khai backend.<br>&emsp; + So sánh với nhu cầu triển khai frontend/backend của project. | 23/04/2026 | 23/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 6 | - Thực hiện phần phạm vi EAM Workspace, vai trò frontend và các dịch vụ AWS sẽ dùng theo tiến độ project.<br>- Tìm hiểu AWS liên quan đến định hướng project, AWS Console, IAM cơ bản và kiểm soát chi phí, chỉ chọn nội dung có dùng trong EAM Workspace. | 17/04/2026 | 17/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Tiếp tục hoàn thiện phạm vi EAM Workspace, vai trò frontend và các dịch vụ AWS sẽ dùng, kiểm tra dữ liệu và trạng thái giao diện.<br>- Ghi chú cấu hình AWS cần cho frontend, backend hoặc database. | 18/04/2026 | 18/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Kiểm thử lỗi thường gặp trong phạm vi EAM Workspace, vai trò frontend và các dịch vụ AWS sẽ dùng.<br>- Đối chiếu cấu hình AWS với luồng triển khai thật của project. | 19/04/2026 | 19/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Cập nhật component/API hoặc tài liệu liên quan đến phạm vi EAM Workspace, vai trò frontend và các dịch vụ AWS sẽ dùng.<br>- Ghi lại biến môi trường, endpoint hoặc rule cần dùng khi deploy. | 20/04/2026 | 20/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Rà soát loading, empty, error state và dữ liệu đầu vào.<br>- Tìm hiểu cách debug nếu phần định hướng project, AWS Console, IAM cơ bản và kiểm soát chi phí cấu hình sai. | 21/04/2026 | 21/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Thực hành điều hướng AWS Console, kiểm tra Region ap-southeast-1 và xác định các dịch vụ sẽ dùng cho project.<br>- Tìm hiểu IAM cơ bản, nguyên tắc phân quyền tối thiểu và cách theo dõi chi phí ban đầu. | 22/04/2026 | 22/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Kiểm tra lại các phần đã hoàn thành trong tuần 1 và xác định lỗi còn tồn tại.<br>- Xác định công việc kỹ thuật cần xử lý trong tuần tiếp theo. | 23/04/2026 | 23/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 1:
 
-- Hiểu được EAM Workspace là hệ thống quản lý tài sản doanh nghiệp, gồm các luồng chính như quản lý tài sản, nhân viên, phòng ban, bàn giao, bảo trì và kiểm kê.
-- Xác định được stack frontend phù hợp cho project: React, Vite, TailwindCSS, React Router và API service layer.
-- Có nền tảng AWS ban đầu để tiếp tục tìm hiểu sâu hơn về IAM, VPC, EC2 và các dịch vụ triển khai ứng dụng.
+- Hoàn thiện được phần phạm vi EAM Workspace, vai trò frontend và các dịch vụ AWS sẽ dùng ở mức phù hợp với tiến độ demo.
+- Nội dung AWS trong tuần bám trực tiếp vào project: định hướng project, AWS Console, IAM cơ bản và kiểm soát chi phí.
+- Có thêm ghi chú kỹ thuật phục vụ kiểm thử và triển khai các tuần sau.
 
 ### Kế hoạch tuần tiếp theo
 
-- Tiếp tục dựng nền tảng frontend bằng React, Vite, TailwindCSS và React Router.
-
-
-
-
+- Dựng nền tảng frontend bằng React, Vite, Tailwind CSS và React Router.

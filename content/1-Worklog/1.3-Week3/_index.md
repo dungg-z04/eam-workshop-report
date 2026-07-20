@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 3 Worklog"
+title: "Worklog Week 3"
 date: 2026-05-01
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-## Week 3 Worklog
+## Worklog Week 3
 
-**Period:** 01/05/2026 - 07/05/2026
+**Time:** 01/05/2026 - 07/05/2026
 
-This week moved the frontend from static screens to API-connected flows. The main work covered login, token storage, current-user checks, and service layers for later admin modules.
+Week 3 focused on login, protected routes, RDS MySQL, Prisma, and DATABASE_URL.
 
-### Week 3 Objectives:
+### Week 3 goals:
 
-- Connect the login form to the backend API.
-- Handle tokens, protected routes, and frontend authentication state.
-- Create service layers for the main API groups.
+- Complete login, token, protected routes, database schema, and migration according to the project schedule.
+- Study login, protected routes, RDS MySQL, Prisma, and DATABASE_URL in relation to the EAM Workspace architecture.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Connect the login form to the backend API and handle login responses.<br>- Learned about Amazon S3 and static website hosting.<br>&emsp; + Noted the main concepts for the report. | 01/05/2026 | 01/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Store login tokens and attach them to subsequent requests.<br>- Learned about Amazon RDS, DB instances, endpoints, backups, and engines.<br>&emsp; + Checked where it could be used in EAM Workspace. | 02/05/2026 | 02/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Create a current-user API flow and synchronize authentication state on the frontend.<br>- Learned about DynamoDB and NoSQL use cases.<br>&emsp; + Compared NoSQL storage with the relational data model used in the project. | 03/05/2026 | 03/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Build protected routes based on authentication state and access rights.<br>- Learned about CloudWatch metrics, logs, and alarms.<br>&emsp; + Read the material and recorded steps useful for deployment. | 04/05/2026 | 04/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Start creating separate frontend services for each API group.<br>- Learned about CloudFront and CDN for web applications.<br>&emsp; + Checked how a CDN can improve frontend loading speed. | 05/05/2026 | 05/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Add loading and empty states for data lists.<br>- Learned about Route 53, DNS, hosted zones, and records.<br>&emsp; + Noted how domains can point to frontend or API endpoints. | 06/05/2026 | 06/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Review login, token, and API call flows before building admin CRUD screens.<br>- Learned about AWS CLI and command-line service operations.<br>&emsp; + Practiced reading common CLI command formats for AWS services. | 07/05/2026 | 07/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on login, token, protected routes, database schema, and migration based on the project schedule.<br>- Studied AWS topics related to login, protected routes, RDS MySQL, Prisma, and DATABASE_URL, selecting only what was used in EAM Workspace. | 01/05/2026 | 01/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving login, token, protected routes, database schema, and migration, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 02/05/2026 | 02/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in login, token, protected routes, database schema, and migration.<br>- Mapped AWS configuration to the real project deployment flow. | 03/05/2026 | 03/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to login, token, protected routes, database schema, and migration.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 04/05/2026 | 04/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug incorrect login, protected routes, RDS MySQL, Prisma, and DATABASE_URL configuration. | 05/05/2026 | 05/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Documented DATABASE_URL configuration for Prisma and MySQL.<br>- Checked the migrate/seed flow before moving from local database to RDS. | 06/05/2026 | 06/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 3 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 07/05/2026 | 07/05/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 3 Achievements:
+### Week 3 results:
 
-- The basic login flow could call the backend, store tokens, and reuse them in later requests.
-- Protected routes limited access to authenticated screens.
-- Loading and empty states were added so API-driven screens responded more clearly.
+- Completed login, token, protected routes, database schema, and migration to a level suitable for the demo progress.
+- AWS learning stayed directly connected to the project: login, protected routes, RDS MySQL, Prisma, and DATABASE_URL.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Complete admin CRUD screens for categories, departments, employees, and assets.
-
-
-
-
+- Complete admin CRUD screens with real or realistic data.

@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên môn liên quan đến AWS, cloud computing, DevOps, bảo mật, trí tuệ nhân tạo và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin. Mỗi sự kiện là một cơ hội để học thêm kiến thức thực tế, quan sát cách các diễn giả chia sẻ kinh nghiệm và kết nối nội dung học tập với môi trường doanh nghiệp.
+Trong quá trình thực tập, em đã tham gia các sự kiện chuyên môn liên quan đến AWS, cloud computing, DevOps, bảo mật, trí tuệ nhân tạo và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin. Mỗi sự kiện là một cơ hội để học thêm kiến thức thực tế, quan sát cách các diễn giả chia sẻ kinh nghiệm và kết nối nội dung học tập với môi trường doanh nghiệp.
 
 ### [Event 1 - AWS First Cloud Journey Community Day](4.1-Event1/)
 
@@ -14,7 +14,7 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 &emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò trong sự kiện:** Người tham dự
 
 &emsp;**Nội dung chính:** Cloud Computing, DevOps, Security, AI, WebSocket, Teamwork và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin.
 
@@ -26,7 +26,7 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 &emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, kết hợp livestream
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò trong sự kiện:** Người tham dự
 
 &emsp;**Nội dung chính:** Cloud Computing, AI Agent, Voice AI, DevOps AI Agent, AI trong nhân sự và triển khai AI an toàn trong doanh nghiệp.
 
@@ -34,11 +34,22 @@ Trong quá trình thực tập, mình đã tham gia các sự kiện chuyên mô
 
 ### [Event 3 - AWS & Swinburne Vietnam Cloud Computing Study Tour](4.3-Event3/)
 
-
 &emsp;**Thời gian:** Ngày 04/07/2026
 
 &emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, kết hợp livestream
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò trong sự kiện:** Người tham dự
 
 &emsp;**Nội dung chính:** Cloud Computing, thị trường việc làm cloud, kỹ năng nghề nghiệp, data engineering, AI, giao tiếp, networking và tư duy phát triển.
+
+---
+
+### [Event 4 - AWS Security, Monitoring and Cloud Practitioner Sharing](4.4-Event4/)
+
+&emsp;**Thời gian:** Ngày 11/07/2026
+
+&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự
+
+&emsp;**Nội dung chính:** AWS Security Agent, bảo mật ứng dụng web, SLA, monitoring, CloudWatch, SNS, AWS Cloud Practitioner và định hướng học chứng chỉ AWS.

@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 11 Worklog"
+title: "Worklog Week 11"
 date: 2026-06-26
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-## Week 11 Worklog
+## Worklog Week 11
 
-**Period:** 26/06/2026 - 02/07/2026
+**Time:** 26/06/2026 - 02/07/2026
 
-After deployment, this week focused on production testing and fixing issues found in the real environment. It also added screenshots and content for the workshop report.
+Week 11 focused on production testing, CloudWatch, Billing, and post-deployment monitoring.
 
-### Week 11 Objectives:
+### Week 11 goals:
 
-- Test the main workflows on the Amplify production environment.
-- Fix image upload, `/uploads/*` rewrite, and inactive-account behavior.
-- Add screenshots, workshop content, and deployment documentation.
+- Complete production tests, Developer Tools, CloudWatch logs, SES checks, and Billing according to the project schedule.
+- Study how to test production, monitor CloudWatch, and control costs after deploying EAM Workspace.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Test admin login through Amplify and confirm API traffic flows through Amplify rewrite, API Gateway, and Elastic Beanstalk. | 26/06/2026 | 26/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Fix image/avatar upload, check `/uploads/*` rewrite, and verify image responses return `200`. | 27/06/2026 | 27/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Fix inactive-account logic and confirm inactive users cannot log in. | 28/06/2026 | 28/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Run regression testing for dashboard, assets, employees, departments, assignments, and maintenance. | 29/06/2026 | 29/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Capture AWS Console screenshots for RDS, security groups, Elastic Beanstalk, API Gateway, and Amplify. | 30/06/2026 | 30/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Add workshop content, describe each screenshot, and clarify SES/SMTP and Prisma migration. | 01/07/2026 | 01/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Standardize backend/frontend documentation and align it with worklog/proposal content. | 02/07/2026 | 02/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on production tests, Developer Tools, CloudWatch logs, SES checks, and Billing based on the project schedule.<br>- Studied how to monitor the deployed application with the AWS services used in EAM Workspace. | 26/06/2026 | 26/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving production tests, Developer Tools, CloudWatch logs, SES checks, and Billing, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 27/06/2026 | 27/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in production tests, Developer Tools, CloudWatch logs, SES checks, and Billing.<br>- Mapped AWS configuration to the real project deployment flow. | 28/06/2026 | 28/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to production tests, Developer Tools, CloudWatch logs, SES checks, and Billing.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 29/06/2026 | 29/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug issues caused by incorrect production API, rewrite rules, or frontend environment configuration. | 30/06/2026 | 30/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Tested production with the Network tab and checked that APIs returned successful responses.<br>- Monitored cost, service status, and issues after deployment. | 01/07/2026 | 01/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 11 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 02/07/2026 | 02/07/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 11 Achievements:
+### Week 11 results:
 
-- Main flows such as admin login, dashboard, assets, employees, departments, assignments, and maintenance were retested.
-- Important integration issues such as image upload and inactive accounts were clarified and fixed.
-- The workshop section gained AWS Console screenshots and clearer explanations for each deployment step.
+- Completed production tests, Developer Tools, CloudWatch logs, SES checks, and Billing to a level suitable for the demo progress.
+- AWS learning stayed directly connected to production testing, CloudWatch, and Billing for EAM Workspace.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Finalize the report, review the Hugo site, and prepare submission.
-
-
-
-
+- Review AWS resource cleanup and summarize the project.

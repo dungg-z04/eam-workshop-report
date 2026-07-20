@@ -1,45 +1,41 @@
 ﻿---
-title: "Week 1 Worklog"
+title: "Worklog Week 1"
 date: 2026-04-17
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-## Week 1 Worklog
+## Worklog Week 1
 
-**Period:** 17/04/2026 - 23/04/2026
+**Time:** 17/04/2026 - 23/04/2026
 
-The first week focused on internship orientation, report requirements, and the frontend role in EAM Workspace. Additional AWS learning also started from the basic cloud concepts needed for later deployment work.
+Week 1 focused on project orientation, AWS Console, basic IAM, and cost control.
 
-### Week 1 Objectives:
+### Week 1 goals:
 
-- Understand the internship goal, project scope, and report structure.
-- Clarify the frontend responsibilities in EAM Workspace.
-- Start learning AWS fundamentals such as cloud concepts, console, IAM, VPC, and EC2.
+- Complete EAM Workspace scope, frontend role, and AWS services to be used according to the project schedule.
+- Study project orientation, AWS Console, basic IAM, and cost control in relation to the EAM Workspace architecture.
+- Record technical issues, test results, and items to resolve during the week.
 
-### Work planned and completed this week:
+### Tasks completed this week:
 
 | Day | Work performed | Start date | End date | References |
 | --- | --- | --- | --- | --- |
-| Friday | - Attend the internship orientation, review report requirements, and identify EAM Workspace as the enterprise asset management project.<br>- Learned about Cloud Computing overview, AWS Global Infrastructure, and AWS Management Console.<br>&emsp; + Noted the main concepts for the report. | 17/04/2026 | 17/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Saturday | - Analyze the frontend role in the team and identify modules such as login, dashboard, assets, assignments, and reports.<br>- Learned about AWS Free Tier.<br>&emsp; + Practiced creating an AWS account and checking basic cost-control notes. | 18/04/2026 | 18/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Sunday | - Summarize project requirements, prepare notes, and align the direction for the admin interface.<br>- Learned about AWS Budgets and cost alerts.<br>&emsp; + Practiced opening AWS Console and checking basic management actions. | 19/04/2026 | 19/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Monday | - Review the initial source code structure and learn the business scope: assets, employees, departments, assignments, maintenance, and inventory.<br>- Learned about Compute, Storage, Database, Networking, and Security service groups.<br>&emsp; + Checked where it could be used in EAM Workspace. | 20/04/2026 | 20/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Tuesday | - Clarify frontend screens, especially admin layout, sidebar, navbar, data tables, and input forms.<br>- Learned the IAM overview and the principle of least privilege.<br>&emsp; + Checked how IAM controls access inside an AWS account. | 21/04/2026 | 21/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | - Define the frontend stack with React, Vite, TailwindCSS, React Router, and API service layers.<br>- Learned about VPC, subnets, route tables, and security groups.<br>&emsp; + Mapped these components to the backend network setup. | 22/04/2026 | 22/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thursday | - Prepare the module-by-module frontend implementation plan and record risks to test in later weeks.<br>- Learned about EC2, AMIs, instance types, and virtual servers for backend deployment.<br>&emsp; + Noted what is needed when choosing a backend runtime environment. | 23/04/2026 | 23/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Friday | - Worked on EAM Workspace scope, frontend role, and AWS services to be used based on the project schedule.<br>- Studied AWS topics related to project orientation, AWS Console, basic IAM, and cost control, selecting only what was used in EAM Workspace. | 17/04/2026 | 17/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Saturday | - Continued improving EAM Workspace scope, frontend role, and AWS services to be used, checking data and UI states.<br>- Noted AWS configuration needed for frontend, backend, or database. | 18/04/2026 | 18/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Sunday | - Tested common issues in EAM Workspace scope, frontend role, and AWS services to be used.<br>- Mapped AWS configuration to the real project deployment flow. | 19/04/2026 | 19/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Monday | - Updated components/APIs or documentation related to EAM Workspace scope, frontend role, and AWS services to be used.<br>- Recorded environment variables, endpoints, or rules needed for deployment. | 20/04/2026 | 20/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Tuesday | - Reviewed loading, empty, error states, and input data.<br>- Studied how to debug incorrect project orientation, AWS Console, basic IAM, and cost control configuration. | 21/04/2026 | 21/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | - Practiced navigating the AWS Console, checked the ap-southeast-1 Region, and identified services planned for the project.<br>- Studied basic IAM, least-privilege permissions, and initial cost monitoring. | 22/04/2026 | 22/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thursday | - Reviewed completed work from week 1 and identified remaining issues.<br>- Defined technical tasks to handle in the following week. | 23/04/2026 | 23/04/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
-### Week 1 Achievements:
+### Week 1 results:
 
-- Understood EAM Workspace as an enterprise asset management system with assets, employees, departments, assignments, maintenance, and inventory.
-- Defined the frontend stack: React, Vite, TailwindCSS, React Router, and API service layers.
-- Built an initial AWS foundation for deeper learning in IAM, VPC, EC2, and deployment services.
+- Completed EAM Workspace scope, frontend role, and AWS services to be used to a level suitable for the demo progress.
+- AWS learning stayed directly connected to the project: project orientation, AWS Console, basic IAM, and cost control.
+- Added technical notes for testing and upcoming deployment work.
 
-### Plan for Next Week
+### Plan for next week
 
-- Continue setting up the frontend foundation with React, Vite, TailwindCSS, and React Router.
-
-
-
-
+- Build the frontend foundation with React, Vite, Tailwind CSS, and React Router.

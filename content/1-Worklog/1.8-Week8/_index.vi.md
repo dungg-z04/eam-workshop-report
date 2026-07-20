@@ -10,36 +10,32 @@ pre: " <b> 1.8. </b> "
 
 **Thời gian:** 05/06/2026 - 11/06/2026
 
-Tuần này mở rộng hệ thống sang trải nghiệm của nhân viên và các phần cài đặt. Bên cạnh admin portal, employee portal cần hiển thị đúng dữ liệu theo quyền để người dùng chỉ thấy những thông tin liên quan đến mình.
+Tuần 8 tập trung vào cổng nhân viên, Amplify Hosting, build settings và frontend env vars.
 
 ### Mục tiêu tuần 8:
 
-- Xây dựng employee dashboard và các trang cá nhân của nhân viên.
-- Hoàn thiện Settings, FAQ, feedback và dark/light mode.
-- Sửa các lỗi hiển thị dark mode ở nhiều module.
+- Hoàn thiện phần employee portal, support request, profile, Amplify build và rewrite theo tiến độ project.
+- Tìm hiểu cổng nhân viên, Amplify Hosting, build settings và frontend env vars gắn với kiến trúc EAM Workspace.
+- Ghi nhận lỗi kỹ thuật, kết quả kiểm thử và các điểm cần xử lý trong tuần.
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Ngày | Nội dung thực hiện | Ngày bắt đầu | Ngày kết thúc | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| Thứ 6 | - Rà soát role SYSTEM_ADMIN, ORGANIZATION_OWNER, ADMIN và USER.<br>- Tìm hiểu AWS Backup và chiến lược bảo vệ dữ liệu.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 05/06/2026 | 05/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 7 | - Làm rõ phạm vi tài khoản và trách nhiệm của owner/admin/system admin.<br>- Tìm hiểu VPC Peering và Transit Gateway.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 06/06/2026 | 06/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Chủ nhật | - Xây dựng employee dashboard, tài sản được bàn giao, hồ sơ, đổi mật khẩu và lịch sử cá nhân.<br>- Tìm hiểu SQS và SNS cho event/message.<br>&emsp; + Thực hành đọc tài liệu và ghi chú các bước cần dùng khi triển khai. | 07/06/2026 | 07/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 2 | - Nâng cấp Settings với dark/light mode, ngôn ngữ, FAQ và feedback.<br>- Tìm hiểu Docker, ECS và container cơ bản.<br>&emsp; + So sánh với nhu cầu triển khai frontend/backend của project. | 08/06/2026 | 08/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 3 | - Di chuyển toggle dark/light lên navbar và giữ language switch trong Settings.<br>- Tìm hiểu CodePipeline và quy trình CI/CD.<br>&emsp; + Xem các bước build, test và deploy tự động cho ứng dụng web. | 09/06/2026 | 09/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 4 | - Sửa lỗi dark mode ở dashboard, bàn giao, bảo trì, kiểm kê, báo cáo và floor map.<br>- Tìm hiểu Step Functions và orchestration.<br>&emsp; + Ghi lại các khái niệm chính để dùng khi viết báo cáo. | 10/06/2026 | 10/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
-| Thứ 5 | - Chuẩn hóa toast notification và chuẩn bị ý tưởng import Excel, sơ đồ mặt bằng.<br>- Tìm hiểu serverless, microservices và hiện đại hóa ứng dụng.<br>&emsp; + Xem phần nào có thể áp dụng vào EAM Workspace. | 11/06/2026 | 11/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 6 | - Thực hiện phần employee portal, support request, profile, Amplify build và rewrite theo tiến độ project.<br>- Tìm hiểu AWS liên quan đến cổng nhân viên, Amplify Hosting, build settings và frontend env vars, chỉ chọn nội dung có dùng trong EAM Workspace. | 05/06/2026 | 05/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 7 | - Tiếp tục hoàn thiện employee portal, support request, profile, Amplify build và rewrite, kiểm tra dữ liệu và trạng thái giao diện.<br>- Ghi chú cấu hình AWS cần cho frontend, backend hoặc database. | 06/06/2026 | 06/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Chủ nhật | - Kiểm thử lỗi thường gặp trong employee portal, support request, profile, Amplify build và rewrite.<br>- Đối chiếu cấu hình AWS với luồng triển khai thật của project. | 07/06/2026 | 07/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 2 | - Cập nhật component/API hoặc tài liệu liên quan đến employee portal, support request, profile, Amplify build và rewrite.<br>- Ghi lại biến môi trường, endpoint hoặc rule cần dùng khi deploy. | 08/06/2026 | 08/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 3 | - Rà soát loading, empty, error state và dữ liệu đầu vào.<br>- Tìm hiểu cách debug nếu phần cổng nhân viên, Amplify Hosting, build settings và frontend env vars cấu hình sai. | 09/06/2026 | 09/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 4 | - Kiểm tra Amplify build settings và cách khai báo biến môi trường cho frontend.<br>- Rà soát base URL để frontend gọi đúng API Gateway sau khi deploy. | 10/06/2026 | 10/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
+| Thứ 5 | - Kiểm tra lại các phần đã hoàn thành trong tuần 8 và xác định lỗi còn tồn tại.<br>- Xác định công việc kỹ thuật cần xử lý trong tuần tiếp theo. | 11/06/2026 | 11/06/2026 | Project source code, team discussion, <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 8:
 
-- Employee portal đã có các màn hình chính như dashboard, tài sản được bàn giao, hồ sơ, đổi mật khẩu và lịch sử.
-- Settings, FAQ và feedback được cải thiện để hỗ trợ trải nghiệm sử dụng đầy đủ hơn.
-- Dark mode được sửa ở nhiều màn hình, giúp giao diện ổn định hơn khi đổi theme.
+- Hoàn thiện được phần employee portal, support request, profile, Amplify build và rewrite ở mức phù hợp với tiến độ demo.
+- Nội dung AWS trong tuần bám trực tiếp vào project: cổng nhân viên, Amplify Hosting, build settings và frontend env vars.
+- Có thêm ghi chú kỹ thuật phục vụ kiểm thử và triển khai các tuần sau.
 
 ### Kế hoạch tuần tiếp theo
 
-- Chuẩn bị dữ liệu, cải thiện tìm kiếm, import Excel, floor map và kế hoạch triển khai AWS.
-
-
-
-
+- Chuẩn bị dữ liệu demo, kiểm thử chức năng và lên kế hoạch triển khai AWS.

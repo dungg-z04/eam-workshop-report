@@ -41,3 +41,15 @@ During the internship period, I participated in professional events related to A
 &emsp;**Role:** Attendee
 
 &emsp;**Main content:** Cloud Computing, cloud job market, career skills, data engineering, AI, communication, networking, and growth mindset.
+
+---
+
+### [Event 4 - AWS Security, Monitoring and Cloud Practitioner Sharing](4.4-Event4/)
+
+&emsp;**Date:** July 11, 2026
+
+&emsp;**Location:** 26th floor, Bitexco Financial Tower
+
+&emsp;**Role:** Attendee
+
+&emsp;**Main content:** AWS Security Agent, web application security, SLA, monitoring, CloudWatch, SNS, AWS Cloud Practitioner, and AWS certification learning path.
